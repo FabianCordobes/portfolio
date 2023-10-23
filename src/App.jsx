@@ -6,11 +6,13 @@ import Home from './pages/home/home';
 import Contact from './pages/contact/Contact';
 import Portfolio from './pages/portfolio/Portfolio';
 import About from './pages/about/About';
+import Themes from './components/Themes';
 
 function App() {
 	return (
 		<BrowserRouter>
 			<Navbar />
+			<Themes />
 			<Routes>
 				<Route
 					index
