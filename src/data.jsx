@@ -6,7 +6,7 @@ import {
 	FaBriefcase,
 	FaGraduationCap,
 	FaCode,
-	FaGithub,
+	
 } from 'react-icons/fa';
 import { FiFileText, FiUser, FiExternalLink, FiGithub } from 'react-icons/fi';
 
