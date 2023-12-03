@@ -6,6 +6,7 @@ const PortfolioItem = ({ img, title, details, links }) => {
 
 	const toggleModal = () => {
 		setModal(!modal);
+		console.log(links);
 	};
 
 	return (
@@ -32,6 +33,20 @@ const PortfolioItem = ({ img, title, details, links }) => {
 							onClick={toggleModal}
 						/>
 
+						<div className="links__cont">
+							{links?.map(({ icon, href, side, title }, index) => {
+								return (
+									<a
+										href={href}
+										className={side === 'left' ? `item__link left` : `item__link right`}
+										target="blank_"
+										key={index}>
+										{icon}
+									</a>
+								);
+							})}
+						</div>
+
 						<h3 className="modal__title">{title}</h3>
 
 						<ul className="modal__list grid">
@@ -50,22 +65,6 @@ const PortfolioItem = ({ img, title, details, links }) => {
 								);
 							})}
 						</ul>
-						{links?.map(({ icon, href, side, title }, index) => {
-							<div className="links__cont">
-								return (
-								<>
-									<a
-										href={href}
-										className={side === 'left' ? `item__link left` : `item__link right`}
-										key={index}
-										target="blank_">
-										{icon}
-									</a>
-									<span>{title}</span>
-								</>
-								);
-							</div>;
-						})}
 
 						<img
 							src={img}

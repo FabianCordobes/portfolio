@@ -64,16 +64,14 @@ const Contact = () => {
 	return (
 		<section className="contact section">
 			<h2 className="section__title">
-			<span>{t('contactMe')}</span>
+				<span>{t('contactMe')}</span>
 			</h2>
 
 			<div className="contact__container container grid gap">
 				<div className="contact__data">
 					<h3 className="contact__title">{`${t('contactTitle')}`}</h3>
 
-					<p className="contact__description">
-						{t('contactDescription')}
-					</p>
+					<p className="contact__description">{t('contactDescription')}</p>
 
 					<div className="contact__info">
 						<div className="info__item">
@@ -104,25 +102,29 @@ const Contact = () => {
 					<div className="contact__socials">
 						<a
 							href="https://www.facebook.com/profile.php?id=100079283746434"
-							className="contact__social-link">
+							className="contact__social-link"
+							target="blank_">
 							<FaFacebookF />
 						</a>
 
 						<a
 							href="https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/"
-							className="contact__social-link">
+							className="contact__social-link"
+							target="blank_">
 							<FaLinkedin />
 						</a>
 
 						<a
 							href="https://www.instagram.com/fabian.ariel_/"
-							className="contact__social-link">
+							className="contact__social-link"
+							target="blank_">
 							<FaInstagram />
 						</a>
 
 						<a
 							href="https://github.com/FabianCordobes"
-							className="contact__social-link">
+							className="contact__social-link"
+							target="blank_">
 							<FaGithub />
 						</a>
 					</div>
@@ -172,8 +174,8 @@ const Contact = () => {
 
 					<div className="form__input-div">
 						<textarea
-								placeholder={t('messagePlace')}
-								className="form__control textarea"
+							placeholder={t('messagePlace')}
+							className="form__control textarea"
 							value={userData.message}
 							onChange={handleChange}
 							name="message"
@@ -183,7 +185,13 @@ const Contact = () => {
 
 					<button
 						className="button"
-						type="submit">
+						type="submit"
+						disabled={
+							userData.user_name.length < 1 ||
+							userData.user_email.length < 1 ||
+							userData.subject.length < 1 ||
+							userData.message.length < 1
+						}>
 						{t('submitButton')}
 						<span className="button__icon contact__button-icon">
 							<FiSend />

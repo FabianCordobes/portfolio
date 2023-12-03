@@ -19,6 +19,7 @@ import Work6 from './assets/project-6.png';
 import Work7 from './assets/project-7.png';
 import Work8 from './assets/project-8.png';
 import Work9 from './assets/project-9.png';
+import Work10 from './assets/project-10.png';
 
 import Theme1 from './assets/purple.png';
 import Theme2 from './assets/red.png';
@@ -356,7 +357,7 @@ export const portfolio = [
 			{
 				icon: <FaCode />,
 				title: 'Language : ',
-				desc: 'React Js',
+				desc: 'JavaScript',
 			},
 		],
 
@@ -394,7 +395,7 @@ export const portfolio = [
 			{
 				icon: <FaCode />,
 				title: 'Language : ',
-				desc: 'React JS',
+				desc: 'JavaScript',
 			},
 		],
 
@@ -432,7 +433,7 @@ export const portfolio = [
 			{
 				icon: <FaCode />,
 				title: 'Language : ',
-				desc: 'React Js',
+				desc: 'JavaScript',
 			},
 		],
 
@@ -470,7 +471,7 @@ export const portfolio = [
 			{
 				icon: <FaCode />,
 				title: 'Language : ',
-				desc: 'React Js',
+				desc: 'JavaScript',
 			},
 		],
 
@@ -505,7 +506,7 @@ export const portfolio = [
 			},
 			{
 				title: 'Language : ',
-				desc: 'React JS, Node JS',
+				desc: 'JavaScript',
 			},
 		],
 
@@ -543,7 +544,7 @@ export const portfolio = [
 			{
 				icon: <FaCode />,
 				title: 'Language : ',
-				desc: 'React Js',
+				desc: 'JavaScript',
 			},
 		],
 
@@ -581,7 +582,7 @@ export const portfolio = [
 			{
 				icon: <FaCode />,
 				title: 'Language : ',
-				desc: 'Javascript',
+				desc: 'JavaScript',
 			},
 		],
 
@@ -619,7 +620,7 @@ export const portfolio = [
 			{
 				icon: <FaCode />,
 				title: 'Language : ',
-				desc: 'React Js',
+				desc: 'JavaScript',
 			},
 		],
 
@@ -657,7 +658,7 @@ export const portfolio = [
 			{
 				icon: <FaCode />,
 				title: 'Language : ',
-				desc: 'JavasCript',
+				desc: 'JavaScript',
 			},
 		],
 
@@ -676,6 +677,45 @@ export const portfolio = [
 			},
 		],
 	},
+
+	{
+		id: 10,
+		img: Work10,
+		title: 'E-commerce',
+		details: [
+			{
+				icon: <FiFileText />,
+				title: 'Project : ',
+				desc: 'Natural Farma E-commerce',
+			},
+			{
+				icon: <FiUser />,
+				title: 'Client : ',
+				desc: 'Natural Farma',
+			},
+			{
+				icon: <FaCode />,
+				title: 'Language : ',
+				desc: 'JavaScript',
+			},
+		],
+
+		links: [
+			{
+				side: 'left',
+				icon: <FiExternalLink />,
+				title: 'Preview ',
+				href: 'https://natural-farma.vercel.app/',
+			},
+			{
+				side: 'right',
+				icon: <FiGithub />,
+				title: 'Repository ',
+				href: 'https://github.com/FabianCordobes/naturalFarma/',
+			},
+		],
+	},
+
 ];
 
 export const themes = [

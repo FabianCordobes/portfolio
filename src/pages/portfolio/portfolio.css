@@ -100,12 +100,12 @@
 
 .links__cont {
 	display: flex;
-	width: 43vw;
-	flex-direction: row-reverse;
+	width: 100%;
+	/* flex-direction: row-reverse; */
 	justify-content: space-between;
 	top: 1.5rem;
-	right: 2rem;
-	position: relative;
+	left: 0rem;
+	position: absolute;
 	transition: all 0.6s ease;
 }
 
