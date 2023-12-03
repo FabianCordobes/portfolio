@@ -6,7 +6,6 @@ import {
 	FaBriefcase,
 	FaGraduationCap,
 	FaCode,
-	
 } from 'react-icons/fa';
 import { FiFileText, FiUser, FiExternalLink, FiGithub } from 'react-icons/fi';
 
@@ -44,7 +43,7 @@ export const links = [
 
 	{
 		id: 2,
-		name: 'About',
+		name: 'Sobre mi',
 		icon: <FaUser className="nav__icon" />,
 		path: '/about',
 	},
@@ -58,7 +57,7 @@ export const links = [
 
 	{
 		id: 4,
-		name: 'Contact',
+		name: 'Contacto',
 		icon: <FaEnvelopeOpen className="nav__icon" />,
 		path: '/contact',
 	},
@@ -67,32 +66,32 @@ export const links = [
 export const personalInfo = [
 	{
 		id: 1,
-		title: 'First Name : ',
+		title: 'Nombre : ',
 		description: 'Fabian',
 	},
 
 	{
 		id: 2,
-		title: 'Last Name : ',
+		title: 'Apellido : ',
 		description: 'Cordobes',
 	},
 
 	{
 		id: 3,
-		title: 'Age : ',
-		description: '19 Years',
+		title: 'Edad : ',
+		description: '19 años',
 	},
 
 	{
 		id: 4,
-		title: 'Nationality : ',
+		title: 'Nationalidad : ',
 		description: 'Argentina',
 	},
 
 	{
 		id: 5,
 		title: 'Freelance : ',
-		description: 'Available',
+		description: 'Disponible',
 	},
 
 	{
@@ -103,8 +102,8 @@ export const personalInfo = [
 
 	{
 		id: 7,
-		title: 'Phone : ',
-		description: '+54 9 11 3673-7281',
+		title: 'Telefono movil : ',
+		description: '+54 9 11 7637-1182',
 	},
 
 	{
@@ -115,14 +114,19 @@ export const personalInfo = [
 
 	{
 		id: 9,
-		title: 'Skype : ',
+		title: 'Linkedin : ',
+		description: '-',
+	},
+	{
+		id: 10,
+		title: 'Linkedin : ',
 		description: '-',
 	},
 
 	{
-		id: 10,
-		title: 'Langages : ',
-		description: 'Spanish, English',
+		id: 11,
+		title: 'Idiomas : ',
+		description: 'Español: nativo, Inglés: intermedio',
 	},
 ];
 
@@ -130,25 +134,19 @@ export const stats = [
 	{
 		id: 1,
 		no: '2+',
-		title: 'Years of <br /> Experience',
+		title: 'Años de <br /> Experiencia',
 	},
 
 	{
 		id: 2,
 		no: '20+',
-		title: 'Completed <br /> Projects',
+		title: 'Proyectos <br /> realizados',
 	},
 
 	{
 		id: 3,
 		no: '15+',
-		title: 'Happy <br /> Customers',
-	},
-
-	{
-		id: 4,
-		no: '53+',
-		title: ' Awards <br /> Won',
+		title: 'Clientes <br /> felices',
 	},
 ];
 
@@ -157,19 +155,19 @@ export const resume = [
 		id: 1,
 		category: 'experience',
 		icon: <FaBriefcase />,
-		year: 'PRESENT',
-		title: 'Web Developer <span> Freelance </span>',
-		desc: 'I am in charge of developing apps for clients who request my services through social networks.',
+		year: 'Presente',
+		title: 'Desarrollador web <span> Freelance </span>',
+		desc: 'Me encargo de desarrollar apps para los clientes que solicitan mis servicios a través de las redes sociales.',
 	},
 
-	// {
-	//   id: 2,
-	//   category: 'experience',
-	//   icon: <FaBriefcase />,
-	//   year: '2013 - 2018',
-	//   title: 'UI/UX Designer <span> Themeforest </span>',
-	//   desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
-	// },
+	{
+		id: 2,
+		category: 'experience',
+		icon: <FaBriefcase />,
+		year: '2023 - 2023',
+		title: 'Desarrollador web <span> front-end </span>',
+		desc: 'En mi rol desarrollé aplicaciones web personalizadas para nuestros clientes, garantizando que sus necesidades se traduzcan en soluciones efectivas y visualmente atractivas.',
+	},
 
 	// {
 	//   id: 3,
@@ -186,7 +184,7 @@ export const resume = [
 		icon: <FaGraduationCap />,
 		year: '2023',
 		title: 'Full-Stack Developer <span> SoyHenry Bootcamp </span>',
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore',
+		desc: 'Soy Henry me permitió adentrarme de lleno en el mundo Tech a través de su modalidad de enseñanza que abarcó la creación de proyectos reales y el trabajo colaborativo en equipo.',
 	},
 
 	{
@@ -196,7 +194,7 @@ export const resume = [
 		year: '2022',
 		title:
 			'JavaSript Algorithms and Data Structures Certification <span> FreeCodeCamp </span>',
-		desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
+		// desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
 	},
 
 	{
@@ -205,7 +203,7 @@ export const resume = [
 		icon: <FaGraduationCap />,
 		year: '2022',
 		title: 'Responsive Web Certifiation <span> FreeCodeCamp </span>',
-		desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore',
+		// desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore',
 	},
 ];
 

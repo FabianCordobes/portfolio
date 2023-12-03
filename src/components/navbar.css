@@ -8,7 +8,6 @@
 	padding: 60px 30px;
 	transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 	z-index: 100;
-
 }
 
 .show-menu {
@@ -52,7 +51,6 @@
 	background-color: var(--container-color);
 	padding: 12px 10px;
 	z-index: 100;
-
 }
 
 .nav__toggle span {
@@ -123,17 +121,17 @@
 		border-radius: 30px;
 		font-size: var(--small-font-size);
 		color: var(--text-white);
+		width: 130px;
 
 		opacity: 0;
 		visibility: hidden;
 		z-index: -1;
-		transition: all 0.3s ease; 
-		 
+		transition: all 0.3s ease;
 	}
-	
-	.nav__link:hover
-	.nav__name {
+
+	.nav__link:hover .nav__name {
 		right: 27px;
+		width: 130px;
 		color: var(--text-white);
 		opacity: 1;
 		visibility: visible;
@@ -144,8 +142,6 @@
 	.active-nav {
 		background-color: var(--first-color);
 	}
-
-	
 
 	.nav__link:hover .nav__icon,
 	.active-nav .nav__icon {

@@ -15,20 +15,20 @@ const Home = () => {
 			<div className="home__content">
 				<div className="home__data">
 					<h1 className="home__title">
-						<span>I&apos;m Fabian Cordobes.</span>
+						<span>Soy Fabian Cordobes.</span>
 					</h1>
 					<h1 className="home__title">Full Stack Developer</h1>
 
 					<p className="home__description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore odit
-						distinctio doloribus a! Ut corrupti iure magni amet, quos quasi aliquam
-						recusandae praesentium blanditiis consectetur ad omnis minima ullam? Est?
+						Soy una persona apasionada por el mundo digital con habilidades
+						destacadas en diversos lenguajes de programación y. Cuento con 2 años de experiencia en
+						desarrollo web.
 					</p>
 
 					<Link
 						to="/about"
 						className="button">
-						More About Me{' '}
+						Mas sobre mi{' '}
 						<span className="button__icon">
 							<FaArrowRight />
 						</span>
@@ -36,7 +36,7 @@ const Home = () => {
 				</div>
 			</div>
 
-      <div className="color__block"></div>
+			<div className="color__block"></div>
 		</section>
 	);
 };

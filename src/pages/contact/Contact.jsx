@@ -7,46 +7,78 @@ import {
 	FaGithub,
 	FaInstagram,
 } from 'react-icons/fa';
-
 import { FiSend } from 'react-icons/fi';
-
+import { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
 import './contact.css';
 
 const Contact = () => {
-	const correoElectronico = 'fabianarielcordobes@gmail.com'; // Reemplaza con tu dirección de correo electrónico.
+	const form = useRef();
+	const [userData, setUserData] = useState({
+		user_name: '',
+		user_email: '',
+		subject: '',
+		message: '',
+	});
+	const correoElectronico = 'fabianarielcordobes@gmail.com';
 
 	const abrirCorreoElectronico = () => {
 		window.location.href = `mailto:${correoElectronico}`;
 	};
 
-	const numeroTelefono = '5491136737281'; // Reemplaza con el número de teléfono al que deseas enviar un mensaje.
+	const handleChange = (event) => {
+		setUserData({
+			...userData,
+			[event.target.name]: event.target.value,
+		});
+	};
 
-	const abrirWhatsApp = () => {
-		window.open(`whatsapp://send?phone=${numeroTelefono}`);
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		// Use your EmailJS template ID, user ID, and access token
+
+		emailjs
+			.sendForm('service_esteb9h', 'template_wi8riyg', form.current, 'btdakFXCbv_wuqY7F')
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+
+		// Clear the form after submission
+		setUserData({
+			user_name: '',
+			user_email: '',
+			subject: '',
+			message: '',
+		});
 	};
 
 	return (
 		<section className="contact section">
 			<h2 className="section__title">
-				Get in <span>Touch</span>
+				<span>Contáctame!</span>
 			</h2>
 
 			<div className="contact__container container grid gap">
 				<div className="contact__data">
-					<h3 className="contact__title">Don't be Shy</h3>
+					<h3 className="contact__title">Te responderé de inmediato</h3>
 
 					<p className="contact__description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas pariatur
-						dolore modi, exercitationem ipsum in numquam. Quo, voluptas laboriosam. Culpa
-						sapiente ssosa
+						Puedes contactarme a través de mis redes sociales, email, llamada telefónica o
+						completando el formulario a continuación.
 					</p>
 
 					<div className="contact__info">
 						<div className="info__item">
 							<FaEnvelopeOpen className="info__icon" />
 
-							<div className='info__cont'>
-								<span className="info__title">Mail me</span>
+							<div className="info__cont">
+								<span className="info__title">Email</span>
 								<h4
 									className="info__desc"
 									onClick={abrirCorreoElectronico}>
@@ -59,12 +91,10 @@ const Contact = () => {
 							<FaPhoneSquareAlt className="info__icon" />
 
 							<div>
-								<span className="info__title">Call me</span>
-								<h4
-									className="info__desc"
-									onClick={abrirWhatsApp}>
-									+54 9 11 3673-7281
-								</h4>
+								<span className="info__title">Telefono movil</span>
+								<a href="tel:1176371182">
+									<h4 className="info__desc">+54 9 11 7637 1182</h4>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -96,41 +126,63 @@ const Contact = () => {
 					</div>
 				</div>
 
-				<form className="contact__form">
+				<form
+					className="contact__form"
+					onSubmit={sendEmail}
+					ref={form}>
 					<div className="form__input-group">
 						<div className="form__input-div">
 							<input
 								type="text"
-								placeholder="Your Name"
+								placeholder="Tu Nombre"
 								className="form__control"
+								value={userData.user_name}
+								onChange={handleChange}
+								name="user_name"
+								id="user_name"
 							/>
 						</div>
 
 						<div className="form__input-div">
 							<input
 								type="email"
-								placeholder="Your Email"
+								placeholder="Tu Email"
 								className="form__control"
+								value={userData.user_email}
+								onChange={handleChange}
+								name="user_email"
+								id="user_email"
 							/>
 						</div>
 
 						<div className="form__input-div">
 							<input
 								type="text"
-								placeholder="Your Subject"
+								placeholder="Tu Asunto"
 								className="form__control"
+								value={userData.subject}
+								onChange={handleChange}
+								name="subject"
+								id="subject"
 							/>
 						</div>
 					</div>
 
 					<div className="form__input-div">
 						<textarea
-							placeholder="Your Message"
-							className="form__control textarea"></textarea>
+							placeholder="Tu Mensaje"
+							className="form__control textarea"
+							value={userData.message}
+							onChange={handleChange}
+							name="message"
+							id="message"
+						/>
 					</div>
 
-					<button className="button">
-						Send Message
+					<button
+						className="button"
+						type="submit">
+						Enviar Mensaje
 						<span className="button__icon contact__button-icon">
 							<FiSend />
 						</span>
