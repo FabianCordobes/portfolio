@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { links } from '../data';
 import './navbar.css';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+	const { t } = useTranslation();
 	const [showMenu, setShowMenu] = useState(false);
 
 	return (
@@ -22,7 +24,7 @@ const Navbar = () => {
 									}
 									onClick={() => setShowMenu(!showMenu)}>
 									{icon}
-									<h3 className="nav__name">{name}</h3>
+									<h3 className="nav__name">{t(name)}</h3>
 								</NavLink>
 							</li>
 						);

@@ -36,14 +36,14 @@ import nextJsIcon from './assets/nextjs.svg';
 export const links = [
 	{
 		id: 1,
-		name: 'Home',
+		name: 'home',
 		icon: <FaHome className="nav__icon" />,
 		path: '/',
 	},
 
 	{
 		id: 2,
-		name: 'Sobre mi',
+		name: 'aboutMe',
 		icon: <FaUser className="nav__icon" />,
 		path: '/about',
 	},
@@ -57,7 +57,7 @@ export const links = [
 
 	{
 		id: 4,
-		name: 'Contacto',
+		name: 'contact',
 		icon: <FaEnvelopeOpen className="nav__icon" />,
 		path: '/contact',
 	},
@@ -66,66 +66,61 @@ export const links = [
 export const personalInfo = [
 	{
 		id: 1,
-		title: 'Nombre : ',
+		title: 'name',
 		description: 'Fabian',
 	},
 
 	{
 		id: 2,
-		title: 'Apellido : ',
+		title: 'lastName',
 		description: 'Cordobes',
 	},
 
 	{
 		id: 3,
-		title: 'Edad : ',
+		title: 'age',
 		description: '19 años',
 	},
 
 	{
 		id: 4,
-		title: 'Nationalidad : ',
+		title: 'nationality',
 		description: 'Argentina',
 	},
 
 	{
 		id: 5,
-		title: 'Freelance : ',
+		title: 'Freelance',
 		description: 'Disponible',
 	},
 
 	{
 		id: 6,
-		title: 'Address : ',
-		description: 'Tunis',
+		title: 'address',
+		description: 'Pilar, Buenos Aires.',
 	},
 
 	{
 		id: 7,
-		title: 'Telefono movil : ',
+		title: 'phone',
 		description: '+54 9 11 7637-1182',
 	},
 
 	{
 		id: 8,
-		title: 'Email : ',
+		title: 'Email',
 		description: 'fabianarielcordobes@gmail.com',
 	},
 
 	{
-		id: 9,
-		title: 'Linkedin : ',
-		description: '-',
-	},
-	{
 		id: 10,
-		title: 'Linkedin : ',
+		title: 'Linkedin',
 		description: '-',
 	},
 
 	{
 		id: 11,
-		title: 'Idiomas : ',
+		title: 'languages',
 		description: 'Español: nativo, Inglés: intermedio',
 	},
 ];

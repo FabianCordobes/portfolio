@@ -1,0 +1,32 @@
+{
+	"contactMe": "¡Contáctame!",
+	"emailSentSuccess": "¡Correo enviado con éxito! Recibirás una respuesta pronto.",
+	"emailSentError": "Error al enviar el correo. Por favor, inténtalo de nuevo.",
+	"contactTitle": "Te responderé inmediatamente",
+	"contactDescription": "Puedes contactarme a través de mis redes sociales, email, llamada telefónica o completando el formulario a continuación.",
+	"telTitle": "Teléfono movil",
+	"namePlace": "Tu Nombre",
+	"emailPlace": "Tu Email",
+	"subjectPlace": "Tu Asunto",
+	"messagePlace": "Tu Mensaje",
+	"submitButton": "Enviar Mensaje",
+	"my": "Mi",
+	"about": "Sobre",
+	"me": "Mi",
+	"personalInfo": "Información Personal",
+	"name": "Nombre",
+	"age": "Edad",
+	"movil": "Teléfono movil",
+	"address": "Dirección",
+	"languages": "Idiomas",
+	"lastName": "Apellido",
+	"nationality": "Nacionalidad",
+	"more": "Más sobre mi",
+	"homeTitle": "Soy Fabián Cordobés",
+	"homeDesc": "Soy una persona apasionada por el mundo digital con habilidades destacadas en diversos lenguajes de programación. Cuento con 2 años de experiencia en desarrollo web.",
+   "aboutMe": "Sobre Mi",
+   "home": "Inicio",
+   "contact": "Contacto"
+
+
+}

@@ -5,6 +5,11 @@ import { BsSun, BsMoon } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import './themes.css';
 
+import { useTranslation } from 'react-i18next';
+import { changeLanguage } from '../i18n';
+import esp from '../assets/esp.png';
+import eng from '../assets/eng.png';
+
 const getStorageColor = () => {
 	let color = 'hsl(252, 35%, 51%)';
 	if (localStorage.getItem('color')) {
@@ -24,6 +29,11 @@ const getStorageTheme = () => {
 };
 
 const Themes = () => {
+
+	const handleLanguageChange = (language) => {
+		changeLanguage(language);
+	};
+
 	const [showSwitcher, setShowSwitcher] = useState(false);
 	const [color, setColor] = useState(getStorageColor());
 	const [theme, setTheme] = useState(getStorageTheme());
@@ -48,7 +58,6 @@ const Themes = () => {
 	useEffect(() => {
 		document.documentElement.className = theme;
 		localStorage.setItem('theme', theme);
-
 	}, [theme]);
 
 	return (
@@ -60,7 +69,9 @@ const Themes = () => {
 					<FaCog />
 				</div>
 
-				<div className="theme__toggler" onClick={toggleTheme}>
+				<div
+					className="theme__toggler"
+					onClick={toggleTheme}>
 					{theme === 'light-theme' ? <BsMoon /> : <BsSun />}
 				</div>
 
@@ -75,6 +86,24 @@ const Themes = () => {
 							/>
 						);
 					})}
+				</div>
+
+				<div className="lang__toggler esp-lang">
+					<button onClick={() => handleLanguageChange('es')}>
+						<img
+							src={esp}
+							alt="Español"
+						/>
+					</button>
+				</div>
+
+				<div className="lang__toggler eng-lang">
+					<button onClick={() => handleLanguageChange('en')}>
+						<img
+							src={eng}
+							alt="English"
+						/>
+					</button>
 				</div>
 
 				<div

@@ -7,18 +7,21 @@ import { resume, skillsFront, skillsBack, skillsTools } from '../../data';
 
 import './about.css';
 import ResumeItem from '../../components/ResumeItem';
+import { useTranslation } from 'react-i18next';
+
 
 const About = () => {
+	const {t} = useTranslation();
 	return (
 		<main className="section container">
 			<section className="about">
 				<h2 className="section__title">
-					Sobre <span>Mi</span>
+					{t("about")} <span>{t('me')}</span>
 				</h2>
 
 				<div className="about__container grid">
 					<div className="about__info">
-						<h3 className="section__subtitle">Información Personal</h3>
+						<h3 className="section__subtitle">{t('personalInfo')}</h3>
 
 						<ul className="info__list grid">
 							<Info />

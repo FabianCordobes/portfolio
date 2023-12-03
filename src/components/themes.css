@@ -49,7 +49,8 @@
 }
 
 .style__switcher-toggler,
-.theme__toggler {
+.theme__toggler,
+.lang__toggler {
    position: absolute;
    left: 100%;
    background-color: var(--text-white);
@@ -75,6 +76,16 @@
 .theme__toggler {
    bottom: 10%;
 }
+
+.esp-lang {
+   top: 10.5rem;
+}
+
+.eng-lang {
+   top: 14rem
+}
+
+.
 
 .style__switcher-close {
    cursor: pointer;
