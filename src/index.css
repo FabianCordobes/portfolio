@@ -3,8 +3,6 @@
 :root {
   --background: #070707;
   --foreground: #f6f6f3;
-  --muted: #9d9d99;
-  --line: rgba(255, 255, 255, 0.1);
   --accent: #c8ff62;
 }
 
