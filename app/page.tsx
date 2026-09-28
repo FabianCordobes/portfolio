@@ -1,3 +1,17 @@
+import { heroImagePart1 } from "./_hero-image/part1";
+import { heroImagePart2 } from "./_hero-image/part2";
+import { heroImagePart3 } from "./_hero-image/part3";
+import { heroImagePart4 } from "./_hero-image/part4";
+import { heroImagePart5 } from "./_hero-image/part5";
+
+const HERO_IMAGE =
+  "data:image/webp;base64," +
+  heroImagePart1 +
+  heroImagePart2 +
+  heroImagePart3 +
+  heroImagePart4 +
+  heroImagePart5;
+
 const CONTACT = {
   whatsapp: "https://wa.me/1127813814",
   linkedin: "https://www.linkedin.com/in/fabian-cordobes/",
@@ -124,17 +138,28 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="home" className="relative min-h-screen border-b border-white/10 pt-20">
-        <div className="grid-bg absolute inset-0" />
-        <div className="hero-glow absolute -right-32 top-24 h-[620px] w-[620px] rounded-full blur-3xl" />
+      <section id="home" className="relative min-h-screen overflow-hidden border-b border-white/10 pt-20">
+        <div className="grid-bg absolute inset-0 z-0" />
+        <div className="hero-glow absolute -right-32 top-24 z-0 h-[620px] w-[620px] rounded-full blur-3xl" />
 
-        <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col justify-center px-5 py-20 sm:px-8 lg:py-28">
+        <div className="hero-portrait absolute inset-y-0 right-0 z-[1] w-[96%] sm:w-[78%] lg:w-[61%] xl:w-[56%]" aria-hidden="true">
+          <img
+            src={HERO_IMAGE}
+            alt=""
+            className="h-full w-full object-cover object-[54%_34%]"
+          />
+          <div className="hero-portrait-overlay absolute inset-0" />
+        </div>
+
+        <div className="hero-portrait-accent pointer-events-none absolute right-[4%] top-[18%] z-[2] h-[48%] w-[34%] rounded-full bg-[#c8ff62]/10 blur-[110px]" />
+
+        <div className="relative z-[3] mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col justify-center px-5 py-20 sm:px-8 lg:py-28">
           <div className="mb-8 flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/45 sm:text-sm">
             <span className="h-2 w-2 rounded-full bg-[#c8ff62] shadow-[0_0_22px_#c8ff62]" />
             Disponible para nuevos proyectos
           </div>
 
-          <h1 className="text-balance max-w-6xl text-[clamp(3.2rem,9vw,8.5rem)] font-semibold leading-[0.93] tracking-[-0.065em]">
+          <h1 className="hero-title text-balance max-w-6xl text-[clamp(3.2rem,9vw,8.5rem)] font-semibold leading-[0.93] tracking-[-0.065em]">
             Desarrollo productos digitales que
             <span className="block text-white/35">mueven negocios.</span>
           </h1>
