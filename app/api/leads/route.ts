@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 const TRELLO_NEW_LEADS_LIST_ID = "6abab828d0452e1269349622";
 
 const SERVICE_CODES: Record<string, string> = {
+  "IA / agentes / automatización inteligente": "AI",
   "Crear un producto / MVP": "MVP",
   "Evolucionar una experiencia digital": "PRODUCT",
   "Aplicación / sistema": "APP",
@@ -191,7 +192,7 @@ function calculateScore(lead: LeadInput, serviceCode: string) {
   }
 
   const intentSignals =
-    /\b(crear|evolucionar|automatizar|integrar|acelerar|mvp|sistema|aplicaci[oó]n|e-?commerce|experiencia|producto)\b/i.test(
+    /\b(ia|agente|llm|crear|evolucionar|automatizar|integrar|acelerar|mvp|sistema|aplicaci[oó]n|e-?commerce|experiencia|producto|websocket|microservicio|mongo|nosql)\b/i.test(
       lead.message,
     );
 
