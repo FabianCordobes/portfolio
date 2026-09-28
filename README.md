@@ -1,28 +1,39 @@
-# Fabián Dev Landing
+# Fabian Dev Landing
 
-Landing comercial para servicios de desarrollo web y aplicaciones.
+Landing de servicios y portfolio profesional construida con Next.js, TypeScript y Tailwind CSS.
 
-## Ejecutar
+## Desarrollo local
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abrir http://localhost:3000
+## Captación de leads → Trello CRM
 
-## Personalizar
+El formulario de contacto envía cada consulta a `POST /api/leads`.
 
-En `app/page.tsx`:
-- Reemplazar los links del objeto `CONTACT`.
-- Editar los proyectos en `projects`.
-- Ajustar servicios y textos si cambia la oferta.
+El backend:
 
-En `app/layout.tsx`:
-- Cambiar `https://example.com` por el dominio final.
-- Ajustar metadata y Open Graph.
+- valida y normaliza los datos;
+- clasifica el servicio según la opción elegida;
+- detecta funcionalidades básicas mencionadas;
+- calcula un Lead Score inicial;
+- crea una tarjeta en **Nuevos leads** del tablero **NEW EVOLUTION — Marketing & CRM**.
 
-## Stack
-- Next.js App Router
-- TypeScript
-- Tailwind CSS v4
+### Variables de entorno
+
+Configurar en Vercel:
+
+```bash
+TRELLO_API_KEY=...
+TRELLO_TOKEN=...
+```
+
+Opcionalmente puede sobrescribirse la lista destino:
+
+```bash
+TRELLO_LIST_ID=6abab828d0452e1269349622
+```
+
+Las credenciales se utilizan sólo en el backend. No deben usar el prefijo `NEXT_PUBLIC_`.
