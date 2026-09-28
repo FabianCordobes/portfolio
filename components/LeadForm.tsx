@@ -7,26 +7,9 @@ const SERVICES = [
   "Mejorar una experiencia digital",
   "Aplicación / sistema interno",
   "Automatización / integración",
-  "E-commerce",
   "Sumar capacidad técnica al equipo",
+  "E-commerce",
   "No estoy seguro todavía",
-];
-
-const BUDGETS = [
-  "Hasta USD 2.500",
-  "USD 2.500–5.000",
-  "USD 5.000–10.000",
-  "Más de USD 10.000",
-  "Todavía no está definido",
-  "Prefiero conversarlo",
-];
-
-const DEADLINES = [
-  "Lo antes posible",
-  "2–4 semanas",
-  "1–2 meses",
-  "3+ meses",
-  "Sin fecha definida",
 ];
 
 type Attribution = {
@@ -85,6 +68,8 @@ export default function LeadForm() {
     const form = event.currentTarget;
     const payload = {
       ...Object.fromEntries(new FormData(form).entries()),
+      budgetRange: "",
+      deadline: "",
       ...attribution,
     };
 
@@ -110,11 +95,19 @@ export default function LeadForm() {
   }
 
   const field =
-    "mt-2 w-full rounded-2xl border border-black/15 bg-white/60 px-4 py-3.5 text-sm text-black outline-none transition placeholder:text-black/35 focus:border-black/45 focus:bg-white/85";
+    "mt-2 w-full rounded-2xl border border-black/15 bg-white/60 px-4 py-3.5 text-sm text-black outline-none transition placeholder:text-black/35 focus:border-black/45 focus:bg-white/90";
 
   return (
     <form onSubmit={onSubmit} className="rounded-[1.75rem] border border-black/10 bg-black/[0.055] p-5 sm:p-7">
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="flex items-center justify-between gap-4">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-black/40">Brief rápido</p>
+          <p className="mt-1 text-sm font-medium text-black/70">Lo esencial para entender si hay encaje.</p>
+        </div>
+        <span className="rounded-full border border-black/10 px-3 py-1.5 text-xs font-medium text-black/45">~2 min</span>
+      </div>
+
+      <div className="mt-6 grid gap-4 sm:grid-cols-2">
         <label className="text-sm font-medium text-black/70">
           Nombre *
           <input className={field} name="name" type="text" autoComplete="name" maxLength={120} required placeholder="Tu nombre" />
@@ -122,7 +115,12 @@ export default function LeadForm() {
 
         <label className="text-sm font-medium text-black/70">
           Email *
-          <input className={field} name="email" type="email" autoComplete="email" maxLength={180} required placeholder="nombre@email.com" />
+          <input className={field} name="email" type="email" autoComplete="email" maxLength={180} required placeholder="nombre@empresa.com" />
+        </label>
+
+        <label className="text-sm font-medium text-black/70">
+          Empresa / proyecto
+          <input className={field} name="companyOrProject" type="text" maxLength={160} placeholder="Nombre" />
         </label>
 
         <label className="text-sm font-medium text-black/70">
@@ -130,44 +128,23 @@ export default function LeadForm() {
           <input className={field} name="phone" type="tel" autoComplete="tel" maxLength={80} placeholder="+54 ..." />
         </label>
 
-        <label className="text-sm font-medium text-black/70">
-          Empresa / proyecto
-          <input className={field} name="companyOrProject" type="text" maxLength={160} placeholder="Nombre del proyecto" />
-        </label>
-
-        <label className="text-sm font-medium text-black/70">
-          ¿Qué necesitás resolver? *
+        <label className="text-sm font-medium text-black/70 sm:col-span-2">
+          ¿Qué necesitás destrabar? *
           <select className={field} name="requestedService" defaultValue="" required>
-            <option value="" disabled>Seleccioná una opción</option>
+            <option value="" disabled>Elegí la más cercana</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
           </select>
         </label>
 
-        <label className="text-sm font-medium text-black/70">
-          Inversión estimada
-          <select className={field} name="budgetRange" defaultValue="">
-            <option value="">No especificado</option>
-            {BUDGETS.map((budget) => <option key={budget} value={budget}>{budget}</option>)}
-          </select>
-        </label>
-
         <label className="text-sm font-medium text-black/70 sm:col-span-2">
-          ¿Para cuándo lo necesitás?
-          <select className={field} name="deadline" defaultValue="">
-            <option value="">No especificado</option>
-            {DEADLINES.map((deadline) => <option key={deadline} value={deadline}>{deadline}</option>)}
-          </select>
-        </label>
-
-        <label className="text-sm font-medium text-black/70 sm:col-span-2">
-          Contame sobre tu proyecto *
+          Contexto *
           <textarea
-            className={`${field} min-h-36 resize-y`}
+            className={`${field} min-h-28 resize-y`}
             name="message"
             minLength={20}
-            maxLength={2500}
+            maxLength={1800}
             required
-            placeholder="¿Qué está pasando hoy, qué debería cambiar y por qué es importante resolverlo?"
+            placeholder="¿Qué está pasando hoy y qué debería cambiar?"
           />
         </label>
 
@@ -177,28 +154,22 @@ export default function LeadForm() {
         </label>
       </div>
 
-      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <p className="max-w-md text-xs leading-5 text-black/45">
-          Usamos estos datos únicamente para evaluar tu proyecto y contactarte.
-        </p>
-
-        <button
-          type="submit"
-          disabled={status === "sending"}
-          className="inline-flex min-w-48 items-center justify-center rounded-full bg-black px-7 py-4 font-semibold text-white transition hover:scale-[1.02] disabled:cursor-wait disabled:opacity-60"
-        >
-          {status === "sending" ? "Enviando..." : "Quiero evaluar esta necesidad ↗"}
-        </button>
-      </div>
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-black px-7 py-4 font-semibold text-white transition hover:scale-[1.01] disabled:cursor-wait disabled:opacity-60"
+      >
+        {status === "sending" ? "Enviando..." : "Enviar contexto ↗"}
+      </button>
 
       {status === "success" && (
-        <p className="mt-5 rounded-2xl border border-black/10 bg-white/55 px-4 py-3 text-sm font-medium text-black/75" role="status">
-          ¡Listo! Recibí el contexto. Lo voy a revisar y te contacto para definir si hay encaje y cuál sería el próximo paso más útil.
+        <p className="mt-4 rounded-2xl border border-black/10 bg-white/55 px-4 py-3 text-sm font-medium text-black/75" role="status">
+          Listo. Recibí el contexto y te contacto con un próximo paso concreto.
         </p>
       )}
 
       {status === "error" && (
-        <p className="mt-5 rounded-2xl border border-black/15 bg-white/55 px-4 py-3 text-sm font-medium text-black/75" role="alert">
+        <p className="mt-4 rounded-2xl border border-black/15 bg-white/55 px-4 py-3 text-sm font-medium text-black/75" role="alert">
           {error}
         </p>
       )}
