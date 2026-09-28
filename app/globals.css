@@ -1825,3 +1825,91 @@ a {
     opacity: 0.42;
   }
 }
+
+
+.signal-options-vertical {
+  display: block;
+  border-top: 1px solid rgba(255,255,255,0.11);
+  border-bottom: 0;
+}
+
+.signal-options-vertical button {
+  width: 100%;
+  min-height: 118px;
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.11);
+  background: transparent;
+  text-align: left;
+}
+
+.signal-options-vertical button:hover,
+.signal-options-vertical button.is-active {
+  background: transparent;
+}
+
+.signal-index {
+  color: rgba(255,255,255,0.22);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+}
+
+.signal-option-label {
+  color: rgba(255,255,255,0.46);
+  font-size: clamp(2.1rem, 5vw, 5.8rem);
+  font-weight: 760;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+  transition:
+    transform 320ms cubic-bezier(.2,.8,.2,1),
+    color 220ms ease;
+}
+
+.signal-option-arrow {
+  color: rgba(255,255,255,0.18);
+  font-size: 1.3rem;
+  transition:
+    transform 320ms cubic-bezier(.2,.8,.2,1),
+    color 220ms ease;
+}
+
+.signal-options-vertical button:hover .signal-option-label,
+.signal-options-vertical button.is-active .signal-option-label {
+  color: #fff;
+  transform: translateX(14px);
+}
+
+.signal-options-vertical button:hover .signal-option-arrow,
+.signal-options-vertical button.is-active .signal-option-arrow {
+  color: var(--accent);
+  transform: rotate(45deg);
+}
+
+.signal-result-open {
+  grid-template-columns: 1fr auto;
+  padding-top: 42px;
+}
+
+@media (max-width: 720px) {
+  .signal-options-vertical {
+    grid-template-columns: none;
+  }
+
+  .signal-options-vertical button {
+    min-height: 92px;
+    grid-template-columns: 36px 1fr auto;
+    gap: 12px;
+  }
+
+  .signal-option-label {
+    font-size: clamp(2rem, 11vw, 3.8rem);
+  }
+
+  .signal-result-open {
+    grid-template-columns: 1fr;
+  }
+}
