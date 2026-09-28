@@ -121,6 +121,35 @@ const reasons = [
   },
 ];
 
+const engagementModels = [
+  {
+    number: "01",
+    title: "Discovery + desarrollo",
+    text: "Para una necesidad que todavía necesita bajar a alcance. Primero ordenamos problema, usuarios, restricciones y prioridades; después construimos.",
+    fit: "Ideal para iniciativas nuevas, MVPs y procesos que todavía no tienen solución definida.",
+  },
+  {
+    number: "02",
+    title: "Proyecto definido",
+    text: "Para una iniciativa con objetivo y alcance suficientemente claros que necesita ejecución técnica, seguimiento y entrega.",
+    fit: "Ideal para webs, aplicaciones, integraciones y funcionalidades concretas.",
+  },
+  {
+    number: "03",
+    title: "Extensión de equipo",
+    text: "Para sumar capacidad temporal sobre un producto existente sin incorporar estructura permanente ni cambiar todo el proceso actual.",
+    fit: "Ideal para equipos con backlog, deadlines o una necesidad técnica específica.",
+  },
+];
+
+const decisionQuestions = [
+  "¿Qué problema de negocio estamos resolviendo realmente?",
+  "¿Qué tiene que cambiar para usuarios, clientes o equipo interno?",
+  "¿Qué es imprescindible en una primera versión y qué puede esperar?",
+  "¿Qué sistemas, datos o procesos existentes hay que respetar?",
+  "¿Cómo dejamos la solución preparada para que pueda continuar?",
+];
+
 export default function Home() {
   return (
     <main className="overflow-hidden bg-[#070707] text-[#f6f6f3]">
@@ -327,6 +356,57 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Antes del código</p>
+              <h2 className="mt-6 text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
+                La primera decisión no es qué tecnología usar. Es qué vale la pena construir.
+              </h2>
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/50">
+                Una conversación útil debería reducir incertidumbre. Antes de estimar desarrollo, busco que podamos responder estas preguntas.
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-3xl border border-white/10">
+              {decisionQuestions.map((question, index) => (
+                <div
+                  key={question}
+                  className="grid grid-cols-[auto_1fr] gap-5 border-b border-white/10 bg-white/[0.02] p-6 last:border-b-0 sm:p-7"
+                >
+                  <span className="text-xs text-[#c8ff62]">0{index + 1}</span>
+                  <p className="text-lg font-medium leading-7 text-white/80">{question}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-white/[0.02] py-24 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Cómo podemos trabajar"
+            title="El formato se adapta al estado del problema, no al revés."
+          />
+
+          <div className="mt-14 grid gap-5 lg:grid-cols-3">
+            {engagementModels.map((model) => (
+              <article
+                key={model.number}
+                className="flex min-h-[360px] flex-col rounded-3xl border border-white/10 bg-[#0a0a0a] p-7 sm:p-8"
+              >
+                <span className="text-xs text-[#c8ff62]">{model.number}</span>
+                <h3 className="mt-16 text-2xl font-semibold tracking-tight">{model.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-white/50">{model.text}</p>
+                <p className="mt-auto border-t border-white/10 pt-6 text-xs leading-6 text-white/35">{model.fit}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="process" className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
@@ -353,10 +433,10 @@ export default function Home() {
           <div className="mt-5 grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <div>
               <h2 className="text-balance max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl">
-                Contame qué necesita cambiar. Definimos si la tecnología es la solución y cuál es el alcance correcto.
+                Traé el problema. Salí con claridad sobre el próximo paso.
               </h2>
               <p className="mt-7 max-w-xl leading-7 text-black/60">
-                No hace falta llegar con todo resuelto. Necesito entender el problema, el contexto y el resultado que buscás. A partir de ahí podemos decidir qué vale la pena construir.
+                No hace falta llegar con una especificación cerrada. Entiendo el problema, el contexto y el resultado que buscás para determinar qué conviene construir, qué puede esperar y si soy la persona adecuada para hacerlo.
               </p>
 
               <div className="mt-9 border-t border-black/10 pt-7">
