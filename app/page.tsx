@@ -50,47 +50,6 @@ const services = [
   },
 ];
 
-const projects = [
-  {
-    id: "01",
-    title: "Tamara Atadía",
-    type: "Portfolio artístico",
-    description:
-      "Sitio de marca personal para una artista multidisciplinaria, con contenido administrable y una experiencia visual enfocada en su identidad.",
-    tech: "Next.js · TypeScript · Sanity · Tailwind CSS",
-    github: "https://github.com/FabianCordobes/tamara-atadia-portfolio",
-    live: "https://tamara-atadia-portfolio.vercel.app",
-  },
-  {
-    id: "02",
-    title: "Jamly",
-    type: "Aplicación full-stack",
-    description:
-      "Plataforma para gestionar reservas de salas y estudios, con frontend y backend separados, autenticación y persistencia en base de datos.",
-    tech: "Next.js · NestJS · TypeScript · PostgreSQL · TypeORM",
-    github: "https://github.com/FabianCordobes/jamly",
-  },
-  {
-    id: "03",
-    title: "E-commerce App",
-    type: "Aplicación web",
-    description:
-      "Experiencia de e-commerce desarrollada con React, manejo de estado global y Firebase.",
-    tech: "React · Redux Toolkit · Firebase · Sass",
-    github: "https://github.com/FabianCordobes/eCommerceApp",
-    live: "https://e-commerce-app-eta-two.vercel.app",
-  },
-  {
-    id: "04",
-    title: "Travel App",
-    type: "Single Page Application",
-    description:
-      "Aplicación frontend orientada a viajes construida como SPA con navegación del lado del cliente.",
-    tech: "React · Vite · React Router",
-    github: "https://github.com/FabianCordobes/travelApp",
-  },
-];
-
 const process = [
   {
     number: "01",
@@ -114,33 +73,6 @@ const process = [
   },
 ];
 
-const experience = [
-  {
-    period: "abr. 2023 — mar. 2025",
-    company: "BuildVision",
-    role: "Full Stack Developer",
-    description:
-      "Participé en la planificación y desarrollo de una plataforma orientada a conectar constructoras y organizar cotizaciones, con foco principal en frontend y contribuciones backend.",
-    tech: "Next.js · React Query · NestJS · Node.js · TypeORM · shadcn/ui",
-  },
-  {
-    period: "jul. 2023 — nov. 2023",
-    company: "Social Wave",
-    role: "Front-End Developer",
-    description:
-      "Desarrollé interfaces funcionales y atractivas a partir de requerimientos técnicos, trabajando en comunicación directa con clientes y colaboradores para proponer e implementar mejoras.",
-    tech: "JavaScript · React · Redux · Tailwind CSS · Sass",
-  },
-  {
-    period: "nov. 2022 — ene. 2023",
-    company: "Henry",
-    role: "Teaching Assistant · Full Stack",
-    description:
-      "Coordiné grupos de estudio y acompañé la resolución de ejercicios mediante pair programming, reforzando conceptos de frontend y backend.",
-    tech: "React · Redux · Node.js · Express · Sequelize",
-  },
-];
-
 export default function Home() {
   return (
     <main className="overflow-hidden bg-[#070707] text-[#f6f6f3]">
@@ -152,10 +84,9 @@ export default function Home() {
 
           <nav className="hidden items-center gap-8 text-sm text-white/55 md:flex">
             <a className="transition hover:text-white" href="#services">Servicios</a>
-            <a className="transition hover:text-white" href="#projects">Proyectos</a>
-            <a className="transition hover:text-white" href="#experience">Experiencia</a>
-            <a className="transition hover:text-white" href="#process">Proceso</a>
-            <a className="transition hover:text-white" href="#about">Sobre mí</a>
+            <a className="transition hover:text-white" href="#process">Cómo trabajo</a>
+            <a className="transition hover:text-white" href="/portfolio">Portfolio</a>
+            <a className="transition hover:text-white" href="#contact">Contacto</a>
           </nav>
 
           <a
@@ -206,16 +137,16 @@ export default function Home() {
                 Quiero mejorar mi presencia digital
               </a>
               <a
-                href="#projects"
+                href="/portfolio"
                 className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 font-medium text-white transition hover:bg-white/5"
               >
-                Ver cómo trabajo ↓
+                Ver portfolio técnico ↗
               </a>
             </div>
           </div>
 
           <div className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/10 pt-7 text-sm text-white/35">
-            <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>NestJS</span><span>PostgreSQL</span>
+            <span>Claridad</span><span>Conversión</span><span>Experiencia</span><span>Velocidad</span><span>Escalabilidad</span>
           </div>
         </div>
       </section>
@@ -309,104 +240,30 @@ export default function Home() {
 
       <section className="border-y border-white/10 bg-white/[0.02] py-16">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 md:grid-cols-3">
-          <Stat value="100%" label="Responsive" />
-          <Stat value="SEO" label="Base técnica optimizada" />
-          <Stat value="A medida" label="Sin plantillas genéricas" />
+          <Stat value="A medida" label="Una solución pensada para tu contexto" />
+          <Stat value="Claro" label="Cada sección tiene un objetivo" />
+          <Stat value="Preparado" label="Para crecer cuando el negocio lo necesite" />
         </div>
       </section>
 
-      <section id="projects" className="py-24 sm:py-32">
+      <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Proyectos"
-            title="No necesitás imaginar cómo trabajo. Podés verlo en proyectos reales."
-          />
-
-          <div className="mt-16 space-y-4">
-            {projects.map((project) => (
-              <article
-                key={project.id}
-                className="group grid gap-8 rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20 hover:bg-white/[0.04] md:grid-cols-[80px_1fr_1.15fr_auto] md:items-center md:p-9"
-              >
-                <span className="text-xs text-white/25">{project.id}</span>
-                <div>
-                  <p className="text-sm text-[#c8ff62]">{project.type}</p>
-                  <h3 className="mt-2 text-2xl font-semibold tracking-tight">{project.title}</h3>
-                </div>
-                <div>
-                  <p className="max-w-xl text-sm leading-6 text-white/50">{project.description}</p>
-                  <p className="mt-3 text-xs text-white/25">{project.tech}</p>
-                </div>
-                <div className="flex flex-wrap gap-2 md:justify-end">
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="rounded-full bg-[#c8ff62] px-4 py-2 text-xs font-semibold text-black transition hover:bg-[#d5ff87]"
-                    >
-                      Ver sitio ↗
-                    </a>
-                  )}
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-full border border-white/15 px-4 py-2 text-xs font-medium text-white/65 transition hover:border-white/30 hover:text-white"
-                  >
-                    GitHub ↗
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-10 flex justify-end">
+          <div className="grid gap-10 rounded-[2rem] border border-white/10 bg-white/[0.025] p-7 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Prueba técnica</p>
+              <h2 className="mt-5 max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
+                La landing explica qué puedo resolver. El portfolio muestra cómo lo construyo.
+              </h2>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-white/50">
+                Si querés revisar proyectos, experiencia, tecnologías y repositorios antes de avanzar, dejé toda la parte técnica separada en un portfolio específico.
+              </p>
+            </div>
             <a
-              href={CONTACT.github}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-white/55 transition hover:text-[#c8ff62]"
+              href="/portfolio"
+              className="inline-flex w-fit shrink-0 items-center justify-center rounded-full border border-white/15 px-6 py-3.5 font-semibold text-white transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
             >
-              Ver todos mis repositorios en GitHub ↗
+              Explorar portfolio técnico ↗
             </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" className="border-y border-white/10 bg-white/[0.02] py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Experiencia"
-            title="Experiencia real construyendo producto, interfaces y soluciones full stack."
-          />
-
-          <div className="mt-16 border-t border-white/10">
-            {experience.map((item) => (
-              <article
-                key={item.company}
-                className="grid gap-6 border-b border-white/10 py-9 md:grid-cols-[0.55fr_1.45fr] md:gap-10 md:py-11"
-              >
-                <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-white/30">
-                    {item.period}
-                  </p>
-                  <p className="mt-3 text-sm font-medium text-[#c8ff62]">
-                    {item.company}
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                    {item.role}
-                  </h3>
-                  <p className="mt-4 max-w-3xl leading-7 text-white/50">
-                    {item.description}
-                  </p>
-                  <p className="mt-5 text-xs text-white/30">{item.tech}</p>
-                </div>
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -423,68 +280,6 @@ export default function Home() {
                 <p className="mt-4 text-sm leading-7 text-white/45">{step.text}</p>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="py-24 sm:py-32">
-        <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[0.7fr_1.3fr]">
-          <div>
-            <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Sobre mí</p>
-          </div>
-          <div>
-            <h2 className="text-balance max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
-              Full Stack con mirada de producto, diseño y negocio.
-            </h2>
-
-            <div className="mt-10 grid gap-8 text-base leading-8 text-white/50 md:grid-cols-2">
-              <p>
-                Combino desarrollo frontend y backend con criterio de UI/UX para construir interfaces atractivas, funcionales y productos que puedan crecer con una base técnica sólida.
-              </p>
-              <p>
-                También tengo experiencia trabajando con clientes, relevando necesidades y comunicando soluciones. Mi recorrido comercial fortaleció una forma de trabajo basada en escuchar, entender el problema y convertirlo en una solución concreta.
-              </p>
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-2">
-              {[
-                "JavaScript",
-                "TypeScript",
-                "React",
-                "Next.js",
-                "Node.js",
-                "NestJS",
-                "PostgreSQL",
-                "Git",
-                "Figma",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-white/10 bg-white/[0.025] px-4 py-2 text-xs text-white/45"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-3">
-              <a
-                href={CONTACT.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
-              >
-                Ver LinkedIn ↗
-              </a>
-              <a
-                href={CONTACT.github}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium transition hover:border-white/30 hover:text-white"
-              >
-                Ver GitHub ↗
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -529,8 +324,8 @@ export default function Home() {
       <footer className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-10 text-sm text-white/35 sm:px-8 md:flex-row md:items-center md:justify-between">
         <p>© {new Date().getFullYear()} Fabián — Desarrollo web</p>
         <div className="flex flex-wrap gap-6">
-          <a className="transition hover:text-white" href={CONTACT.linkedin}>LinkedIn</a>
-          <a className="transition hover:text-white" href={CONTACT.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a className="transition hover:text-white" href="/portfolio">Portfolio técnico</a>
+          <a className="transition hover:text-white" href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </footer>
     </main>
