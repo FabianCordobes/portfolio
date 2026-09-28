@@ -1,5 +1,6 @@
 import LeadForm from "../components/LeadForm";
 import ExperienceLayer from "../components/ExperienceLayer";
+import FutureField from "../components/FutureField";
 import SmartProjectBrief from "../components/SmartProjectBrief";
 import { heroImagePart1 } from "./_hero-image/part1";
 import { heroImagePart2 } from "./_hero-image/part2";
@@ -36,561 +37,286 @@ const MEDIA = {
     "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/forgot.png",
 };
 
-const verifiedSignals = [
-  { value: "47", label: "assets multimedia", project: "Tamara Atadía" },
-  { value: "5", label: "rutas reales", project: "Tamara Atadía" },
-  { value: "3", label: "dominios core", project: "Jamly" },
-  { value: "8", label: "flujos/pantallas", project: "E-commerce" },
+const signals = [
+  ["47", "media assets"],
+  ["05", "real routes"],
+  ["03", "core domains"],
+  ["08", "product flows"],
 ];
 
 export default function Home() {
   return (
-    <main className="overflow-hidden bg-[#070707] text-[#f6f6f3]">
+    <main className="future-site">
       <ExperienceLayer />
 
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#070707]/72 backdrop-blur-2xl">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
-          <a href="#home" className="text-lg font-semibold tracking-tight">
-            Fabián<span className="text-[#c8ff62]">.</span>
-          </a>
+      <header className="future-nav">
+        <a href="#home" className="future-brand">
+          FABIÁN<span>.</span>
+        </a>
 
-          <nav className="hidden items-center gap-8 text-sm text-white/50 md:flex">
-            <a className="transition hover:text-white" href="#work">
-              Trabajo real
-            </a>
-            <a className="transition hover:text-white" href="#brief">
-              Diagnóstico
-            </a>
-            <a className="transition hover:text-white" href="/portfolio">
-              Portfolio
-            </a>
-          </nav>
+        <nav>
+          <a href="#work">Work</a>
+          <a href="#signal">Signal</a>
+          <a href="/portfolio">Tech</a>
+        </nav>
 
-          <a
-            href="#contact"
-            className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
-          >
-            Hablemos ↗
-          </a>
-        </div>
+        <a href="#contact" className="future-nav-cta">
+          Start ↗
+        </a>
       </header>
 
-      <section
-        id="home"
-        className="relative min-h-screen overflow-hidden border-b border-white/10 pt-20"
+      <a
+        href={CONTACT.whatsapp}
+        target="_blank"
+        rel="noreferrer"
+        className="whatsapp-float"
+        aria-label="Abrir conversación por WhatsApp"
       >
-        <div className="grid-bg absolute inset-0 z-0" />
-        <div className="hero-glow absolute -right-32 top-10 z-0 h-[720px] w-[720px] rounded-full blur-3xl" />
-        <div className="depth-ring depth-ring-one" aria-hidden="true" />
-        <div className="depth-ring depth-ring-two" aria-hidden="true" />
+        <span className="whatsapp-pulse" />
+        <span className="whatsapp-icon">✦</span>
+        <span className="whatsapp-label">WhatsApp</span>
+      </a>
 
-        <div
-          className="hero-portrait absolute inset-y-0 right-0 z-[1] w-[96%] sm:w-[76%] lg:w-[55%]"
-          aria-hidden="true"
-        >
-          <img
-            src={HERO_IMAGE}
-            alt=""
-            className="h-full w-full object-cover object-[54%_34%]"
-          />
-          <div className="hero-portrait-overlay absolute inset-0" />
+      <section id="home" className="future-hero">
+        <FutureField />
+
+        <div className="future-hero-photo" aria-hidden="true">
+          <img src={HERO_IMAGE} alt="" />
+          <div className="future-hero-photo-mask" />
         </div>
 
-        <div className="relative z-[4] mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.03fr_0.97fr] lg:py-20">
-          <div>
-            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs uppercase tracking-[0.18em] text-white/50 backdrop-blur-xl">
-              <span className="signal-dot" />
-              Producto · automatización · AI-ready
-            </div>
+        <div className="future-hero-orbit future-hero-orbit-a" aria-hidden="true" />
+        <div className="future-hero-orbit future-hero-orbit-b" aria-hidden="true" />
 
-            <h1 className="hero-title max-w-5xl text-balance text-[clamp(3.6rem,7.7vw,7.9rem)] font-semibold leading-[0.89] tracking-[-0.068em]">
-              Menos fricción.
-              <span className="block text-white/35">Más producto.</span>
-            </h1>
+        <div className="future-hero-content">
+          <div className="future-eyebrow">
+            <span className="signal-dot" />
+            DIGITAL PRODUCT · AI · AUTOMATION
+          </div>
 
-            <p className="mt-7 max-w-xl text-base leading-7 text-white/52 sm:text-lg">
-              Construyo soluciones digitales para empresas y equipos que necesitan
-              lanzar, automatizar o destrabar una oportunidad.
-            </p>
+          <h1 className="five-d-title" data-text="BUILD NEXT">
+            <span>BUILD</span>
+            <span>NEXT</span>
+          </h1>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#brief"
-                className="inline-flex items-center justify-center rounded-full bg-[#c8ff62] px-6 py-3.5 font-semibold text-black transition hover:scale-[1.02] hover:bg-[#d5ff87]"
-              >
-                Diagnosticar mi necesidad ↗
+          <div className="future-hero-bottom">
+            <p>Experiencias digitales que se sienten un paso adelante.</p>
+
+            <div className="future-hero-actions">
+              <a href="#work" className="future-cta future-cta-primary">
+                Ver experiencia <span>↓</span>
               </a>
-              <a
-                href="#work"
-                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-black/15 px-6 py-3.5 font-medium text-white backdrop-blur-xl transition hover:border-white/30 hover:bg-white/5"
-              >
-                Ver evidencia
+              <a href="#contact" className="future-cta">
+                Quiero algo así <span>↗</span>
               </a>
             </div>
           </div>
+        </div>
 
-          <div
-            className="relative hidden min-h-[620px] [transform-style:preserve-3d] lg:block"
-            aria-hidden="true"
-          >
-            <div className="floating-ui floating-ui-a">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-[0.2em] text-white/35">
-                  SIGNAL
-                </span>
-                <span className="h-2 w-2 rounded-full bg-[#c8ff62] shadow-[0_0_18px_#c8ff62]" />
-              </div>
-              <p className="mt-5 text-3xl font-semibold">Problem → Product</p>
-              <div className="mt-6 h-1.5 overflow-hidden rounded-full bg-white/8">
-                <div className="signal-bar h-full w-[78%] rounded-full bg-[#c8ff62]" />
-              </div>
-              <p className="mt-3 text-xs text-white/35">Scope · Build · Ship</p>
-            </div>
-
-            <div className="floating-ui floating-ui-b">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">
-                SYSTEM
-              </p>
-              <div className="mt-5 grid grid-cols-3 gap-2">
-                {["UI", "API", "DATA"].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-4 text-center text-xs text-white/60"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 grid grid-cols-[1fr_auto_1fr] items-center gap-2 text-[10px] text-white/25">
-                <span className="h-px bg-white/10" />
-                <span>CONNECTED</span>
-                <span className="h-px bg-white/10" />
-              </div>
-            </div>
-
-            <div className="floating-ui floating-ui-c">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">
-                DELIVERY
-              </p>
-              <div className="mt-4 flex items-end gap-2">
-                {[42, 65, 54, 88, 72, 96].map((height, index) => (
-                  <span
-                    key={height + index}
-                    className="metric-bar block w-6 rounded-t-md bg-white/12"
-                    style={{ height: `${height}px` }}
-                  />
-                ))}
-              </div>
-              <p className="mt-4 text-xs text-[#c8ff62]">Production-ready</p>
-            </div>
-
-            <div className="neural-orbit">
-              <span className="neural-node neural-node-a" />
-              <span className="neural-node neural-node-b" />
-              <span className="neural-node neural-node-c" />
-              <span className="neural-node neural-node-d" />
-            </div>
-          </div>
+        <div className="future-side-label" aria-hidden="true">
+          2027 → 2030
         </div>
       </section>
 
-      <section className="border-b border-white/10 bg-white/[0.018]">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="flex items-center justify-between gap-6 border-b border-white/10 py-4 text-[10px] uppercase tracking-[0.19em] text-white/25">
-            <span>Evidencia verificable</span>
-            <span className="hidden sm:inline">Datos tomados de repositorios públicos</span>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4">
-            {verifiedSignals.map((item) => (
-              <div
-                key={item.label}
-                className="border-white/10 py-8 lg:border-r lg:px-7 lg:first:pl-0 lg:last:border-r-0"
-              >
-                <p className="text-4xl font-semibold tracking-[-0.04em]">{item.value}</p>
-                <p className="mt-1 text-sm text-white/55">{item.label}</p>
-                <p className="mt-1 text-xs text-white/25">{item.project}</p>
-              </div>
-            ))}
-          </div>
+      <section className="signal-strip" aria-label="Métricas verificadas">
+        <div className="signal-strip-track">
+          {signals.map(([value, label]) => (
+            <div key={label} className="signal-stat">
+              <strong>{value}</strong>
+              <span>{label}</span>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section id="work" className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <section id="work" className="future-work">
+        <div className="future-section-intro">
+          <p className="future-kicker">SELECTED WORK</p>
+          <h2 className="five-d-heading" data-text="REAL OUTPUT">
+            REAL OUTPUT
+          </h2>
+        </div>
+
+        <article className="project-chapter project-chapter-image">
+          <div className="project-media project-media-tamara">
+            <img src={MEDIA.tamaraHero} alt="Proyecto Tamara Atadía" />
+            <img className="project-float project-float-a" src={MEDIA.tamaraStage} alt="" />
+            <img className="project-float project-float-b" src={MEDIA.tamaraProduction} alt="" />
+            <div className="project-gradient" />
+          </div>
+
+          <div className="project-overlay">
             <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">
-                Trabajo real
-              </p>
-              <h2 className="mt-5 max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
-                La prueba antes del pitch.
-              </h2>
+              <p className="future-kicker">01 · BRAND EXPERIENCE</p>
+              <h3>TAMARA<br />ATADÍA</h3>
             </div>
 
-            <a
-              href="#contact"
-              className="w-fit rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/65 transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
-            >
-              Tengo un proyecto ↗
-            </a>
+            <div className="project-meta">
+              <Metric value="47" label="media assets" />
+              <Metric value="05" label="routes" />
+              <Metric value="46" label="source files" />
+            </div>
+
+            <div className="project-links">
+              <a href="https://tamara-atadia-portfolio.vercel.app" target="_blank" rel="noreferrer">
+                Live ↗
+              </a>
+              <a href="https://github.com/FabianCordobes/tamara-atadia-portfolio" target="_blank" rel="noreferrer">
+                Code ↗
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article className="project-chapter project-chapter-system">
+          <div className="system-space">
+            <div className="system-orbit system-orbit-a" />
+            <div className="system-orbit system-orbit-b" />
+
+            <div className="system-core">
+              <div className="system-core-head">
+                <span>JAMLY / LIVE SYSTEM</span>
+                <span className="system-live">● ONLINE</span>
+              </div>
+
+              <div className="system-grid">
+                <div className="system-block system-block-large">
+                  <small>BOOKING ENGINE</small>
+                  <strong>20:00</strong>
+                  <span>Studio session</span>
+                </div>
+
+                <div className="system-block">
+                  <small>ACCESS</small>
+                  <strong>JWT</strong>
+                  <span>1h</span>
+                </div>
+
+                <div className="system-block">
+                  <small>ROLES</small>
+                  <strong>02</strong>
+                  <span>User · Admin</span>
+                </div>
+
+                <div className="system-block system-block-wide">
+                  <small>AVAILABILITY</small>
+                  <div className="availability-wave">
+                    {[38, 62, 44, 86, 54, 92, 68, 78].map((height, index) => (
+                      <i key={index} style={{ height: `${height}%` }} />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="system-label system-label-a">API</div>
+            <div className="system-label system-label-b">DATA</div>
+            <div className="system-label system-label-c">AUTH</div>
           </div>
 
-          <div className="mt-14 space-y-6">
-            <article className="case-card grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] lg:grid-cols-[0.78fr_1.22fr]">
-              <div className="flex flex-col p-7 sm:p-9 lg:p-10">
-                <div className="flex items-center gap-3">
-                  <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/40">
-                    Brand + web
-                  </span>
-                  <span className="text-xs text-[#c8ff62]">Live</span>
-                </div>
+          <div className="project-overlay project-overlay-light">
+            <div>
+              <p className="future-kicker">02 · FULL-STACK PRODUCT</p>
+              <h3>JAMLY</h3>
+            </div>
 
-                <h3 className="mt-8 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
-                  Tamara Atadía
-                </h3>
+            <div className="project-meta">
+              <Metric value="03" label="core domains" />
+              <Metric value="45" label="source files" />
+              <Metric value="04" label="test files" />
+            </div>
 
-                <p className="mt-4 max-w-lg text-base leading-7 text-white/45">
-                  Marca personal, portfolio, coaching y contratación dentro de una
-                  misma experiencia.
-                </p>
-
-                <div className="mt-8 grid grid-cols-3 gap-3">
-                  <MiniMetric value="47" label="media assets" />
-                  <MiniMetric value="5" label="routes" />
-                  <MiniMetric value="46" label="source files" />
-                </div>
-
-                <div className="mt-auto flex flex-wrap gap-3 pt-10">
-                  <a
-                    href="https://tamara-atadia-portfolio.vercel.app"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:scale-[1.02]"
-                  >
-                    Ver sitio ↗
-                  </a>
-                  <a
-                    href="https://github.com/FabianCordobes/tamara-atadia-portfolio"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/60 transition hover:text-white"
-                  >
-                    Repositorio
-                  </a>
-                </div>
-              </div>
-
-              <div className="relative min-h-[540px] overflow-hidden bg-[#15120d]">
-                <img
-                  src={MEDIA.tamaraHero}
-                  alt="Proyecto web Tamara Atadía"
-                  className="absolute inset-0 h-full w-full object-cover object-center opacity-80 transition duration-700 hover:scale-[1.025]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/42 via-transparent to-transparent" />
-                <img
-                  src={MEDIA.tamaraStage}
-                  alt=""
-                  className="case-float-image absolute bottom-8 right-7 h-48 w-36 rounded-2xl border border-white/15 object-cover shadow-2xl sm:h-56 sm:w-44"
-                />
-                <img
-                  src={MEDIA.tamaraProduction}
-                  alt=""
-                  className="case-float-image case-float-image-delay absolute right-40 top-8 hidden h-40 w-[7.5rem] rounded-2xl border border-white/15 object-cover shadow-2xl sm:block"
-                />
-              </div>
-            </article>
-
-            <article className="case-card grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] lg:grid-cols-[1.14fr_0.86fr]">
-              <div className="relative order-2 min-h-[510px] overflow-hidden bg-[radial-gradient(circle_at_30%_20%,rgba(200,255,98,0.12),transparent_34%),#090b09] p-6 sm:p-10 lg:order-1">
-                <div className="jamly-window mx-auto max-w-2xl rounded-[1.75rem] border border-white/10 bg-[#0d100d]/90 p-5 shadow-2xl backdrop-blur-xl">
-                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                    <div>
-                      <p className="text-xs text-white/30">JAMLY / BOOKING</p>
-                      <p className="mt-1 text-lg font-semibold">Studio Session</p>
-                    </div>
-                    <div className="flex gap-1.5">
-                      <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
-                      <span className="h-2.5 w-2.5 rounded-full bg-[#c8ff62]" />
-                    </div>
-                  </div>
-
-                  <div className="mt-5 grid gap-4 sm:grid-cols-[0.9fr_1.1fr]">
-                    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                      <p className="text-xs text-white/30">Space</p>
-                      <p className="mt-2 text-xl font-semibold">Sala Norte</p>
-                      <div className="mt-5 grid grid-cols-2 gap-2 text-xs">
-                        {["18:00", "19:00", "20:00", "21:00"].map((time, index) => (
-                          <div
-                            key={time}
-                            className={`rounded-xl border px-3 py-3 text-center ${
-                              index === 2
-                                ? "border-[#c8ff62]/50 bg-[#c8ff62]/10 text-[#c8ff62]"
-                                : "border-white/10 text-white/45"
-                            }`}
-                          >
-                            {time}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                      <p className="text-xs text-white/30">Booking engine</p>
-                      <div className="mt-4 space-y-3">
-                        {[
-                          ["Overlap validation", "Active"],
-                          ["Roles", "USER / ADMIN"],
-                          ["JWT", "1h"],
-                        ].map(([label, value]) => (
-                          <div
-                            key={label}
-                            className="flex items-center justify-between rounded-xl bg-black/25 px-3 py-3"
-                          >
-                            <span className="text-xs text-white/40">{label}</span>
-                            <span className="text-xs font-medium text-white/75">
-                              {value}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-4 rounded-2xl border border-[#c8ff62]/20 bg-[#c8ff62]/[0.06] px-4 py-3 text-xs text-[#c8ff62]">
-                    Booking ready · overlap protection enabled
-                  </div>
-                </div>
-
-                <div className="data-orbit data-orbit-a" />
-                <div className="data-orbit data-orbit-b" />
-              </div>
-
-              <div className="order-1 flex flex-col p-7 sm:p-9 lg:order-2 lg:p-10">
-                <span className="w-fit rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/40">
-                  Full-stack product
-                </span>
-
-                <h3 className="mt-8 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
-                  Jamly
-                </h3>
-
-                <p className="mt-4 max-w-lg text-base leading-7 text-white/45">
-                  Reservas, autenticación, roles y control real de solapamientos.
-                </p>
-
-                <div className="mt-8 grid grid-cols-3 gap-3">
-                  <MiniMetric value="3" label="core domains" />
-                  <MiniMetric value="45" label="source files" />
-                  <MiniMetric value="4" label="test files" />
-                </div>
-
-                <a
-                  href="https://github.com/FabianCordobes/jamly"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-auto w-fit pt-10 text-sm font-medium text-white/55 transition hover:text-[#c8ff62]"
-                >
-                  Ver repositorio ↗
-                </a>
-              </div>
-            </article>
-
-            <article className="case-card grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] lg:grid-cols-[0.72fr_1.28fr]">
-              <div className="flex flex-col p-7 sm:p-9 lg:p-10">
-                <span className="w-fit rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/40">
-                  Commerce
-                </span>
-
-                <h3 className="mt-8 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
-                  E-commerce
-                </h3>
-
-                <p className="mt-4 max-w-lg text-base leading-7 text-white/45">
-                  Catálogo, autenticación, carrito, administración y órdenes.
-                </p>
-
-                <div className="mt-8 grid grid-cols-3 gap-3">
-                  <MiniMetric value="8" label="page flows" />
-                  <MiniMetric value="22" label="source files" />
-                  <MiniMetric value="3" label="auth screens" />
-                </div>
-
-                <div className="mt-auto flex flex-wrap gap-3 pt-10">
-                  <a
-                    href="https://e-commerce-app-eta-two.vercel.app"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:scale-[1.02]"
-                  >
-                    Ver sitio ↗
-                  </a>
-                  <a
-                    href="https://github.com/FabianCordobes/eCommerceApp"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/60 transition hover:text-white"
-                  >
-                    Repositorio
-                  </a>
-                </div>
-              </div>
-
-              <div className="commerce-stage relative min-h-[520px] overflow-hidden bg-[#0b0b0d] p-6 sm:p-10">
-                <img
-                  src={MEDIA.commerceLogin}
-                  alt="Pantalla de login del proyecto e-commerce"
-                  className="commerce-shot commerce-shot-main absolute left-[8%] top-[8%] w-[54%] rounded-2xl border border-white/10 shadow-2xl"
-                />
-                <img
-                  src={MEDIA.commerceRegister}
-                  alt="Pantalla de registro del proyecto e-commerce"
-                  className="commerce-shot commerce-shot-second absolute right-[5%] top-[20%] w-[48%] rounded-2xl border border-white/10 shadow-2xl"
-                />
-                <img
-                  src={MEDIA.commerceForgot}
-                  alt="Pantalla de recuperación de contraseña del proyecto e-commerce"
-                  className="commerce-shot commerce-shot-third absolute bottom-[8%] left-[24%] w-[44%] rounded-2xl border border-white/10 shadow-2xl"
-                />
-                <div className="scan-line" aria-hidden="true" />
-              </div>
-            </article>
+            <div className="project-links">
+              <a href="https://github.com/FabianCordobes/jamly" target="_blank" rel="noreferrer">
+                Code ↗
+              </a>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <article className="project-chapter project-chapter-commerce">
+          <div className="commerce-space">
+            <div className="commerce-title-ghost">COMMERCE</div>
+            <img className="commerce-shot commerce-shot-a" src={MEDIA.commerceLogin} alt="Login e-commerce" />
+            <img className="commerce-shot commerce-shot-b" src={MEDIA.commerceRegister} alt="Registro e-commerce" />
+            <img className="commerce-shot commerce-shot-c" src={MEDIA.commerceForgot} alt="Recuperación de acceso e-commerce" />
+            <div className="commerce-beam commerce-beam-a" />
+            <div className="commerce-beam commerce-beam-b" />
+          </div>
+
+          <div className="project-overlay">
+            <div>
+              <p className="future-kicker">03 · COMMERCE EXPERIENCE</p>
+              <h3>E-COMMERCE</h3>
+            </div>
+
+            <div className="project-meta">
+              <Metric value="08" label="flows" />
+              <Metric value="22" label="source files" />
+              <Metric value="03" label="auth screens" />
+            </div>
+
+            <div className="project-links">
+              <a href="https://e-commerce-app-eta-two.vercel.app" target="_blank" rel="noreferrer">
+                Live ↗
+              </a>
+              <a href="https://github.com/FabianCordobes/eCommerceApp" target="_blank" rel="noreferrer">
+                Code ↗
+              </a>
+            </div>
+          </div>
+        </article>
       </section>
 
-      <section
-        id="brief"
-        className="border-y border-white/10 bg-white/[0.018] py-24 sm:py-28"
-      >
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.68fr_1.32fr] lg:items-start">
-          <div>
-            <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">
-              Diagnóstico
-            </p>
-            <h2 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
-              Primero, una mejor decisión.
-            </h2>
-            <p className="mt-6 max-w-sm text-sm leading-7 text-white/40">
-              Elegí el tipo de bloqueo. La interfaz te muestra una ruta probable
-              antes de pedirte datos.
-            </p>
-          </div>
+      <section id="signal" className="future-signal-section">
+        <FutureField />
+        <div className="future-signal-copy">
+          <p className="future-kicker">NEXT MOVE</p>
+          <h2 className="five-d-heading five-d-heading-center" data-text="MAKE IT REAL">
+            MAKE IT REAL
+          </h2>
+        </div>
 
+        <div className="future-signal-inner">
           <SmartProjectBrief />
         </div>
       </section>
 
-      <section className="py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-px overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 md:grid-cols-3">
-            <CompactValue
-              kicker="01"
-              title="Directo"
-              text="La misma persona entiende, decide y construye."
-            />
-            <CompactValue
-              kicker="02"
-              title="Full-stack"
-              text="Frontend, backend, datos e integraciones en una sola conversación."
-            />
-            <CompactValue
-              kicker="03"
-              title="Transferible"
-              text="Código y decisiones pensados para que otro equipo pueda continuar."
-            />
-          </div>
-        </div>
+      <section className="future-manifesto">
+        <div className="future-manifesto-line">PRODUCT</div>
+        <div className="future-manifesto-line future-manifesto-line-shift">MOTION</div>
+        <div className="future-manifesto-line">SYSTEMS</div>
+        <div className="future-manifesto-line future-manifesto-line-accent">NEXT</div>
       </section>
 
-      <section id="contact" className="px-5 pb-5 sm:px-8 sm:pb-8">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#c8ff62] px-6 py-14 text-black sm:px-10 sm:py-20 lg:px-14">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/45">
-                Lead → conversación
-              </p>
-
-              <h2 className="mt-5 max-w-3xl text-balance text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl">
-                Traé el problema.
-              </h2>
-
-              <p className="mt-6 max-w-lg text-base leading-7 text-black/58">
-                Te digo qué veo, qué priorizaría y si tiene sentido construirlo
-                juntos.
-              </p>
-
-              <div className="mt-8 flex flex-wrap gap-2 text-xs font-medium text-black/50">
-                <span className="rounded-full border border-black/15 px-3 py-2">
-                  Sin pitch genérico
-                </span>
-                <span className="rounded-full border border-black/15 px-3 py-2">
-                  Sin alcance inflado
-                </span>
-                <span className="rounded-full border border-black/15 px-3 py-2">
-                  Próximo paso concreto
-                </span>
-              </div>
-
-              <a
-                href={CONTACT.whatsapp}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-black/15 px-5 py-3 text-sm font-semibold text-black transition hover:bg-black hover:text-white"
-              >
-                WhatsApp ↗
-              </a>
-            </div>
-
-            <LeadForm />
-          </div>
+      <section id="contact" className="future-contact">
+        <div className="future-contact-copy">
+          <p className="future-kicker">START SOMETHING</p>
+          <h2 className="five-d-heading" data-text="YOUR NEXT">
+            YOUR NEXT
+          </h2>
+          <p>Una idea. Una dirección. Un próximo nivel.</p>
         </div>
+
+        <LeadForm />
       </section>
 
-      <footer className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-9 text-sm text-white/30 sm:px-8 md:flex-row md:items-center md:justify-between">
+      <footer className="future-footer">
         <p>© {new Date().getFullYear()} Fabián Cordobés</p>
-        <div className="flex flex-wrap gap-6">
-          <a className="transition hover:text-white" href="/portfolio">
-            Portfolio técnico
-          </a>
-          <a
-            className="transition hover:text-white"
-            href={CONTACT.linkedin}
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
+        <div>
+          <a href="/portfolio">Portfolio</a>
+          <a href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </footer>
     </main>
   );
 }
 
-function MiniMetric({ value, label }: { value: string; label: string }) {
+function Metric({ value, label }: { value: string; label: string }) {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4">
-      <p className="text-2xl font-semibold tracking-tight">{value}</p>
-      <p className="mt-1 text-[11px] leading-4 text-white/32">{label}</p>
+    <div className="project-metric">
+      <strong>{value}</strong>
+      <span>{label}</span>
     </div>
-  );
-}
-
-function CompactValue({
-  kicker,
-  title,
-  text,
-}: {
-  kicker: string;
-  title: string;
-  text: string;
-}) {
-  return (
-    <article className="min-h-52 bg-[#0a0a0a] p-7 sm:p-8">
-      <span className="text-xs text-[#c8ff62]">{kicker}</span>
-      <h3 className="mt-12 text-2xl font-semibold">{title}</h3>
-      <p className="mt-3 max-w-sm text-sm leading-6 text-white/40">{text}</p>
-    </article>
   );
 }
