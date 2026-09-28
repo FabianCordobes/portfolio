@@ -3,21 +3,21 @@
 import { FormEvent, useEffect, useState } from "react";
 
 const SERVICES = [
-  "Landing Page",
-  "Sitio Web",
+  "Lanzar un producto / MVP",
+  "Mejorar una experiencia digital",
+  "Aplicación / sistema interno",
+  "Automatización / integración",
   "E-commerce",
-  "Aplicación / Sistema",
-  "Automatización",
-  "Mantenimiento",
-  "No estoy seguro",
+  "Sumar capacidad técnica al equipo",
+  "No estoy seguro todavía",
 ];
 
 const BUDGETS = [
-  "Menos de USD 500",
-  "USD 500–1.000",
-  "USD 1.000–2.500",
+  "Hasta USD 2.500",
   "USD 2.500–5.000",
-  "Más de USD 5.000",
+  "USD 5.000–10.000",
+  "Más de USD 10.000",
+  "Todavía no está definido",
   "Prefiero conversarlo",
 ];
 
@@ -136,7 +136,7 @@ export default function LeadForm() {
         </label>
 
         <label className="text-sm font-medium text-black/70">
-          ¿Qué necesitás? *
+          ¿Qué necesitás resolver? *
           <select className={field} name="requestedService" defaultValue="" required>
             <option value="" disabled>Seleccioná una opción</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
@@ -144,7 +144,7 @@ export default function LeadForm() {
         </label>
 
         <label className="text-sm font-medium text-black/70">
-          Presupuesto aproximado
+          Inversión estimada
           <select className={field} name="budgetRange" defaultValue="">
             <option value="">No especificado</option>
             {BUDGETS.map((budget) => <option key={budget} value={budget}>{budget}</option>)}
@@ -167,7 +167,7 @@ export default function LeadForm() {
             minLength={20}
             maxLength={2500}
             required
-            placeholder="Contame dónde estás hoy, qué te está frenando y qué te gustaría conseguir."
+            placeholder="¿Qué está pasando hoy, qué debería cambiar y por qué es importante resolverlo?"
           />
         </label>
 
@@ -187,13 +187,13 @@ export default function LeadForm() {
           disabled={status === "sending"}
           className="inline-flex min-w-48 items-center justify-center rounded-full bg-black px-7 py-4 font-semibold text-white transition hover:scale-[1.02] disabled:cursor-wait disabled:opacity-60"
         >
-          {status === "sending" ? "Enviando..." : "Quiero evaluar mi proyecto ↗"}
+          {status === "sending" ? "Enviando..." : "Quiero evaluar esta necesidad ↗"}
         </button>
       </div>
 
       {status === "success" && (
         <p className="mt-5 rounded-2xl border border-black/10 bg-white/55 px-4 py-3 text-sm font-medium text-black/75" role="status">
-          ¡Listo! Recibí tu consulta. La voy a revisar y te contacto para definir cuál sería el mejor próximo paso.
+          ¡Listo! Recibí el contexto. Lo voy a revisar y te contacto para definir si hay encaje y cuál sería el próximo paso más útil.
         </p>
       )}
 
