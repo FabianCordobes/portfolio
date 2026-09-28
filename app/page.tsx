@@ -328,7 +328,6 @@ export default function Home() {
         <div className="flex flex-wrap gap-6">
           <a className="transition hover:text-white" href={CONTACT.linkedin}>LinkedIn</a>
           <a className="transition hover:text-white" href={CONTACT.github} target="_blank" rel="noreferrer">GitHub</a>
-          <a className="transition hover:text-white" href={CONTACT.instagram}>Instagram</a>
         </div>
       </footer>
     </main>
