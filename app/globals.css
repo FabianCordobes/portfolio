@@ -1953,3 +1953,465 @@ a {
     animation: none;
   }
 }
+
+
+.ai-architecture {
+  position: relative;
+  min-height: 120svh;
+  overflow: hidden;
+  padding: 16vh 5vw 12vh;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background:
+    radial-gradient(circle at 50% 42%, rgba(200,255,98,0.08), transparent 28%),
+    radial-gradient(circle at 18% 76%, rgba(76,126,255,0.08), transparent 26%),
+    #050505;
+}
+
+.ai-architecture-copy {
+  position: relative;
+  z-index: 4;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.ai-architecture-copy .five-d-heading {
+  max-width: 8.7ch;
+}
+
+.ai-architecture-question {
+  max-width: 620px;
+  margin: 28px 0 0;
+  color: rgba(255,255,255,0.42);
+  font-size: clamp(1rem, 1.45vw, 1.3rem);
+  line-height: 1.6;
+}
+
+.ai-architecture-stage {
+  position: relative;
+  z-index: 3;
+  width: min(1280px, 100%);
+  min-height: 760px;
+  margin: 11vh auto 0;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.ai-neural-grid {
+  position: absolute;
+  inset: 8% 4%;
+  opacity: 0.34;
+  background:
+    linear-gradient(rgba(200,255,98,0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,255,98,0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at center, black 0%, rgba(0,0,0,0.82) 45%, transparent 78%);
+  transform: perspective(1200px) rotateX(68deg) translateY(15%);
+  transform-origin: center;
+  animation: neuralGridShift 14s linear infinite;
+}
+
+.ai-node {
+  position: absolute;
+  z-index: 5;
+  min-width: 180px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background:
+    linear-gradient(145deg, rgba(16,18,14,0.88), rgba(7,8,7,0.72));
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.34),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  transform-style: preserve-3d;
+}
+
+.ai-node small {
+  display: block;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.56rem;
+  letter-spacing: 0.14em;
+}
+
+.ai-node strong {
+  display: block;
+  margin-top: 9px;
+  color: rgba(255,255,255,0.84);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.ai-node-light {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 20px rgba(200,255,98,0.7);
+  animation: aiNodePulse 2.4s ease-out infinite;
+}
+
+.ai-node-core {
+  left: 50%;
+  top: 50%;
+  min-width: 250px;
+  padding: 28px 30px;
+  transform: translate(-50%, -50%) translateZ(90px);
+  border-color: rgba(200,255,98,0.28);
+  box-shadow:
+    0 0 70px rgba(200,255,98,0.08),
+    0 36px 100px rgba(0,0,0,0.48),
+    inset 0 0 40px rgba(200,255,98,0.035);
+  animation: aiCoreFloat 5.6s ease-in-out infinite;
+}
+
+.ai-node-core small {
+  color: var(--accent);
+}
+
+.ai-node-core strong {
+  font-size: 1.15rem;
+}
+
+.ai-node-a {
+  left: 8%;
+  top: 18%;
+  transform: rotateY(5deg) translateZ(10px);
+  animation: aiNodeFloatA 7.5s ease-in-out infinite;
+}
+
+.ai-node-b {
+  right: 8%;
+  top: 18%;
+  transform: rotateY(-5deg) translateZ(18px);
+  animation: aiNodeFloatB 8.2s ease-in-out infinite;
+}
+
+.ai-node-c {
+  left: 7%;
+  bottom: 17%;
+  transform: rotateY(7deg);
+  animation: aiNodeFloatB 8.8s ease-in-out infinite reverse;
+}
+
+.ai-node-d {
+  right: 7%;
+  bottom: 17%;
+  transform: rotateY(-7deg);
+  animation: aiNodeFloatA 7.8s ease-in-out infinite reverse;
+}
+
+.ai-node-e {
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%) translateZ(20px);
+  animation: aiNodeFloatA 9s ease-in-out infinite;
+}
+
+.ai-node-f {
+  left: 50%;
+  top: 4%;
+  transform: translateX(-50%) translateZ(14px);
+  animation: aiNodeFloatB 8.4s ease-in-out infinite;
+}
+
+.ai-core-halo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(200,255,98,0.1);
+  border-radius: 999px;
+  transform-style: preserve-3d;
+}
+
+.ai-core-halo-a {
+  width: 310px;
+  aspect-ratio: 1;
+  animation: aiHaloA 14s linear infinite;
+}
+
+.ai-core-halo-b {
+  width: 470px;
+  aspect-ratio: 1;
+  border-style: dashed;
+  border-color: rgba(255,255,255,0.07);
+  animation: aiHaloB 21s linear infinite;
+}
+
+.ai-core-halo-c {
+  width: 620px;
+  aspect-ratio: 1;
+  border-color: rgba(93,139,255,0.09);
+  animation: aiHaloC 28s linear infinite;
+}
+
+.ai-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  height: 1px;
+  transform-origin: left center;
+  background: linear-gradient(90deg, rgba(200,255,98,0.04), rgba(200,255,98,0.34), rgba(200,255,98,0.05));
+  overflow: visible;
+}
+
+.ai-link i {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: #eaffbf;
+  box-shadow: 0 0 15px rgba(200,255,98,0.8);
+  animation: aiPacket 2.8s linear infinite;
+}
+
+.ai-link-1 { width: 38%; transform: rotate(-145deg); }
+.ai-link-2 { width: 38%; transform: rotate(-35deg); }
+.ai-link-3 { width: 39%; transform: rotate(145deg); }
+.ai-link-4 { width: 39%; transform: rotate(35deg); }
+.ai-link-5 { width: 29%; transform: rotate(90deg); }
+.ai-link-6 { width: 28%; transform: rotate(-90deg); }
+
+.ai-link-2 i { animation-delay: -0.6s; }
+.ai-link-3 i { animation-delay: -1.1s; }
+.ai-link-4 i { animation-delay: -1.7s; }
+.ai-link-5 i { animation-delay: -2.1s; }
+.ai-link-6 i { animation-delay: -0.9s; }
+
+.ai-data-wave {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 72%;
+  height: 1px;
+  transform-origin: center;
+  background: linear-gradient(90deg, transparent, rgba(76,126,255,0.18), rgba(200,255,98,0.34), transparent);
+  filter: blur(0.15px);
+}
+
+.ai-data-wave-a {
+  transform: translate(-50%, -50%) rotate(12deg);
+  animation: aiWave 6.5s ease-in-out infinite;
+}
+
+.ai-data-wave-b {
+  transform: translate(-50%, -50%) rotate(-21deg);
+  animation: aiWave 8.2s ease-in-out infinite reverse;
+}
+
+.ai-data-wave-c {
+  transform: translate(-50%, -50%) rotate(90deg);
+  animation: aiWave 7.4s ease-in-out infinite;
+}
+
+.ai-stream {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+  color: rgba(255,255,255,0.13);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.03em;
+}
+
+.ai-stream-left {
+  left: 1%;
+  top: 43%;
+  transform: rotate(-90deg) translateX(-50%);
+  transform-origin: left top;
+}
+
+.ai-stream-right {
+  right: 1%;
+  top: 43%;
+  transform: rotate(90deg) translateX(50%);
+  transform-origin: right top;
+}
+
+.ai-stream span {
+  animation: aiStreamBlink 3.8s ease-in-out infinite;
+}
+
+.ai-stream span:nth-child(2) { animation-delay: -0.8s; }
+.ai-stream span:nth-child(3) { animation-delay: -1.6s; }
+.ai-stream span:nth-child(4) { animation-delay: -2.4s; }
+
+.ai-capabilities {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  width: min(1180px, 100%);
+  margin: 2vh auto 0;
+}
+
+.ai-capabilities span {
+  padding: 9px 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+  color: rgba(255,255,255,0.38);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  background: rgba(255,255,255,0.018);
+}
+
+@keyframes neuralGridShift {
+  to { background-position: 44px 44px, 44px 44px; }
+}
+
+@keyframes aiNodePulse {
+  0% { box-shadow: 0 0 0 0 rgba(200,255,98,0.48), 0 0 20px rgba(200,255,98,0.7); }
+  75% { box-shadow: 0 0 0 9px rgba(200,255,98,0), 0 0 20px rgba(200,255,98,0.7); }
+  100% { box-shadow: 0 0 0 0 rgba(200,255,98,0), 0 0 20px rgba(200,255,98,0.7); }
+}
+
+@keyframes aiCoreFloat {
+  0%,100% { transform: translate(-50%, -50%) translateZ(90px) scale(0.98); }
+  50% { transform: translate(-50%, calc(-50% - 8px)) translateZ(120px) scale(1.02); }
+}
+
+@keyframes aiNodeFloatA {
+  0%,100% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+}
+
+@keyframes aiNodeFloatB {
+  0%,100% { translate: 0 0; }
+  50% { translate: 8px -7px; }
+}
+
+@keyframes aiHaloA {
+  from { transform: translate(-50%, -50%) rotateX(68deg) rotateZ(0deg); }
+  to { transform: translate(-50%, -50%) rotateX(68deg) rotateZ(360deg); }
+}
+
+@keyframes aiHaloB {
+  from { transform: translate(-50%, -50%) rotateY(62deg) rotateZ(0deg); }
+  to { transform: translate(-50%, -50%) rotateY(62deg) rotateZ(-360deg); }
+}
+
+@keyframes aiHaloC {
+  from { transform: translate(-50%, -50%) rotateX(72deg) rotateY(18deg) rotateZ(0deg); }
+  to { transform: translate(-50%, -50%) rotateX(72deg) rotateY(18deg) rotateZ(360deg); }
+}
+
+@keyframes aiPacket {
+  0% { left: 0; opacity: 0; }
+  12% { opacity: 1; }
+  82% { opacity: 1; }
+  100% { left: calc(100% - 5px); opacity: 0; }
+}
+
+@keyframes aiWave {
+  0%,100% { opacity: 0.1; scale: 0.82 1; }
+  50% { opacity: 0.7; scale: 1.06 1; }
+}
+
+@keyframes aiStreamBlink {
+  0%,100% { opacity: 0.16; }
+  50% { opacity: 0.46; }
+}
+
+@media (max-width: 900px) {
+  .ai-architecture {
+    min-height: auto;
+    padding: 13vh 20px 10vh;
+  }
+
+  .ai-architecture-stage {
+    min-height: 720px;
+    margin-top: 8vh;
+  }
+
+  .ai-node {
+    min-width: 145px;
+    padding: 14px 15px;
+  }
+
+  .ai-node-core {
+    min-width: 210px;
+  }
+
+  .ai-node-a,
+  .ai-node-c {
+    left: 0;
+  }
+
+  .ai-node-b,
+  .ai-node-d {
+    right: 0;
+  }
+
+  .ai-core-halo-c {
+    width: 520px;
+  }
+}
+
+@media (max-width: 620px) {
+  .ai-architecture-copy .five-d-heading {
+    max-width: 7.6ch;
+    font-size: clamp(3.3rem, 17vw, 6rem);
+  }
+
+  .ai-architecture-stage {
+    min-height: 860px;
+  }
+
+  .ai-node {
+    min-width: 134px;
+    max-width: 148px;
+  }
+
+  .ai-node strong {
+    font-size: 0.75rem;
+  }
+
+  .ai-node-core {
+    min-width: 190px;
+    max-width: 210px;
+    padding: 22px 20px;
+  }
+
+  .ai-node-a { left: 0; top: 16%; }
+  .ai-node-b { right: 0; top: 16%; }
+  .ai-node-c { left: 0; bottom: 18%; }
+  .ai-node-d { right: 0; bottom: 18%; }
+  .ai-node-e { bottom: 4%; }
+  .ai-node-f { top: 4%; }
+
+  .ai-stream {
+    display: none;
+  }
+
+  .ai-core-halo-c {
+    display: none;
+  }
+
+  .ai-neural-grid {
+    inset: 15% -20%;
+    opacity: 0.22;
+  }
+
+  .ai-capabilities {
+    margin-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-node,
+  .ai-node-light,
+  .ai-core-halo,
+  .ai-link i,
+  .ai-data-wave,
+  .ai-stream span,
+  .ai-neural-grid {
+    animation: none !important;
+  }
+}
