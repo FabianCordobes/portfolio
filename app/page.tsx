@@ -1,6 +1,7 @@
 import LeadForm from "../components/LeadForm";
 import ExperienceLayer from "../components/ExperienceLayer";
 import FutureField from "../components/FutureField";
+import CinematicPortal from "../components/CinematicPortal";
 import SmartProjectBrief from "../components/SmartProjectBrief";
 import { heroImagePart1 } from "./_hero-image/part1";
 import { heroImagePart2 } from "./_hero-image/part2";
@@ -79,6 +80,7 @@ export default function Home() {
 
       <section id="home" className="future-hero">
         <FutureField />
+        <CinematicPortal />
 
         <div className="future-hero-photo" aria-hidden="true">
           <img src={HERO_IMAGE} alt="" />
@@ -94,9 +96,9 @@ export default function Home() {
             DIGITAL PRODUCT · AI · AUTOMATION
           </div>
 
-          <h1 className="five-d-title" data-text="¿QUÉ SIGUE?">
-            <span>¿QUÉ</span>
-            <span>SIGUE?</span>
+          <h1 className="five-d-title">
+            <span data-text="¿QUÉ">¿QUÉ</span>
+            <span data-text="SIGUE?">SIGUE?</span>
           </h1>
 
           <div className="future-hero-bottom">
@@ -130,7 +132,7 @@ export default function Home() {
       </section>
 
       <section id="work" className="future-work">
-        <div className="future-section-intro">
+        <div className="future-section-intro" data-reveal>
           <p className="future-kicker">SELECTED EXPERIENCES</p>
           <h2 className="five-d-heading" data-text="¿HASTA DÓNDE?">
             ¿HASTA DÓNDE?
@@ -145,7 +147,7 @@ export default function Home() {
             <div className="project-gradient" />
           </div>
 
-          <div className="project-overlay">
+          <div className="project-overlay" data-reveal>
             <div>
               <p className="future-kicker">01 · BRAND EXPERIENCE</p>
               <h3>¿Y SI TU<br />MARCA SE SIENTE?</h3>
@@ -214,7 +216,7 @@ export default function Home() {
             <div className="system-label system-label-c">AUTH</div>
           </div>
 
-          <div className="project-overlay project-overlay-light">
+          <div className="project-overlay project-overlay-light" data-reveal>
             <div>
               <p className="future-kicker">02 · FULL-STACK PRODUCT</p>
               <h3>¿Y SI TODO<br />FLUYE?</h3>
@@ -270,14 +272,14 @@ export default function Home() {
 
       <section id="signal" className="future-signal-section">
         <FutureField />
-        <div className="future-signal-copy">
+        <div className="future-signal-copy" data-reveal>
           <p className="future-kicker">NEXT MOVE</p>
           <h2 className="five-d-heading five-d-heading-center" data-text="¿QUÉ QUERÉS CREAR?">
             ¿QUÉ QUERÉS CREAR?
           </h2>
         </div>
 
-        <div className="future-signal-inner">
+        <div className="future-signal-inner" data-reveal>
           <SmartProjectBrief />
         </div>
       </section>
@@ -292,7 +294,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="future-contact">
-        <div className="future-contact-copy">
+        <div className="future-contact-copy" data-reveal>
           <p className="future-kicker">START SOMETHING</p>
           <h2 className="five-d-heading" data-text="¿Y SI ES AHORA?">
             ¿Y SI ES AHORA?
