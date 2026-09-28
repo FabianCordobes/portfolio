@@ -27,7 +27,7 @@ const TAMARA_IMAGES = [
 ];
 
 const realSignals = [
-  { value: "52", label: "assets multimedia", detail: "Tamara Atadía" },
+  { value: "47", label: "assets multimedia", detail: "Tamara Atadía" },
   { value: "5", label: "rutas de producto", detail: "portfolio artístico" },
   { value: "3", label: "dominios core", detail: "Jamly" },
   { value: "8", label: "flujos/pantallas", detail: "e-commerce" },
@@ -211,7 +211,7 @@ export default function Home() {
                 </p>
 
                 <div className="mt-8 grid grid-cols-3 gap-3">
-                  <MiniMetric value="52" label="media assets" />
+                  <MiniMetric value="47" label="media assets" />
                   <MiniMetric value="5" label="routes" />
                   <MiniMetric value="46" label="source files" />
                 </div>
@@ -327,7 +327,7 @@ export default function Home() {
                 <div className="mt-8 grid grid-cols-3 gap-3">
                   <MiniMetric value="3" label="core domains" />
                   <MiniMetric value="45" label="source files" />
-                  <MiniMetric value="4" label="test layers" />
+                  <MiniMetric value="4" label="test files" />
                 </div>
 
                 <a
