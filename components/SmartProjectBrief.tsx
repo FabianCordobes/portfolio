@@ -3,10 +3,10 @@
 import { useMemo, useState } from "react";
 
 const NEEDS = [
-  { id: "create", label: "Crear", title: "Nueva experiencia", route: "Discovery + build", outcome: "Idea → alcance → primera versión." },
-  { id: "evolve", label: "Evolucionar", title: "Producto activo", route: "Product evolution", outcome: "Experiencia → prioridad → siguiente nivel." },
-  { id: "automate", label: "Automatizar", title: "Operación digital", route: "Automation + integration", outcome: "Flujo → conexión → escala." },
-  { id: "accelerate", label: "Acelerar", title: "Equipo en movimiento", route: "Technical acceleration", outcome: "Roadmap → capacidad → entrega." },
+  { id: "create", label: "Crear", title: "Una nueva experiencia", route: "Discovery + build", outcome: "¿Qué forma podría tomar tu idea?" },
+  { id: "evolve", label: "Evolucionar", title: "Una experiencia en evolución", route: "Product evolution", outcome: "¿Qué podría sentirse todavía mejor?" },
+  { id: "automate", label: "Automatizar", title: "Un sistema conectado", route: "Automation + integration", outcome: "¿Qué podría suceder de forma más inteligente?" },
+  { id: "accelerate", label: "Acelerar", title: "Un equipo en expansión", route: "Technical acceleration", outcome: "¿Qué podrías llevar más lejos este trimestre?" },
 ];
 
 const MOMENTS = ["Ahora", "Este trimestre", "Exploración"];
@@ -21,7 +21,7 @@ export default function SmartProjectBrief() {
       <div className="signal-header">
         <div>
           <p className="future-kicker">PROJECT SIGNAL</p>
-          <h3>Elegí tu próximo movimiento.</h3>
+          <h3>¿Qué te gustaría activar?</h3>
         </div>
         <div className="ai-orb" aria-hidden="true"><span /><span /><span /></div>
       </div>
