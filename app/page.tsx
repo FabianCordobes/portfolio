@@ -94,17 +94,17 @@ export default function Home() {
             DIGITAL PRODUCT · AI · AUTOMATION
           </div>
 
-          <h1 className="five-d-title" data-text="BUILD NEXT">
-            <span>BUILD</span>
-            <span>NEXT</span>
+          <h1 className="five-d-title" data-text="¿QUÉ SIGUE?">
+            <span>¿QUÉ</span>
+            <span>SIGUE?</span>
           </h1>
 
           <div className="future-hero-bottom">
-            <p>Experiencias digitales que se sienten un paso adelante.</p>
+            <p>¿Cómo se vería tu próxima idea si ya viviera en 2030?</p>
 
             <div className="future-hero-actions">
               <a href="#work" className="future-cta future-cta-primary">
-                Ver experiencia <span>↓</span>
+                Ver posibilidades <span>↓</span>
               </a>
               <a href="#contact" className="future-cta">
                 Quiero algo así <span>↗</span>
@@ -131,9 +131,9 @@ export default function Home() {
 
       <section id="work" className="future-work">
         <div className="future-section-intro">
-          <p className="future-kicker">SELECTED WORK</p>
-          <h2 className="five-d-heading" data-text="REAL OUTPUT">
-            REAL OUTPUT
+          <p className="future-kicker">SELECTED EXPERIENCES</p>
+          <h2 className="five-d-heading" data-text="¿HASTA DÓNDE?">
+            ¿HASTA DÓNDE?
           </h2>
         </div>
 
@@ -148,7 +148,7 @@ export default function Home() {
           <div className="project-overlay">
             <div>
               <p className="future-kicker">01 · BRAND EXPERIENCE</p>
-              <h3>TAMARA<br />ATADÍA</h3>
+              <h3>¿Y SI TU<br />MARCA SE SIENTE?</h3>
             </div>
 
             <div className="project-meta">
@@ -217,7 +217,7 @@ export default function Home() {
           <div className="project-overlay project-overlay-light">
             <div>
               <p className="future-kicker">02 · FULL-STACK PRODUCT</p>
-              <h3>JAMLY</h3>
+              <h3>¿Y SI TODO<br />FLUYE?</h3>
             </div>
 
             <div className="project-meta">
@@ -247,7 +247,7 @@ export default function Home() {
           <div className="project-overlay">
             <div>
               <p className="future-kicker">03 · COMMERCE EXPERIENCE</p>
-              <h3>E-COMMERCE</h3>
+              <h3>¿Y SI COMPRAR<br />SE SIENTE NUEVO?</h3>
             </div>
 
             <div className="project-meta">
@@ -272,8 +272,8 @@ export default function Home() {
         <FutureField />
         <div className="future-signal-copy">
           <p className="future-kicker">NEXT MOVE</p>
-          <h2 className="five-d-heading five-d-heading-center" data-text="MAKE IT REAL">
-            MAKE IT REAL
+          <h2 className="five-d-heading five-d-heading-center" data-text="¿QUÉ QUERÉS CREAR?">
+            ¿QUÉ QUERÉS CREAR?
           </h2>
         </div>
 
@@ -283,19 +283,21 @@ export default function Home() {
       </section>
 
       <section className="future-manifesto">
-        <div className="future-manifesto-line">PRODUCT</div>
+        <div className="future-manifesto-question">¿Qué querés que tu marca haga sentir?</div>
+        <div className="future-manifesto-line">IMPACT</div>
+        <div className="future-manifesto-question future-manifesto-question-shift">¿Qué experiencia todavía no existe?</div>
         <div className="future-manifesto-line future-manifesto-line-shift">MOTION</div>
-        <div className="future-manifesto-line">SYSTEMS</div>
+        <div className="future-manifesto-question">¿Qué podrías llevar al próximo nivel?</div>
         <div className="future-manifesto-line future-manifesto-line-accent">NEXT</div>
       </section>
 
       <section id="contact" className="future-contact">
         <div className="future-contact-copy">
           <p className="future-kicker">START SOMETHING</p>
-          <h2 className="five-d-heading" data-text="YOUR NEXT">
-            YOUR NEXT
+          <h2 className="five-d-heading" data-text="¿Y SI ES AHORA?">
+            ¿Y SI ES AHORA?
           </h2>
-          <p>Una idea. Una dirección. Un próximo nivel.</p>
+          <p>¿Qué te gustaría ver funcionando, moviéndose y creciendo?</p>
         </div>
 
         <LeadForm />
