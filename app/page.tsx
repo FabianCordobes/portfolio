@@ -1,4 +1,4 @@
-const CONTACT = {
+import LeadForm from "@/components/LeadForm";\n\nconst CONTACT = {
   whatsapp: "#contact",
   linkedin: "#",
   github: "https://github.com/FabianCordobes",
@@ -304,22 +304,25 @@ export default function Home() {
       <section id="contact" className="px-5 pb-5 sm:px-8 sm:pb-8">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#c8ff62] px-6 py-16 text-black sm:px-10 sm:py-24 lg:px-16">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50">Empecemos</p>
-          <div className="mt-5 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div className="mt-5 grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
-              <h2 className="text-balance max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl lg:text-8xl">
+              <h2 className="text-balance max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl">
                 ¿Tenés una idea? Hagámosla realidad.
               </h2>
               <p className="mt-7 max-w-xl leading-7 text-black/60">
                 Contame qué querés construir, qué problema necesitás resolver o qué mejorarías de tu presencia digital.
               </p>
+              <div className="mt-9 border-t border-black/10 pt-7">
+                <p className="text-sm font-semibold">Qué pasa después</p>
+                <ol className="mt-4 space-y-3 text-sm leading-6 text-black/55">
+                  <li>01 · Analizamos la consulta y el tipo de solución.</li>
+                  <li>02 · New Evolution revisa la oportunidad y completa la calificación.</li>
+                  <li>03 · Si requiere definición técnica, coordinamos una reunión conmigo.</li>
+                </ol>
+              </div>
             </div>
 
-            <a
-              href={CONTACT.whatsapp}
-              className="inline-flex w-fit items-center justify-center rounded-full bg-black px-7 py-4 font-semibold text-white transition hover:scale-[1.02]"
-            >
-              Hablemos por WhatsApp ↗
-            </a>
+            <LeadForm />
           </div>
         </div>
       </section>
