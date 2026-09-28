@@ -1,5 +1,5 @@
 const CONTACT = {
-  whatsapp: "https://wa.me/27813814",
+  whatsapp: "https://wa.me/1127813814",
   linkedin: "https://www.linkedin.com/in/fabian-cordobes/",
   github: "https://github.com/FabianCordobes",
 };
