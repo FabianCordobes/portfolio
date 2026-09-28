@@ -296,7 +296,7 @@ export default function Home() {
                 <img
                   src={MEDIA.tamaraProduction}
                   alt=""
-                  className="case-float-image case-float-image-delay absolute right-40 top-8 hidden h-40 w-30 rounded-2xl border border-white/15 object-cover shadow-2xl sm:block"
+                  className="case-float-image case-float-image-delay absolute right-40 top-8 hidden h-40 w-[7.5rem] rounded-2xl border border-white/15 object-cover shadow-2xl sm:block"
                 />
               </div>
             </article>
