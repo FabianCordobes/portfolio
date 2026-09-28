@@ -2,6 +2,7 @@ import LeadForm from "../components/LeadForm";
 import ExperienceLayer from "../components/ExperienceLayer";
 import FutureField from "../components/FutureField";
 import CinematicPortal from "../components/CinematicPortal";
+import AIArchitectureScene from "../components/AIArchitectureScene";
 import SmartProjectBrief from "../components/SmartProjectBrief";
 import { heroImagePart1 } from "./_hero-image/part1";
 import { heroImagePart2 } from "./_hero-image/part2";
@@ -252,6 +253,8 @@ export default function Home() {
           </div>
         </article>
       </section>
+
+      <AIArchitectureScene />
 
       <section id="signal" className="future-signal-section">
         <FutureField />
