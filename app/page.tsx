@@ -56,13 +56,13 @@ export default function Home() {
         </a>
 
         <nav>
-          <a href="#work">Work</a>
-          <a href="#signal">Signal</a>
-          <a href="/portfolio">Tech</a>
+          <a href="#work">Experiencias</a>
+          <a href="#signal">Idea</a>
+          <a href="/portfolio">Portfolio</a>
         </nav>
 
         <a href="#contact" className="future-nav-cta">
-          Start ↗
+          Crear ↗
         </a>
       </header>
 
