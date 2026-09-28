@@ -611,8 +611,9 @@ a {
 
 .project-overlay h3 {
   margin: 20px 0 0;
-  font-size: clamp(4.8rem, 11.5vw, 12rem);
-  line-height: 0.76;
+  max-width: 10ch;
+  font-size: clamp(3.8rem, 8.4vw, 9.2rem);
+  line-height: 0.82;
   letter-spacing: -0.08em;
   font-weight: 850;
   text-transform: uppercase;
@@ -1080,6 +1081,19 @@ a {
   color: #080808;
 }
 
+.future-manifesto-question {
+  width: min(88vw, 1200px);
+  margin: 0 auto 7vh;
+  color: rgba(8, 8, 8, 0.56);
+  font-size: clamp(1.35rem, 2.7vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.future-manifesto-question-shift {
+  margin-left: 18vw;
+}
+
 .future-manifesto-line {
   width: max-content;
   margin-left: -2vw;
@@ -1436,7 +1450,15 @@ a {
   }
 
   .project-overlay h3 {
-    font-size: clamp(4.1rem, 21vw, 8rem);
+    max-width: 9ch;
+    font-size: clamp(3.2rem, 15vw, 6.4rem);
+  }
+
+  .future-manifesto-question,
+  .future-manifesto-question-shift {
+    width: auto;
+    margin: 0 20px 5vh;
+    font-size: clamp(1.4rem, 7vw, 2.35rem);
   }
 
   .project-float-a {
