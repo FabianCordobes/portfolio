@@ -1,4 +1,6 @@
 import LeadForm from "../components/LeadForm";
+import ExperienceLayer from "../components/ExperienceLayer";
+import SmartProjectBrief from "../components/SmartProjectBrief";
 import { heroImagePart1 } from "./_hero-image/part1";
 import { heroImagePart2 } from "./_hero-image/part2";
 import { heroImagePart3 } from "./_hero-image/part3";
@@ -15,155 +17,53 @@ const HERO_IMAGE =
 
 const CONTACT = {
   whatsapp: "https://wa.me/5491127813814",
-  linkedin: "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/?isSelfProfile=true",
+  linkedin:
+    "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/?isSelfProfile=true",
 };
 
-const solutions = [
-  {
-    number: "01",
-    title: "Lanzar una iniciativa digital",
-    description:
-      "Cuando hay una oportunidad, una idea o una necesidad comercial que necesita convertirse en una experiencia concreta: desde un MVP hasta una web, e-commerce o producto digital.",
-    tags: ["MVP", "Producto digital", "Web", "E-commerce"],
-  },
-  {
-    number: "02",
-    title: "Mejorar una experiencia que ya existe",
-    description:
-      "Cuando un sitio o producto funciona, pero genera fricción, no acompaña el crecimiento o necesita evolucionar para cumplir mejor su objetivo.",
-    tags: ["UX", "Conversión", "Performance", "Evolución"],
-  },
-  {
-    number: "03",
-    title: "Digitalizar un proceso manual",
-    description:
-      "Cuando el equipo pierde tiempo entre planillas, mensajes, tareas repetitivas o pasos que podrían resolverse con un sistema más simple.",
-    tags: ["Automatización", "Sistemas internos", "Operación"],
-  },
-  {
-    number: "04",
-    title: "Extender capacidad del equipo",
-    description:
-      "Cuando existe trabajo por ejecutar pero no conviene sumar estructura fija: nuevas funcionalidades, integraciones o desarrollo frontend y backend.",
-    tags: ["Frontend", "Backend", "Integraciones", "Producto"],
-  },
-];
+const MEDIA = {
+  tamaraHero:
+    "https://raw.githubusercontent.com/FabianCordobes/tamara-atadia-portfolio/main/public/images/tamara/tamara-hero.jpg",
+  tamaraStage:
+    "https://raw.githubusercontent.com/FabianCordobes/tamara-atadia-portfolio/main/public/images/tamara/tamara-stage-purple.jpg",
+  tamaraProduction:
+    "https://raw.githubusercontent.com/FabianCordobes/tamara-atadia-portfolio/main/public/images/tamara/tamara-production-event.jpg",
+  commerceLogin:
+    "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/login.png",
+  commerceRegister:
+    "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/register.png",
+  commerceForgot:
+    "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/forgot.png",
+};
 
-const process = [
-  {
-    number: "01",
-    title: "Diagnosticar",
-    text: "Entiendo el problema, el objetivo, el contexto actual y las restricciones antes de definir una solución.",
-  },
-  {
-    number: "02",
-    title: "Definir",
-    text: "Convertimos la necesidad en un alcance claro, prioridades y una primera versión que tenga sentido construir.",
-  },
-  {
-    number: "03",
-    title: "Construir",
-    text: "Desarrollo la solución con foco en experiencia, mantenibilidad y comunicación directa durante la ejecución.",
-  },
-  {
-    number: "04",
-    title: "Entregar y evolucionar",
-    text: "La solución queda lista para operar, continuar desarrollándose y crecer sin depender de decisiones improvisadas.",
-  },
-];
-
-const proofPoints = [
-  {
-    title: "Producto y aplicaciones",
-    text: "Experiencia desarrollando frontend y backend sobre productos digitales y funcionalidades que tienen que convivir con usuarios y procesos reales.",
-  },
-  {
-    title: "APIs e integraciones",
-    text: "Trabajo conectando servicios, datos y flujos para que la solución no quede aislada del resto de la operación.",
-  },
-  {
-    title: "Calidad y mantenibilidad",
-    text: "Testing, decisiones técnicas claras y una base preparada para que el producto pueda continuar evolucionando.",
-  },
-];
-
-const riskItems = [
-  {
-    title: "“Todavía no tenemos el alcance cerrado.”",
-    text: "No hace falta llegar con una especificación completa. El primer trabajo es separar problema, objetivo y prioridades para definir qué conviene construir y qué no.",
-  },
-  {
-    title: "“Ya tenemos equipo interno o proveedor.”",
-    text: "Puedo trabajar sobre una necesidad puntual, integrarme a un flujo existente o tomar una pieza del proyecto sin obligar a reemplazar lo que ya funciona.",
-  },
-  {
-    title: "“No podemos rehacer todo desde cero.”",
-    text: "No siempre hay que hacerlo. Muchas veces el mejor camino es mejorar por etapas, reducir fricción y preservar lo que ya aporta valor.",
-  },
-  {
-    title: "“Nos preocupa quedar atados a una sola persona.”",
-    text: "La solución debe poder mantenerse y transferirse. Por eso priorizo código claro, documentación de lo necesario y decisiones que otro equipo pueda continuar.",
-  },
-];
-
-const reasons = [
-  {
-    title: "Trato directo",
-    text: "Hablás con la misma persona que entiende el problema, toma decisiones técnicas y construye la solución.",
-  },
-  {
-    title: "Criterio antes que features",
-    text: "No agrego complejidad para justificar desarrollo. Primero definimos qué tiene impacto y qué puede esperar.",
-  },
-  {
-    title: "Capacidad full-stack",
-    text: "Puedo trabajar desde la experiencia de usuario hasta APIs, lógica de negocio, datos e integraciones cuando el proyecto lo necesita.",
-  },
-];
-
-const engagementModels = [
-  {
-    number: "01",
-    title: "Discovery + desarrollo",
-    text: "Para una necesidad que todavía necesita bajar a alcance. Primero ordenamos problema, usuarios, restricciones y prioridades; después construimos.",
-    fit: "Ideal para iniciativas nuevas, MVPs y procesos que todavía no tienen solución definida.",
-  },
-  {
-    number: "02",
-    title: "Proyecto definido",
-    text: "Para una iniciativa con objetivo y alcance suficientemente claros que necesita ejecución técnica, seguimiento y entrega.",
-    fit: "Ideal para webs, aplicaciones, integraciones y funcionalidades concretas.",
-  },
-  {
-    number: "03",
-    title: "Extensión de equipo",
-    text: "Para sumar capacidad temporal sobre un producto existente sin incorporar estructura permanente ni cambiar todo el proceso actual.",
-    fit: "Ideal para equipos con backlog, deadlines o una necesidad técnica específica.",
-  },
-];
-
-const decisionQuestions = [
-  "¿Qué problema de negocio estamos resolviendo realmente?",
-  "¿Qué tiene que cambiar para usuarios, clientes o equipo interno?",
-  "¿Qué es imprescindible en una primera versión y qué puede esperar?",
-  "¿Qué sistemas, datos o procesos existentes hay que respetar?",
-  "¿Cómo dejamos la solución preparada para que pueda continuar?",
+const verifiedSignals = [
+  { value: "47", label: "assets multimedia", project: "Tamara Atadía" },
+  { value: "5", label: "rutas reales", project: "Tamara Atadía" },
+  { value: "3", label: "dominios core", project: "Jamly" },
+  { value: "8", label: "flujos/pantallas", project: "E-commerce" },
 ];
 
 export default function Home() {
   return (
     <main className="overflow-hidden bg-[#070707] text-[#f6f6f3]">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#070707]/80 backdrop-blur-xl">
+      <ExperienceLayer />
+
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#070707]/72 backdrop-blur-2xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8">
           <a href="#home" className="text-lg font-semibold tracking-tight">
             Fabián<span className="text-[#c8ff62]">.</span>
           </a>
 
-          <nav className="hidden items-center gap-8 text-sm text-white/55 md:flex">
-            <a className="transition hover:text-white" href="#solutions">Soluciones</a>
-            <a className="transition hover:text-white" href="#experience">Experiencia</a>
-            <a className="transition hover:text-white" href="#process">Cómo trabajo</a>
-            <a className="transition hover:text-white" href="/portfolio">Portfolio</a>
+          <nav className="hidden items-center gap-8 text-sm text-white/50 md:flex">
+            <a className="transition hover:text-white" href="#work">
+              Trabajo real
+            </a>
+            <a className="transition hover:text-white" href="#brief">
+              Diagnóstico
+            </a>
+            <a className="transition hover:text-white" href="/portfolio">
+              Portfolio
+            </a>
           </nav>
 
           <a
@@ -175,11 +75,19 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="home" className="relative min-h-screen overflow-hidden border-b border-white/10 pt-20">
+      <section
+        id="home"
+        className="relative min-h-screen overflow-hidden border-b border-white/10 pt-20"
+      >
         <div className="grid-bg absolute inset-0 z-0" />
-        <div className="hero-glow absolute -right-32 top-24 z-0 h-[620px] w-[620px] rounded-full blur-3xl" />
+        <div className="hero-glow absolute -right-32 top-10 z-0 h-[720px] w-[720px] rounded-full blur-3xl" />
+        <div className="depth-ring depth-ring-one" aria-hidden="true" />
+        <div className="depth-ring depth-ring-two" aria-hidden="true" />
 
-        <div className="hero-portrait absolute inset-y-0 right-0 z-[1] w-[96%] sm:w-[78%] lg:w-[61%] xl:w-[56%]" aria-hidden="true">
+        <div
+          className="hero-portrait absolute inset-y-0 right-0 z-[1] w-[96%] sm:w-[76%] lg:w-[55%]"
+          aria-hidden="true"
+        >
           <img
             src={HERO_IMAGE}
             alt=""
@@ -188,264 +96,441 @@ export default function Home() {
           <div className="hero-portrait-overlay absolute inset-0" />
         </div>
 
-        <div className="hero-portrait-accent pointer-events-none absolute right-[4%] top-[18%] z-[2] h-[48%] w-[34%] rounded-full bg-[#c8ff62]/10 blur-[110px]" />
+        <div className="relative z-[4] mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.03fr_0.97fr] lg:py-20">
+          <div>
+            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs uppercase tracking-[0.18em] text-white/50 backdrop-blur-xl">
+              <span className="signal-dot" />
+              Producto · automatización · AI-ready
+            </div>
 
-        <div className="relative z-[3] mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col justify-center px-5 py-20 sm:px-8 lg:py-28">
-          <div className="mb-8 flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/45 sm:text-sm">
-            <span className="h-2 w-2 rounded-full bg-[#c8ff62] shadow-[0_0_22px_#c8ff62]" />
-            Desarrollo de producto y soluciones digitales
-          </div>
+            <h1 className="hero-title max-w-5xl text-balance text-[clamp(3.6rem,7.7vw,7.9rem)] font-semibold leading-[0.89] tracking-[-0.068em]">
+              Menos fricción.
+              <span className="block text-white/35">Más producto.</span>
+            </h1>
 
-          <h1 className="hero-title text-balance max-w-6xl text-[clamp(3rem,8vw,7.8rem)] font-semibold leading-[0.93] tracking-[-0.065em]">
-            Cuando una necesidad de negocio necesita tecnología para avanzar.
-            <span className="block text-white/35">La convierto en una solución concreta.</span>
-          </h1>
-
-          <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-end">
-            <p className="max-w-2xl text-base leading-8 text-white/55 sm:text-lg">
-              Trabajo con empresas, equipos y negocios que necesitan lanzar una iniciativa digital, mejorar un producto, automatizar procesos o sumar capacidad técnica sin incorporar complejidad innecesaria.
+            <p className="mt-7 max-w-xl text-base leading-7 text-white/52 sm:text-lg">
+              Construyo soluciones digitales para empresas y equipos que necesitan
+              lanzar, automatizar o destrabar una oportunidad.
             </p>
 
-            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#contact"
+                href="#brief"
                 className="inline-flex items-center justify-center rounded-full bg-[#c8ff62] px-6 py-3.5 font-semibold text-black transition hover:scale-[1.02] hover:bg-[#d5ff87]"
               >
-                Contame qué necesitás resolver
+                Diagnosticar mi necesidad ↗
               </a>
               <a
-                href="/portfolio"
-                className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 font-medium text-white transition hover:bg-white/5"
+                href="#work"
+                className="inline-flex items-center justify-center rounded-full border border-white/15 bg-black/15 px-6 py-3.5 font-medium text-white backdrop-blur-xl transition hover:border-white/30 hover:bg-white/5"
               >
-                Ver experiencia técnica ↗
+                Ver evidencia
               </a>
             </div>
           </div>
 
-          <div className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/10 pt-7 text-sm text-white/35">
-            <span>Producto digital</span>
-            <span>Aplicaciones</span>
-            <span>Automatización</span>
-            <span>Integraciones</span>
-            <span>Web</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-white/10 bg-white/[0.02] py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
-            <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">La situación</p>
-            <div>
-              <h2 className="max-w-5xl text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
-                Una oportunidad aparece. El negocio sabe qué quiere lograr. Lo difícil es convertirlo en algo que funcione.
-              </h2>
-              <p className="mt-7 max-w-3xl text-base leading-8 text-white/50">
-                Entre la idea y la ejecución aparecen decisiones de alcance, experiencia, tecnología, datos e integración. Mi trabajo es ordenar esas decisiones y convertir la necesidad en una solución que pueda usarse, mantenerse y evolucionar.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="solutions" className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Dónde aporto valor"
-            title="No empiezo por el tipo de software. Empiezo por lo que el negocio necesita destrabar."
-          />
-
-          <div className="mt-16 grid border-t border-white/10 md:grid-cols-2">
-            {solutions.map((solution) => (
-              <article
-                key={solution.number}
-                className="group border-b border-white/10 py-9 md:px-8 md:[&:nth-child(odd)]:border-r"
-              >
-                <div className="flex items-start justify-between gap-8">
-                  <span className="text-xs text-white/30">{solution.number}</span>
-                  <span className="text-xl text-white/25 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#c8ff62]">↗</span>
-                </div>
-                <h3 className="mt-12 text-2xl font-semibold tracking-tight sm:text-3xl">{solution.title}</h3>
-                <p className="mt-4 max-w-xl leading-7 text-white/50">{solution.description}</p>
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {solution.tags.map((tag) => (
-                    <span key={tag} className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">{tag}</span>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" className="border-y border-white/10 bg-white/[0.025] py-24 sm:py-28">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Experiencia aplicada"
-            title="Capacidad técnica para trabajar más allá de una landing."
-          />
-
-          <p className="mt-7 max-w-3xl text-base leading-8 text-white/50">
-            Mi recorrido incluye desarrollo frontend y backend, APIs, integraciones, testing y trabajo sobre productos digitales que tienen que convivir con equipos, datos y procesos reales.
-          </p>
-
-          <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-3">
-            {proofPoints.map((item) => (
-              <article key={item.title} className="min-h-64 bg-[#0a0a0a] p-7 sm:p-8">
-                <h3 className="text-2xl font-semibold tracking-tight">{item.title}</h3>
-                <p className="mt-5 text-sm leading-7 text-white/45">{item.text}</p>
-              </article>
-            ))}
-          </div>
-
-          <a
-            href="/portfolio"
-            className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-white/15 px-6 py-3.5 font-semibold text-white transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
+          <div
+            className="relative hidden min-h-[620px] [transform-style:preserve-3d] lg:block"
+            aria-hidden="true"
           >
-            Revisar proyectos, experiencia y stack ↗
-          </a>
-        </div>
-      </section>
-
-      <section className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-            <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Reducir riesgo</p>
-              <h2 className="mt-6 text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
-                Una buena decisión técnica también tiene que ser una buena decisión para el negocio.
-              </h2>
-              <p className="mt-7 max-w-2xl text-base leading-8 text-white/50">
-                Antes de desarrollar, hay que entender qué conviene resolver, cómo se integra con lo que ya existe y qué necesita quedar preparado para después.
-              </p>
+            <div className="floating-ui floating-ui-a">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-white/35">
+                  SIGNAL
+                </span>
+                <span className="h-2 w-2 rounded-full bg-[#c8ff62] shadow-[0_0_18px_#c8ff62]" />
+              </div>
+              <p className="mt-5 text-3xl font-semibold">Problem → Product</p>
+              <div className="mt-6 h-1.5 overflow-hidden rounded-full bg-white/8">
+                <div className="signal-bar h-full w-[78%] rounded-full bg-[#c8ff62]" />
+              </div>
+              <p className="mt-3 text-xs text-white/35">Scope · Build · Ship</p>
             </div>
 
-            <div className="grid gap-4">
-              {riskItems.map((item) => (
-                <article key={item.title} className="rounded-3xl border border-white/10 bg-white/[0.025] p-6 sm:p-7">
-                  <h3 className="text-lg font-semibold tracking-tight">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-white/50">{item.text}</p>
-                </article>
-              ))}
+            <div className="floating-ui floating-ui-b">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">
+                SYSTEM
+              </p>
+              <div className="mt-5 grid grid-cols-3 gap-2">
+                {["UI", "API", "DATA"].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-4 text-center text-xs text-white/60"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 grid grid-cols-[1fr_auto_1fr] items-center gap-2 text-[10px] text-white/25">
+                <span className="h-px bg-white/10" />
+                <span>CONNECTED</span>
+                <span className="h-px bg-white/10" />
+              </div>
+            </div>
+
+            <div className="floating-ui floating-ui-c">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-white/35">
+                DELIVERY
+              </p>
+              <div className="mt-4 flex items-end gap-2">
+                {[42, 65, 54, 88, 72, 96].map((height, index) => (
+                  <span
+                    key={height + index}
+                    className="metric-bar block w-6 rounded-t-md bg-white/12"
+                    style={{ height: `${height}px` }}
+                  />
+                ))}
+              </div>
+              <p className="mt-4 text-xs text-[#c8ff62]">Production-ready</p>
+            </div>
+
+            <div className="neural-orbit">
+              <span className="neural-node neural-node-a" />
+              <span className="neural-node neural-node-b" />
+              <span className="neural-node neural-node-c" />
+              <span className="neural-node neural-node-d" />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.02] py-24 sm:py-28">
+      <section className="border-b border-white/10 bg-white/[0.018]">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Forma de trabajo"
-            title="Menos capas entre el problema y la ejecución."
-          />
+          <div className="flex items-center justify-between gap-6 border-b border-white/10 py-4 text-[10px] uppercase tracking-[0.19em] text-white/25">
+            <span>Evidencia verificable</span>
+            <span className="hidden sm:inline">Datos tomados de repositorios públicos</span>
+          </div>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {reasons.map((item) => (
-              <article key={item.title} className="rounded-3xl border border-white/10 bg-black/20 p-7">
-                <h3 className="text-2xl font-semibold tracking-tight">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-white/50">{item.text}</p>
-              </article>
+          <div className="grid grid-cols-2 lg:grid-cols-4">
+            {verifiedSignals.map((item) => (
+              <div
+                key={item.label}
+                className="border-white/10 py-8 lg:border-r lg:px-7 lg:first:pl-0 lg:last:border-r-0"
+              >
+                <p className="text-4xl font-semibold tracking-[-0.04em]">{item.value}</p>
+                <p className="mt-1 text-sm text-white/55">{item.label}</p>
+                <p className="mt-1 text-xs text-white/25">{item.project}</p>
+              </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-10 rounded-3xl border border-[#c8ff62]/25 bg-[#c8ff62]/[0.06] p-7 sm:p-9">
-            <p className="max-w-4xl text-xl font-semibold leading-8 sm:text-2xl">
-              Hablás con la misma persona que entiende el contexto, propone el alcance y trabaja sobre la solución. Eso reduce pérdida de información y acelera decisiones.
+      <section id="work" className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">
+                Trabajo real
+              </p>
+              <h2 className="mt-5 max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
+                La prueba antes del pitch.
+              </h2>
+            </div>
+
+            <a
+              href="#contact"
+              className="w-fit rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/65 transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
+            >
+              Tengo un proyecto ↗
+            </a>
+          </div>
+
+          <div className="mt-14 space-y-6">
+            <article className="case-card grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] lg:grid-cols-[0.78fr_1.22fr]">
+              <div className="flex flex-col p-7 sm:p-9 lg:p-10">
+                <div className="flex items-center gap-3">
+                  <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/40">
+                    Brand + web
+                  </span>
+                  <span className="text-xs text-[#c8ff62]">Live</span>
+                </div>
+
+                <h3 className="mt-8 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
+                  Tamara Atadía
+                </h3>
+
+                <p className="mt-4 max-w-lg text-base leading-7 text-white/45">
+                  Marca personal, portfolio, coaching y contratación dentro de una
+                  misma experiencia.
+                </p>
+
+                <div className="mt-8 grid grid-cols-3 gap-3">
+                  <MiniMetric value="47" label="media assets" />
+                  <MiniMetric value="5" label="routes" />
+                  <MiniMetric value="46" label="source files" />
+                </div>
+
+                <div className="mt-auto flex flex-wrap gap-3 pt-10">
+                  <a
+                    href="https://tamara-atadia-portfolio.vercel.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:scale-[1.02]"
+                  >
+                    Ver sitio ↗
+                  </a>
+                  <a
+                    href="https://github.com/FabianCordobes/tamara-atadia-portfolio"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/60 transition hover:text-white"
+                  >
+                    Repositorio
+                  </a>
+                </div>
+              </div>
+
+              <div className="relative min-h-[540px] overflow-hidden bg-[#15120d]">
+                <img
+                  src={MEDIA.tamaraHero}
+                  alt="Proyecto web Tamara Atadía"
+                  className="absolute inset-0 h-full w-full object-cover object-center opacity-80 transition duration-700 hover:scale-[1.025]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#070707]/42 via-transparent to-transparent" />
+                <img
+                  src={MEDIA.tamaraStage}
+                  alt=""
+                  className="case-float-image absolute bottom-8 right-7 h-48 w-36 rounded-2xl border border-white/15 object-cover shadow-2xl sm:h-56 sm:w-44"
+                />
+                <img
+                  src={MEDIA.tamaraProduction}
+                  alt=""
+                  className="case-float-image case-float-image-delay absolute right-40 top-8 hidden h-40 w-30 rounded-2xl border border-white/15 object-cover shadow-2xl sm:block"
+                />
+              </div>
+            </article>
+
+            <article className="case-card grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] lg:grid-cols-[1.14fr_0.86fr]">
+              <div className="relative order-2 min-h-[510px] overflow-hidden bg-[radial-gradient(circle_at_30%_20%,rgba(200,255,98,0.12),transparent_34%),#090b09] p-6 sm:p-10 lg:order-1">
+                <div className="jamly-window mx-auto max-w-2xl rounded-[1.75rem] border border-white/10 bg-[#0d100d]/90 p-5 shadow-2xl backdrop-blur-xl">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <div>
+                      <p className="text-xs text-white/30">JAMLY / BOOKING</p>
+                      <p className="mt-1 text-lg font-semibold">Studio Session</p>
+                    </div>
+                    <div className="flex gap-1.5">
+                      <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-white/10" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-[#c8ff62]" />
+                    </div>
+                  </div>
+
+                  <div className="mt-5 grid gap-4 sm:grid-cols-[0.9fr_1.1fr]">
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                      <p className="text-xs text-white/30">Space</p>
+                      <p className="mt-2 text-xl font-semibold">Sala Norte</p>
+                      <div className="mt-5 grid grid-cols-2 gap-2 text-xs">
+                        {["18:00", "19:00", "20:00", "21:00"].map((time, index) => (
+                          <div
+                            key={time}
+                            className={`rounded-xl border px-3 py-3 text-center ${
+                              index === 2
+                                ? "border-[#c8ff62]/50 bg-[#c8ff62]/10 text-[#c8ff62]"
+                                : "border-white/10 text-white/45"
+                            }`}
+                          >
+                            {time}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                      <p className="text-xs text-white/30">Booking engine</p>
+                      <div className="mt-4 space-y-3">
+                        {[
+                          ["Overlap validation", "Active"],
+                          ["Roles", "USER / ADMIN"],
+                          ["JWT", "1h"],
+                        ].map(([label, value]) => (
+                          <div
+                            key={label}
+                            className="flex items-center justify-between rounded-xl bg-black/25 px-3 py-3"
+                          >
+                            <span className="text-xs text-white/40">{label}</span>
+                            <span className="text-xs font-medium text-white/75">
+                              {value}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 rounded-2xl border border-[#c8ff62]/20 bg-[#c8ff62]/[0.06] px-4 py-3 text-xs text-[#c8ff62]">
+                    Booking ready · overlap protection enabled
+                  </div>
+                </div>
+
+                <div className="data-orbit data-orbit-a" />
+                <div className="data-orbit data-orbit-b" />
+              </div>
+
+              <div className="order-1 flex flex-col p-7 sm:p-9 lg:order-2 lg:p-10">
+                <span className="w-fit rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/40">
+                  Full-stack product
+                </span>
+
+                <h3 className="mt-8 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
+                  Jamly
+                </h3>
+
+                <p className="mt-4 max-w-lg text-base leading-7 text-white/45">
+                  Reservas, autenticación, roles y control real de solapamientos.
+                </p>
+
+                <div className="mt-8 grid grid-cols-3 gap-3">
+                  <MiniMetric value="3" label="core domains" />
+                  <MiniMetric value="45" label="source files" />
+                  <MiniMetric value="4" label="test files" />
+                </div>
+
+                <a
+                  href="https://github.com/FabianCordobes/jamly"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-auto w-fit pt-10 text-sm font-medium text-white/55 transition hover:text-[#c8ff62]"
+                >
+                  Ver repositorio ↗
+                </a>
+              </div>
+            </article>
+
+            <article className="case-card grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.025] lg:grid-cols-[0.72fr_1.28fr]">
+              <div className="flex flex-col p-7 sm:p-9 lg:p-10">
+                <span className="w-fit rounded-full border border-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-white/40">
+                  Commerce
+                </span>
+
+                <h3 className="mt-8 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
+                  E-commerce
+                </h3>
+
+                <p className="mt-4 max-w-lg text-base leading-7 text-white/45">
+                  Catálogo, autenticación, carrito, administración y órdenes.
+                </p>
+
+                <div className="mt-8 grid grid-cols-3 gap-3">
+                  <MiniMetric value="8" label="page flows" />
+                  <MiniMetric value="22" label="source files" />
+                  <MiniMetric value="3" label="auth screens" />
+                </div>
+
+                <div className="mt-auto flex flex-wrap gap-3 pt-10">
+                  <a
+                    href="https://e-commerce-app-eta-two.vercel.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:scale-[1.02]"
+                  >
+                    Ver sitio ↗
+                  </a>
+                  <a
+                    href="https://github.com/FabianCordobes/eCommerceApp"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/60 transition hover:text-white"
+                  >
+                    Repositorio
+                  </a>
+                </div>
+              </div>
+
+              <div className="commerce-stage relative min-h-[520px] overflow-hidden bg-[#0b0b0d] p-6 sm:p-10">
+                <img
+                  src={MEDIA.commerceLogin}
+                  alt="Pantalla de login del proyecto e-commerce"
+                  className="commerce-shot commerce-shot-main absolute left-[8%] top-[8%] w-[54%] rounded-2xl border border-white/10 shadow-2xl"
+                />
+                <img
+                  src={MEDIA.commerceRegister}
+                  alt="Pantalla de registro del proyecto e-commerce"
+                  className="commerce-shot commerce-shot-second absolute right-[5%] top-[20%] w-[48%] rounded-2xl border border-white/10 shadow-2xl"
+                />
+                <img
+                  src={MEDIA.commerceForgot}
+                  alt="Pantalla de recuperación de contraseña del proyecto e-commerce"
+                  className="commerce-shot commerce-shot-third absolute bottom-[8%] left-[24%] w-[44%] rounded-2xl border border-white/10 shadow-2xl"
+                />
+                <div className="scan-line" aria-hidden="true" />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="brief"
+        className="border-y border-white/10 bg-white/[0.018] py-24 sm:py-28"
+      >
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.68fr_1.32fr] lg:items-start">
+          <div>
+            <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">
+              Diagnóstico
+            </p>
+            <h2 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
+              Primero, una mejor decisión.
+            </h2>
+            <p className="mt-6 max-w-sm text-sm leading-7 text-white/40">
+              Elegí el tipo de bloqueo. La interfaz te muestra una ruta probable
+              antes de pedirte datos.
             </p>
           </div>
+
+          <SmartProjectBrief />
         </div>
       </section>
 
-      <section className="py-24 sm:py-32">
+      <section className="py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
-            <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Antes del código</p>
-              <h2 className="mt-6 text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
-                La primera decisión no es qué tecnología usar. Es qué vale la pena construir.
-              </h2>
-              <p className="mt-7 max-w-2xl text-base leading-8 text-white/50">
-                Una conversación útil debería reducir incertidumbre. Antes de estimar desarrollo, busco que podamos responder estas preguntas.
-              </p>
-            </div>
-
-            <div className="overflow-hidden rounded-3xl border border-white/10">
-              {decisionQuestions.map((question, index) => (
-                <div
-                  key={question}
-                  className="grid grid-cols-[auto_1fr] gap-5 border-b border-white/10 bg-white/[0.02] p-6 last:border-b-0 sm:p-7"
-                >
-                  <span className="text-xs text-[#c8ff62]">0{index + 1}</span>
-                  <p className="text-lg font-medium leading-7 text-white/80">{question}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-white/10 bg-white/[0.02] py-24 sm:py-28">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Cómo podemos trabajar"
-            title="El formato se adapta al estado del problema, no al revés."
-          />
-
-          <div className="mt-14 grid gap-5 lg:grid-cols-3">
-            {engagementModels.map((model) => (
-              <article
-                key={model.number}
-                className="flex min-h-[360px] flex-col rounded-3xl border border-white/10 bg-[#0a0a0a] p-7 sm:p-8"
-              >
-                <span className="text-xs text-[#c8ff62]">{model.number}</span>
-                <h3 className="mt-16 text-2xl font-semibold tracking-tight">{model.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-white/50">{model.text}</p>
-                <p className="mt-auto border-t border-white/10 pt-6 text-xs leading-6 text-white/35">{model.fit}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="process" className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Proceso"
-            title="Del problema al producto, con un alcance que se pueda explicar antes de construir."
-          />
-
-          <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
-            {process.map((step) => (
-              <article key={step.number} className="min-h-72 bg-[#0a0a0a] p-7 sm:p-8">
-                <span className="text-xs text-[#c8ff62]">{step.number}</span>
-                <h3 className="mt-20 text-2xl font-semibold">{step.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-white/45">{step.text}</p>
-              </article>
-            ))}
+          <div className="grid gap-px overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 md:grid-cols-3">
+            <CompactValue
+              kicker="01"
+              title="Directo"
+              text="La misma persona entiende, decide y construye."
+            />
+            <CompactValue
+              kicker="02"
+              title="Full-stack"
+              text="Frontend, backend, datos e integraciones en una sola conversación."
+            />
+            <CompactValue
+              kicker="03"
+              title="Transferible"
+              text="Código y decisiones pensados para que otro equipo pueda continuar."
+            />
           </div>
         </div>
       </section>
 
       <section id="contact" className="px-5 pb-5 sm:px-8 sm:pb-8">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#c8ff62] px-6 py-16 text-black sm:px-10 sm:py-24 lg:px-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50">Próximo paso</p>
-
-          <div className="mt-5 grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#c8ff62] px-6 py-14 text-black sm:px-10 sm:py-20 lg:px-14">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
-              <h2 className="text-balance max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl">
-                Traé el problema. Salí con claridad sobre el próximo paso.
-              </h2>
-              <p className="mt-7 max-w-xl leading-7 text-black/60">
-                No hace falta llegar con una especificación cerrada. Entiendo el problema, el contexto y el resultado que buscás para determinar qué conviene construir, qué puede esperar y si soy la persona adecuada para hacerlo.
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/45">
+                Lead → conversación
               </p>
 
-              <div className="mt-9 border-t border-black/10 pt-7">
-                <p className="text-sm font-semibold">Primera conversación, foco concreto</p>
-                <ol className="mt-4 space-y-3 text-sm leading-6 text-black/55">
-                  <li>01 · Entiendo el problema, el objetivo y el contexto actual.</li>
-                  <li>02 · Identificamos restricciones, prioridades y qué conviene resolver primero.</li>
-                  <li>03 · Si hay encaje, definimos alcance, tiempos y propuesta.</li>
-                </ol>
+              <h2 className="mt-5 max-w-3xl text-balance text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl">
+                Traé el problema.
+              </h2>
+
+              <p className="mt-6 max-w-lg text-base leading-7 text-black/58">
+                Te digo qué veo, qué priorizaría y si tiene sentido construirlo
+                juntos.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-2 text-xs font-medium text-black/50">
+                <span className="rounded-full border border-black/15 px-3 py-2">
+                  Sin pitch genérico
+                </span>
+                <span className="rounded-full border border-black/15 px-3 py-2">
+                  Sin alcance inflado
+                </span>
+                <span className="rounded-full border border-black/15 px-3 py-2">
+                  Próximo paso concreto
+                </span>
               </div>
 
               <a
@@ -454,7 +539,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-black/15 px-5 py-3 text-sm font-semibold text-black transition hover:bg-black hover:text-white"
               >
-                Hablar por WhatsApp ↗
+                WhatsApp ↗
               </a>
             </div>
 
@@ -463,22 +548,49 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-10 text-sm text-white/35 sm:px-8 md:flex-row md:items-center md:justify-between">
-        <p>© {new Date().getFullYear()} Fabián — Desarrollo de producto y soluciones digitales</p>
+      <footer className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-9 text-sm text-white/30 sm:px-8 md:flex-row md:items-center md:justify-between">
+        <p>© {new Date().getFullYear()} Fabián Cordobés</p>
         <div className="flex flex-wrap gap-6">
-          <a className="transition hover:text-white" href="/portfolio">Portfolio técnico</a>
-          <a className="transition hover:text-white" href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a className="transition hover:text-white" href="/portfolio">
+            Portfolio técnico
+          </a>
+          <a
+            className="transition hover:text-white"
+            href={CONTACT.linkedin}
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </footer>
     </main>
   );
 }
 
-function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
+function MiniMetric({ value, label }: { value: string; label: string }) {
   return (
-    <div className="grid gap-6 lg:grid-cols-[0.55fr_1.45fr]">
-      <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">{eyebrow}</p>
-      <h2 className="text-balance max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">{title}</h2>
+    <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4">
+      <p className="text-2xl font-semibold tracking-tight">{value}</p>
+      <p className="mt-1 text-[11px] leading-4 text-white/32">{label}</p>
     </div>
+  );
+}
+
+function CompactValue({
+  kicker,
+  title,
+  text,
+}: {
+  kicker: string;
+  title: string;
+  text: string;
+}) {
+  return (
+    <article className="min-h-52 bg-[#0a0a0a] p-7 sm:p-8">
+      <span className="text-xs text-[#c8ff62]">{kicker}</span>
+      <h3 className="mt-12 text-2xl font-semibold">{title}</h3>
+      <p className="mt-3 max-w-sm text-sm leading-6 text-white/40">{text}</p>
+    </article>
   );
 }
