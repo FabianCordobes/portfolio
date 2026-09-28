@@ -48,3 +48,63 @@ body {
 .text-balance {
   text-wrap: balance;
 }
+
+
+.hero-portrait {
+  opacity: 0.34;
+  filter: saturate(0.78) contrast(1.06) brightness(0.72);
+}
+
+.hero-portrait-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      #070707 0%,
+      rgba(7, 7, 7, 0.96) 18%,
+      rgba(7, 7, 7, 0.72) 42%,
+      rgba(7, 7, 7, 0.22) 68%,
+      rgba(7, 7, 7, 0) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #070707 0%,
+      rgba(7, 7, 7, 0.8) 10%,
+      rgba(7, 7, 7, 0.15) 36%,
+      rgba(7, 7, 7, 0) 62%
+    );
+}
+
+.hero-title {
+  text-shadow: 0 8px 48px rgba(0, 0, 0, 0.42);
+}
+
+@media (min-width: 640px) {
+  .hero-portrait {
+    opacity: 0.48;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-portrait {
+    opacity: 0.72;
+    filter: saturate(0.82) contrast(1.04) brightness(0.78);
+  }
+
+  .hero-portrait-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        #070707 0%,
+        rgba(7, 7, 7, 0.97) 15%,
+        rgba(7, 7, 7, 0.72) 36%,
+        rgba(7, 7, 7, 0.18) 62%,
+        rgba(7, 7, 7, 0) 82%
+      ),
+      linear-gradient(
+        0deg,
+        #070707 0%,
+        rgba(7, 7, 7, 0.72) 8%,
+        rgba(7, 7, 7, 0) 33%
+      );
+  }
+}
