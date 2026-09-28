@@ -3,14 +3,14 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Fabián — Desarrollo web & aplicaciones",
+  title: "Fabián Cordobés — Producto, aplicaciones y soluciones digitales",
   description:
-    "Desarrollo páginas web, landing pages y aplicaciones a medida para profesionales, emprendimientos y empresas.",
-  metadataBase: new URL("https://example.com"),
+    "Diseño y desarrollo productos, aplicaciones, integraciones y soluciones digitales para empresas y equipos que necesitan convertir una necesidad de negocio en software.",
+  metadataBase: new URL("https://portfolio-hazel-six-lrkttprbjn.vercel.app"),
   openGraph: {
-    title: "Fabián — Desarrollo web & aplicaciones",
+    title: "Fabián Cordobés — Producto y soluciones digitales",
     description:
-      "Productos digitales modernos, rápidos y pensados para hacer crecer tu negocio.",
+      "Desarrollo de producto, aplicaciones, automatización e integraciones con foco en problemas reales de negocio.",
     type: "website",
     locale: "es_AR",
   },

@@ -18,58 +18,136 @@ const CONTACT = {
   linkedin: "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/?isSelfProfile=true",
 };
 
-const services = [
+const solutions = [
   {
     number: "01",
-    title: "Landing pages",
+    title: "Lanzar una iniciativa digital",
     description:
-      "Para dejar de mandar explicaciones largas por mensaje y llevar a cada persona a una propuesta clara, enfocada en una sola acción.",
-    tags: ["Conversión", "Claridad", "Contacto directo"],
+      "Cuando hay una oportunidad, una idea o una necesidad comercial que necesita convertirse en una experiencia concreta: desde un MVP hasta una web, e-commerce o producto digital.",
+    tags: ["MVP", "Producto digital", "Web", "E-commerce"],
   },
   {
     number: "02",
-    title: "Sitios web",
+    title: "Mejorar una experiencia que ya existe",
     description:
-      "Para que tu negocio se vea tan serio como realmente es, genere confianza antes del primer contacto y facilite que te elijan.",
-    tags: ["Confianza", "Contenido", "Posicionamiento"],
+      "Cuando un sitio o producto funciona, pero genera fricción, no acompaña el crecimiento o necesita evolucionar para cumplir mejor su objetivo.",
+    tags: ["UX", "Conversión", "Performance", "Evolución"],
   },
   {
     number: "03",
-    title: "Aplicaciones web",
+    title: "Digitalizar un proceso manual",
     description:
-      "Para transformar tareas repetitivas, desorden operativo o procesos manuales en un sistema que ahorre tiempo y reduzca fricción.",
-    tags: ["Procesos", "Automatización", "Operación"],
+      "Cuando el equipo pierde tiempo entre planillas, mensajes, tareas repetitivas o pasos que podrían resolverse con un sistema más simple.",
+    tags: ["Automatización", "Sistemas internos", "Operación"],
   },
   {
     number: "04",
-    title: "E-commerce",
+    title: "Extender capacidad del equipo",
     description:
-      "Para que vender online no dependa de conversaciones eternas, sino de una experiencia de compra clara, confiable y preparada para convertir.",
-    tags: ["Ventas", "Catálogo", "Experiencia de compra"],
+      "Cuando existe trabajo por ejecutar pero no conviene sumar estructura fija: nuevas funcionalidades, integraciones o desarrollo frontend y backend.",
+    tags: ["Frontend", "Backend", "Integraciones", "Producto"],
   },
 ];
 
 const process = [
   {
     number: "01",
-    title: "Entender",
-    text: "Me contás tu idea, objetivo y contexto. Definimos qué necesita realmente el proyecto.",
+    title: "Diagnosticar",
+    text: "Entiendo el problema, el objetivo, el contexto actual y las restricciones antes de definir una solución.",
   },
   {
     number: "02",
-    title: "Diseñar",
-    text: "Organizo la experiencia, el contenido y la solución antes de entrar de lleno al código.",
+    title: "Definir",
+    text: "Convertimos la necesidad en un alcance claro, prioridades y una primera versión que tenga sentido construir.",
   },
   {
     number: "03",
     title: "Construir",
-    text: "Construyo la solución con foco en claridad, velocidad y una experiencia simple para quien la usa.",
+    text: "Desarrollo la solución con foco en experiencia, mantenibilidad y comunicación directa durante la ejecución.",
   },
   {
     number: "04",
-    title: "Lanzar",
-    text: "Publicamos, revisamos los últimos detalles y dejamos el proyecto listo para crecer.",
+    title: "Entregar y evolucionar",
+    text: "La solución queda lista para operar, continuar desarrollándose y crecer sin depender de decisiones improvisadas.",
   },
+];
+
+const proofPoints = [
+  {
+    title: "Producto y aplicaciones",
+    text: "Experiencia desarrollando frontend y backend sobre productos digitales y funcionalidades que tienen que convivir con usuarios y procesos reales.",
+  },
+  {
+    title: "APIs e integraciones",
+    text: "Trabajo conectando servicios, datos y flujos para que la solución no quede aislada del resto de la operación.",
+  },
+  {
+    title: "Calidad y mantenibilidad",
+    text: "Testing, decisiones técnicas claras y una base preparada para que el producto pueda continuar evolucionando.",
+  },
+];
+
+const riskItems = [
+  {
+    title: "“Todavía no tenemos el alcance cerrado.”",
+    text: "No hace falta llegar con una especificación completa. El primer trabajo es separar problema, objetivo y prioridades para definir qué conviene construir y qué no.",
+  },
+  {
+    title: "“Ya tenemos equipo interno o proveedor.”",
+    text: "Puedo trabajar sobre una necesidad puntual, integrarme a un flujo existente o tomar una pieza del proyecto sin obligar a reemplazar lo que ya funciona.",
+  },
+  {
+    title: "“No podemos rehacer todo desde cero.”",
+    text: "No siempre hay que hacerlo. Muchas veces el mejor camino es mejorar por etapas, reducir fricción y preservar lo que ya aporta valor.",
+  },
+  {
+    title: "“Nos preocupa quedar atados a una sola persona.”",
+    text: "La solución debe poder mantenerse y transferirse. Por eso priorizo código claro, documentación de lo necesario y decisiones que otro equipo pueda continuar.",
+  },
+];
+
+const reasons = [
+  {
+    title: "Trato directo",
+    text: "Hablás con la misma persona que entiende el problema, toma decisiones técnicas y construye la solución.",
+  },
+  {
+    title: "Criterio antes que features",
+    text: "No agrego complejidad para justificar desarrollo. Primero definimos qué tiene impacto y qué puede esperar.",
+  },
+  {
+    title: "Capacidad full-stack",
+    text: "Puedo trabajar desde la experiencia de usuario hasta APIs, lógica de negocio, datos e integraciones cuando el proyecto lo necesita.",
+  },
+];
+
+const engagementModels = [
+  {
+    number: "01",
+    title: "Discovery + desarrollo",
+    text: "Para una necesidad que todavía necesita bajar a alcance. Primero ordenamos problema, usuarios, restricciones y prioridades; después construimos.",
+    fit: "Ideal para iniciativas nuevas, MVPs y procesos que todavía no tienen solución definida.",
+  },
+  {
+    number: "02",
+    title: "Proyecto definido",
+    text: "Para una iniciativa con objetivo y alcance suficientemente claros que necesita ejecución técnica, seguimiento y entrega.",
+    fit: "Ideal para webs, aplicaciones, integraciones y funcionalidades concretas.",
+  },
+  {
+    number: "03",
+    title: "Extensión de equipo",
+    text: "Para sumar capacidad temporal sobre un producto existente sin incorporar estructura permanente ni cambiar todo el proceso actual.",
+    fit: "Ideal para equipos con backlog, deadlines o una necesidad técnica específica.",
+  },
+];
+
+const decisionQuestions = [
+  "¿Qué problema de negocio estamos resolviendo realmente?",
+  "¿Qué tiene que cambiar para usuarios, clientes o equipo interno?",
+  "¿Qué es imprescindible en una primera versión y qué puede esperar?",
+  "¿Qué sistemas, datos o procesos existentes hay que respetar?",
+  "¿Cómo dejamos la solución preparada para que pueda continuar?",
 ];
 
 export default function Home() {
@@ -82,10 +160,10 @@ export default function Home() {
           </a>
 
           <nav className="hidden items-center gap-8 text-sm text-white/55 md:flex">
-            <a className="transition hover:text-white" href="#services">Servicios</a>
+            <a className="transition hover:text-white" href="#solutions">Soluciones</a>
+            <a className="transition hover:text-white" href="#experience">Experiencia</a>
             <a className="transition hover:text-white" href="#process">Cómo trabajo</a>
             <a className="transition hover:text-white" href="/portfolio">Portfolio</a>
-            <a className="transition hover:text-white" href="#contact">Contacto</a>
           </nav>
 
           <a
@@ -115,17 +193,17 @@ export default function Home() {
         <div className="relative z-[3] mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col justify-center px-5 py-20 sm:px-8 lg:py-28">
           <div className="mb-8 flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/45 sm:text-sm">
             <span className="h-2 w-2 rounded-full bg-[#c8ff62] shadow-[0_0_22px_#c8ff62]" />
-            Tomando nuevos proyectos
+            Desarrollo de producto y soluciones digitales
           </div>
 
-          <h1 className="hero-title text-balance max-w-6xl text-[clamp(3.2rem,9vw,8.5rem)] font-semibold leading-[0.93] tracking-[-0.065em]">
-            Tu web debería ayudarte a vender, no sólo
-            <span className="block text-white/35">verse bien.</span>
+          <h1 className="hero-title text-balance max-w-6xl text-[clamp(3rem,8vw,7.8rem)] font-semibold leading-[0.93] tracking-[-0.065em]">
+            Cuando una necesidad de negocio necesita tecnología para avanzar.
+            <span className="block text-white/35">La convierto en una solución concreta.</span>
           </h1>
 
           <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-end">
             <p className="max-w-2xl text-base leading-8 text-white/55 sm:text-lg">
-              Si hoy tu negocio depende demasiado de explicar por mensaje qué hacés, perseguir consultas o perder oportunidades por una presencia digital débil, puedo ayudarte a convertir eso en una experiencia clara, profesional y preparada para generar acción.
+              Trabajo con empresas, equipos y negocios que necesitan lanzar una iniciativa digital, mejorar un producto, automatizar procesos o sumar capacidad técnica sin incorporar complejidad innecesaria.
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
@@ -133,44 +211,64 @@ export default function Home() {
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-full bg-[#c8ff62] px-6 py-3.5 font-semibold text-black transition hover:scale-[1.02] hover:bg-[#d5ff87]"
               >
-                Quiero mejorar mi presencia digital
+                Contame qué necesitás resolver
               </a>
               <a
                 href="/portfolio"
                 className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 font-medium text-white transition hover:bg-white/5"
               >
-                Ver portfolio técnico ↗
+                Ver experiencia técnica ↗
               </a>
             </div>
           </div>
 
           <div className="mt-16 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/10 pt-7 text-sm text-white/35">
-            <span>Claridad</span><span>Conversión</span><span>Experiencia</span><span>Velocidad</span><span>Escalabilidad</span>
+            <span>Producto digital</span>
+            <span>Aplicaciones</span>
+            <span>Automatización</span>
+            <span>Integraciones</span>
+            <span>Web</span>
           </div>
         </div>
       </section>
 
-      <section id="services" className="py-24 sm:py-32">
+      <section className="border-b border-white/10 bg-white/[0.02] py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
+            <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">La situación</p>
+            <div>
+              <h2 className="max-w-5xl text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
+                Una oportunidad aparece. El negocio sabe qué quiere lograr. Lo difícil es convertirlo en algo que funcione.
+              </h2>
+              <p className="mt-7 max-w-3xl text-base leading-8 text-white/50">
+                Entre la idea y la ejecución aparecen decisiones de alcance, experiencia, tecnología, datos e integración. Mi trabajo es ordenar esas decisiones y convertir la necesidad en una solución que pueda usarse, mantenerse y evolucionar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="solutions" className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
-            eyebrow="Servicios"
-            title="La tecnología importa. Pero lo que realmente importa es qué cambia en tu negocio."
+            eyebrow="Dónde aporto valor"
+            title="No empiezo por el tipo de software. Empiezo por lo que el negocio necesita destrabar."
           />
 
           <div className="mt-16 grid border-t border-white/10 md:grid-cols-2">
-            {services.map((service) => (
+            {solutions.map((solution) => (
               <article
-                key={service.number}
+                key={solution.number}
                 className="group border-b border-white/10 py-9 md:px-8 md:[&:nth-child(odd)]:border-r"
               >
                 <div className="flex items-start justify-between gap-8">
-                  <span className="text-xs text-white/30">{service.number}</span>
+                  <span className="text-xs text-white/30">{solution.number}</span>
                   <span className="text-xl text-white/25 transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-[#c8ff62]">↗</span>
                 </div>
-                <h3 className="mt-12 text-2xl font-semibold tracking-tight sm:text-3xl">{service.title}</h3>
-                <p className="mt-4 max-w-xl leading-7 text-white/50">{service.description}</p>
+                <h3 className="mt-12 text-2xl font-semibold tracking-tight sm:text-3xl">{solution.title}</h3>
+                <p className="mt-4 max-w-xl leading-7 text-white/50">{solution.description}</p>
                 <div className="mt-7 flex flex-wrap gap-2">
-                  {service.tags.map((tag) => (
+                  {solution.tags.map((tag) => (
                     <span key={tag} className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-white/40">{tag}</span>
                   ))}
                 </div>
@@ -180,96 +278,141 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.025] py-24 sm:py-28">
+      <section id="experience" className="border-y border-white/10 bg-white/[0.025] py-24 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Experiencia aplicada"
+            title="Capacidad técnica para trabajar más allá de una landing."
+          />
+
+          <p className="mt-7 max-w-3xl text-base leading-8 text-white/50">
+            Mi recorrido incluye desarrollo frontend y backend, APIs, integraciones, testing y trabajo sobre productos digitales que tienen que convivir con equipos, datos y procesos reales.
+          </p>
+
+          <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-3">
+            {proofPoints.map((item) => (
+              <article key={item.title} className="min-h-64 bg-[#0a0a0a] p-7 sm:p-8">
+                <h3 className="text-2xl font-semibold tracking-tight">{item.title}</h3>
+                <p className="mt-5 text-sm leading-7 text-white/45">{item.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <a
+            href="/portfolio"
+            className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-white/15 px-6 py-3.5 font-semibold text-white transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
+          >
+            Revisar proyectos, experiencia y stack ↗
+          </a>
+        </div>
+      </section>
+
+      <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Antes de postergarlo otra vez</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Reducir riesgo</p>
               <h2 className="mt-6 text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
-                Una presencia digital débil no siempre se nota. Las oportunidades que se pierden, tampoco.
+                Una buena decisión técnica también tiene que ser una buena decisión para el negocio.
               </h2>
               <p className="mt-7 max-w-2xl text-base leading-8 text-white/50">
-                Si una persona entra, no entiende rápido qué ofrecés, no confía o no sabe cuál es el siguiente paso, puede irse sin escribirte. Mejorar eso no es “hacer una web más linda”: es reducir fricción entre el interés y la acción.
+                Antes de desarrollar, hay que entender qué conviene resolver, cómo se integra con lo que ya existe y qué necesita quedar preparado para después.
               </p>
             </div>
 
             <div className="grid gap-4">
-              {[
-                {
-                  title: "“Todavía no sé exactamente qué necesito.”",
-                  text: "No hace falta. El primer paso es ordenar el problema, el objetivo y las prioridades. La solución se define después.",
-                },
-                {
-                  title: "“No sé si ahora es el momento.”",
-                  text: "Si hoy ya estás perdiendo tiempo explicando manualmente, derivando consultas o sosteniendo procesos desordenados, ya existe un costo. La pregunta es si conviene seguir absorbiéndolo.",
-                },
-                {
-                  title: "“Me preocupa invertir y que no sirva.”",
-                  text: "Por eso el trabajo empieza por alcance y objetivo. No se trata de sumar funciones: se trata de construir sólo lo que tenga una razón clara de existir.",
-                },
-                {
-                  title: "“Seguro va a ser demasiado complejo.”",
-                  text: "La complejidad se divide en etapas. Primero resolvemos lo esencial; después se puede evolucionar con una base preparada para crecer.",
-                },
-              ].map((item) => (
-                <article key={item.title} className="rounded-3xl border border-white/10 bg-black/20 p-6 sm:p-7">
+              {riskItems.map((item) => (
+                <article key={item.title} className="rounded-3xl border border-white/10 bg-white/[0.025] p-6 sm:p-7">
                   <h3 className="text-lg font-semibold tracking-tight">{item.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-white/50">{item.text}</p>
                 </article>
               ))}
             </div>
           </div>
-
-          <div className="mt-12 flex flex-col gap-5 rounded-3xl border border-[#c8ff62]/25 bg-[#c8ff62]/[0.06] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-9">
-            <div>
-              <p className="text-sm font-semibold text-[#c8ff62]">No necesitás decidir todo hoy.</p>
-              <p className="mt-2 max-w-2xl text-sm leading-7 text-white/55">
-                Sí necesitás saber cuál sería el siguiente paso correcto. Contame tu situación y vemos si tiene sentido avanzar.
-              </p>
-            </div>
-            <a
-              href="#contact"
-              className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#c8ff62] px-6 py-3.5 font-semibold text-black transition hover:scale-[1.02] hover:bg-[#d5ff87]"
-            >
-              Evaluar mi proyecto ↗
-            </a>
-          </div>
         </div>
       </section>
 
-      <section className="border-y border-white/10 bg-white/[0.02] py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 md:grid-cols-3">
-          <Stat value="A medida" label="Una solución pensada para tu contexto" />
-          <Stat value="Claro" label="Cada sección tiene un objetivo" />
-          <Stat value="Preparado" label="Para crecer cuando el negocio lo necesite" />
+      <section className="border-y border-white/10 bg-white/[0.02] py-24 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Forma de trabajo"
+            title="Menos capas entre el problema y la ejecución."
+          />
+
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
+            {reasons.map((item) => (
+              <article key={item.title} className="rounded-3xl border border-white/10 bg-black/20 p-7">
+                <h3 className="text-2xl font-semibold tracking-tight">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-white/50">{item.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 rounded-3xl border border-[#c8ff62]/25 bg-[#c8ff62]/[0.06] p-7 sm:p-9">
+            <p className="max-w-4xl text-xl font-semibold leading-8 sm:text-2xl">
+              Hablás con la misma persona que entiende el contexto, propone el alcance y trabaja sobre la solución. Eso reduce pérdida de información y acelera decisiones.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid gap-10 rounded-[2rem] border border-white/10 bg-white/[0.025] p-7 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
             <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Prueba técnica</p>
-              <h2 className="mt-5 max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
-                La landing explica qué puedo resolver. El portfolio muestra cómo lo construyo.
+              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Antes del código</p>
+              <h2 className="mt-6 text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
+                La primera decisión no es qué tecnología usar. Es qué vale la pena construir.
               </h2>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-white/50">
-                Si querés revisar proyectos, experiencia, tecnologías y repositorios antes de avanzar, dejé toda la parte técnica separada en un portfolio específico.
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/50">
+                Una conversación útil debería reducir incertidumbre. Antes de estimar desarrollo, busco que podamos responder estas preguntas.
               </p>
             </div>
-            <a
-              href="/portfolio"
-              className="inline-flex w-fit shrink-0 items-center justify-center rounded-full border border-white/15 px-6 py-3.5 font-semibold text-white transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
-            >
-              Explorar portfolio técnico ↗
-            </a>
+
+            <div className="overflow-hidden rounded-3xl border border-white/10">
+              {decisionQuestions.map((question, index) => (
+                <div
+                  key={question}
+                  className="grid grid-cols-[auto_1fr] gap-5 border-b border-white/10 bg-white/[0.02] p-6 last:border-b-0 sm:p-7"
+                >
+                  <span className="text-xs text-[#c8ff62]">0{index + 1}</span>
+                  <p className="text-lg font-medium leading-7 text-white/80">{question}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="process" className="border-y border-white/10 py-24 sm:py-32">
+      <section className="border-y border-white/10 bg-white/[0.02] py-24 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading eyebrow="Proceso" title="Menos incertidumbre. Más claridad desde el primer día." />
+          <SectionHeading
+            eyebrow="Cómo podemos trabajar"
+            title="El formato se adapta al estado del problema, no al revés."
+          />
+
+          <div className="mt-14 grid gap-5 lg:grid-cols-3">
+            {engagementModels.map((model) => (
+              <article
+                key={model.number}
+                className="flex min-h-[360px] flex-col rounded-3xl border border-white/10 bg-[#0a0a0a] p-7 sm:p-8"
+              >
+                <span className="text-xs text-[#c8ff62]">{model.number}</span>
+                <h3 className="mt-16 text-2xl font-semibold tracking-tight">{model.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-white/50">{model.text}</p>
+                <p className="mt-auto border-t border-white/10 pt-6 text-xs leading-6 text-white/35">{model.fit}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="process" className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Proceso"
+            title="Del problema al producto, con un alcance que se pueda explicar antes de construir."
+          />
 
           <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
             {process.map((step) => (
@@ -285,23 +428,23 @@ export default function Home() {
 
       <section id="contact" className="px-5 pb-5 sm:px-8 sm:pb-8">
         <div className="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#c8ff62] px-6 py-16 text-black sm:px-10 sm:py-24 lg:px-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50">Empecemos</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50">Próximo paso</p>
 
           <div className="mt-5 grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <div>
               <h2 className="text-balance max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl">
-                Si sabés que tu presencia digital puede estar rindiendo más, este es el momento de ordenarla.
+                Traé el problema. Salí con claridad sobre el próximo paso.
               </h2>
               <p className="mt-7 max-w-xl leading-7 text-black/60">
-                No necesitás llegar con todo definido. Contame dónde estás hoy y qué querés conseguir. Te ayudo a convertirlo en un alcance claro y en un próximo paso concreto.
+                No hace falta llegar con una especificación cerrada. Entiendo el problema, el contexto y el resultado que buscás para determinar qué conviene construir, qué puede esperar y si soy la persona adecuada para hacerlo.
               </p>
 
               <div className="mt-9 border-t border-black/10 pt-7">
-                <p className="text-sm font-semibold">Sin vueltas y sin compromisos innecesarios</p>
+                <p className="text-sm font-semibold">Primera conversación, foco concreto</p>
                 <ol className="mt-4 space-y-3 text-sm leading-6 text-black/55">
-                  <li>01 · Me contás el problema y el objetivo.</li>
-                  <li>02 · Ordenamos el alcance y detectamos qué conviene resolver primero.</li>
-                  <li>03 · Si hay encaje, definimos próximos pasos, tiempos y propuesta.</li>
+                  <li>01 · Entiendo el problema, el objetivo y el contexto actual.</li>
+                  <li>02 · Identificamos restricciones, prioridades y qué conviene resolver primero.</li>
+                  <li>03 · Si hay encaje, definimos alcance, tiempos y propuesta.</li>
                 </ol>
               </div>
 
@@ -311,7 +454,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-black/15 px-5 py-3 text-sm font-semibold text-black transition hover:bg-black hover:text-white"
               >
-                Quiero hablarlo por WhatsApp ↗
+                Hablar por WhatsApp ↗
               </a>
             </div>
 
@@ -321,7 +464,7 @@ export default function Home() {
       </section>
 
       <footer className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-10 text-sm text-white/35 sm:px-8 md:flex-row md:items-center md:justify-between">
-        <p>© {new Date().getFullYear()} Fabián — Desarrollo web</p>
+        <p>© {new Date().getFullYear()} Fabián — Desarrollo de producto y soluciones digitales</p>
         <div className="flex flex-wrap gap-6">
           <a className="transition hover:text-white" href="/portfolio">Portfolio técnico</a>
           <a className="transition hover:text-white" href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
@@ -336,15 +479,6 @@ function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) 
     <div className="grid gap-6 lg:grid-cols-[0.55fr_1.45fr]">
       <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">{eyebrow}</p>
       <h2 className="text-balance max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">{title}</h2>
-    </div>
-  );
-}
-
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div>
-      <p className="text-3xl font-semibold tracking-tight">{value}</p>
-      <p className="mt-2 text-sm text-white/40">{label}</p>
     </div>
   );
 }
