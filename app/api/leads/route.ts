@@ -3,13 +3,13 @@ import { NextResponse } from "next/server";
 const TRELLO_NEW_LEADS_LIST_ID = "6abab828d0452e1269349622";
 
 const SERVICE_CODES: Record<string, string> = {
-  "Landing Page": "LANDING",
-  "Sitio Web": "WEB",
+  "Lanzar un producto / MVP": "MVP",
+  "Mejorar una experiencia digital": "PRODUCT",
+  "Aplicación / sistema interno": "APP",
+  "Automatización / integración": "AUTO",
+  "Sumar capacidad técnica al equipo": "TEAM",
   "E-commerce": "ECOM",
-  "Aplicación / Sistema": "APP",
-  Automatización: "AUTO",
-  Mantenimiento: "MAINT",
-  "No estoy seguro": "OTHER",
+  "No estoy seguro todavía": "OTHER",
 };
 
 const SOURCE_CHANNELS = new Set([
@@ -162,29 +162,42 @@ function calculateScore(lead: LeadInput, serviceCode: string) {
   let value = 0;
   const reasons: string[] = [];
 
-  if (lead.message.length >= 35 && serviceCode !== "OTHER") {
+  if (serviceCode !== "OTHER") {
     value += 2;
-    reasons.push("necesidad clara");
+    reasons.push("necesidad categorizada");
   }
 
-  if (lead.budgetRange) {
+  if (lead.message.length >= 60) {
     value += 2;
-    reasons.push("presupuesto informado");
-  }
-
-  if (lead.deadline && lead.deadline !== "Sin fecha definida") {
-    value += 2;
-    reasons.push("plazo definido");
+    reasons.push("contexto suficiente");
+  } else if (lead.message.length >= 30) {
+    value += 1;
+    reasons.push("contexto inicial");
   }
 
   if (lead.companyOrProject) {
-    value += 1;
+    value += 2;
     reasons.push("empresa/proyecto identificado");
+  }
+
+  if (lead.phone) {
+    value += 1;
+    reasons.push("canal directo disponible");
   }
 
   if (lead.source === "LINKEDIN" || lead.source === "WHATSAPP" || lead.source === "REFERRAL") {
     value += 1;
     reasons.push("origen comercial identificado");
+  }
+
+  const intentSignals =
+    /\b(lanzar|automatizar|integrar|mejorar|mvp|sistema|aplicaci[oó]n|e-?commerce|proceso|producto)\b/i.test(
+      lead.message,
+    );
+
+  if (intentSignals) {
+    value += 1;
+    reasons.push("intención concreta detectada");
   }
 
   const priceOnly =
@@ -199,7 +212,7 @@ function calculateScore(lead: LeadInput, serviceCode: string) {
   value = Math.max(0, Math.min(10, value));
 
   const priority =
-    value >= 8 ? "ALTA" :
+    value >= 7 ? "ALTA" :
     value >= 5 ? "INTERESANTE" :
     value >= 3 ? "NUTRIR" :
     "BAJA";
