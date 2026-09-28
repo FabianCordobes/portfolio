@@ -38,13 +38,6 @@ const MEDIA = {
     "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/forgot.png",
 };
 
-const signals = [
-  ["47", "media assets"],
-  ["05", "real routes"],
-  ["03", "core domains"],
-  ["08", "product flows"],
-];
-
 export default function Home() {
   return (
     <main className="future-site">
@@ -120,16 +113,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="signal-strip" aria-label="Métricas verificadas">
-        <div className="signal-strip-track">
-          {signals.map(([value, label]) => (
-            <div key={label} className="signal-stat">
-              <strong>{value}</strong>
-              <span>{label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section id="work" className="future-work">
         <div className="future-section-intro" data-reveal>
