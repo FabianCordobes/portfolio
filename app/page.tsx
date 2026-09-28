@@ -13,8 +13,8 @@ const HERO_IMAGE =
   heroImagePart5;
 
 const CONTACT = {
-  whatsapp: "https://wa.me/1127813814",
-  linkedin: "https://www.linkedin.com/in/fabian-cordobes/",
+  whatsapp: "https://wa.me/5491127813814",
+  linkedin: "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/?isSelfProfile=true",
   github: "https://github.com/FabianCordobes",
 };
 
