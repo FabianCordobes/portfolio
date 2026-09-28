@@ -73,7 +73,7 @@ export default function Home() {
         aria-label="Abrir conversación por WhatsApp"
       >
         <span className="whatsapp-pulse" />
-        <span className="whatsapp-icon">✦</span>
+        <span className="whatsapp-icon">WA</span>
         <span className="whatsapp-label">WhatsApp</span>
       </a>
 
