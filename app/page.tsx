@@ -113,6 +113,33 @@ const process = [
   },
 ];
 
+const experience = [
+  {
+    period: "abr. 2023 — mar. 2025",
+    company: "BuildVision",
+    role: "Full Stack Developer",
+    description:
+      "Participé en la planificación y desarrollo de una plataforma orientada a conectar constructoras y organizar cotizaciones, con foco principal en frontend y contribuciones backend.",
+    tech: "Next.js · React Query · NestJS · Node.js · TypeORM · shadcn/ui",
+  },
+  {
+    period: "jul. 2023 — nov. 2023",
+    company: "Social Wave",
+    role: "Front-End Developer",
+    description:
+      "Desarrollé interfaces funcionales y atractivas a partir de requerimientos técnicos, trabajando en comunicación directa con clientes y colaboradores para proponer e implementar mejoras.",
+    tech: "JavaScript · React · Redux · Tailwind CSS · Sass",
+  },
+  {
+    period: "nov. 2022 — ene. 2023",
+    company: "Henry",
+    role: "Teaching Assistant · Full Stack",
+    description:
+      "Coordiné grupos de estudio y acompañé la resolución de ejercicios mediante pair programming, reforzando conceptos de frontend y backend.",
+    tech: "React · Redux · Node.js · Express · Sequelize",
+  },
+];
+
 export default function Home() {
   return (
     <main className="overflow-hidden bg-[#070707] text-[#f6f6f3]">
@@ -125,6 +152,7 @@ export default function Home() {
           <nav className="hidden items-center gap-8 text-sm text-white/55 md:flex">
             <a className="transition hover:text-white" href="#services">Servicios</a>
             <a className="transition hover:text-white" href="#projects">Proyectos</a>
+            <a className="transition hover:text-white" href="#experience">Experiencia</a>
             <a className="transition hover:text-white" href="#process">Proceso</a>
             <a className="transition hover:text-white" href="#about">Sobre mí</a>
           </nav>
@@ -288,6 +316,43 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="experience" className="border-y border-white/10 bg-white/[0.02] py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Experiencia"
+            title="Experiencia real construyendo producto, interfaces y soluciones full stack."
+          />
+
+          <div className="mt-16 border-t border-white/10">
+            {experience.map((item) => (
+              <article
+                key={item.company}
+                className="grid gap-6 border-b border-white/10 py-9 md:grid-cols-[0.55fr_1.45fr] md:gap-10 md:py-11"
+              >
+                <div>
+                  <p className="text-xs uppercase tracking-[0.18em] text-white/30">
+                    {item.period}
+                  </p>
+                  <p className="mt-3 text-sm font-medium text-[#c8ff62]">
+                    {item.company}
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+                    {item.role}
+                  </h3>
+                  <p className="mt-4 max-w-3xl leading-7 text-white/50">
+                    {item.description}
+                  </p>
+                  <p className="mt-5 text-xs text-white/30">{item.tech}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="process" className="border-y border-white/10 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading eyebrow="Proceso" title="Simple, transparente y sin vueltas." />
@@ -311,15 +376,56 @@ export default function Home() {
           </div>
           <div>
             <h2 className="text-balance max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
-              Soy Fabián. Desarrollo productos web de punta a punta.
+              Full Stack con mirada de producto, diseño y negocio.
             </h2>
+
             <div className="mt-10 grid gap-8 text-base leading-8 text-white/50 md:grid-cols-2">
               <p>
-                Trabajo tanto frontend como backend, por lo que puedo acompañar un proyecto desde la interfaz hasta APIs, autenticación, bases de datos e integraciones.
+                Combino desarrollo frontend y backend con criterio de UI/UX para construir interfaces atractivas, funcionales y productos que puedan crecer con una base técnica sólida.
               </p>
               <p>
-                Mi enfoque combina desarrollo sólido con una experiencia clara para el usuario y una solución que tenga sentido para el negocio.
+                También tengo experiencia trabajando con clientes, relevando necesidades y comunicando soluciones. Mi recorrido comercial fortaleció una forma de trabajo basada en escuchar, entender el problema y convertirlo en una solución concreta.
               </p>
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-2">
+              {[
+                "JavaScript",
+                "TypeScript",
+                "React",
+                "Next.js",
+                "Node.js",
+                "NestJS",
+                "PostgreSQL",
+                "Git",
+                "Figma",
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-white/10 bg-white/[0.025] px-4 py-2 text-xs text-white/45"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-wrap gap-3">
+              <a
+                href={CONTACT.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
+              >
+                Ver LinkedIn ↗
+              </a>
+              <a
+                href={CONTACT.github}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium transition hover:border-white/30 hover:text-white"
+              >
+                Ver GitHub ↗
+              </a>
             </div>
           </div>
         </div>
