@@ -106,16 +106,16 @@ export default function LeadForm() {
         <label><span>WhatsApp</span><input name="phone" type="tel" autoComplete="tel" maxLength={80} placeholder="+54 ..." /></label>
 
         <label className="future-form-wide">
-          <span>¿Qué querés crear?</span>
+          <span>¿Qué querés explorar?</span>
           <select name="requestedService" defaultValue="" required>
-            <option value="" disabled>Elegí una dirección</option>
+            <option value="" disabled>Elegí una posibilidad</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
           </select>
         </label>
 
         <label className="future-form-wide">
-          <span>Contame la idea</span>
-          <textarea name="message" minLength={20} maxLength={1800} required placeholder="Qué querés llevar al próximo nivel..." />
+          <span>¿Qué imaginás?</span>
+          <textarea name="message" minLength={20} maxLength={1800} required placeholder="Una experiencia, un producto, una evolución..." />
         </label>
 
         <label className="sr-only" aria-hidden="true">
@@ -125,10 +125,10 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"} className="future-submit">
-        {status === "sending" ? "Enviando..." : "Empecemos ↗"}
+        {status === "sending" ? "Enviando..." : "Quiero verlo tomar forma ↗"}
       </button>
 
-      {status === "success" && <p className="future-form-status" role="status">Recibido. Te contacto con una dirección concreta.</p>}
+      {status === "success" && <p className="future-form-status" role="status">Recibido. Lo convierto en una primera dirección para conversar.</p>}
       {status === "error" && <p className="future-form-status" role="alert">{error}</p>}
     </form>
   );
