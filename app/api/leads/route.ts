@@ -3,13 +3,13 @@ import { NextResponse } from "next/server";
 const TRELLO_NEW_LEADS_LIST_ID = "6abab828d0452e1269349622";
 
 const SERVICE_CODES: Record<string, string> = {
-  "Landing Page": "LANDING",
-  "Sitio Web": "WEB",
+  "Lanzar un producto / MVP": "MVP",
+  "Mejorar una experiencia digital": "PRODUCT",
+  "Aplicación / sistema interno": "APP",
+  "Automatización / integración": "AUTO",
+  "Sumar capacidad técnica al equipo": "TEAM",
   "E-commerce": "ECOM",
-  "Aplicación / Sistema": "APP",
-  Automatización: "AUTO",
-  Mantenimiento: "MAINT",
-  "No estoy seguro": "OTHER",
+  "No estoy seguro todavía": "OTHER",
 };
 
 const SOURCE_CHANNELS = new Set([
