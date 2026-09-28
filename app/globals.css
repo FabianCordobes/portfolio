@@ -117,7 +117,9 @@ a {
   inset: 0 auto auto 0;
   z-index: 120;
   height: 2px;
-  width: calc(var(--scroll-progress) * 100%);
+  width: 100%;
+  transform: scaleX(var(--scroll-progress));
+  transform-origin: left center;
   background: linear-gradient(90deg, transparent, var(--accent));
   box-shadow: 0 0 22px rgba(200, 255, 98, 0.6);
   pointer-events: none;
@@ -514,8 +516,8 @@ a {
     10px 14px 30px rgba(0, 0, 0, 0.45);
   transform:
     perspective(1200px)
-    rotateX(calc(var(--tilt-x) * 0.45))
-    rotateY(calc(var(--tilt-y) * 0.45));
+    rotateX(var(--tilt-x))
+    rotateY(var(--tilt-y));
 }
 
 .five-d-heading::before {
@@ -875,7 +877,7 @@ a {
     perspective(1300px)
     rotateY(-10deg)
     rotateX(2deg)
-    translate3d(calc(var(--shift-x) * -0.6), calc(var(--shift-y) * -0.5), 0);
+    translate3d(var(--shift-x), var(--shift-y), 0);
 }
 
 .commerce-shot-c {
@@ -885,7 +887,7 @@ a {
   transform:
     perspective(1300px)
     rotateY(5deg)
-    translate3d(calc(var(--shift-x) * 0.4), calc(var(--shift-y) * 0.4), 0);
+    translate3d(var(--shift-x), var(--shift-y), 0);
 }
 
 .commerce-beam {
@@ -1269,8 +1271,8 @@ a {
 }
 
 @keyframes beam {
-  0%, 100% { opacity: 0.15; scale: 0.82 1; }
-  50% { opacity: 0.8; scale: 1.08 1; }
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.82; }
 }
 
 @keyframes orbFloat {
