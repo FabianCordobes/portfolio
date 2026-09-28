@@ -81,14 +81,14 @@ export async function POST(request: Request) {
     if (message.startsWith("CONFIG:")) {
       console.error(message);
       return NextResponse.json(
-        { ok: false, error: "El formulario está en configuración. Probá nuevamente en unos minutos." },
+        { ok: false, error: "Volvamos a conectarnos en unos minutos." },
         { status: 503 },
       );
     }
 
     console.error("Lead intake error:", error);
     return NextResponse.json(
-      { ok: false, error: "No pudimos enviar tu consulta. Probá nuevamente." },
+      { ok: false, error: "Volvamos a intentarlo en un momento." },
       { status: 500 },
     );
   }
