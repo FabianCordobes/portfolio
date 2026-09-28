@@ -1,8 +1,7 @@
 const CONTACT = {
-  whatsapp: "#contact",
-  linkedin: "#",
+  whatsapp: "https://wa.me/27813814",
+  linkedin: "https://www.linkedin.com/in/fabian-cordobes/",
   github: "https://github.com/FabianCordobes",
-  instagram: "#",
 };
 
 const services = [
