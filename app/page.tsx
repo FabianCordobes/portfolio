@@ -16,7 +16,6 @@ const HERO_IMAGE =
 const CONTACT = {
   whatsapp: "https://wa.me/5491127813814",
   linkedin: "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/?isSelfProfile=true",
-  github: "https://github.com/FabianCordobes",
 };
 
 const services = [
@@ -25,28 +24,28 @@ const services = [
     title: "Landing pages",
     description:
       "Para dejar de mandar explicaciones largas por mensaje y llevar a cada persona a una propuesta clara, enfocada en una sola acción.",
-    tags: ["Diseño responsive", "SEO", "WhatsApp"],
+    tags: ["Conversión", "Claridad", "Contacto directo"],
   },
   {
     number: "02",
     title: "Sitios web",
     description:
       "Para que tu negocio se vea tan serio como realmente es, genere confianza antes del primer contacto y facilite que te elijan.",
-    tags: ["Institucional", "Portfolio", "CMS"],
+    tags: ["Confianza", "Contenido", "Posicionamiento"],
   },
   {
     number: "03",
     title: "Aplicaciones web",
     description:
       "Para transformar tareas repetitivas, desorden operativo o procesos manuales en un sistema que ahorre tiempo y reduzca fricción.",
-    tags: ["Dashboards", "Usuarios", "APIs"],
+    tags: ["Procesos", "Automatización", "Operación"],
   },
   {
     number: "04",
     title: "E-commerce",
     description:
       "Para que vender online no dependa de conversaciones eternas, sino de una experiencia de compra clara, confiable y preparada para convertir.",
-    tags: ["Catálogo", "Pagos", "Integraciones"],
+    tags: ["Ventas", "Catálogo", "Experiencia de compra"],
   },
 ];
 
@@ -64,7 +63,7 @@ const process = [
   {
     number: "03",
     title: "Construir",
-    text: "Desarrollo el producto con foco en rendimiento, responsive y una base mantenible.",
+    text: "Construyo la solución con foco en claridad, velocidad y una experiencia simple para quien la usa.",
   },
   {
     number: "04",
