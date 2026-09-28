@@ -26,17 +26,21 @@ export default function SmartProjectBrief() {
         <div className="ai-orb" aria-hidden="true"><span /><span /><span /></div>
       </div>
 
-      <div className="signal-options">
-        {NEEDS.map((item) => (
+      <div className="signal-options signal-options-vertical">
+        {NEEDS.map((item, index) => (
           <button key={item.id} type="button" onClick={() => setNeed(item.id)} className={need === item.id ? "is-active" : ""}>
-            {item.label}
+            <span className="signal-index">0{index + 1}</span>
+            <span className="signal-option-label">{item.label}</span>
+            <span className="signal-option-arrow">↗</span>
           </button>
         ))}
       </div>
 
-      <div className="signal-result">
-        <p className="signal-path">{selected.title} <span>→</span> {selected.route}</p>
-        <p className="signal-outcome">{selected.outcome}</p>
+      <div className="signal-result signal-result-open">
+        <div>
+          <p className="signal-path">{selected.title} <span>→</span> {selected.route}</p>
+          <p className="signal-outcome">{selected.outcome}</p>
+        </div>
 
         <div className="signal-moments">
           {MOMENTS.map((item) => (
