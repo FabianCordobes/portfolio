@@ -24,28 +24,28 @@ const services = [
     number: "01",
     title: "Landing pages",
     description:
-      "Páginas enfocadas en presentar tu propuesta con claridad y convertir visitas en consultas.",
+      "Para dejar de mandar explicaciones largas por mensaje y llevar a cada persona a una propuesta clara, enfocada en una sola acción.",
     tags: ["Diseño responsive", "SEO", "WhatsApp"],
   },
   {
     number: "02",
     title: "Sitios web",
     description:
-      "Webs profesionales para empresas y marcas que necesitan una presencia digital sólida.",
+      "Para que tu negocio se vea tan serio como realmente es, genere confianza antes del primer contacto y facilite que te elijan.",
     tags: ["Institucional", "Portfolio", "CMS"],
   },
   {
     number: "03",
     title: "Aplicaciones web",
     description:
-      "Plataformas y sistemas a medida para automatizar procesos y resolver necesidades concretas.",
+      "Para transformar tareas repetitivas, desorden operativo o procesos manuales en un sistema que ahorre tiempo y reduzca fricción.",
     tags: ["Dashboards", "Usuarios", "APIs"],
   },
   {
     number: "04",
     title: "E-commerce",
     description:
-      "Experiencias de compra rápidas, claras y preparadas para integrarse con pagos y gestión.",
+      "Para que vender online no dependa de conversaciones eternas, sino de una experiencia de compra clara, confiable y preparada para convertir.",
     tags: ["Catálogo", "Pagos", "Integraciones"],
   },
 ];
@@ -185,17 +185,17 @@ export default function Home() {
         <div className="relative z-[3] mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col justify-center px-5 py-20 sm:px-8 lg:py-28">
           <div className="mb-8 flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-white/45 sm:text-sm">
             <span className="h-2 w-2 rounded-full bg-[#c8ff62] shadow-[0_0_22px_#c8ff62]" />
-            Disponible para nuevos proyectos
+            Tomando nuevos proyectos
           </div>
 
           <h1 className="hero-title text-balance max-w-6xl text-[clamp(3.2rem,9vw,8.5rem)] font-semibold leading-[0.93] tracking-[-0.065em]">
-            Desarrollo productos digitales que
-            <span className="block text-white/35">mueven negocios.</span>
+            Tu web debería ayudarte a vender, no sólo
+            <span className="block text-white/35">verse bien.</span>
           </h1>
 
           <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-end">
             <p className="max-w-2xl text-base leading-8 text-white/55 sm:text-lg">
-              Diseño y desarrollo páginas web, landing pages y aplicaciones a medida para profesionales, emprendimientos y empresas que necesitan una presencia digital seria y efectiva.
+              Si hoy tu negocio depende demasiado de explicar por mensaje qué hacés, perseguir consultas o perder oportunidades por una presencia digital débil, puedo ayudarte a convertir eso en una experiencia clara, profesional y preparada para generar acción.
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
@@ -203,13 +203,13 @@ export default function Home() {
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-full bg-[#c8ff62] px-6 py-3.5 font-semibold text-black transition hover:scale-[1.02] hover:bg-[#d5ff87]"
               >
-                Quiero crear mi proyecto
+                Quiero mejorar mi presencia digital
               </a>
               <a
                 href="#projects"
                 className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 font-medium text-white transition hover:bg-white/5"
               >
-                Ver trabajos ↓
+                Ver cómo trabajo ↓
               </a>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Servicios"
-            title="No vendo código. Construyo soluciones para objetivos concretos."
+            title="La tecnología importa. Pero lo que realmente importa es qué cambia en tu negocio."
           />
 
           <div className="mt-16 grid border-t border-white/10 md:grid-cols-2">
@@ -250,6 +250,63 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-y border-white/10 bg-white/[0.025] py-24 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">Antes de postergarlo otra vez</p>
+              <h2 className="mt-6 text-balance text-4xl font-semibold leading-tight tracking-[-0.04em] sm:text-6xl">
+                Una presencia digital débil no siempre se nota. Las oportunidades que se pierden, tampoco.
+              </h2>
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/50">
+                Si una persona entra, no entiende rápido qué ofrecés, no confía o no sabe cuál es el siguiente paso, puede irse sin escribirte. Mejorar eso no es “hacer una web más linda”: es reducir fricción entre el interés y la acción.
+              </p>
+            </div>
+
+            <div className="grid gap-4">
+              {[
+                {
+                  title: "“Todavía no sé exactamente qué necesito.”",
+                  text: "No hace falta. El primer paso es ordenar el problema, el objetivo y las prioridades. La solución se define después.",
+                },
+                {
+                  title: "“No sé si ahora es el momento.”",
+                  text: "Si hoy ya estás perdiendo tiempo explicando manualmente, derivando consultas o sosteniendo procesos desordenados, ya existe un costo. La pregunta es si conviene seguir absorbiéndolo.",
+                },
+                {
+                  title: "“Me preocupa invertir y que no sirva.”",
+                  text: "Por eso el trabajo empieza por alcance y objetivo. No se trata de sumar funciones: se trata de construir sólo lo que tenga una razón clara de existir.",
+                },
+                {
+                  title: "“Seguro va a ser demasiado complejo.”",
+                  text: "La complejidad se divide en etapas. Primero resolvemos lo esencial; después se puede evolucionar con una base preparada para crecer.",
+                },
+              ].map((item) => (
+                <article key={item.title} className="rounded-3xl border border-white/10 bg-black/20 p-6 sm:p-7">
+                  <h3 className="text-lg font-semibold tracking-tight">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-white/50">{item.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col gap-5 rounded-3xl border border-[#c8ff62]/25 bg-[#c8ff62]/[0.06] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-9">
+            <div>
+              <p className="text-sm font-semibold text-[#c8ff62]">No necesitás decidir todo hoy.</p>
+              <p className="mt-2 max-w-2xl text-sm leading-7 text-white/55">
+                Sí necesitás saber cuál sería el siguiente paso correcto. Contame tu situación y vemos si tiene sentido avanzar.
+              </p>
+            </div>
+            <a
+              href="#contact"
+              className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#c8ff62] px-6 py-3.5 font-semibold text-black transition hover:scale-[1.02] hover:bg-[#d5ff87]"
+            >
+              Evaluar mi proyecto ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-white/10 bg-white/[0.02] py-16">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 md:grid-cols-3">
           <Stat value="100%" label="Responsive" />
@@ -262,7 +319,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Proyectos"
-            title="Trabajo real, explicado desde el problema y la solución."
+            title="No necesitás imaginar cómo trabajo. Podés verlo en proyectos reales."
           />
 
           <div className="mt-16 space-y-4">
@@ -356,7 +413,7 @@ export default function Home() {
 
       <section id="process" className="border-y border-white/10 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading eyebrow="Proceso" title="Simple, transparente y sin vueltas." />
+          <SectionHeading eyebrow="Proceso" title="Menos incertidumbre. Más claridad desde el primer día." />
 
           <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
             {process.map((step) => (
@@ -439,18 +496,18 @@ export default function Home() {
           <div className="mt-5 grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <div>
               <h2 className="text-balance max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl">
-                ¿Tenés una idea? Hagámosla realidad.
+                Si sabés que tu presencia digital puede estar rindiendo más, este es el momento de ordenarla.
               </h2>
               <p className="mt-7 max-w-xl leading-7 text-black/60">
-                Contame qué querés construir, qué problema necesitás resolver o qué mejorarías de tu presencia digital.
+                No necesitás llegar con todo definido. Contame dónde estás hoy y qué querés conseguir. Te ayudo a convertirlo en un alcance claro y en un próximo paso concreto.
               </p>
 
               <div className="mt-9 border-t border-black/10 pt-7">
-                <p className="text-sm font-semibold">Qué pasa después</p>
+                <p className="text-sm font-semibold">Sin vueltas y sin compromisos innecesarios</p>
                 <ol className="mt-4 space-y-3 text-sm leading-6 text-black/55">
-                  <li>01 · Recibimos y ordenamos la consulta.</li>
-                  <li>02 · New Evolution revisa la oportunidad y completa la calificación.</li>
-                  <li>03 · Si necesita definición técnica, coordinamos una reunión conmigo.</li>
+                  <li>01 · Me contás el problema y el objetivo.</li>
+                  <li>02 · Ordenamos el alcance y detectamos qué conviene resolver primero.</li>
+                  <li>03 · Si hay encaje, definimos próximos pasos, tiempos y propuesta.</li>
                 </ol>
               </div>
 
@@ -460,7 +517,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="mt-8 inline-flex w-fit items-center justify-center rounded-full border border-black/15 px-5 py-3 text-sm font-semibold text-black transition hover:bg-black hover:text-white"
               >
-                Prefiero WhatsApp ↗
+                Quiero hablarlo por WhatsApp ↗
               </a>
             </div>
 
