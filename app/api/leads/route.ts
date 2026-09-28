@@ -115,7 +115,7 @@ async function createTrelloCard(
   const url = new URL("https://api.trello.com/1/cards");
   url.searchParams.set("idList", listId);
 
-  const headers: HeadersInit = {
+  const headers: Record<string, string> = {
     Accept: "application/json",
     "Content-Type": "application/json",
   };
