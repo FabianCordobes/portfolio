@@ -1,12 +1,10 @@
 name: Validate landing
 
 on:
-  push:
-    branches:
-      - feat/2030-immersive-conversion
   pull_request:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build:
