@@ -191,7 +191,7 @@ function calculateScore(lead: LeadInput, serviceCode: string) {
   }
 
   const intentSignals =
-    /\b(lanzar|automatizar|integrar|mejorar|mvp|sistema|aplicaci[oó]n|e-?commerce|proceso|producto)\b/i.test(
+    /\b(crear|evolucionar|automatizar|integrar|acelerar|mvp|sistema|aplicaci[oó]n|e-?commerce|experiencia|producto)\b/i.test(
       lead.message,
     );
 
