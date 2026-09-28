@@ -167,7 +167,7 @@ export default function LeadForm() {
             minLength={20}
             maxLength={2500}
             required
-            placeholder="Qué querés construir, qué problema necesitás resolver y cualquier contexto que nos ayude a entenderlo."
+            placeholder="Contame dónde estás hoy, qué te está frenando y qué te gustaría conseguir."
           />
         </label>
 
@@ -187,13 +187,13 @@ export default function LeadForm() {
           disabled={status === "sending"}
           className="inline-flex min-w-48 items-center justify-center rounded-full bg-black px-7 py-4 font-semibold text-white transition hover:scale-[1.02] disabled:cursor-wait disabled:opacity-60"
         >
-          {status === "sending" ? "Enviando..." : "Enviar proyecto ↗"}
+          {status === "sending" ? "Enviando..." : "Quiero evaluar mi proyecto ↗"}
         </button>
       </div>
 
       {status === "success" && (
         <p className="mt-5 rounded-2xl border border-black/10 bg-white/55 px-4 py-3 text-sm font-medium text-black/75" role="status">
-          ¡Listo! Recibí tu consulta. La voy a revisar y te contacto con los próximos pasos.
+          ¡Listo! Recibí tu consulta. La voy a revisar y te contacto para definir cuál sería el mejor próximo paso.
         </p>
       )}
 
