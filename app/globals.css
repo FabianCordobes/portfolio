@@ -1799,3 +1799,29 @@ a {
   78% { opacity: 0.4; }
   100% { top: 73%; opacity: 0; }
 }
+
+
+@media (max-width: 720px) {
+  .cinematic-portal {
+    right: -58vw;
+    top: 14vh;
+    width: 138vw;
+    opacity: 0.5;
+  }
+
+  .portal-horizon {
+    opacity: 0.24;
+  }
+
+  .portal-ring-4 {
+    display: none;
+  }
+
+  .portal-beam {
+    opacity: 0.22;
+  }
+
+  .portal-flare {
+    opacity: 0.42;
+  }
+}
