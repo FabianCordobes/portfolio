@@ -6,6 +6,7 @@ const NEEDS = [
   { id: "create", label: "Crear", title: "Una nueva experiencia", route: "Discovery + build", outcome: "¿Qué forma podría tomar tu idea?" },
   { id: "evolve", label: "Evolucionar", title: "Una experiencia en evolución", route: "Product evolution", outcome: "¿Qué podría sentirse todavía mejor?" },
   { id: "automate", label: "Automatizar", title: "Un sistema conectado", route: "Automation + integration", outcome: "¿Qué podría suceder de forma más inteligente?" },
+  { id: "ai", label: "Potenciar con IA", title: "Una experiencia inteligente", route: "AI orchestration", outcome: "¿Qué podría pensar, responder o crear junto a tus usuarios?" },
   { id: "accelerate", label: "Acelerar", title: "Un equipo en expansión", route: "Technical acceleration", outcome: "¿Qué podrías llevar más lejos este trimestre?" },
 ];
 
