@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 
 const SERVICES = [
+  "IA / agentes / automatización inteligente",
   "Crear un producto / MVP",
   "Evolucionar una experiencia digital",
   "Aplicación / sistema",
