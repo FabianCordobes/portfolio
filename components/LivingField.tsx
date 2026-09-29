@@ -58,6 +58,38 @@ export default function LivingField() {
       context.clearRect(0, 0, width, height);
       time += 0.006;
 
+      const drawRibbon = (
+        baseY: number,
+        amplitude: number,
+        phase: number,
+        rgba: string,
+        widthPx: number,
+      ) => {
+        context.beginPath();
+
+        for (let x = -40; x <= width + 40; x += 18) {
+          const normalized = x / Math.max(width, 1);
+          const y =
+            baseY +
+            Math.sin(normalized * Math.PI * 2.2 + time * 1.35 + phase) * amplitude +
+            Math.sin(normalized * Math.PI * 5.3 - time * 0.72 + phase) * amplitude * 0.28;
+
+          if (x === -40) context.moveTo(x, y);
+          else context.lineTo(x, y);
+        }
+
+        context.strokeStyle = rgba;
+        context.lineWidth = widthPx;
+        context.shadowBlur = 22;
+        context.shadowColor = rgba;
+        context.stroke();
+        context.shadowBlur = 0;
+      };
+
+      drawRibbon(height * 0.32, Math.min(34, height * 0.035), 0.3, "rgba(105,216,255,0.075)", 1.1);
+      drawRibbon(height * 0.54, Math.min(42, height * 0.045), 1.7, "rgba(159,134,255,0.055)", 1);
+      drawRibbon(height * 0.71, Math.min(27, height * 0.03), 3.1, "rgba(200,255,98,0.035)", 0.8);
+
       for (const node of nodes) {
         if (!reducedMotion) {
           node.x += node.vx * node.depth;
