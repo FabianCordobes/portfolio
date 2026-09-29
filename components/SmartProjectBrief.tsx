@@ -3,17 +3,16 @@
 import { useMemo, useState } from "react";
 
 const NEEDS = [
-  { id: "create", label: "Crear producto", title: "Producto nuevo", route: "Discovery + build", outcome: "Definición, diseño y primera versión." },
-  { id: "evolve", label: "Evolucionar", title: "Producto en evolución", route: "Product evolution", outcome: "Experiencia, rendimiento y nuevas funcionalidades." },
-  { id: "automate", label: "Automatizar", title: "Automatización", route: "Automation + integration", outcome: "Procesos conectados y flujos automáticos." },
-  { id: "ai", label: "Aplicar IA", title: "IA aplicada", route: "AI orchestration", outcome: "Agentes, modelos y automatización inteligente." },
-  { id: "accelerate", label: "Sumar capacidad", title: "Capacidad técnica", route: "Technical acceleration", outcome: "Desarrollo para roadmap, entregas y expansión." },
+  { id: "landing", label: "Landing Page", title: "Landing Page", route: "Diseño + desarrollo", outcome: "Propuesta clara, narrativa visual y conversión." },
+  { id: "website", label: "Sitio Web", title: "Sitio Web", route: "Arquitectura + experiencia", outcome: "Contenido, identidad y una presencia profesional." },
+  { id: "app", label: "Aplicación Web", title: "Aplicación Web", route: "Producto + desarrollo", outcome: "Interfaz, lógica de negocio, datos e integraciones." },
+  { id: "commerce", label: "E-commerce", title: "E-commerce", route: "Experiencia + ventas", outcome: "Catálogo, compra, administración y crecimiento." },
 ];
 
 const MOMENTS = ["Ahora", "Este trimestre", "Exploración"];
 
 export default function SmartProjectBrief() {
-  const [need, setNeed] = useState("create");
+  const [need, setNeed] = useState("landing");
   const [moment, setMoment] = useState("Este trimestre");
   const selected = useMemo(() => NEEDS.find((item) => item.id === need) ?? NEEDS[0], [need]);
 
@@ -21,8 +20,8 @@ export default function SmartProjectBrief() {
     <div className="signal-panel">
       <div className="signal-header">
         <div>
-          <p className="future-kicker">PROJECT SIGNAL</p>
-          <h3>Seleccioná el tipo de proyecto.</h3>
+          <p className="future-kicker">TIPO DE PROYECTO</p>
+          <h3>Elegí qué querés construir.</h3>
         </div>
         <div className="ai-orb" aria-hidden="true"><span /><span /><span /></div>
       </div>
