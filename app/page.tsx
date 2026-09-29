@@ -25,12 +25,6 @@ const CONTACT = {
 };
 
 const MEDIA = {
-  tamaraHero:
-    "https://raw.githubusercontent.com/FabianCordobes/tamara-atadia-portfolio/main/public/images/tamara/tamara-hero.jpg",
-  tamaraStage:
-    "https://raw.githubusercontent.com/FabianCordobes/tamara-atadia-portfolio/main/public/images/tamara/tamara-stage-purple.jpg",
-  tamaraProduction:
-    "https://raw.githubusercontent.com/FabianCordobes/tamara-atadia-portfolio/main/public/images/tamara/tamara-production-event.jpg",
   commerceLogin:
     "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/login.png",
   commerceRegister:
@@ -43,26 +37,30 @@ const SERVICES = [
   {
     index: "01",
     title: "LANDING PAGES",
-    text: "Páginas enfocadas en presentar una propuesta y convertir visitas en oportunidades.",
-    tags: "Conversión · Marca · Velocidad",
+    line: "Presentan. Conectan. Convierten.",
+    text: "Una propuesta clara, una identidad visual fuerte y un recorrido pensado para generar oportunidades.",
+    scene: "landing",
   },
   {
     index: "02",
     title: "SITIOS WEB",
-    text: "Sitios profesionales para empresas, marcas y proyectos con una presencia digital sólida.",
-    tags: "Contenido · Identidad · Escala",
+    line: "Marca. Contenido. Presencia.",
+    text: "Una experiencia digital completa para comunicar valor, posicionar la marca y acompañar su crecimiento.",
+    scene: "website",
   },
   {
     index: "03",
     title: "APLICACIONES WEB",
-    text: "Productos, plataformas, dashboards y sistemas a medida con lógica de negocio.",
-    tags: "Producto · Operación · Integración",
+    line: "Producto. Lógica. Datos.",
+    text: "Interfaces, procesos, integraciones y datos trabajando dentro de una experiencia de producto.",
+    scene: "application",
   },
   {
     index: "04",
     title: "E-COMMERCE",
-    text: "Experiencias de compra, catálogo, carrito, administración y flujo de órdenes.",
-    tags: "Ventas · Catálogo · Experiencia",
+    line: "Catálogo. Compra. Gestión.",
+    text: "Una experiencia comercial conectada desde el descubrimiento hasta la operación.",
+    scene: "commerce",
   },
 ];
 
@@ -79,7 +77,7 @@ export default function Home() {
         <nav>
           <a href="#services">Servicios</a>
           <a href="#work">Proyectos</a>
-          <a href="#architecture">Arquitectura</a>
+          <a href="#architecture">Tech</a>
           <a href="/portfolio">Portfolio</a>
         </nav>
 
@@ -115,9 +113,6 @@ export default function Home() {
           <div className="future-hero-photo-mask" />
         </div>
 
-        <div className="future-hero-orbit future-hero-orbit-a" aria-hidden="true" />
-        <div className="future-hero-orbit future-hero-orbit-b" aria-hidden="true" />
-
         <div className="future-hero-content">
           <div className="future-eyebrow">
             <span className="signal-dot" />
@@ -125,127 +120,195 @@ export default function Home() {
           </div>
 
           <h1 className="five-d-title">
-            <span data-text="PRODUCTOS">PRODUCTOS</span>
+            <span data-text="EXPERIENCIAS">EXPERIENCIAS</span>
             <span data-text="DIGITALES">DIGITALES</span>
           </h1>
 
           <div className="future-hero-bottom">
             <p>
-              Diseño y desarrollo landing pages, sitios web, aplicaciones y e-commerce
-              para marcas, profesionales y empresas.
+              Diseño y desarrollo productos digitales para marcas, profesionales y
+              empresas con una experiencia visual distintiva y una base técnica sólida.
             </p>
 
             <div className="future-hero-actions">
               <a href="#contact" className="future-cta future-cta-primary">
-                Quiero crear mi proyecto <span>↗</span>
+                Iniciar proyecto <span>↗</span>
               </a>
-              <a href="#work" className="future-cta">
-                Ver trabajos <span>↓</span>
+              <a href="#services" className="future-cta">
+                Ver servicios <span>↓</span>
               </a>
             </div>
           </div>
         </div>
 
         <div className="future-side-label" aria-hidden="true">
-          LANDING · WEB · APPS · COMMERCE
+          DIGITAL EXPERIENCE · PRODUCT · ENGINEERING
         </div>
       </section>
 
-      <section id="services" className="future-services">
-        <div className="future-services-head" data-reveal>
+      <section id="services" className="service-cinema">
+        <div className="service-cinema-intro" data-reveal>
           <p className="future-kicker">SERVICIOS</p>
-          <h2 className="five-d-heading" data-text="DE LA IDEA A PRODUCCIÓN">
-            DE LA IDEA A PRODUCCIÓN
+          <h2 className="five-d-heading" data-text="CUATRO FORMAS DE CONSTRUIR">
+            CUATRO FORMAS DE CONSTRUIR
           </h2>
         </div>
 
-        <div className="future-services-list">
+        <div className="service-cinema-list">
           {SERVICES.map((service) => (
-            <article key={service.index} className="future-service-row" data-reveal>
-              <span className="future-service-index">{service.index}</span>
-              <div className="future-service-main">
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
+            <article key={service.index} className="service-chapter">
+              <div className="service-copy" data-reveal>
+                <span className="service-number">{service.index}</span>
+                <h3 className="service-five-d" data-text={service.title}>
+                  {service.title}
+                </h3>
+                <p className="service-line">{service.line}</p>
+                <p className="service-description">{service.text}</p>
+                <a href="#contact" className="service-action">
+                  Crear este proyecto <span>↗</span>
+                </a>
               </div>
-              <span className="future-service-tags">{service.tags}</span>
-              <span className="future-service-arrow">↗</span>
+
+              <div className={`service-visual service-visual-${service.scene}`} aria-hidden="true">
+                <div className="scene-grid" />
+                <div className="scene-glow" />
+
+                {service.scene === "landing" && (
+                  <>
+                    <div className="landing-screen landing-screen-main">
+                      <div className="screen-toolbar">
+                        <span /><span /><span />
+                        <i>brand.com</i>
+                      </div>
+                      <div className="landing-screen-body">
+                        <small>VALUE PROPOSITION</small>
+                        <strong>MAKE IT<br />VISIBLE</strong>
+                        <div className="landing-cta-demo">START ↗</div>
+                      </div>
+                    </div>
+                    <div className="landing-screen landing-screen-data">
+                      <small>CONVERSION SIGNAL</small>
+                      <div className="mini-wave">
+                        {[38, 62, 48, 72, 58, 86, 73, 94].map((height, index) => (
+                          <i key={index} style={{ height: `${height}%` }} />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="tech-whisper tech-whisper-a">AI_ASSIST / READY</div>
+                    <div className="tech-whisper tech-whisper-b">lodash.transform()</div>
+                  </>
+                )}
+
+                {service.scene === "website" && (
+                  <>
+                    <div className="site-orbit site-orbit-a" />
+                    <div className="site-orbit site-orbit-b" />
+                    <div className="site-panel site-panel-a">
+                      <small>HOME / EXPERIENCE</small>
+                      <strong>BRAND</strong>
+                    </div>
+                    <div className="site-panel site-panel-b">
+                      <small>CONTENT SYSTEM</small>
+                      <strong>STORY</strong>
+                    </div>
+                    <div className="site-panel site-panel-c">
+                      <small>CONNECTED PAGES</small>
+                      <strong>FLOW</strong>
+                    </div>
+                    <div className="tech-whisper tech-whisper-a">service.mesh / active</div>
+                    <div className="tech-whisper tech-whisper-c">mongo.collection</div>
+                  </>
+                )}
+
+                {service.scene === "application" && (
+                  <>
+                    <div className="app-console">
+                      <div className="app-console-head">
+                        <span>PRODUCT SYSTEM</span>
+                        <span className="live-dot">● LIVE</span>
+                      </div>
+                      <div className="app-console-grid">
+                        <div className="app-module app-module-main">
+                          <small>REALTIME ACTIVITY</small>
+                          <div className="realtime-wave">
+                            {[42, 68, 51, 82, 63, 91, 74, 88, 67, 95].map((height, index) => (
+                              <i key={index} style={{ height: `${height}%` }} />
+                            ))}
+                          </div>
+                        </div>
+                        <div className="app-module">
+                          <small>API</small>
+                          <strong>REST</strong>
+                        </div>
+                        <div className="app-module">
+                          <small>DATA</small>
+                          <strong>NoSQL</strong>
+                        </div>
+                        <div className="app-module app-module-wide">
+                          <small>CHANNEL</small>
+                          <strong>WebSocket</strong>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="data-packet packet-a" />
+                    <div className="data-packet packet-b" />
+                    <div className="data-packet packet-c" />
+                    <div className="tech-whisper tech-whisper-b">microservice.route()</div>
+                  </>
+                )}
+
+                {service.scene === "commerce" && (
+                  <>
+                    <img className="commerce-service-shot commerce-service-a" src={MEDIA.commerceLogin} alt="" />
+                    <img className="commerce-service-shot commerce-service-b" src={MEDIA.commerceRegister} alt="" />
+                    <img className="commerce-service-shot commerce-service-c" src={MEDIA.commerceForgot} alt="" />
+                    <div className="commerce-service-core">
+                      <small>COMMERCE FLOW</small>
+                      <strong>DISCOVER → BUY → MANAGE</strong>
+                    </div>
+                    <div className="tech-whisper tech-whisper-a">inventory.sync()</div>
+                    <div className="tech-whisper tech-whisper-c">orders.stream</div>
+                  </>
+                )}
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="work" className="future-work">
-        <div className="future-section-intro" data-reveal>
-          <p className="future-kicker">PROYECTOS REALES</p>
-          <h2 className="five-d-heading" data-text="TRABAJO PUBLICADO">
-            TRABAJO PUBLICADO
+      <section id="work" className="professional-proof">
+        <div className="professional-proof-head" data-reveal>
+          <p className="future-kicker">PRODUCTOS REALES</p>
+          <h2 className="five-d-heading" data-text="DISEÑO + INGENIERÍA">
+            DISEÑO + INGENIERÍA
           </h2>
         </div>
 
-        <article className="project-chapter project-chapter-image">
-          <div className="project-media project-media-tamara">
-            <img src={MEDIA.tamaraHero} alt="Proyecto Tamara Atadía" />
-            <img className="project-float project-float-a" src={MEDIA.tamaraStage} alt="" />
-            <img className="project-float project-float-b" src={MEDIA.tamaraProduction} alt="" />
-            <div className="project-gradient" />
-          </div>
-
-          <div className="project-overlay" data-reveal>
-            <div>
-              <p className="future-kicker">01 · BRAND EXPERIENCE</p>
-              <h3>TAMARA<br />ATADÍA</h3>
-              <p className="project-summary">
-                Portfolio artístico, marca personal, contenido multimedia y contratación.
-              </p>
-            </div>
-
-            <div className="project-meta">
-              <Metric value="47" label="media assets" />
-              <Metric value="05" label="routes" />
-              <Metric value="46" label="source files" />
-            </div>
-
-            <div className="project-links">
-              <a href="https://tamara-atadia-portfolio.vercel.app" target="_blank" rel="noreferrer">
-                Live ↗
-              </a>
-              <a href="https://github.com/FabianCordobes/tamara-atadia-portfolio" target="_blank" rel="noreferrer">
-                Code ↗
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article className="project-chapter project-chapter-system">
-          <div className="system-space">
+        <article className="proof-chapter proof-chapter-jamly">
+          <div className="proof-visual">
             <div className="system-orbit system-orbit-a" />
             <div className="system-orbit system-orbit-b" />
-
             <div className="system-core">
               <div className="system-core-head">
-                <span>JAMLY / LIVE SYSTEM</span>
+                <span>JAMLY / BOOKING SYSTEM</span>
                 <span className="system-live">● ONLINE</span>
               </div>
-
               <div className="system-grid">
                 <div className="system-block system-block-large">
                   <small>BOOKING ENGINE</small>
                   <strong>20:00</strong>
                   <span>Studio session</span>
                 </div>
-
                 <div className="system-block">
                   <small>ACCESS</small>
                   <strong>JWT</strong>
                   <span>1h</span>
                 </div>
-
                 <div className="system-block">
                   <small>ROLES</small>
                   <strong>02</strong>
                   <span>User · Admin</span>
                 </div>
-
                 <div className="system-block system-block-wide">
                   <small>AVAILABILITY</small>
                   <div className="availability-wave">
@@ -256,70 +319,50 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            <div className="system-label system-label-a">API</div>
-            <div className="system-label system-label-b">DATA</div>
-            <div className="system-label system-label-c">AUTH</div>
           </div>
 
-          <div className="project-overlay project-overlay-light" data-reveal>
-            <div>
-              <p className="future-kicker">02 · FULL-STACK PRODUCT</p>
-              <h3>JAMLY</h3>
-              <p className="project-summary">
-                Sistema de reservas con autenticación, roles y validación de disponibilidad.
-              </p>
-            </div>
-
-            <div className="project-meta">
+          <div className="proof-copy" data-reveal>
+            <p className="future-kicker">FULL-STACK PRODUCT</p>
+            <h3>JAMLY</h3>
+            <p>Sistema de reservas con autenticación, roles y disponibilidad.</p>
+            <div className="proof-metrics">
               <Metric value="03" label="core domains" />
               <Metric value="45" label="source files" />
               <Metric value="04" label="test files" />
             </div>
-
-            <div className="project-links">
-              <a href="https://github.com/FabianCordobes/jamly" target="_blank" rel="noreferrer">
-                Code ↗
-              </a>
-            </div>
+            <a href="https://github.com/FabianCordobes/jamly" target="_blank" rel="noreferrer">
+              Ver código ↗
+            </a>
           </div>
         </article>
 
-        <article className="project-chapter project-chapter-commerce">
-          <div className="commerce-space">
-            <div className="commerce-title-ghost">COMMERCE</div>
-            <img className="commerce-shot commerce-shot-a" src={MEDIA.commerceLogin} alt="Login e-commerce" />
-            <img className="commerce-shot commerce-shot-b" src={MEDIA.commerceRegister} alt="Registro e-commerce" />
-            <img className="commerce-shot commerce-shot-c" src={MEDIA.commerceForgot} alt="Recuperación de acceso e-commerce" />
-            <div className="commerce-beam commerce-beam-a" />
-            <div className="commerce-beam commerce-beam-b" />
-          </div>
-
-          <div className="project-overlay" data-reveal>
-            <div>
-              <p className="future-kicker">03 · COMMERCE EXPERIENCE</p>
-              <h3>E-COMMERCE</h3>
-              <p className="project-summary">
-                Catálogo, autenticación, carrito, administración y flujo de órdenes.
-              </p>
-            </div>
-
-            <div className="project-meta">
+        <article className="proof-chapter proof-chapter-commerce">
+          <div className="proof-copy" data-reveal>
+            <p className="future-kicker">COMMERCE EXPERIENCE</p>
+            <h3>E-COMMERCE</h3>
+            <p>Catálogo, autenticación, carrito, administración y órdenes.</p>
+            <div className="proof-metrics">
               <Metric value="08" label="flows" />
               <Metric value="22" label="source files" />
               <Metric value="03" label="auth screens" />
             </div>
+            <a href="https://e-commerce-app-eta-two.vercel.app" target="_blank" rel="noreferrer">
+              Ver producto ↗
+            </a>
+          </div>
 
-            <div className="project-links">
-              <a href="https://e-commerce-app-eta-two.vercel.app" target="_blank" rel="noreferrer">
-                Live ↗
-              </a>
-              <a href="https://github.com/FabianCordobes/eCommerceApp" target="_blank" rel="noreferrer">
-                Code ↗
-              </a>
-            </div>
+          <div className="proof-visual commerce-proof-space">
+            <img className="commerce-proof commerce-proof-a" src={MEDIA.commerceLogin} alt="Login e-commerce" />
+            <img className="commerce-proof commerce-proof-b" src={MEDIA.commerceRegister} alt="Registro e-commerce" />
+            <img className="commerce-proof commerce-proof-c" src={MEDIA.commerceForgot} alt="Recuperación de acceso e-commerce" />
+            <div className="commerce-proof-beam" />
           </div>
         </article>
+
+        <a href="/portfolio" className="portfolio-bridge" data-reveal>
+          <span>Más experiencia técnica</span>
+          <strong>PORTFOLIO ↗</strong>
+        </a>
       </section>
 
       <div id="architecture">
@@ -329,9 +372,9 @@ export default function Home() {
       <section id="signal" className="future-signal-section">
         <FutureField />
         <div className="future-signal-copy" data-reveal>
-          <p className="future-kicker">FORMAS DE TRABAJO</p>
-          <h2 className="five-d-heading five-d-heading-center" data-text="ELEGÍ EL PUNTO DE PARTIDA">
-            ELEGÍ EL PUNTO DE PARTIDA
+          <p className="future-kicker">PUNTO DE PARTIDA</p>
+          <h2 className="five-d-heading five-d-heading-center" data-text="ELEGÍ TU PROYECTO">
+            ELEGÍ TU PROYECTO
           </h2>
         </div>
 
@@ -341,14 +384,14 @@ export default function Home() {
       </section>
 
       <section className="future-manifesto">
-        <div className="future-manifesto-caption">Experiencias que representan una marca.</div>
+        <div className="future-manifesto-caption">Experiencias digitales con identidad.</div>
         <div className="future-manifesto-line">WEB</div>
         <div className="future-manifesto-caption future-manifesto-caption-shift">
-          Productos que operan, conectan y evolucionan.
+          Productos conectados con la operación.
         </div>
         <div className="future-manifesto-line future-manifesto-line-shift">APPS</div>
-        <div className="future-manifesto-caption">Sistemas inteligentes integrados al negocio.</div>
-        <div className="future-manifesto-line future-manifesto-line-accent">AI</div>
+        <div className="future-manifesto-caption">Tecnología integrada a la experiencia.</div>
+        <div className="future-manifesto-line future-manifesto-line-accent">MOTION</div>
       </section>
 
       <section id="contact" className="future-contact">
