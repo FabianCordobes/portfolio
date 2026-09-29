@@ -1,7 +1,7 @@
 "use client";
 
 const TRACK_A = [
-  "DIGITAL PRODUCTS",
+  "DIGITAL EXPERIENCES",
   "FULL-STACK DEVELOPMENT",
   "AUTOMATION",
   "E-COMMERCE",

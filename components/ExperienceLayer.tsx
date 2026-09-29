@@ -34,7 +34,9 @@ export default function ExperienceLayer() {
 
       root.style.setProperty("--scroll-progress", progress.toString());
       root.style.setProperty("--scroll-depth", `${Math.min(window.scrollY * 0.028, 72)}px`);
+      root.style.setProperty("--scroll-scrub", `${window.scrollY * 0.045}px`);
       root.style.setProperty("--scroll-energy", (Math.abs(delta) / 40).toFixed(3));
+      root.dataset.scrollDirection = delta >= 0 ? "down" : "up";
     };
 
     const observer = new IntersectionObserver(

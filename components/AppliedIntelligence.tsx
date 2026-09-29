@@ -10,7 +10,7 @@ export default function AppliedIntelligence() {
           INTELIGENCIA APLICADA · AUTOMATIZACIÓN · DATOS · REALTIME ·
         </div>
         <div className="ai-cinema-type ai-cinema-type-b">
-          SYSTEMS · WORKFLOWS · APIs · SIGNAL · PRODUCT ·
+          SYSTEMS · WORKFLOWS · APIs · SIGNAL · LOGIC ·
         </div>
 
         <div className="ai-frame-burn ai-frame-burn-a" />
@@ -30,7 +30,7 @@ export default function AppliedIntelligence() {
           </h2>
           <p>
             Integraciones, datos, realtime y automatización trabajando detrás del
-            producto para conectar procesos y acelerar operaciones.
+            experiencia para conectar procesos y acelerar operaciones.
           </p>
 
           <div className="ai-capability-line">
