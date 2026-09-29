@@ -43,7 +43,7 @@ export default function Home() {
         </nav>
 
         <a href="#contact" className="nav-project-link">
-          Solicitar propuesta ↗
+          Plantear un proyecto ↗
         </a>
       </header>
 
@@ -103,25 +103,25 @@ export default function Home() {
         <div className="section-shell hero-content">
           <div className="hero-overline hero-reveal hero-reveal-1">
             <span className="live-dot" />
-            CAPTACIÓN · AUTOMATIZACIÓN · DESARROLLO
+            ESTRATEGIA · INGENIERÍA · AUTOMATIZACIÓN
           </div>
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">QUE NINGUNA</span>
-              <span className="hero-reveal hero-reveal-3">OPORTUNIDAD</span>
-              <span className="hero-reveal hero-reveal-3 hero-title-outline">SE PIERDA.</span>
+              <span className="hero-reveal hero-reveal-2">SISTEMAS</span>
+              <span className="hero-reveal hero-reveal-3">DIGITALES</span>
+              <span className="hero-reveal hero-reveal-3 hero-title-outline">CON CRITERIO.</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Diseño sistemas digitales que no se quedan mirando: capturan la intención, entienden cada consulta y la convierten en información lista para actuar.
+              Diseño y desarrollo interfaces, aplicaciones y automatizaciones para resolver problemas concretos de adquisición, operación e información. Desde la arquitectura hasta la puesta en producción.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#services" className="hero-button hero-button-primary">
-                Ver el sistema en acción <span>↗</span>
+                Ver enfoque de trabajo <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Solicitar propuesta <span>↗</span>
@@ -152,13 +152,13 @@ export default function Home() {
 
       <section className="statement-section">
         <div className="section-shell statement-grid" data-reveal>
-          <p className="micro-label">PRESENCIA DIGITAL</p>
+          <p className="micro-label">ENFOQUE</p>
           <h2>
-            Una visita dura segundos.<br />
-            <span>La oportunidad no debería desaparecer con ella.</span>
+            La interfaz es sólo una capa.<br />
+            <span>Lo importante es el sistema que sostiene detrás.</span>
           </h2>
           <p>
-            La experiencia atrae. El sistema escucha. La automatización ordena. Vos recibís una oportunidad con contexto para decidir qué hacer después.
+            Trabajo sobre el recorrido completo: interfaz, datos, reglas de negocio, integraciones y automatización. Cada capa tiene una función y una razón técnica para existir.
           </p>
         </div>
       </section>
@@ -173,10 +173,10 @@ export default function Home() {
 
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
-          <p className="micro-label">HABLEMOS DE TU PROYECTO</p>
-          <h2>Convertí una visita<br /><span>en una oportunidad accionable.</span></h2>
+          <p className="micro-label">CONTEXTO DEL PROYECTO</p>
+          <h2>Un buen desarrollo empieza<br /><span>por entender bien el problema.</span></h2>
           <p>
-            Contame qué querés lograr. Este mismo formulario registra el origen de tu consulta y prepara el contexto para analizarla: es una muestra del sistema de captación que puedo implementar en tu negocio.
+            Describí el contexto, la necesidad y las restricciones conocidas. Con esa información puedo evaluar alcance, dependencias y una primera dirección técnica antes de hablar de implementación.
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export default function Home() {
         <div className="section-shell living-footer-inner">
           <div>
             <strong>FABIÁN CORDOBÉS</strong>
-            <span>DESIGN · DEVELOPMENT · DIGITAL EXPERIENCES</span>
+            <span>SOFTWARE ENGINEERING · WEB SYSTEMS · AUTOMATION</span>
           </div>
           <div>
             <a href="/portfolio">Portfolio</a>
