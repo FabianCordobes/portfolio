@@ -1,72 +1,38 @@
 export default function AIArchitectureScene() {
-  const services = [
-    { label: "AI ORCHESTRATOR", detail: "Agents · tools · context", className: "ai-node ai-node-core" },
-    { label: "MICROSERVICE 01", detail: "Business logic", className: "ai-node ai-node-a" },
-    { label: "MICROSERVICE 02", detail: "Automation", className: "ai-node ai-node-b" },
-    { label: "MICROSERVICE 03", detail: "Integrations", className: "ai-node ai-node-c" },
-    { label: "WEBSOCKET", detail: "Realtime channel", className: "ai-node ai-node-d" },
-    { label: "NOSQL", detail: "MongoDB · DynamoDB", className: "ai-node ai-node-e" },
-    { label: "LODASH", detail: "Utility layer", className: "ai-node ai-node-f" },
-  ];
-
   return (
-    <section className="ai-architecture" aria-label="Arquitectura digital con inteligencia artificial">
-      <div className="ai-architecture-copy" data-reveal>
-        <p className="future-kicker">AI MOTION LAYER</p>
-        <h2 className="five-d-heading" data-text="INTELLIGENCE IN MOTION">
-          INTELLIGENCE IN MOTION
-        </h2>
-
+    <section className="ai-cinema">
+      <div className="ai-cinema-copy" data-reveal>
+        <p className="future-kicker">TECH LAYER</p>
+        <h2>INTELLIGENCE<br />IN MOTION</h2>
+        <p>
+          IA, realtime y arquitectura moderna integrados como una sola capa
+          visual y técnica.
+        </p>
       </div>
 
-      <div className="ai-architecture-stage" data-reveal>
-        <div className="ai-neural-grid" aria-hidden="true" />
-        <div className="ai-data-wave ai-data-wave-a" aria-hidden="true" />
-        <div className="ai-data-wave ai-data-wave-b" aria-hidden="true" />
-        <div className="ai-data-wave ai-data-wave-c" aria-hidden="true" />
-
-        <div className="ai-core-halo ai-core-halo-a" aria-hidden="true" />
-        <div className="ai-core-halo ai-core-halo-b" aria-hidden="true" />
-        <div className="ai-core-halo ai-core-halo-c" aria-hidden="true" />
-
-        {services.map((service) => (
-          <div key={service.label} className={service.className}>
-            <span className="ai-node-light" />
-            <small>{service.label}</small>
-            <strong>{service.detail}</strong>
-          </div>
-        ))}
-
-        <div className="ai-link ai-link-1"><i /></div>
-        <div className="ai-link ai-link-2"><i /></div>
-        <div className="ai-link ai-link-3"><i /></div>
-        <div className="ai-link ai-link-4"><i /></div>
-        <div className="ai-link ai-link-5"><i /></div>
-        <div className="ai-link ai-link-6"><i /></div>
-
-        <div className="ai-stream ai-stream-left" aria-hidden="true">
-          <span>agent.invoke()</span>
-          <span>socket.emit()</span>
-          <span>service.route()</span>
-          <span>mongo.write()</span>
+      <div className="ai-cinema-stage" data-reveal aria-hidden="true">
+        <div className="ai-cinema-haze" />
+        <div className="ai-cinema-ring ai-cinema-ring-a" />
+        <div className="ai-cinema-ring ai-cinema-ring-b" />
+        <div className="ai-cinema-ring ai-cinema-ring-c" />
+        <div className="ai-cinema-core">
+          <span>AI</span>
         </div>
 
-        <div className="ai-stream ai-stream-right" aria-hidden="true">
-          <span>context.ready</span>
-          <span>realtime.connected</span>
-          <span>vector.signal</span>
-          <span>response.stream</span>
-        </div>
+        <div className="ai-cinema-label label-a">REALTIME</div>
+        <div className="ai-cinema-label label-b">DATA</div>
+        <div className="ai-cinema-label label-c">SERVICES</div>
+        <div className="ai-cinema-label label-d">SYSTEMS</div>
+
+        <div className="ai-cinema-scan" />
+        <div className="ai-cinema-beam" />
       </div>
 
-      <div className="ai-capabilities" data-reveal>
-        <span>AI agents</span>
-        <span>LLM orchestration</span>
+      <div className="ai-cinema-caption" data-reveal>
         <span>Microservices</span>
         <span>WebSocket</span>
         <span>NoSQL</span>
         <span>MongoDB</span>
-        <span>DynamoDB</span>
         <span>Lodash</span>
       </div>
     </section>
