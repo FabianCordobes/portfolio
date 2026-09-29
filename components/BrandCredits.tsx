@@ -24,25 +24,25 @@ export default function BrandCredits() {
   return (
     <section className="brand-credits">
       <div className="section-shell brand-credits-head" data-reveal>
-        <p className="micro-label">EXPERIENCIA PROFESIONAL</p>
+        <p className="micro-label">RECORRIDO</p>
         <div>
           <h2>
-            Trabajo en software que<br />
-            <span>opera fuera del portfolio.</span>
+            Experiencia aplicada a<br />
+            <span>proyectos y equipos reales.</span>
           </h2>
           <p>
-            Experiencia en equipos y sistemas con código existente, integraciones, restricciones de negocio, testing y mantenimiento. El criterio técnico también se forma trabajando sobre complejidad que ya existe.
+            Años participando en proyectos digitales de distintas escalas, trabajando junto a equipos, marcas y organizaciones. Ese recorrido aporta criterio para entender cada objetivo y convertirlo en una solución clara, sólida y preparada para evolucionar.
           </p>
         </div>
       </div>
 
       <div className="section-shell film-credits-stage" data-reveal>
         <div className="film-credits-header">
-          <span>SELECTED EXPERIENCE</span>
+          <span>TRAYECTORIA</span>
           <span>2022 — 2026</span>
         </div>
 
-        <div className="film-credits-list" aria-label="Experiencia profesional">
+        <div className="film-credits-list" aria-label="Trayectoria">
           {BRANDS.map((brand, index) => (
             <div
               key={brand.name}
