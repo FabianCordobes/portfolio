@@ -3,13 +3,12 @@ import { NextResponse } from "next/server";
 const TRELLO_NEW_LEADS_LIST_ID = "6abab828d0452e1269349622";
 
 const SERVICE_CODES: Record<string, string> = {
-  "Landing Page": "LANDING",
-  "Sitio Web": "WEB",
-  "E-commerce": "ECOM",
-  "Aplicación / Sistema": "APP",
-  "Automatización": "AUTO",
-  "Mantenimiento": "MAINT",
-  "Quiero orientación": "OTHER",
+  "Adquisición y captura": "ACQUISITION",
+  "Web / interfaz": "WEB",
+  "Comercio digital": "COMMERCE",
+  "Aplicación / sistema": "APP",
+  "Automatización / integración": "AUTOMATION",
+  "Todavía no sé qué solución necesito": "DISCOVERY",
 };
 
 const SOURCE_CHANNELS = new Set([
@@ -162,7 +161,7 @@ function calculateScore(lead: LeadInput, serviceCode: string) {
   let value = 0;
   const reasons: string[] = [];
 
-  if (serviceCode !== "OTHER") {
+  if (serviceCode !== "DISCOVERY") {
     value += 2;
     reasons.push("necesidad categorizada");
   }
