@@ -9,7 +9,7 @@ const SERVICE_CODES: Record<string, string> = {
   "Aplicación / Sistema": "APP",
   Automatización: "AUTO",
   Mantenimiento: "MAINT",
-  "Quiero orientación": "OTHER",
+  "No estoy seguro": "OTHER",
 };
 
 const SOURCE_CHANNELS = new Set([
