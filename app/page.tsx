@@ -108,19 +108,20 @@ export default function Home() {
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">TU WEB,</span>
-              <span className="hero-reveal hero-reveal-3">EN ACCIÓN.</span>
+              <span className="hero-reveal hero-reveal-2">QUE NINGUNA</span>
+              <span className="hero-reveal hero-reveal-3">OPORTUNIDAD</span>
+              <span className="hero-reveal hero-reveal-3 hero-title-outline">SE PIERDA.</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Transformo tu presencia digital en un sistema que capta consultas, identifica oportunidades y organiza el seguimiento. Estrategia, desarrollo y automatización conectados.
+              Diseño sistemas digitales que no se quedan mirando: capturan la intención, entienden cada consulta y la convierten en información lista para actuar.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#services" className="hero-button hero-button-primary">
-                Ver cómo funciona <span>↗</span>
+                Ver el sistema en acción <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Solicitar propuesta <span>↗</span>
@@ -142,15 +143,22 @@ export default function Home() {
 
       <KineticType />
 
+      <section className="signal-strip" aria-label="Flujo del sistema">
+        <div className="signal-strip-track">
+          <span>VISITA</span><i>→</i><span>INTENCIÓN</span><i>→</i><span>CONTEXTO</span><i>→</i><span>PRIORIDAD</span><i>→</i><span>ACCIÓN</span>
+          <b>LEADFLOW / LIVE PIPELINE</b>
+        </div>
+      </section>
+
       <section className="statement-section">
         <div className="section-shell statement-grid" data-reveal>
           <p className="micro-label">PRESENCIA DIGITAL</p>
           <h2>
-            Tu web no debería limitarse a mostrar quién sos.<br />
-            <span>Debería detectar oportunidades.</span>
+            Una visita dura segundos.<br />
+            <span>La oportunidad no debería desaparecer con ella.</span>
           </h2>
           <p>
-            Diseño el recorrido completo: atraer la atención, convertirla en una consulta útil y dejar esa oportunidad preparada para el seguimiento. La tecnología trabaja detrás; el negocio recibe claridad.
+            La experiencia atrae. El sistema escucha. La automatización ordena. Vos recibís una oportunidad con contexto para decidir qué hacer después.
           </p>
         </div>
       </section>
