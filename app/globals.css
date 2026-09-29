@@ -6113,3 +6113,105 @@ html[data-scroll-direction="up"] .kinetic-track-reverse .kinetic-track-inner {
     line-height: 1.5;
   }
 }
+
+
+/* === PR 19 / final mobile spacing cleanup === */
+@media (max-width: 600px) {
+  .statement-section,
+  .client-spectrum,
+  .service-flow,
+  .cinematic-work,
+  .brand-credits,
+  .applied-intelligence,
+  .contact-section {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-block: 48px !important;
+  }
+
+  .statement-grid,
+  .client-spectrum-grid,
+  .service-flow-head,
+  .service-flow-layout,
+  .cinematic-work-head,
+  .brand-credits-head,
+  .ai-cinema-grid,
+  .contact-heading {
+    min-height: 0 !important;
+  }
+
+  .statement-grid { gap: 20px !important; }
+  .client-spectrum-grid { gap: 24px !important; }
+  .client-spectrum-cases { margin-top: 24px !important; }
+
+  .service-flow-head,
+  .cinematic-work-head,
+  .brand-credits-head,
+  .contact-heading {
+    margin-bottom: 28px !important;
+  }
+
+  .service-flow-layout { gap: 28px !important; }
+  .service-flow-item { padding-block: 22px !important; }
+
+  .work-chapter {
+    min-height: 0 !important;
+    padding-block: 28px !important;
+  }
+  .work-chapter-grid {
+    min-height: 0 !important;
+    gap: 20px !important;
+  }
+  .cinematic-project-frame {
+    min-height: 300px !important;
+  }
+  .project-frame-stage {
+    min-height: 240px !important;
+  }
+  .cinematic-work-footer {
+    min-height: 0 !important;
+    padding: 24px 0 32px !important;
+  }
+
+  .brand-credits-head { gap: 22px !important; }
+  .film-credits-stage {
+    min-height: 0 !important;
+    margin-top: 24px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .applied-intelligence { padding-block: 48px !important; }
+  .ai-cinema-grid {
+    min-height: 0 !important;
+    gap: 28px !important;
+  }
+  .ai-cinema-machine {
+    min-height: 360px !important;
+  }
+  .leadflow-sequence { margin-top: 20px !important; }
+
+  .contact-heading {
+    gap: 20px !important;
+    padding-bottom: 0 !important;
+  }
+  .future-form { margin-top: 28px !important; }
+
+  .living-footer { padding-block: 28px !important; }
+  .living-footer-inner { gap: 18px !important; }
+}
+
+@media (max-width: 390px) {
+  .statement-section,
+  .client-spectrum,
+  .service-flow,
+  .cinematic-work,
+  .brand-credits,
+  .applied-intelligence,
+  .contact-section {
+    padding-block: 40px !important;
+  }
+
+  .work-chapter { padding-block: 24px !important; }
+  .cinematic-work-footer { padding: 20px 0 28px !important; }
+  .ai-cinema-machine { min-height: 330px !important; }
+}
