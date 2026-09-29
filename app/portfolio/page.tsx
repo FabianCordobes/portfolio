@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio técnico — Fabián Cordobés",
+  title: "Proyectos y soluciones digitales — Fabián Cordobés",
   description:
-    "Proyectos, experiencia y stack técnico de Fabián Cordobés, Full Stack Developer.",
+    "Sitios web, aplicaciones y sistemas desarrollados por Fabián Cordobés para marcas, profesionales y operaciones digitales.",
 };
 
 const CONTACT = {
@@ -114,14 +114,14 @@ export default function PortfolioPage() {
           <nav className="hidden items-center gap-8 text-sm text-white/55 md:flex">
             <a className="transition hover:text-white" href="#projects">Proyectos</a>
             <a className="transition hover:text-white" href="#experience">Experiencia</a>
-            <a className="transition hover:text-white" href="#stack">Stack</a>
+            <a className="transition hover:text-white" href="/#contact">Contacto</a>
           </nav>
 
           <a
             href="/"
             className="rounded-full border border-white/15 px-4 py-2 text-sm font-medium transition hover:border-[#c8ff62] hover:text-[#c8ff62]"
           >
-            Ver servicios ↗
+            Crear mi proyecto ↗
           </a>
         </div>
       </header>
@@ -129,34 +129,34 @@ export default function PortfolioPage() {
       <section className="border-b border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
           <p className="text-xs uppercase tracking-[0.22em] text-[#c8ff62]">
-            Portfolio técnico
+            TRABAJO REALIZADO
           </p>
           <div className="mt-6 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
             <div>
               <h1 className="text-balance text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl lg:text-8xl">
-                Ingeniería aplicada a problemas reales.
+                Ideas convertidas en experiencias digitales que funcionan.
               </h1>
             </div>
             <div>
               <p className="max-w-xl text-base leading-8 text-white/50 sm:text-lg">
-                Proyectos y experiencia profesional presentados desde la implementación: contexto, responsabilidades, decisiones técnicas y tecnologías utilizadas.
+                Una selección de sitios, aplicaciones y sistemas que muestran distintas escalas de trabajo: presencia digital, experiencias de compra, reservas, gestión e integraciones.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
-                  href={CONTACT.github}
+                  href="#projects"
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-full bg-[#c8ff62] px-5 py-3 text-sm font-semibold text-black transition hover:bg-[#d5ff87]"
                 >
-                  GitHub ↗
+                  Ver proyectos ↗
                 </a>
                 <a
-                  href={CONTACT.linkedin}
+                  href="/#contact"
                   target="_blank"
                   rel="noreferrer"
                   className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium transition hover:border-white/30"
                 >
-                  LinkedIn ↗
+                  Hablemos ↗
                 </a>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function PortfolioPage() {
 
       <section id="projects" className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading eyebrow="Proyectos" title="Implementaciones y decisiones técnicas." />
+          <SectionHeading eyebrow="Proyectos seleccionados" title="Distintas ideas, objetivos y escalas convertidas en soluciones digitales." />
 
           <div className="mt-14 grid gap-5 lg:grid-cols-2">
             {projects.map((project) => (
@@ -230,7 +230,7 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Experiencia"
-            title="Experiencia construyendo software en equipos y operaciones reales."
+            title="Experiencia que aporta criterio, solidez y capacidad para proyectos de distintas escalas."
           />
 
           <div className="mt-14 border-t border-white/10">
@@ -267,8 +267,8 @@ export default function PortfolioPage() {
       <section id="stack" className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
-            eyebrow="Stack"
-            title="Tecnologías que uso para construir, integrar y mantener software."
+            eyebrow="Capacidad técnica"
+            title="Tecnología elegida según el alcance, la experiencia y la evolución de cada proyecto."
           />
           <div className="mt-14 flex flex-wrap gap-3">
             {stack.map((item) => (
@@ -291,27 +291,27 @@ export default function PortfolioPage() {
                 NUEVO PROYECTO
               </p>
               <h2 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
-                Si el problema requiere software, empecemos por definirlo correctamente.
+                Transformemos tu idea en una solución digital pensada para avanzar.
               </h2>
             </div>
             <a
               href="/#contact"
               className="inline-flex w-fit items-center justify-center rounded-full bg-black px-6 py-3.5 font-semibold text-white"
             >
-              Plantear proyecto ↗
+              Hablemos de tu proyecto ↗
             </a>
           </div>
         </div>
       </section>
 
       <footer className="mx-auto flex max-w-7xl flex-col gap-7 px-5 py-10 text-sm text-white/35 sm:px-8 md:flex-row md:items-center md:justify-between">
-        <p>© {new Date().getFullYear()} Fabián — Portfolio técnico</p>
+        <p>© {new Date().getFullYear()} Fabián — TRABAJO REALIZADO</p>
         <div className="flex flex-wrap gap-6">
           <a className="transition hover:text-white" href="/">Servicios</a>
-          <a className="transition hover:text-white" href={CONTACT.github} target="_blank" rel="noreferrer">
+          <a className="transition hover:text-white" href="#projects" target="_blank" rel="noreferrer">
             GitHub
           </a>
-          <a className="transition hover:text-white" href={CONTACT.linkedin} target="_blank" rel="noreferrer">
+          <a className="transition hover:text-white" href="/#contact" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
         </div>
