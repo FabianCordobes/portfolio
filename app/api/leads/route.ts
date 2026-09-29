@@ -5,8 +5,10 @@ const TRELLO_NEW_LEADS_LIST_ID = "6abab828d0452e1269349622";
 const SERVICE_CODES: Record<string, string> = {
   "Landing Page": "LANDING",
   "Sitio Web": "WEB",
-  "Aplicación Web": "APP",
   "E-commerce": "ECOM",
+  "Aplicación / Sistema": "APP",
+  Automatización: "AUTO",
+  Mantenimiento: "MAINT",
   "Quiero orientación": "OTHER",
 };
 
