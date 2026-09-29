@@ -88,7 +88,7 @@ export default function LeadForm() {
       setStatus("success");
     } catch (err) {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "Volvamos a intentarlo en un momento.");
+      setError(err instanceof Error ? err.message : "Continuemos por WhatsApp mientras restablecemos el formulario.");
     }
   }
 
