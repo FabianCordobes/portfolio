@@ -168,7 +168,7 @@ export default function Home() {
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
           <p className="micro-label">NUEVO PROYECTO</p>
-          <h2>Convirtamos tu idea<br /><span>en un producto listo para crecer.</span></h2>
+          <h2>Convirtamos tu idea<br /><span>en una solución digital lista para crecer.</span></h2>
           <p>
             Landing page, sitio web, e-commerce, aplicación, automatización o
             mantenimiento. Contame qué querés construir y preparo una propuesta.
