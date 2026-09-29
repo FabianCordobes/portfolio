@@ -148,7 +148,7 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"} className="future-submit">
-        {status === "sending" ? "Enviando..." : "Iniciar proyecto ↗"}
+        {status === "sending" ? "Enviando..." : "Solicitar propuesta ↗"}
       </button>
 
       {status === "success" && (
