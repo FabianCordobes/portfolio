@@ -5411,3 +5411,229 @@ html[data-scroll-direction="up"] .kinetic-track-reverse .kinetic-track-inner {
   }
   .first-choice-links a:last-child { grid-column: 1 / -1; }
 }
+
+
+/* === Responsive pass / PR 19 === */
+@media (max-width: 1024px) {
+  .section-shell { width: min(100% - 48px, 1480px); }
+
+  .living-nav {
+    min-height: 66px;
+    grid-template-columns: auto 1fr auto;
+    padding-inline: 24px;
+  }
+  .living-nav nav { gap: 18px; }
+  .living-nav nav a, .nav-project-link { font-size: .84rem; }
+
+  .living-hero { min-height: 900px; }
+  .hero-content { padding-top: 148px; }
+  .hero-human-system { width: 58%; min-width: 500px; opacity: .76; }
+  .hero-title { font-size: clamp(5.4rem, 10vw, 8rem); }
+  .hero-intro { max-width: 580px; }
+
+  .statement-grid,
+  .brand-credits-head,
+  .service-flow-head,
+  .contact-heading { gap: 36px; }
+
+  .whatsapp-live { right: 18px; bottom: 18px; }
+}
+
+@media (max-width: 820px) {
+  .living-nav {
+    grid-template-columns: 1fr auto;
+    padding-inline: 20px;
+  }
+  .living-nav nav { display: none; }
+  .nav-project-link {
+    font-size: .82rem;
+    padding: 9px 12px;
+    border: 1px solid rgba(255,255,255,.12);
+  }
+
+  .living-hero {
+    min-height: 820px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .hero-content {
+    width: min(100% - 40px, 1480px);
+    padding-top: 126px;
+    padding-bottom: 110px;
+  }
+  .hero-title { font-size: clamp(4.8rem, 15vw, 7rem); line-height: .84; }
+  .hero-title-wrap { max-width: 100%; }
+  .hero-intro { max-width: 90%; font-size: 1.08rem !important; }
+  .hero-human-system {
+    inset: 0 -16% 0 auto;
+    width: 82%;
+    min-width: 0;
+    opacity: .52;
+  }
+  .hero-portrait { width: 88%; top: 8vh; }
+  .hero-portrait-wash {
+    background:
+      linear-gradient(90deg,var(--bg) 0%,rgba(5,5,6,.68) 30%,rgba(5,5,6,.14) 76%,rgba(5,5,6,.05) 100%),
+      linear-gradient(0deg,var(--bg) 0%,transparent 42%);
+  }
+  .hero-sculpture { opacity: .5; }
+  .hero-footer { gap: 24px; }
+  .hero-actions { flex-wrap: wrap; }
+  .hero-button { min-height: 50px; }
+  .hero-signature { display: none; }
+
+  .statement-section,
+  .brand-credits,
+  .service-flow,
+  .applied-intelligence,
+  .contact-section { overflow: hidden; }
+
+  .kinetic-track span { white-space: nowrap; }
+
+  .film-credits-stage { min-height: auto; }
+  .film-credit-row { min-width: 0; }
+
+  .future-form { width: 100%; }
+  .future-form-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 600px) {
+  .section-shell { width: calc(100% - 32px); }
+
+  .living-nav { min-height: 60px; padding-inline: 16px; }
+  .living-brand { font-size: .82rem; }
+  .nav-project-link { font-size: .72rem; padding: 8px 10px; }
+
+  .living-hero { min-height: 760px; }
+  .hero-content {
+    width: calc(100% - 32px);
+    padding-top: 112px;
+    padding-bottom: 94px;
+  }
+  .hero-overline {
+    max-width: 270px;
+    font-size: .65rem;
+    line-height: 1.5;
+    letter-spacing: .14em;
+  }
+  .hero-title {
+    max-width: 100%;
+    font-size: clamp(3.75rem, 18.5vw, 5.5rem);
+    line-height: .86;
+    letter-spacing: -.065em;
+  }
+  .hero-title-outline { -webkit-text-stroke-width: .7px; }
+  .hero-intro {
+    max-width: 100%;
+    margin-top: 24px;
+    font-size: 1rem !important;
+    line-height: 1.58 !important;
+  }
+  .hero-actions { width: 100%; gap: 10px; }
+  .hero-button,
+  .hero-button-primary {
+    width: 100%;
+    min-width: 0;
+    justify-content: space-between;
+  }
+  .hero-scroll-cue { display: none; }
+  .hero-human-system {
+    right: -38%;
+    width: 126%;
+    opacity: .34;
+  }
+  .hero-portrait { width: 82%; }
+  .hero-sculpture { display: none; }
+
+  .first-choice-inner > p { padding-top: 22px; }
+  .first-choice-links { grid-template-columns: 1fr; }
+  .first-choice-links a,
+  .first-choice-links a:last-child {
+    grid-column: auto;
+    min-height: 88px;
+    padding: 18px 16px;
+    gap: 18px;
+  }
+  .first-choice-links a span { top: 16px; left: 16px; }
+
+  .kinetic-type { overflow: hidden; }
+  .kinetic-track span { font-size: clamp(2.2rem, 12vw, 4rem); }
+
+  .signal-strip-track { min-height: 68px; }
+  .signal-strip span { font-size: .7rem; }
+
+  .statement-section { padding-block: 12vh; }
+  .statement-grid { grid-template-columns: 1fr !important; gap: 26px; }
+  .statement-grid h2 { font-size: clamp(2.7rem, 12vw, 4.3rem); }
+
+  .client-spectrum h2 { font-size: clamp(2.9rem, 14vw, 4.6rem); }
+  .client-spectrum-cases p { font-size: .98rem; }
+
+  .service-flow { padding-block: 11vh; }
+  .service-flow-head { grid-template-columns: 1fr !important; }
+  .service-flow-head h2 { font-size: clamp(3rem, 14vw, 4.8rem); }
+  .service-flow-layout { grid-template-columns: 1fr !important; }
+  .service-stage { min-height: 360px; position: relative !important; top: auto !important; }
+  .service-flow-item { padding-left: 0; }
+  .service-flow-item::before { display: none; }
+
+  .cinematic-work-head h2 { font-size: clamp(3rem, 14vw, 4.8rem); }
+  .work-chapter-grid { width: calc(100% - 32px); }
+  .cinematic-project-frame { min-height: 440px; }
+  .project-frame-stage { min-height: 360px; }
+
+  .brand-credits-head { grid-template-columns: 1fr !important; }
+  .brand-credits-head h2 { font-size: clamp(3rem, 14vw, 4.8rem); }
+  .film-credits-header { padding-inline: 0; }
+  .film-credit-row {
+    grid-template-columns: 34px 44px 1fr;
+    gap: 10px;
+    padding-inline: 0;
+  }
+  .film-credit-mark { width: 40px; height: 40px; }
+  .film-credit-row strong { font-size: clamp(1.15rem, 6vw, 1.6rem); }
+
+  .ai-cinema-grid { grid-template-columns: 1fr !important; }
+  .ai-cinema-copy h2 { font-size: clamp(3rem, 14vw, 4.8rem); }
+  .ai-cinema-machine { min-height: 430px; }
+  .leadflow-sequence { grid-template-columns: 1fr; }
+  .leadflow-sequence > div,
+  .leadflow-sequence > div:nth-child(2) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    padding-left: 0;
+  }
+
+  .contact-heading { grid-template-columns: 1fr !important; }
+  .contact-heading h2 { font-size: clamp(3rem, 14vw, 4.8rem); }
+  .future-form { padding: 22px 0; }
+  .future-form::before { display: none; }
+  .future-submit { width: 100%; justify-content: space-between; }
+
+  .living-footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .whatsapp-live {
+    right: 12px;
+    bottom: 12px;
+    min-height: 52px;
+    padding-right: 8px;
+  }
+  .whatsapp-live-icon { width: 40px; height: 40px; }
+  .whatsapp-live-label { display: none; }
+}
+
+@media (max-width: 390px) {
+  .hero-title { font-size: clamp(3.35rem, 18vw, 4.25rem); }
+  .hero-overline { max-width: 230px; }
+  .nav-project-link { max-width: 145px; text-align: center; }
+  .client-spectrum h2,
+  .service-flow-head h2,
+  .cinematic-work-head h2,
+  .brand-credits-head h2,
+  .ai-cinema-copy h2,
+  .contact-heading h2 { font-size: 2.8rem; }
+}
