@@ -65,11 +65,11 @@ export default function SelectedWork() {
         <p className="micro-label dark">EVIDENCIA / TRABAJO SELECCIONADO</p>
         <div>
           <h2>
-            Las ideas no cuentan la historia completa.<br />
-            <span>El software funcionando, sí.</span>
+            Código, decisiones y comportamiento.<br />
+            <span>El trabajo se evalúa en funcionamiento.</span>
           </h2>
           <p>
-            Tres escenarios distintos. Tres problemas convertidos en experiencias funcionales: reservar, comprar y explorar.
+            Una selección de implementaciones con dominios distintos. El foco está en qué debía resolver cada sistema y cómo se tradujo esa necesidad a software.
           </p>
         </div>
       </div>
