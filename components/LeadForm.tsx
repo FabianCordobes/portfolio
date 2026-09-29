@@ -3,12 +3,13 @@
 import { FormEvent, useEffect, useState } from "react";
 
 const SERVICES = [
-  "Adquisición y captura",
-  "Web / interfaz",
-  "Comercio digital",
-  "Aplicación / sistema",
-  "Automatización / integración",
-  "Todavía no sé qué solución necesito",
+  "Landing / sitio web",
+  "E-commerce",
+  "Aplicación web",
+  "Sistema a medida",
+  "Integración / automatización",
+  "Mejora de un proyecto existente",
+  "Quiero orientación para definir la solución",
 ];
 
 type Attribution = {
@@ -122,7 +123,7 @@ export default function LeadForm() {
         </label>
 
         <label className="future-form-wide">
-          <span>Área aproximada</span>
+          <span>¿Qué necesitás?</span>
           <select name="requestedService" defaultValue="" required>
             <option value="" disabled>Elegí una opción</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
@@ -130,13 +131,13 @@ export default function LeadForm() {
         </label>
 
         <label className="future-form-wide">
-          <span>Contexto y problema</span>
+          <span>Contame brevemente el proyecto</span>
           <textarea
             name="message"
             minLength={20}
             maxLength={1800}
             required
-            placeholder="Describí qué sucede hoy, qué debería suceder y cualquier restricción o dependencia que ya conozcas."
+            placeholder="Puede ser algo simple: qué querés crear o mejorar, para quién es y qué necesitás que permita hacer."
           />
         </label>
 
@@ -147,12 +148,12 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"} className="future-submit">
-        {status === "sending" ? "Enviando..." : "Plantear el problema ↗"}
+        {status === "sending" ? "Enviando..." : "Enviar consulta ↗"}
       </button>
 
       {status === "success" && (
         <p className="future-form-status" role="status">
-          Recibido. Voy a revisar el contexto y, si hace falta, te voy a pedir la información técnica o funcional necesaria para definir el siguiente paso.
+          Recibido. Voy a revisar el proyecto y te contacto para definir el siguiente paso.
         </p>
       )}
 

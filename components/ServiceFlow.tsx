@@ -5,33 +5,33 @@ import { useEffect, useRef, useState } from "react";
 const SERVICES = [
   {
     id: "01",
-    title: "Adquisición y Captura",
-    line: "Interfaces conectadas a procesos.",
-    text: "Diseño puntos de entrada que registran procedencia, intención y contexto. La información puede validarse, clasificarse y derivarse al flujo operativo correspondiente.",
+    title: "Landing y sitio web",
+    line: "Una presencia digital clara, rápida y profesional.",
+    text: "Para profesionales, marcas y empresas que necesitan presentar servicios, generar consultas, lanzar una propuesta o contar con un sitio institucional bien construido.",
   },
   {
     id: "02",
-    title: "Web e Interfaces",
-    line: "Arquitectura de información y experiencia.",
-    text: "Construyo sitios e interfaces donde contenido, jerarquía visual, rendimiento y comportamiento responden a objetivos definidos, no a una plantilla.",
+    title: "E-commerce",
+    line: "Una experiencia de compra pensada de principio a fin.",
+    text: "Catálogo, navegación, carrito, órdenes, administración e integraciones reunidos en una experiencia consistente para el cliente y manejable para el negocio.",
   },
   {
     id: "03",
-    title: "Comercio Digital",
-    line: "Catálogo, estado y transacciones.",
-    text: "Implemento experiencias de comercio con navegación, gestión de estado, carrito, órdenes e integraciones, cuidando consistencia entre interfaz y lógica.",
+    title: "Aplicaciones web",
+    line: "Experiencias digitales donde el usuario participa y opera.",
+    text: "Interfaces con autenticación, perfiles, paneles, formularios, búsquedas, reservas, estados y flujos específicos para convertir una necesidad funcional en una herramienta usable.",
   },
   {
     id: "04",
-    title: "Aplicaciones y Sistemas",
-    line: "Dominio, datos e integración.",
-    text: "Desarrollo aplicaciones cuando el problema requiere reglas propias: autenticación, permisos, persistencia, APIs, integraciones y procesos específicos del dominio.",
+    title: "Sistemas a medida",
+    line: "Software construido alrededor de una operación real.",
+    text: "Para procesos que requieren reglas de negocio, permisos, bases de datos, APIs, integraciones y una arquitectura preparada para crecer con mayor complejidad.",
   },
   {
     id: "05",
-    title: "Automatización e Integración",
-    line: "Menos transferencia manual entre sistemas.",
-    text: "Conecto servicios, eventos y datos para ejecutar tareas repetibles de forma consistente, conservar trazabilidad y reducir puntos de intervención manual.",
+    title: "Integración y automatización",
+    line: "Conectar lo que hoy funciona por separado.",
+    text: "Integro servicios y automatizo tareas repetitivas para agilizar procesos, conservar trazabilidad y coordinar el trabajo entre herramientas.",
   },
 ];
 
@@ -62,8 +62,8 @@ export default function ServiceFlow() {
   return (
     <section id="services" className="service-flow">
       <div className="section-shell service-flow-head" data-reveal>
-        <p className="micro-label">ÁREAS DE TRABAJO</p>
-        <h2>No parto de una tecnología.<br /><span>Parto del problema y sus restricciones.</span></h2>
+        <p className="micro-label">SOLUCIONES POR ESCALA</p>
+        <h2>La escala adecuada.<br /><span>Una solución alineada con cada etapa del proyecto.</span></h2>
       </div>
 
       <div className="section-shell service-flow-layout">
@@ -83,7 +83,7 @@ export default function ServiceFlow() {
             <div className="service-stage-pulse pulse-a" />
             <div className="service-stage-pulse pulse-b" />
             <div className="service-stage-caption">
-              <small>CURRENT DOMAIN</small>
+              <small>PROJECT SCALE</small>
               <strong>{current.title}</strong>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function ServiceFlow() {
               <h3>{service.title}</h3>
               <p className="service-flow-line">{service.line}</p>
               <p className="service-flow-text">{service.text}</p>
-              <a href="#contact">Plantear un caso ↗</a>
+              <a href="#contact">Consultar por esta solución ↗</a>
             </article>
           ))}
         </div>

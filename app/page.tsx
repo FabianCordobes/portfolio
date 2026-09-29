@@ -37,9 +37,10 @@ export default function Home() {
         </a>
 
         <nav>
-          <a href="#services">Servicios</a>
+          <a href="#solutions">Soluciones</a>
           <a href="#work">Proyectos</a>
-          <a href="/portfolio">Portfolio</a>
+          <a href="#experience">Experiencia</a>
+          <a href="/portfolio">Perfil técnico</a>
         </nav>
 
         <a href="#contact" className="nav-project-link">
@@ -103,28 +104,28 @@ export default function Home() {
         <div className="section-shell hero-content">
           <div className="hero-overline hero-reveal hero-reveal-1">
             <span className="live-dot" />
-            ESTRATEGIA · INGENIERÍA · AUTOMATIZACIÓN
+            DESARROLLO WEB · APLICACIONES · SISTEMAS
           </div>
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">DISEÑO.</span>
-              <span className="hero-reveal hero-reveal-3">DESARROLLO.</span>
-              <span className="hero-reveal hero-reveal-3 hero-title-outline">SISTEMAS.</span>
+              <span className="hero-reveal hero-reveal-2">CREO</span>
+              <span className="hero-reveal hero-reveal-3">SOLUCIONES</span>
+              <span className="hero-reveal hero-reveal-3 hero-title-outline">DIGITALES.</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Trabajo con empresas, equipos y profesionales que necesitan convertir una necesidad en software: una presencia web, un flujo comercial, una aplicación, una integración o una operación que hoy depende de trabajo manual.
+              Desde una landing o sitio profesional hasta una aplicación o sistema completo. Diseño y desarrollo experiencias digitales que presentan, venden, organizan, conectan y hacen avanzar una operación.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
-              <a href="#services" className="hero-button hero-button-primary">
-                Ver qué puedo resolver <span>↗</span>
+              <a href="#solutions" className="hero-button hero-button-primary">
+                Encontrar mi solución <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
-                Solicitar propuesta <span>↗</span>
+                Hablemos de tu proyecto <span>↗</span>
               </a>
             </div>
 
@@ -136,8 +137,21 @@ export default function Home() {
         </div>
 
         <div className="hero-scroll-cue" aria-hidden="true">
-          <span>SCROLL TO ENTER</span>
+          <span>EXPLORAR</span>
           <i />
+        </div>
+      </section>
+
+      <section className="first-choice" aria-label="Tipos de proyecto">
+        <div className="section-shell first-choice-inner">
+          <p>¿Qué querés crear?</p>
+          <div className="first-choice-links">
+            <a href="#services"><span>01</span>Una web</a>
+            <a href="#services"><span>02</span>Una tienda</a>
+            <a href="#services"><span>03</span>Una aplicación</a>
+            <a href="#services"><span>04</span>Un sistema</a>
+            <a href="#contact"><span>05</span>Definirlo juntos</a>
+          </div>
         </div>
       </section>
 
@@ -145,7 +159,7 @@ export default function Home() {
 
       <section className="signal-strip" aria-label="Flujo del sistema">
         <div className="signal-strip-track">
-          <span>PROBLEMA</span><i>→</i><span>CONTEXTO</span><i>→</i><span>DECISIÓN</span><i>→</i><span>IMPLEMENTACIÓN</span><i>→</i><span>OPERACIÓN</span>
+          <span>OBJETIVO</span><i>→</i><span>CONTEXTO</span><i>→</i><span>DECISIÓN</span><i>→</i><span>IMPLEMENTACIÓN</span><i>→</i><span>OPERACIÓN</span>
           <b>FROM CONTEXT TO SOFTWARE</b>
         </div>
       </section>
@@ -154,16 +168,31 @@ export default function Home() {
         <div className="section-shell statement-grid" data-reveal>
           <p className="micro-label">ENFOQUE</p>
           <h2>
-            La interfaz es sólo una capa.<br />
-            <span>Lo importante es el sistema que sostiene detrás.</span>
+            Cada proyecto necesita una escala distinta.<br />
+            <span>La solución crece en proporción a esa necesidad.</span>
           </h2>
           <p>
-            Trabajo sobre el recorrido completo: interfaz, datos, reglas de negocio, integraciones y automatización. Cada capa tiene una función y una razón técnica para existir.
+            Cada proyecto recibe la arquitectura que corresponde a su escala. Defino el alcance según el objetivo, el uso, las necesidades actuales y la evolución prevista.
           </p>
         </div>
       </section>
 
-      <BrandCredits />
+      <div id="experience"><BrandCredits /></div>
+
+      <section id="solutions" className="client-spectrum">
+        <div className="section-shell client-spectrum-grid" data-reveal>
+          <p className="micro-label">PUNTOS DE PARTIDA</p>
+          <div>
+            <h2>Desde una web puntual<br /><span>hasta un sistema que articula una operación.</span></h2>
+            <div className="client-spectrum-cases">
+              <article><span>01</span><strong>Quiero crear</strong><p>Una landing, portfolio o sitio institucional para presentar una actividad, servicio o propuesta con claridad.</p></article>
+              <article><span>02</span><strong>Quiero evolucionar</strong><p>Un sitio, tienda o aplicación existente que necesita una nueva etapa de diseño, funcionalidad o rendimiento.</p></article>
+              <article><span>03</span><strong>Quiero integrar</strong><p>Herramientas, APIs y datos que necesitan integrarse para centralizar información, agilizar procesos y coordinar el trabajo entre sistemas.</p></article>
+              <article><span>04</span><strong>Quiero desarrollar</strong><p>Una aplicación o sistema con reglas propias, usuarios, permisos, datos, procesos e integraciones específicas.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="client-spectrum">
         <div className="section-shell client-spectrum-grid" data-reveal>
@@ -189,9 +218,9 @@ export default function Home() {
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
           <p className="micro-label">CONTEXTO DEL PROYECTO</p>
-          <h2>Un buen desarrollo empieza<br /><span>por entender bien el problema.</span></h2>
+          <h2>Un buen desarrollo empieza<br /><span>por entender bien el objetivo.</span></h2>
           <p>
-            Describí el contexto, la necesidad y las restricciones conocidas. Con esa información puedo evaluar alcance, dependencias y una primera dirección técnica antes de hablar de implementación.
+            Describí el contexto, el objetivo y las condiciones conocidas. Con esa información puedo evaluar alcance, dependencias y una primera dirección técnica para el proyecto.
           </p>
         </div>
 
