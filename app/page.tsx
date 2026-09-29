@@ -103,24 +103,24 @@ export default function Home() {
         <div className="section-shell hero-content">
           <div className="hero-overline hero-reveal hero-reveal-1">
             <span className="live-dot" />
-            DESIGN · DEVELOPMENT · DIGITAL GROWTH
+            CAPTACIÓN · AUTOMATIZACIÓN · DESARROLLO
           </div>
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">PRODUCTOS</span>
-              <span className="hero-reveal hero-reveal-3">DIGITALES</span>
+              <span className="hero-reveal hero-reveal-2">TU WEB,</span>
+              <span className="hero-reveal hero-reveal-3">EN ACCIÓN.</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Diseño y desarrollo experiencias digitales que convierten atención en consultas, ventas y procesos más eficientes. Desde una landing hasta un sistema a medida.
+              Transformo tu presencia digital en un sistema que capta consultas, identifica oportunidades y organiza el seguimiento. Estrategia, desarrollo y automatización conectados.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#services" className="hero-button hero-button-primary">
-                Quiero impulsar mi proyecto <span>↗</span>
+                Ver cómo funciona <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Solicitar propuesta <span>↗</span>
@@ -146,11 +146,11 @@ export default function Home() {
         <div className="section-shell statement-grid" data-reveal>
           <p className="micro-label">PRESENCIA DIGITAL</p>
           <h2>
-            Tu presencia digital no debería limitarse a verse bien.<br />
-            <span>Debería ayudarte a avanzar.</span>
+            Tu web no debería limitarse a mostrar quién sos.<br />
+            <span>Debería detectar oportunidades.</span>
           </h2>
           <p>
-            Construyo recorridos claros para que una visita entienda tu propuesta, confíe en ella y sepa qué hacer después. Diseño y desarrollo trabajan con un objetivo comercial concreto.
+            Diseño el recorrido completo: atraer la atención, convertirla en una consulta útil y dejar esa oportunidad preparada para el seguimiento. La tecnología trabaja detrás; el negocio recibe claridad.
           </p>
         </div>
       </section>
@@ -166,9 +166,9 @@ export default function Home() {
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
           <p className="micro-label">HABLEMOS DE TU PROYECTO</p>
-          <h2>Si hay una oportunidad,<br /><span>construyamos la solución correcta.</span></h2>
+          <h2>Convertí una visita<br /><span>en una oportunidad accionable.</span></h2>
           <p>
-            No necesitás llegar con la solución definida. Contame qué querés lograr, qué está frenando hoy el proyecto o qué proceso querés mejorar. A partir de eso definimos el próximo paso.
+            Contame qué querés lograr. Este mismo formulario registra el origen de tu consulta y prepara el contexto para analizarla: es una muestra del sistema de captación que puedo implementar en tu negocio.
           </p>
         </div>
 
