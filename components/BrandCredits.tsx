@@ -27,11 +27,11 @@ export default function BrandCredits() {
         <p className="micro-label">EXPERIENCIA PROFESIONAL</p>
         <div>
           <h2>
-            Experiencia que respalda<br />
-            <span>cada decisión del proyecto.</span>
+            Trabajo en software que<br />
+            <span>opera fuera del portfolio.</span>
           </h2>
           <p>
-            Experiencia construyendo y manteniendo soluciones digitales en contextos reales: equipos, plataformas y operaciones con distintos niveles de complejidad y escala.
+            Experiencia en equipos y sistemas con código existente, integraciones, restricciones de negocio, testing y mantenimiento. El criterio técnico también se forma trabajando sobre complejidad que ya existe.
           </p>
         </div>
       </div>
