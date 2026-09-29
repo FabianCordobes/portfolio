@@ -8,7 +8,7 @@ const SERVICES = [
   "Comercio digital",
   "Aplicación / sistema",
   "Automatización / integración",
-  "Necesito evaluar el problema",
+  "Todavía no sé qué solución necesito",
 ];
 
 type Attribution = {
@@ -96,7 +96,7 @@ export default function LeadForm() {
   return (
     <form onSubmit={onSubmit} className="future-form">
       <div className="future-form-head">
-        <p className="micro-label">BRIEF INICIAL</p>
+        <p className="micro-label">PUNTO DE PARTIDA</p>
         <span>~2 min</span>
       </div>
 
@@ -147,7 +147,7 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"} className="future-submit">
-        {status === "sending" ? "Enviando..." : "Enviar contexto ↗"}
+        {status === "sending" ? "Enviando..." : "Plantear el problema ↗"}
       </button>
 
       {status === "success" && (
