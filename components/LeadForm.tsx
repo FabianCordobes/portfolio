@@ -9,7 +9,7 @@ const SERVICES = [
   "Aplicación / Sistema",
   "Automatización",
   "Mantenimiento",
-  "Quiero orientación",
+  "No estoy seguro",
 ];
 
 type Attribution = {
