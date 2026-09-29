@@ -27,12 +27,11 @@ export default function BrandCredits() {
         <p className="micro-label">EXPERIENCIA PROFESIONAL</p>
         <div>
           <h2>
-            Experiencia en tecnología.<br />
-            <span>Equipos y tecnología real.</span>
+            Experiencia que respalda<br />
+            <span>cada decisión del proyecto.</span>
           </h2>
           <p>
-            Trabajo en plataformas, sistemas y equipos de desarrollo
-            con distintos niveles de complejidad y escala.
+            Experiencia construyendo y manteniendo soluciones digitales en contextos reales: equipos, plataformas y operaciones con distintos niveles de complejidad y escala.
           </p>
         </div>
       </div>

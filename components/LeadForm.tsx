@@ -97,7 +97,7 @@ export default function LeadForm() {
   return (
     <form onSubmit={onSubmit} className="future-form">
       <div className="future-form-head">
-        <p className="micro-label">CONTAME TU PROYECTO</p>
+        <p className="micro-label">PRIMER PASO</p>
         <span>~2 min</span>
       </div>
 
@@ -131,13 +131,13 @@ export default function LeadForm() {
         </label>
 
         <label className="future-form-wide">
-          <span>Contexto</span>
+          <span>¿Qué querés lograr?</span>
           <textarea
             name="message"
             minLength={20}
             maxLength={1800}
             required
-            placeholder="Contame brevemente qué querés construir..."
+            placeholder="Por ejemplo: necesito más consultas, vender online, automatizar un proceso o desarrollar una plataforma..."
           />
         </label>
 
@@ -148,12 +148,12 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"} className="future-submit">
-        {status === "sending" ? "Enviando..." : "Solicitar propuesta ↗"}
+        {status === "sending" ? "Enviando..." : "Contar mi proyecto ↗"}
       </button>
 
       {status === "success" && (
         <p className="future-form-status" role="status">
-          Recibido. Te contacto para avanzar con el próximo paso.
+          Recibido. Voy a revisar el contexto y te contacto para definir el próximo paso.
         </p>
       )}
 
