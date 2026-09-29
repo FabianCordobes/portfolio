@@ -40,7 +40,12 @@ const PROJECTS = [
 
 export default function SelectedWork() {
   const [active, setActive] = useState(0);
+  const [hovered, setHovered] = useState<number | null>(null);
   const refs = useRef<Array<HTMLElement | null>>([]);
+  const previewRef = useRef<HTMLDivElement | null>(null);
+  const target = useRef({ x: -500, y: -500 });
+  const current = useRef({ x: -500, y: -500 });
+  const previousTarget = useRef({ x: -500, y: -500 });
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,6 +63,57 @@ export default function SelectedWork() {
     refs.current.forEach((item) => item && observer.observe(item));
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const finePointer = window.matchMedia("(pointer: fine)").matches;
+    if (reduceMotion || !finePointer) return;
+
+    let frame = 0;
+
+    const animate = () => {
+      const preview = previewRef.current;
+      if (preview) {
+        const dx = target.current.x - current.current.x;
+        const dy = target.current.y - current.current.y;
+        current.current.x += dx * 0.135;
+        current.current.y += dy * 0.135;
+
+        const eventVX = target.current.x - previousTarget.current.x;
+        const eventVY = target.current.y - previousTarget.current.y;
+        const rotate = Math.max(-7, Math.min(7, dx * 0.028 + eventVX * 0.018));
+        const skewY = Math.max(-3.5, Math.min(3.5, dy * 0.018 + eventVY * 0.012));
+
+        preview.style.transform =
+          `translate3d(${current.current.x}px, ${current.current.y}px, 0) translate(-8%, -48%) rotate(${rotate}deg) skewY(${skewY}deg)`;
+
+        previousTarget.current.x += eventVX * 0.2;
+        previousTarget.current.y += eventVY * 0.2;
+      }
+
+      frame = requestAnimationFrame(animate);
+    };
+
+    frame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  const movePreview = (event: React.PointerEvent<HTMLElement>) => {
+    target.current.x = event.clientX + 30;
+    target.current.y = event.clientY + 18;
+  };
+
+  const showPreview = (index: number, event: React.PointerEvent<HTMLElement>) => {
+    current.current.x = event.clientX + 22;
+    current.current.y = event.clientY + 18;
+    target.current.x = event.clientX + 30;
+    target.current.y = event.clientY + 18;
+    previousTarget.current = { ...target.current };
+    setActive(index);
+    setHovered(index);
+  };
+
+  const hoveredProject = hovered === null ? null : PROJECTS[hovered];
 
   return (
     <section id="work" className="cinematic-work">
@@ -95,7 +151,12 @@ export default function SelectedWork() {
             </div>
 
             <div className="section-shell work-chapter-grid">
-              <div className="work-chapter-copy">
+              <div
+                className="work-chapter-copy"
+                onPointerEnter={(event) => showPreview(index, event)}
+                onPointerMove={movePreview}
+                onPointerLeave={() => setHovered(null)}
+              >
                 <p className="work-chapter-type">{project.type}</p>
                 <h3>{project.title}</h3>
                 <p className="work-chapter-result">{project.result}</p>
@@ -194,6 +255,25 @@ export default function SelectedWork() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div
+        ref={previewRef}
+        className={hoveredProject ? `work-cursor-preview is-visible preview-${hoveredProject.visual}` : "work-cursor-preview"}
+        aria-hidden="true"
+      >
+        {hoveredProject && (
+          <>
+            <div className="cursor-preview-light" />
+            <div className="cursor-preview-scan" />
+            <div className="cursor-preview-index">{hoveredProject.id}</div>
+            <div className="cursor-preview-copy">
+              <small>{hoveredProject.type}</small>
+              <strong>{hoveredProject.title}</strong>
+              <span>EXPLORE ↗</span>
+            </div>
+          </>
+        )}
       </div>
 
       <div className="section-shell cinematic-work-footer">
