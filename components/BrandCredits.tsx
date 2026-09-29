@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 const BRANDS = [
-  { name: "WAYFAIR", mark: "W", meta: "PRODUCT TEAMS" },
+  { name: "WAYFAIR", mark: "W", meta: "DIGITAL TEAMS" },
   { name: "ISCX", mark: "IX", meta: "INSURANCE SOFTWARE" },
   { name: "SOCIAL WAVE", mark: "SW", meta: "FRONT-END" },
-  { name: "BUILDVISION", mark: "BV", meta: "PRODUCT DEVELOPMENT" },
+  { name: "BUILDVISION", mark: "BV", meta: "SOFTWARE DEVELOPMENT" },
   { name: "HENRY", mark: "H", meta: "FULL-STACK" },
 ];
 
@@ -27,11 +27,11 @@ export default function BrandCredits() {
         <p className="micro-label">EXPERIENCIA PROFESIONAL</p>
         <div>
           <h2>
-            Experiencia en producto.<br />
+            Experiencia en tecnología.<br />
             <span>Equipos y tecnología real.</span>
           </h2>
           <p>
-            Trabajo en productos digitales, plataformas y equipos de desarrollo
+            Trabajo en plataformas, sistemas y equipos de desarrollo
             con distintos niveles de complejidad y escala.
           </p>
         </div>
