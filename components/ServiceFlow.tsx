@@ -5,39 +5,33 @@ import { useEffect, useRef, useState } from "react";
 const SERVICES = [
   {
     id: "01",
-    title: "Landing Page",
-    line: "Presencia. Claridad. Conversión.",
-    text: "Convierte una campaña, lanzamiento o servicio en un recorrido enfocado en una acción: consultar, reservar, comprar o solicitar una propuesta.",
+    title: "Sistema de Captación",
+    line: "Captar. Entender. Priorizar.",
+    text: "Una landing conectada a un formulario inteligente que registra el origen de cada consulta, detecta necesidades y prepara la oportunidad para su seguimiento comercial.",
   },
   {
     id: "02",
-    title: "Sitio Web",
-    line: "Identidad. Contenido. Evolución.",
-    text: "Dale a tu negocio una presencia profesional que explique mejor lo que hacés, genere confianza y transforme visitas en oportunidades.",
+    title: "Web de Conversión",
+    line: "Claridad. Confianza. Acción.",
+    text: "Diseño una presencia digital enfocada en explicar tu propuesta, reducir dudas y llevar a cada visitante hacia una acción concreta.",
   },
   {
     id: "03",
-    title: "E-commerce",
+    title: "Comercio Digital",
     line: "Descubrir. Elegir. Comprar.",
-    text: "Reduce fricción entre descubrir, elegir y comprar con una experiencia clara, administrable y preparada para vender.",
+    text: "Construyo experiencias de venta donde catálogo, navegación y checkout forman un recorrido simple y administrable.",
   },
   {
     id: "04",
-    title: "Aplicación / Sistema",
-    line: "Software. Operación. Datos.",
-    text: "Cuando una web estándar no alcanza, desarrollo software a medida para convertir procesos, datos e ideas en una herramienta de trabajo real.",
+    title: "Software a Medida",
+    line: "Procesos. Datos. Operación.",
+    text: "Desarrollo aplicaciones y sistemas cuando una solución estándar no alcanza: autenticación, roles, datos, integraciones y lógica de negocio.",
   },
   {
     id: "05",
     title: "Automatización",
     line: "Conectar. Ejecutar. Escalar.",
-    text: "Elimina tareas repetitivas y conecta herramientas para responder más rápido, mejorar el seguimiento y liberar tiempo operativo.",
-  },
-  {
-    id: "06",
-    title: "Mantenimiento",
-    line: "Continuidad. Mejora. Expansión.",
-    text: "Tu plataforma no termina al publicarse. La mantengo estable, actualizada y preparada para evolucionar cuando el negocio lo necesite.",
+    text: "Conecto herramientas y flujos para reducir tareas manuales, acelerar respuestas y convertir información dispersa en acciones concretas.",
   },
 ];
 
@@ -68,8 +62,8 @@ export default function ServiceFlow() {
   return (
     <section id="services" className="service-flow">
       <div className="section-shell service-flow-head" data-reveal>
-        <p className="micro-label">SERVICIOS</p>
-        <h2>Una solución para cada etapa.<br /><span>Un objetivo claro detrás de cada decisión.</span></h2>
+        <p className="micro-label">SOLUCIONES</p>
+        <h2>Primero, el resultado.<br /><span>Después, la tecnología necesaria para conseguirlo.</span></h2>
       </div>
 
       <div className="section-shell service-flow-layout">
