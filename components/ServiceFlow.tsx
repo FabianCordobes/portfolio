@@ -7,37 +7,37 @@ const SERVICES = [
     id: "01",
     title: "Landing Page",
     line: "Presencia. Claridad. Conversión.",
-    text: "Presenta tu propuesta con claridad, concentra la atención y conduce al contacto.",
+    text: "Convierte una campaña, lanzamiento o servicio en un recorrido enfocado en una acción: consultar, reservar, comprar o solicitar una propuesta.",
   },
   {
     id: "02",
     title: "Sitio Web",
     line: "Identidad. Contenido. Evolución.",
-    text: "Ordena tu marca, contenido y oferta en una presencia digital lista para generar oportunidades.",
+    text: "Dale a tu negocio una presencia profesional que explique mejor lo que hacés, genere confianza y transforme visitas en oportunidades.",
   },
   {
     id: "03",
     title: "E-commerce",
     line: "Descubrir. Elegir. Comprar.",
-    text: "Lleva al usuario del descubrimiento a la compra con un recorrido fluido y administrable.",
+    text: "Reduce fricción entre descubrir, elegir y comprar con una experiencia clara, administrable y preparada para vender.",
   },
   {
     id: "04",
     title: "Aplicación / Sistema",
     line: "Software. Operación. Datos.",
-    text: "Convierte procesos e ideas en una solución digital a medida, conectada con tus datos y operación.",
+    text: "Cuando una web estándar no alcanza, desarrollo software a medida para convertir procesos, datos e ideas en una herramienta de trabajo real.",
   },
   {
     id: "05",
     title: "Automatización",
     line: "Conectar. Ejecutar. Escalar.",
-    text: "Conecta herramientas, información y acciones para acelerar tareas, seguimiento y respuesta.",
+    text: "Elimina tareas repetitivas y conecta herramientas para responder más rápido, mejorar el seguimiento y liberar tiempo operativo.",
   },
   {
     id: "06",
     title: "Mantenimiento",
     line: "Continuidad. Mejora. Expansión.",
-    text: "Mantiene tu plataforma actualizada, optimizada y lista para incorporar nuevas oportunidades.",
+    text: "Tu plataforma no termina al publicarse. La mantengo estable, actualizada y preparada para evolucionar cuando el negocio lo necesite.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function ServiceFlow() {
     <section id="services" className="service-flow">
       <div className="section-shell service-flow-head" data-reveal>
         <p className="micro-label">SERVICIOS</p>
-        <h2>Experiencias y sistemas.<br /><span>Construidos para generar negocio.</span></h2>
+        <h2>Una solución para cada etapa.<br /><span>Un objetivo claro detrás de cada decisión.</span></h2>
       </div>
 
       <div className="section-shell service-flow-layout">
@@ -107,7 +107,7 @@ export default function ServiceFlow() {
               <h3>{service.title}</h3>
               <p className="service-flow-line">{service.line}</p>
               <p className="service-flow-text">{service.text}</p>
-              <a href="#contact">Solicitar propuesta ↗</a>
+              <a href="#contact">Quiero resolver esto ↗</a>
             </article>
           ))}
         </div>
