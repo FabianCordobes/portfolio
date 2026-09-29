@@ -40,7 +40,7 @@ export default function Home() {
         </nav>
 
         <a href="#contact" className="nav-project-link">
-          Iniciar proyecto ↗
+          Solicitar propuesta ↗
         </a>
       </header>
 
@@ -64,6 +64,13 @@ export default function Home() {
           <div className="hero-film-light hero-film-light-a" />
           <div className="hero-film-light hero-film-light-b" />
           <div className="hero-anamorphic" />
+          <div className="hero-ai-veil" />
+          <div className="hero-chroma hero-chroma-a" />
+          <div className="hero-chroma hero-chroma-b" />
+          <div className="hero-scan-volume" />
+          <div className="hero-data-streak streak-one" />
+          <div className="hero-data-streak streak-two" />
+          <div className="hero-data-streak streak-three" />
         </div>
 
         <div className="hero-human-system" aria-hidden="true">
@@ -93,7 +100,7 @@ export default function Home() {
         <div className="section-shell hero-content">
           <div className="hero-overline hero-reveal hero-reveal-1">
             <span className="live-dot" />
-            DESIGN · DEVELOPMENT · DIGITAL EXPERIENCES
+            DESIGN · DEVELOPMENT · DIGITAL GROWTH
           </div>
 
           <div className="hero-title-wrap">
@@ -103,15 +110,15 @@ export default function Home() {
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Diseño y desarrollo productos web donde estética, tecnología y
-              movimiento forman una misma experiencia.
+              Landing pages, sitios web, e-commerce, aplicaciones y automatizaciones
+              creadas para captar atención, generar oportunidades y acompañar el crecimiento.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#services" className="hero-button hero-button-primary">
-                Explorar servicios <span>↓</span>
+                Ver servicios <span>↓</span>
               </a>
               <a href="#contact" className="hero-button">
                 Iniciar proyecto <span>↗</span>
@@ -135,12 +142,12 @@ export default function Home() {
         <div className="section-shell statement-grid" data-reveal>
           <p className="micro-label">PRESENCIA DIGITAL</p>
           <h2>
-            Belleza que atrae.<br />
-            <span>Tecnología que responde.</span>
+            Diseño que capta.<br />
+            <span>Tecnología que convierte.</span>
           </h2>
           <p>
-            Cada decisión visual tiene una función. Cada interacción acompaña
-            la experiencia. Cada producto está pensado para sentirse propio.
+            Cada sección guía la atención hacia una acción concreta. Diseño,
+            desarrollo y movimiento trabajan juntos para generar oportunidades.
           </p>
         </div>
       </section>
@@ -154,10 +161,10 @@ export default function Home() {
         <div className="section-shell intelligence-layout">
           <div className="intelligence-copy" data-reveal>
             <p className="micro-label">UNDER THE SURFACE</p>
-            <h2>La tecnología<br /><span>también puede sentirse.</span></h2>
+            <h2>Tecnología en movimiento.<br /><span>IA integrada al producto.</span></h2>
             <p>
-              Arquitectura, datos, realtime e inteligencia integrados sin
-              convertirse en ruido visual.
+              Arquitectura, datos, realtime e inteligencia trabajando dentro de
+              una misma solución para crear productos más conectados y escalables.
             </p>
           </div>
 
@@ -173,6 +180,11 @@ export default function Home() {
               <i className="intel-node node-c" />
             </div>
             <div className="intel-scan" />
+            <div className="intel-video-glow" />
+            <div className="intel-video-sweep sweep-one" />
+            <div className="intel-video-sweep sweep-two" />
+            <div className="intel-pulse-ring pulse-ring-one" />
+            <div className="intel-pulse-ring pulse-ring-two" />
             <span className="intel-label label-one">MICROSERVICES</span>
             <span className="intel-label label-two">WEBSOCKET</span>
             <span className="intel-label label-three">NOSQL</span>
@@ -184,10 +196,10 @@ export default function Home() {
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
           <p className="micro-label">NUEVO PROYECTO</p>
-          <h2>Hagamos que<br /><span>tome forma.</span></h2>
+          <h2>Convirtamos tu idea<br /><span>en un producto listo para crecer.</span></h2>
           <p>
             Landing page, sitio web, e-commerce, aplicación, automatización o
-            mantenimiento. Contame qué querés construir.
+            mantenimiento. Contame qué querés construir y preparo una propuesta.
           </p>
         </div>
 
