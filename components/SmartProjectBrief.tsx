@@ -3,10 +3,12 @@
 import { useMemo, useState } from "react";
 
 const NEEDS = [
-  { id: "landing", label: "Landing Page", title: "Landing Page", route: "Diseño + desarrollo", outcome: "Propuesta clara, narrativa visual y conversión." },
-  { id: "website", label: "Sitio Web", title: "Sitio Web", route: "Arquitectura + experiencia", outcome: "Contenido, identidad y una presencia profesional." },
-  { id: "app", label: "Aplicación Web", title: "Aplicación Web", route: "Producto + desarrollo", outcome: "Interfaz, lógica de negocio, datos e integraciones." },
+  { id: "landing", label: "Landing Page", title: "Landing Page", route: "Diseño + desarrollo", outcome: "Propuesta clara, identidad visual y conversión." },
+  { id: "website", label: "Sitio Web", title: "Sitio Web", route: "Arquitectura + experiencia", outcome: "Contenido, presencia y evolución digital." },
   { id: "commerce", label: "E-commerce", title: "E-commerce", route: "Experiencia + ventas", outcome: "Catálogo, compra, administración y crecimiento." },
+  { id: "app", label: "Aplicación / Sistema", title: "Aplicación / Sistema", route: "Producto + desarrollo", outcome: "Interfaz, lógica, datos e integraciones." },
+  { id: "automation", label: "Automatización", title: "Automatización", route: "Flujos + integración", outcome: "Procesos conectados y acciones inteligentes." },
+  { id: "maintenance", label: "Mantenimiento", title: "Mantenimiento", route: "Evolución continua", outcome: "Optimización, mejoras y nuevas capacidades." },
 ];
 
 const MOMENTS = ["Ahora", "Este trimestre", "Exploración"];
