@@ -25,12 +25,11 @@ export default function AppliedIntelligence() {
         <div className="ai-cinema-copy" data-reveal>
           <p className="micro-label">INTELIGENCIA APLICADA</p>
           <h2>
-            Sistemas que procesan.<br />
-            <span>Automatizaciones que ejecutan.</span>
+            Menos trabajo manual.<br />
+            <span>Más capacidad para avanzar.</span>
           </h2>
           <p>
-            Integraciones, datos, realtime y automatización trabajando detrás del
-            experiencia para conectar procesos y acelerar operaciones.
+            Integro herramientas, datos y automatizaciones para reducir tareas repetitivas, mejorar tiempos de respuesta y hacer que la operación acompañe el crecimiento.
           </p>
 
           <div className="ai-capability-line">
