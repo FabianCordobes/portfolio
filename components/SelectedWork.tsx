@@ -18,7 +18,7 @@ const PROJECTS = [
     id: "02",
     title: "E-commerce App",
     type: "Comercio digital",
-    result: "Del descubrimiento al checkout sin romper el recorrido.",
+    result: "Un recorrido continuo desde el descubrimiento hasta el checkout.",
     description:
       "Experiencia de e-commerce con catálogo, autenticación, carrito, administración y flujo de órdenes.",
     tech: ["React", "Redux Toolkit", "Firebase", "Sass"],
@@ -62,14 +62,14 @@ export default function SelectedWork() {
   return (
     <section id="work" className="cinematic-work">
       <div className="section-shell cinematic-work-head" data-reveal>
-        <p className="micro-label dark">EVIDENCIA / TRABAJO SELECCIONADO</p>
+        <p className="micro-label dark">PROYECTOS / SOLUCIONES EN ACCIÓN</p>
         <div>
           <h2>
-            Código, decisiones y comportamiento.<br />
-            <span>El trabajo se evalúa en funcionamiento.</span>
+            Ideas llevadas a experiencias reales.<br />
+            <span>Proyectos que muestran distintas formas de crear valor digital.</span>
           </h2>
           <p>
-            Una selección de implementaciones con dominios distintos. El foco está en qué debía resolver cada sistema y cómo se tradujo esa necesidad a software.
+            Sitios, aplicaciones y experiencias desarrolladas para objetivos distintos: presentar una propuesta, facilitar una compra, organizar reservas y construir recorridos digitales claros.
           </p>
         </div>
       </div>
@@ -197,7 +197,7 @@ export default function SelectedWork() {
 
       <div className="section-shell cinematic-work-footer">
         <a href="/portfolio">
-          Ver portfolio técnico completo <span>↗</span>
+          Ver más proyectos <span>↗</span>
         </a>
       </div>
     </section>
