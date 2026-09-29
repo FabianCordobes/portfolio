@@ -339,6 +339,12 @@ button {
   bottom: 0;
   width: 76%;
   overflow: hidden;
+  opacity: 0;
+  filter: blur(12px);
+  transform-origin: 66% 38%;
+  transform: perspective(1200px) translate3d(5vw, 2vh, -260px) scale(.76);
+  will-change: transform, opacity, filter;
+  animation: portraitDollyIn 1.85s 1.08s cubic-bezier(.12,.82,.18,1) forwards;
 }
 
 .hero-portrait img {
@@ -1815,6 +1821,24 @@ button {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes portraitDollyIn {
+  0% {
+    opacity: 0;
+    filter: blur(14px);
+    transform: perspective(1200px) translate3d(5vw, 2vh, -260px) scale(.76);
+  }
+  58% {
+    opacity: .94;
+    filter: blur(2px);
+    transform: perspective(1200px) translate3d(.5vw, 0, 28px) scale(1.028);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: perspective(1200px) translate3d(0, 0, 0) scale(1);
+  }
+}
+
 @keyframes stageIn {
   from { opacity: .25; transform: scale(.96); }
   to { opacity: 1; transform: scale(1); }
@@ -2244,7 +2268,8 @@ button {
 
   .hero-reveal,
   [data-reveal],
-  .hero-human-system {
+  .hero-human-system,
+  .hero-portrait {
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
