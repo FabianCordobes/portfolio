@@ -113,15 +113,14 @@ export default function Home() {
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Landing pages, sitios web, e-commerce, aplicaciones y automatizaciones
-              creadas para captar atención, generar oportunidades y acompañar el crecimiento.
+              Diseño y desarrollo experiencias digitales que convierten atención en consultas, ventas y procesos más eficientes. Desde una landing hasta un sistema a medida.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#services" className="hero-button hero-button-primary">
-                Ver servicios <span>↓</span>
+                Quiero impulsar mi proyecto <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Solicitar propuesta <span>↗</span>
@@ -147,12 +146,11 @@ export default function Home() {
         <div className="section-shell statement-grid" data-reveal>
           <p className="micro-label">PRESENCIA DIGITAL</p>
           <h2>
-            Diseño que capta.<br />
-            <span>Tecnología que convierte.</span>
+            Tu presencia digital no debería limitarse a verse bien.<br />
+            <span>Debería ayudarte a avanzar.</span>
           </h2>
           <p>
-            Cada sección guía la atención hacia una acción concreta. Diseño,
-            desarrollo y movimiento trabajan juntos para generar oportunidades.
+            Construyo recorridos claros para que una visita entienda tu propuesta, confíe en ella y sepa qué hacer después. Diseño y desarrollo trabajan con un objetivo comercial concreto.
           </p>
         </div>
       </section>
@@ -167,11 +165,10 @@ export default function Home() {
 
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
-          <p className="micro-label">NUEVO PROYECTO</p>
-          <h2>Convirtamos tu idea<br /><span>en una solución digital lista para crecer.</span></h2>
+          <p className="micro-label">HABLEMOS DE TU PROYECTO</p>
+          <h2>Si hay una oportunidad,<br /><span>construyamos la solución correcta.</span></h2>
           <p>
-            Landing page, sitio web, e-commerce, aplicación, automatización o
-            mantenimiento. Contame qué querés construir y preparo una propuesta.
+            No necesitás llegar con la solución definida. Contame qué querés lograr, qué está frenando hoy el proyecto o qué proceso querés mejorar. A partir de eso definimos el próximo paso.
           </p>
         </div>
 
