@@ -65,12 +65,11 @@ export default function SelectedWork() {
         <p className="micro-label dark">TRABAJO SELECCIONADO</p>
         <div>
           <h2>
-            Proyectos con lógica.<br />
-            <span>Experiencias con carácter.</span>
+            No alcanza con prometer.<br />
+            <span>Hay que demostrar que se puede construir.</span>
           </h2>
           <p>
-            Cada proyecto se construye desde la necesidad real hasta la experiencia
-            final: interfaz, arquitectura, datos y operación.
+            Una selección de trabajos donde diseño y desarrollo resuelven necesidades concretas: operación, compra, navegación y experiencia de usuario.
           </p>
         </div>
       </div>
@@ -106,7 +105,7 @@ export default function SelectedWork() {
                 </div>
 
                 <a href={project.href} target="_blank" rel="noreferrer">
-                  Ver proyecto <span>↗</span>
+                  Explorar proyecto <span>↗</span>
                 </a>
               </div>
 
