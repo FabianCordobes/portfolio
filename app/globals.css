@@ -3961,7 +3961,7 @@ button {
 }
 
 .cinematic-project-frame:hover {
-  transform: perspective(1400px) rotateY(0) rotateX(0) scale(1.018);
+  scale: 1.018;
   box-shadow: 0 75px 170px rgba(0,0,0,.55);
 }
 
