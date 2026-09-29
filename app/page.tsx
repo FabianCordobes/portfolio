@@ -194,6 +194,21 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="client-spectrum">
+        <div className="section-shell client-spectrum-grid" data-reveal>
+          <p className="micro-label">NO HACE FALTA LLEGAR CON UNA SOLUCIÓN DEFINIDA</p>
+          <div>
+            <h2>Podés llegar con una idea,<br /><span>un problema o un sistema que ya existe.</span></h2>
+            <div className="client-spectrum-cases">
+              <article><span>01</span><strong>Necesito empezar</strong><p>Una presencia web, un MVP o una primera versión que permita validar y operar.</p></article>
+              <article><span>02</span><strong>Necesito mejorar</strong><p>Una interfaz, flujo o aplicación existente que necesita evolucionar sin rehacerse sin criterio.</p></article>
+              <article><span>03</span><strong>Necesito conectar</strong><p>Datos, APIs, herramientas o procesos que hoy funcionan separados o requieren intervención manual.</p></article>
+              <article><span>04</span><strong>Necesito resolver</strong><p>Un problema específico que todavía no tiene una solución técnica definida. El trabajo puede empezar por ahí.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <ServiceFlow />
 
       <SelectedWork />
