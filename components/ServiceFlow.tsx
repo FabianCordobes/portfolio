@@ -7,37 +7,37 @@ const SERVICES = [
     id: "01",
     title: "Landing Page",
     line: "Presencia. Claridad. Conversión.",
-    text: "Una experiencia enfocada en presentar una propuesta con precisión y transformar atención en oportunidades.",
+    text: "Presenta tu propuesta con claridad, concentra la atención y conduce al contacto.",
   },
   {
     id: "02",
     title: "Sitio Web",
     line: "Identidad. Contenido. Evolución.",
-    text: "Una presencia digital completa para comunicar valor, construir identidad y acompañar el crecimiento.",
+    text: "Ordena tu marca, contenido y oferta en una presencia digital lista para generar oportunidades.",
   },
   {
     id: "03",
     title: "E-commerce",
     line: "Descubrir. Elegir. Comprar.",
-    text: "Una experiencia comercial fluida desde el catálogo hasta la gestión de órdenes.",
+    text: "Lleva al usuario del descubrimiento a la compra con un recorrido fluido y administrable.",
   },
   {
     id: "04",
     title: "Aplicación / Sistema",
     line: "Producto. Operación. Datos.",
-    text: "Interfaces, lógica, integraciones y datos trabajando dentro de una solución desarrollada a medida.",
+    text: "Convierte procesos e ideas en un producto digital a medida, conectado con tus datos y operación.",
   },
   {
     id: "05",
     title: "Automatización",
     line: "Conectar. Ejecutar. Escalar.",
-    text: "Procesos digitales que conectan herramientas, información y acciones de forma inteligente.",
+    text: "Conecta herramientas, información y acciones para acelerar tareas, seguimiento y respuesta.",
   },
   {
     id: "06",
     title: "Mantenimiento",
     line: "Continuidad. Mejora. Expansión.",
-    text: "Evolución técnica, optimización y nuevas funcionalidades para productos digitales activos.",
+    text: "Mantiene tu producto actualizado, optimizado y listo para incorporar nuevas oportunidades.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function ServiceFlow() {
     <section id="services" className="service-flow">
       <div className="section-shell service-flow-head" data-reveal>
         <p className="micro-label">SERVICIOS</p>
-        <h2>Una idea.<br /><span>Seis formas de construirla.</span></h2>
+        <h2>Soluciones digitales.<br /><span>Diseñadas para generar negocio.</span></h2>
       </div>
 
       <div className="section-shell service-flow-layout">
@@ -103,7 +103,7 @@ export default function ServiceFlow() {
               <h3>{service.title}</h3>
               <p className="service-flow-line">{service.line}</p>
               <p className="service-flow-text">{service.text}</p>
-              <a href="#contact">Crear este proyecto ↗</a>
+              <a href="#contact">Solicitar propuesta ↗</a>
             </article>
           ))}
         </div>
