@@ -3834,3 +3834,175 @@ a {
     animation: none !important;
   }
 }
+
+
+/* Spectral cinematic refinement */
+:root {
+  --spectral-blue: #69d8ff;
+  --spectral-violet: #9f86ff;
+  --whatsapp: #25d366;
+}
+
+.future-hero::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 78% 36%, rgba(105,216,255,.075), transparent 18%),
+    radial-gradient(circle at 65% 58%, rgba(159,134,255,.065), transparent 22%);
+  filter: blur(28px);
+  mix-blend-mode: screen;
+  animation: spectralDrift 12s ease-in-out infinite alternate;
+}
+
+.five-d-title span,
+.service-five-d,
+.five-d-heading {
+  background-image:
+    linear-gradient(115deg, #ffffff 0%, #dfeeff 24%, #ffffff 42%, #dfffb7 61%, #d9d4ff 78%, #f6f6ef 100%);
+  background-size: 180% 180%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: spectralType 9s ease-in-out infinite;
+}
+
+.five-d-title span {
+  color: transparent;
+}
+
+.service-five-d,
+.five-d-heading {
+  color: transparent;
+}
+
+.five-d-title span::before {
+  color: rgba(105,216,255,.07);
+  text-shadow: 10px 12px 26px rgba(105,216,255,.08);
+}
+
+.five-d-title span::after {
+  color: rgba(159,134,255,.05);
+  text-shadow: 18px 18px 34px rgba(159,134,255,.07);
+}
+
+.cinematic-portal {
+  filter:
+    drop-shadow(0 0 28px rgba(105,216,255,.06))
+    drop-shadow(0 0 70px rgba(159,134,255,.04));
+}
+
+.portal-core {
+  background:
+    radial-gradient(circle at 42% 38%, rgba(255,255,255,.96) 0 1.5%, transparent 8%),
+    radial-gradient(circle, rgba(200,255,98,.2), rgba(105,216,255,.055) 36%, rgba(159,134,255,.025) 56%, transparent 72%);
+}
+
+.portal-anamorphic {
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(105,216,255,.08) 24%, rgba(230,255,188,.18) 50%, rgba(159,134,255,.08) 76%, transparent 100%);
+}
+
+.whatsapp-float {
+  min-height: 64px;
+  padding: 0 20px 0 9px;
+  border-color: rgba(37,211,102,.28);
+  background: rgba(6,16,10,.88);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.42),
+    0 0 28px rgba(37,211,102,.12),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.whatsapp-float:hover {
+  border-color: rgba(37,211,102,.62);
+  background: rgba(7,25,14,.94);
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.46),
+    0 0 36px rgba(37,211,102,.2);
+}
+
+.whatsapp-icon {
+  width: 46px;
+  height: 46px;
+  background: var(--whatsapp);
+  color: white;
+  box-shadow: 0 0 30px rgba(37,211,102,.26);
+}
+
+.whatsapp-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.whatsapp-pulse {
+  left: 12px;
+  top: 12px;
+  width: 40px;
+  height: 40px;
+  border-color: rgba(37,211,102,.35);
+}
+
+.whatsapp-label {
+  font-size: .82rem;
+  font-weight: 750;
+}
+
+.service-chapter:nth-child(2n) .scene-glow {
+  background: radial-gradient(circle, rgba(105,216,255,.11), rgba(159,134,255,.04) 36%, transparent 72%);
+}
+
+.service-chapter:nth-child(3n) .scene-glow {
+  background: radial-gradient(circle, rgba(159,134,255,.1), rgba(200,255,98,.035) 38%, transparent 72%);
+}
+
+.ai-architecture {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(105,216,255,.065), transparent 27%),
+    radial-gradient(circle at 24% 76%, rgba(159,134,255,.055), transparent 24%),
+    radial-gradient(circle at 80% 28%, rgba(200,255,98,.045), transparent 22%),
+    #050505;
+}
+
+.ai-node-core {
+  border-color: rgba(105,216,255,.26);
+  box-shadow:
+    0 0 70px rgba(105,216,255,.07),
+    0 36px 100px rgba(0,0,0,.48),
+    inset 0 0 40px rgba(159,134,255,.03);
+}
+
+.ai-node-core small {
+  color: var(--spectral-blue);
+}
+
+@keyframes spectralType {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes spectralDrift {
+  from { transform: translate3d(-1%, -1%, 0) scale(1); opacity: .7; }
+  to { transform: translate3d(2%, 1%, 0) scale(1.05); opacity: 1; }
+}
+
+@media (max-width: 720px) {
+  .whatsapp-float {
+    width: 62px;
+    height: 62px;
+    min-height: 62px;
+  }
+
+  .whatsapp-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .whatsapp-pulse {
+    left: 10px;
+    top: 10px;
+    width: 42px;
+    height: 42px;
+  }
+}
