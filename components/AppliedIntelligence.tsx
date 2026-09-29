@@ -25,8 +25,8 @@ export default function AppliedIntelligence() {
         <div className="ai-cinema-copy" data-reveal>
           <p className="micro-label">SISTEMA LEADFLOW</p>
           <h2>
-            De una visita a una oportunidad.<br />
-            <span>Sin perder el contexto en el camino.</span>
+            La consulta entra.<br />
+            <span>El sistema empieza a pensar.</span>
           </h2>
           <p>
             El sistema registra de dónde llega la consulta, interpreta qué necesita el prospecto, asigna señales de prioridad y organiza la información para que el seguimiento empiece con contexto.
@@ -37,6 +37,13 @@ export default function AppliedIntelligence() {
             <span>NEED DETECTION</span>
             <span>LEAD SCORE</span>
             <span>TRELLO</span>
+          </div>
+
+          <div className="leadflow-sequence" aria-label="Cómo funciona LeadFlow">
+            <div><b>01</b><span>CAPTURA</span><small>Origen + consulta</small></div>
+            <div><b>02</b><span>INTERPRETA</span><small>Necesidad detectada</small></div>
+            <div><b>03</b><span>PRIORIZA</span><small>Señales + score</small></div>
+            <div><b>04</b><span>ENTREGA</span><small>Pipeline listo</small></div>
           </div>
         </div>
 
