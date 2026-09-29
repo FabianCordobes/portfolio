@@ -15,7 +15,7 @@ const projects = [
   {
     id: "01",
     title: "Tamara Atadía",
-    type: "Portfolio artístico",
+    type: "Sitio de marca personal",
     description:
       "Sitio de marca personal para una artista multidisciplinaria, con contenido administrable y una experiencia visual enfocada en su identidad.",
     tech: ["Next.js", "TypeScript", "Sanity", "Tailwind CSS"],
@@ -25,7 +25,7 @@ const projects = [
   {
     id: "02",
     title: "Jamly",
-    type: "Aplicación full-stack",
+    type: "Sistema de reservas",
     description:
       "Plataforma para gestionar reservas de salas y estudios, con frontend y backend separados, autenticación, roles y persistencia en base de datos.",
     tech: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "TypeORM"],
@@ -34,7 +34,7 @@ const projects = [
   {
     id: "03",
     title: "E-commerce App",
-    type: "Aplicación web",
+    type: "Tienda online",
     description:
       "Experiencia de e-commerce desarrollada con React, manejo de estado global, Firebase y una interfaz responsive.",
     tech: ["React", "Redux Toolkit", "Firebase", "Sass"],
@@ -44,62 +44,12 @@ const projects = [
   {
     id: "04",
     title: "Travel App",
-    type: "Single Page Application",
+    type: "Experiencia web",
     description:
       "Aplicación frontend orientada a viajes construida como SPA con navegación del lado del cliente.",
     tech: ["React", "Vite", "React Router"],
     github: "https://github.com/FabianCordobes/travelApp",
   },
-];
-
-const experience = [
-  {
-    period: "abr. 2023 — mar. 2025",
-    company: "BuildVision",
-    role: "Full Stack Developer",
-    description:
-      "Participé en planificación y desarrollo de una plataforma orientada a conectar constructoras y organizar cotizaciones, con foco principal en frontend y contribuciones backend.",
-    tech: ["Next.js", "React Query", "NestJS", "Node.js", "TypeORM", "shadcn/ui"],
-  },
-  {
-    period: "jul. 2023 — nov. 2023",
-    company: "Social Wave",
-    role: "Front-End Developer",
-    description:
-      "Desarrollé interfaces a partir de requerimientos técnicos y trabajé en comunicación directa con clientes y colaboradores para proponer e implementar mejoras.",
-    tech: ["JavaScript", "React", "Redux", "Tailwind CSS", "Sass"],
-  },
-  {
-    period: "nov. 2022 — ene. 2023",
-    company: "Henry",
-    role: "Teaching Assistant · Full Stack",
-    description:
-      "Coordiné grupos de estudio y acompañé resolución de ejercicios mediante pair programming, reforzando conceptos de frontend y backend.",
-    tech: ["React", "Redux", "Node.js", "Express", "Sequelize"],
-  },
-];
-
-const stack = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Redux Toolkit",
-  "React Query",
-  "Tailwind CSS",
-  "shadcn/ui",
-  "Node.js",
-  "NestJS",
-  "Express",
-  "PostgreSQL",
-  "TypeORM",
-  "MySQL",
-  "DynamoDB",
-  "Jest",
-  "SuperTest",
-  "Docker",
-  "Git",
-  "AWS",
 ];
 
 export default function PortfolioPage() {
@@ -113,7 +63,6 @@ export default function PortfolioPage() {
 
           <nav className="hidden items-center gap-8 text-sm text-white/55 md:flex">
             <a className="transition hover:text-white" href="#projects">Proyectos</a>
-            <a className="transition hover:text-white" href="#experience">Experiencia</a>
             <a className="transition hover:text-white" href="/#contact">Contacto</a>
           </nav>
 
@@ -134,12 +83,12 @@ export default function PortfolioPage() {
           <div className="mt-6 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
             <div>
               <h1 className="text-balance text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl lg:text-8xl">
-                Ideas convertidas en experiencias digitales que funcionan.
+                Proyectos digitales creados para impulsar ideas, marcas y negocios.
               </h1>
             </div>
             <div>
               <p className="max-w-xl text-base leading-8 text-white/50 sm:text-lg">
-                Una selección de sitios, aplicaciones y sistemas que muestran distintas escalas de trabajo: presencia digital, experiencias de compra, reservas, gestión e integraciones.
+                Explorá distintas soluciones desarrolladas para presentar servicios, vender, organizar operaciones y crear nuevas experiencias para clientes y usuarios.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
@@ -221,63 +170,6 @@ export default function PortfolioPage() {
                   </a>
                 </div>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" className="border-y border-white/10 bg-white/[0.02] py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Experiencia"
-            title="Experiencia que aporta criterio, solidez y capacidad para proyectos de distintas escalas."
-          />
-
-          <div className="mt-14 border-t border-white/10">
-            {experience.map((item) => (
-              <article
-                key={item.company}
-                className="grid gap-7 border-b border-white/10 py-9 md:grid-cols-[0.5fr_1.5fr]"
-              >
-                <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-white/30">
-                    {item.period}
-                  </p>
-                  <p className="mt-3 text-sm font-medium text-[#c8ff62]">{item.company}</p>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold tracking-tight">{item.role}</h3>
-                  <p className="mt-4 max-w-3xl text-sm leading-7 text-white/50">
-                    {item.description}
-                  </p>
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {item.tech.map((tech) => (
-                      <span key={tech} className="text-xs text-white/30">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="stack" className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading
-            eyebrow="Capacidad técnica"
-            title="Tecnología elegida según el alcance, la experiencia y la evolución de cada proyecto."
-          />
-          <div className="mt-14 flex flex-wrap gap-3">
-            {stack.map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-white/10 bg-white/[0.025] px-4 py-2.5 text-sm text-white/55"
-              >
-                {item}
-              </span>
             ))}
           </div>
         </div>
