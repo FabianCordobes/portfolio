@@ -4,6 +4,7 @@ import FutureField from "../components/FutureField";
 import CinematicPortal from "../components/CinematicPortal";
 import AIArchitectureScene from "../components/AIArchitectureScene";
 import SelectedWorkShowcase from "../components/SelectedWorkShowcase";
+import IntroSequence from "../components/IntroSequence";
 import { heroImagePart1 } from "./_hero-image/part1";
 import { heroImagePart2 } from "./_hero-image/part2";
 import { heroImagePart3 } from "./_hero-image/part3";
@@ -72,6 +73,7 @@ const SERVICES = [
 export default function Home() {
   return (
     <main className="future-site">
+      <IntroSequence />
       <ExperienceLayer />
 
       <header className="future-nav">
