@@ -121,7 +121,7 @@ export default function Home() {
                 Ver servicios <span>↓</span>
               </a>
               <a href="#contact" className="hero-button">
-                Iniciar proyecto <span>↗</span>
+                Solicitar propuesta <span>↗</span>
               </a>
             </div>
 
