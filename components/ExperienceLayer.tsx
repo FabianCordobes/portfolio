@@ -19,10 +19,10 @@ export default function ExperienceLayer() {
 
         root.style.setProperty("--cursor-x", `${event.clientX}px`);
         root.style.setProperty("--cursor-y", `${event.clientY}px`);
-        root.style.setProperty("--tilt-x", `${ny * -3.2}deg`);
-        root.style.setProperty("--tilt-y", `${nx * 4.6}deg`);
-        root.style.setProperty("--shift-x", `${nx * 12}px`);
-        root.style.setProperty("--shift-y", `${ny * 12}px`);
+        root.style.setProperty("--tilt-x", `${ny * -1.4}deg`);
+        root.style.setProperty("--tilt-y", `${nx * 2}deg`);
+        root.style.setProperty("--shift-x", `${nx * 7}px`);
+        root.style.setProperty("--shift-y", `${ny * 7}px`);
       });
     };
 
