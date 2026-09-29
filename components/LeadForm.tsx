@@ -3,14 +3,13 @@
 import { FormEvent, useEffect, useState } from "react";
 
 const SERVICES = [
-  "IA / agentes / automatización inteligente",
-  "Crear un producto / MVP",
-  "Evolucionar una experiencia digital",
-  "Aplicación / sistema",
-  "Automatización / integración",
-  "Acelerar capacidad técnica",
+  "Landing Page",
+  "Sitio Web",
   "E-commerce",
-  "Quiero explorarlo",
+  "Aplicación / Sistema",
+  "Automatización",
+  "Mantenimiento",
+  "Quiero orientación",
 ];
 
 type Attribution = {
@@ -49,6 +48,7 @@ export default function LeadForm() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const utmSource = params.get("utm_source") || "";
+
     setAttribution({
       source: normalizeChannel(utmSource),
       utmSource,
@@ -79,6 +79,7 @@ export default function LeadForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
+
       const data = (await response.json()) as { ok?: boolean; error?: string };
 
       if (!response.ok || !data.ok) {
@@ -96,27 +97,48 @@ export default function LeadForm() {
   return (
     <form onSubmit={onSubmit} className="future-form">
       <div className="future-form-head">
-        <p className="future-kicker">START SOMETHING</p>
+        <p className="micro-label">CONTAME TU PROYECTO</p>
         <span>~2 min</span>
       </div>
 
       <div className="future-form-grid">
-        <label><span>Nombre</span><input name="name" type="text" autoComplete="name" maxLength={120} required placeholder="Tu nombre" /></label>
-        <label><span>Email</span><input name="email" type="email" autoComplete="email" maxLength={180} required placeholder="nombre@empresa.com" /></label>
-        <label><span>Empresa / proyecto</span><input name="companyOrProject" type="text" maxLength={160} placeholder="Nombre" /></label>
-        <label><span>WhatsApp</span><input name="phone" type="tel" autoComplete="tel" maxLength={80} placeholder="+54 ..." /></label>
+        <label>
+          <span>Nombre</span>
+          <input name="name" type="text" autoComplete="name" maxLength={120} required placeholder="Tu nombre" />
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input name="email" type="email" autoComplete="email" maxLength={180} required placeholder="nombre@empresa.com" />
+        </label>
+
+        <label>
+          <span>Empresa / proyecto</span>
+          <input name="companyOrProject" type="text" maxLength={160} placeholder="Nombre" />
+        </label>
+
+        <label>
+          <span>WhatsApp</span>
+          <input name="phone" type="tel" autoComplete="tel" maxLength={80} placeholder="+54 ..." />
+        </label>
 
         <label className="future-form-wide">
-          <span>¿Qué querés explorar?</span>
+          <span>Tipo de proyecto</span>
           <select name="requestedService" defaultValue="" required>
-            <option value="" disabled>Elegí una posibilidad</option>
+            <option value="" disabled>Elegí una opción</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
           </select>
         </label>
 
         <label className="future-form-wide">
-          <span>¿Qué imaginás?</span>
-          <textarea name="message" minLength={20} maxLength={1800} required placeholder="Una experiencia, un producto, una evolución..." />
+          <span>Contexto</span>
+          <textarea
+            name="message"
+            minLength={20}
+            maxLength={1800}
+            required
+            placeholder="Contame brevemente qué querés construir..."
+          />
         </label>
 
         <label className="sr-only" aria-hidden="true">
@@ -126,11 +148,18 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"} className="future-submit">
-        {status === "sending" ? "Enviando..." : "Quiero verlo tomar forma ↗"}
+        {status === "sending" ? "Enviando..." : "Iniciar proyecto ↗"}
       </button>
 
-      {status === "success" && <p className="future-form-status" role="status">Recibido. Lo convierto en una primera dirección para conversar.</p>}
-      {status === "error" && <p className="future-form-status" role="alert">{error}</p>}
+      {status === "success" && (
+        <p className="future-form-status" role="status">
+          Recibido. Te contacto para avanzar con el próximo paso.
+        </p>
+      )}
+
+      {status === "error" && (
+        <p className="future-form-status" role="alert">{error}</p>
+      )}
     </form>
   );
 }
