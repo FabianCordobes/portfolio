@@ -1,10 +1,8 @@
 import LeadForm from "../components/LeadForm";
 import ExperienceLayer from "../components/ExperienceLayer";
-import FutureField from "../components/FutureField";
-import CinematicPortal from "../components/CinematicPortal";
 import AIArchitectureScene from "../components/AIArchitectureScene";
 import SelectedWorkShowcase from "../components/SelectedWorkShowcase";
-import IntroSequence from "../components/IntroSequence";
+import LivingHero from "../components/LivingHero";
 import { heroImagePart1 } from "./_hero-image/part1";
 import { heroImagePart2 } from "./_hero-image/part2";
 import { heroImagePart3 } from "./_hero-image/part3";
@@ -73,7 +71,6 @@ const SERVICES = [
 export default function Home() {
   return (
     <main className="future-site">
-      <IntroSequence />
       <ExperienceLayer />
 
       <header className="future-nav">
@@ -106,45 +103,7 @@ export default function Home() {
         <span className="whatsapp-label">WhatsApp</span>
       </a>
 
-      <section id="home" className="future-hero focus-hero">
-        <FutureField />
-        <CinematicPortal />
-
-        <div className="future-hero-photo" aria-hidden="true">
-          <img src={HERO_IMAGE} alt="" />
-          <div className="future-hero-photo-mask" />
-        </div>
-
-        <div className="future-hero-content">
-          <div className="future-eyebrow">
-            <span className="signal-dot" />
-            DISEÑO + DESARROLLO WEB
-          </div>
-
-          <h1 className="five-d-title">
-            <span data-text="EXPERIENCIAS">EXPERIENCIAS</span>
-            <span data-text="DIGITALES">DIGITALES</span>
-          </h1>
-
-          <div className="future-hero-bottom">
-            <p>
-              Landing pages, sitios web, e-commerce, aplicaciones, automatización
-              y mantenimiento para marcas, profesionales y empresas.
-            </p>
-
-            <div className="future-hero-actions">
-              <a href="#services" className="future-cta future-cta-primary">
-                Ver servicios <span>↓</span>
-              </a>
-              <a href="#contact" className="future-cta">
-                Iniciar proyecto <span>↗</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" className="service-stack">
+      <LivingHero portraitSrc={HERO_IMAGE} />\n\n      <section id="services" className="service-stack">
         <div className="service-stack-header" data-reveal>
           <p className="future-kicker">SERVICIOS</p>
           <h2>
