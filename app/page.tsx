@@ -37,9 +37,10 @@ export default function Home() {
         </a>
 
         <nav>
-          <a href="#services">Servicios</a>
+          <a href="#solutions">Soluciones</a>
           <a href="#work">Proyectos</a>
-          <a href="/portfolio">Portfolio</a>
+          <a href="#experience">Experiencia</a>
+          <a href="/portfolio">Perfil técnico</a>
         </nav>
 
         <a href="#contact" className="nav-project-link">
@@ -103,25 +104,25 @@ export default function Home() {
         <div className="section-shell hero-content">
           <div className="hero-overline hero-reveal hero-reveal-1">
             <span className="live-dot" />
-            ESTRATEGIA · INGENIERÍA · AUTOMATIZACIÓN
+            DISEÑO Y DESARROLLO DIGITAL · DE SITIOS WEB A SISTEMAS
           </div>
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">DISEÑO.</span>
-              <span className="hero-reveal hero-reveal-3">DESARROLLO.</span>
-              <span className="hero-reveal hero-reveal-3 hero-title-outline">SISTEMAS.</span>
+              <span className="hero-reveal hero-reveal-2">SOLUCIONES</span>
+              <span className="hero-reveal hero-reveal-3">DIGITALES</span>
+              <span className="hero-reveal hero-reveal-3 hero-title-outline">A MEDIDA.</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Trabajo con empresas, equipos y profesionales que necesitan convertir una necesidad en software: una presencia web, un flujo comercial, una aplicación, una integración o una operación que hoy depende de trabajo manual.
+              Diseño y desarrollo sitios web, tiendas, aplicaciones y sistemas para profesionales, empresas y equipos. El alcance puede ser una web clara y bien resuelta o una plataforma con lógica, datos, integraciones y automatización.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
-              <a href="#services" className="hero-button hero-button-primary">
-                Ver qué puedo resolver <span>↗</span>
+              <a href="#solutions" className="hero-button hero-button-primary">
+                Explorar soluciones <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Solicitar propuesta <span>↗</span>
@@ -154,27 +155,27 @@ export default function Home() {
         <div className="section-shell statement-grid" data-reveal>
           <p className="micro-label">ENFOQUE</p>
           <h2>
-            La interfaz es sólo una capa.<br />
-            <span>Lo importante es el sistema que sostiene detrás.</span>
+            Cada proyecto necesita una escala distinta.<br />
+            <span>La solución debería responder a esa necesidad, no complicarla.</span>
           </h2>
           <p>
-            Trabajo sobre el recorrido completo: interfaz, datos, reglas de negocio, integraciones y automatización. Cada capa tiene una función y una razón técnica para existir.
+            Una página institucional no necesita la arquitectura de una plataforma compleja. Y un sistema crítico no debería resolverse como una página más. Defino el alcance según el problema, el uso y la evolución prevista.
           </p>
         </div>
       </section>
 
-      <BrandCredits />
+      <div id="experience"><BrandCredits /></div>
 
-      <section className="client-spectrum">
+      <section id="solutions" className="client-spectrum">
         <div className="section-shell client-spectrum-grid" data-reveal>
-          <p className="micro-label">NO HACE FALTA LLEGAR CON UNA SOLUCIÓN DEFINIDA</p>
+          <p className="micro-label">PUNTOS DE PARTIDA</p>
           <div>
-            <h2>Podés llegar con una idea,<br /><span>un problema o un sistema que ya existe.</span></h2>
+            <h2>Desde una web puntual<br /><span>hasta un sistema que articula una operación.</span></h2>
             <div className="client-spectrum-cases">
-              <article><span>01</span><strong>Necesito empezar</strong><p>Una presencia web, un MVP o una primera versión que permita validar y operar.</p></article>
-              <article><span>02</span><strong>Necesito mejorar</strong><p>Una interfaz, flujo o aplicación existente que necesita evolucionar sin rehacerse sin criterio.</p></article>
-              <article><span>03</span><strong>Necesito conectar</strong><p>Datos, APIs, herramientas o procesos que hoy funcionan separados o requieren intervención manual.</p></article>
-              <article><span>04</span><strong>Necesito resolver</strong><p>Un problema específico que todavía no tiene una solución técnica definida. El trabajo puede empezar por ahí.</p></article>
+              <article><span>01</span><strong>Necesito empezar</strong><p>Una landing, portfolio o sitio institucional para presentar una actividad, servicio o propuesta con claridad.</p></article>
+              <article><span>02</span><strong>Necesito mejorar</strong><p>Un sitio, tienda o aplicación existente que necesita una nueva etapa de diseño, funcionalidad o rendimiento.</p></article>
+              <article><span>03</span><strong>Necesito conectar</strong><p>Herramientas, APIs y datos que necesitan integrarse para evitar duplicación, demoras o tareas manuales.</p></article>
+              <article><span>04</span><strong>Necesito resolver</strong><p>Una aplicación o sistema con reglas propias, usuarios, permisos, datos, procesos e integraciones específicas.</p></article>
             </div>
           </div>
         </div>
