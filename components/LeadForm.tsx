@@ -5,8 +5,10 @@ import { FormEvent, useEffect, useState } from "react";
 const SERVICES = [
   "Landing Page",
   "Sitio Web",
-  "Aplicación Web",
   "E-commerce",
+  "Aplicación / Sistema",
+  "Automatización",
+  "Mantenimiento",
   "Quiero orientación",
 ];
 
