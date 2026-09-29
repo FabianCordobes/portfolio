@@ -3,12 +3,12 @@
 import { FormEvent, useEffect, useState } from "react";
 
 const SERVICES = [
-  "Sistema de captación",
-  "Web de conversión",
+  "Adquisición y captura",
+  "Web / interfaz",
   "Comercio digital",
-  "Software a medida",
-  "Automatización",
-  "Quiero orientación",
+  "Aplicación / sistema",
+  "Automatización / integración",
+  "Necesito evaluar el problema",
 ];
 
 type Attribution = {
@@ -96,7 +96,7 @@ export default function LeadForm() {
   return (
     <form onSubmit={onSubmit} className="future-form">
       <div className="future-form-head">
-        <p className="micro-label">ESTE SISTEMA ESTÁ FUNCIONANDO AHORA</p>
+        <p className="micro-label">BRIEF INICIAL</p>
         <span>~2 min</span>
       </div>
 
@@ -122,7 +122,7 @@ export default function LeadForm() {
         </label>
 
         <label className="future-form-wide">
-          <span>¿Qué querés resolver?</span>
+          <span>Área aproximada</span>
           <select name="requestedService" defaultValue="" required>
             <option value="" disabled>Elegí una opción</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
@@ -130,13 +130,13 @@ export default function LeadForm() {
         </label>
 
         <label className="future-form-wide">
-          <span>¿Qué querés lograr?</span>
+          <span>Contexto y problema</span>
           <textarea
             name="message"
             minLength={20}
             maxLength={1800}
             required
-            placeholder="Por ejemplo: necesito más consultas, vender online, automatizar un proceso o desarrollar una plataforma..."
+            placeholder="Describí qué sucede hoy, qué debería suceder y cualquier restricción o dependencia que ya conozcas."
           />
         </label>
 
@@ -147,12 +147,12 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"} className="future-submit">
-        {status === "sending" ? "Enviando..." : "Analizar mi proyecto ↗"}
+        {status === "sending" ? "Enviando..." : "Enviar contexto ↗"}
       </button>
 
       {status === "success" && (
         <p className="future-form-status" role="status">
-          Recibido. La consulta ya entró con su contexto de origen y proyecto. Voy a revisarla y te contacto para definir el próximo paso.
+          Recibido. Voy a revisar el contexto y, si hace falta, te voy a pedir la información técnica o funcional necesaria para definir el siguiente paso.
         </p>
       )}
 
