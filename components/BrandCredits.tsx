@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 const BRANDS = [
   { name: "WAYFAIR", mark: "W", meta: "PRODUCT TEAMS" },
   { name: "ISCX", mark: "IX", meta: "INSURANCE SOFTWARE" },
@@ -8,48 +10,60 @@ const BRANDS = [
   { name: "HENRY", mark: "H", meta: "FULL-STACK" },
 ];
 
-function BrandItem({ brand }: { brand: (typeof BRANDS)[number] }) {
-  return (
-    <div className="brand-credit-item">
-      <span className="brand-credit-mark">{brand.mark}</span>
-      <span className="brand-credit-copy">
-        <strong>{brand.name}</strong>
-        <small>{brand.meta}</small>
-      </span>
-    </div>
-  );
-}
-
-function BrandTrack({ reverse = false }: { reverse?: boolean }) {
-  const repeated = [...BRANDS, ...BRANDS];
-  return (
-    <div className={reverse ? "brand-credit-track brand-credit-track-reverse" : "brand-credit-track"}>
-      <div className="brand-credit-track-inner">
-        {repeated.map((brand, index) => (
-          <BrandItem key={`${brand.name}-${index}`} brand={brand} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function BrandCredits() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActive((current) => (current + 1) % BRANDS.length);
+    }, 2400);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
     <section className="brand-credits">
       <div className="section-shell brand-credits-head" data-reveal>
         <p className="micro-label">EXPERIENCIA PROFESIONAL</p>
         <div>
-          <h2>Equipos, productos<br /><span>y tecnología real.</span></h2>
+          <h2>
+            Experiencia en producto.<br />
+            <span>Equipos y tecnología real.</span>
+          </h2>
           <p>
-            Experiencia desarrollando producto y software en distintos equipos,
-            contextos y escalas.
+            Trabajo en productos digitales, plataformas y equipos de desarrollo
+            con distintos niveles de complejidad y escala.
           </p>
         </div>
       </div>
 
-      <div className="brand-credits-stage" aria-label="Marcas y equipos con experiencia profesional">
-        <BrandTrack />
-        <BrandTrack reverse />
+      <div className="section-shell film-credits-stage" data-reveal>
+        <div className="film-credits-header">
+          <span>SELECTED EXPERIENCE</span>
+          <span>2022 — 2026</span>
+        </div>
+
+        <div className="film-credits-list" aria-label="Experiencia profesional">
+          {BRANDS.map((brand, index) => (
+            <div
+              key={brand.name}
+              className={active === index ? "film-credit-row is-active" : "film-credit-row"}
+              onMouseEnter={() => setActive(index)}
+            >
+              <span className="film-credit-index">0{index + 1}</span>
+              <span className="film-credit-mark">{brand.mark}</span>
+              <strong>{brand.name}</strong>
+              <small>{brand.meta}</small>
+              <span className="film-credit-line" />
+            </div>
+          ))}
+        </div>
+
+        <div className="film-credits-focus" aria-hidden="true">
+          <span>IN FOCUS</span>
+          <strong>{BRANDS[active].name}</strong>
+          <small>{BRANDS[active].meta}</small>
+        </div>
       </div>
     </section>
   );
