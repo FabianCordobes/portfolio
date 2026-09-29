@@ -69,7 +69,7 @@ export default function ServiceFlow() {
     <section id="services" className="service-flow">
       <div className="section-shell service-flow-head" data-reveal>
         <p className="micro-label">SERVICIOS</p>
-        <h2>Soluciones digitales.<br /><span>Diseñadas para generar negocio.</span></h2>
+        <h2>Productos y sistemas.<br /><span>Construidos para generar negocio.</span></h2>
       </div>
 
       <div className="section-shell service-flow-layout">
