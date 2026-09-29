@@ -7,7 +7,7 @@ const SERVICE_CODES: Record<string, string> = {
   "Sitio Web": "WEB",
   "Aplicación Web": "APP",
   "E-commerce": "ECOM",
-  "No estoy seguro todavía": "OTHER",
+  "Quiero orientación": "OTHER",
 };
 
 const SOURCE_CHANNELS = new Set([
