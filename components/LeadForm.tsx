@@ -82,7 +82,7 @@ export default function LeadForm() {
       const data = (await response.json()) as { ok?: boolean; error?: string };
 
       if (!response.ok || !data.ok) {
-        throw new Error(data.error || "Volvamos a intentarlo en un momento.");
+        throw new Error(data.error || "Podés continuar por WhatsApp mientras reconectamos el formulario.");
       }
 
       form.reset();
@@ -96,7 +96,7 @@ export default function LeadForm() {
   return (
     <form onSubmit={onSubmit} className="future-form">
       <div className="future-form-head">
-        <p className="future-kicker">START SOMETHING</p>
+        <p className="future-kicker">NUEVO PROYECTO</p>
         <span>~2 min</span>
       </div>
 
@@ -107,16 +107,16 @@ export default function LeadForm() {
         <label><span>WhatsApp</span><input name="phone" type="tel" autoComplete="tel" maxLength={80} placeholder="+54 ..." /></label>
 
         <label className="future-form-wide">
-          <span>¿Qué querés explorar?</span>
+          <span>Tipo de proyecto</span>
           <select name="requestedService" defaultValue="" required>
-            <option value="" disabled>Elegí una posibilidad</option>
+            <option value="" disabled>Seleccioná una categoría</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
           </select>
         </label>
 
         <label className="future-form-wide">
-          <span>¿Qué imaginás?</span>
-          <textarea name="message" minLength={20} maxLength={1800} required placeholder="Una experiencia, un producto, una evolución..." />
+          <span>Contexto</span>
+          <textarea name="message" minLength={20} maxLength={1800} required placeholder="Objetivo, alcance o idea principal..." />
         </label>
 
         <label className="sr-only" aria-hidden="true">
@@ -126,10 +126,10 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"} className="future-submit">
-        {status === "sending" ? "Enviando..." : "Quiero verlo tomar forma ↗"}
+        {status === "sending" ? "Enviando..." : "Enviar proyecto ↗"}
       </button>
 
-      {status === "success" && <p className="future-form-status" role="status">Recibido. Lo convierto en una primera dirección para conversar.</p>}
+      {status === "success" && <p className="future-form-status" role="status">Recibido. Te contacto para avanzar con el próximo paso.</p>}
       {status === "error" && <p className="future-form-status" role="alert">{error}</p>}
     </form>
   );
