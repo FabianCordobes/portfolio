@@ -18,7 +18,7 @@ const SERVICES = [
   {
     id: "03",
     title: "Aplicaciones web",
-    line: "Cuando el usuario necesita hacer, no solamente mirar.",
+    line: "Experiencias digitales donde el usuario participa y opera.",
     text: "Interfaces con autenticación, perfiles, paneles, formularios, búsquedas, reservas, estados y flujos específicos para convertir una necesidad funcional en una herramienta usable.",
   },
   {
@@ -31,7 +31,7 @@ const SERVICES = [
     id: "05",
     title: "Integración y automatización",
     line: "Conectar lo que hoy funciona por separado.",
-    text: "Integro servicios y automatizo tareas repetitivas para reducir pasos manuales, conservar trazabilidad y hacer más fluido el trabajo entre herramientas.",
+    text: "Integro servicios y automatizo tareas repetitivas para agilizar procesos, conservar trazabilidad y coordinar el trabajo entre herramientas.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function ServiceFlow() {
     <section id="services" className="service-flow">
       <div className="section-shell service-flow-head" data-reveal>
         <p className="micro-label">SOLUCIONES POR ESCALA</p>
-        <h2>La complejidad correcta.<br /><span>Ni más ni menos de lo que el proyecto necesita.</span></h2>
+        <h2>La escala adecuada.<br /><span>Una solución alineada con cada etapa del proyecto.</span></h2>
       </div>
 
       <div className="section-shell service-flow-layout">
