@@ -8,7 +8,7 @@ const SERVICE_CODES: Record<string, string> = {
   "Comercio digital": "COMMERCE",
   "Aplicación / sistema": "APP",
   "Automatización / integración": "AUTOMATION",
-  "Necesito evaluar el problema": "DISCOVERY",
+  "Todavía no sé qué solución necesito": "DISCOVERY",
 };
 
 const SOURCE_CHANNELS = new Set([
