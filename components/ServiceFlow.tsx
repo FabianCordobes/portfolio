@@ -24,8 +24,8 @@ const SERVICES = [
   {
     id: "04",
     title: "Aplicación / Sistema",
-    line: "Producto. Operación. Datos.",
-    text: "Convierte procesos e ideas en un producto digital a medida, conectado con tus datos y operación.",
+    line: "Software. Operación. Datos.",
+    text: "Convierte procesos e ideas en una solución digital a medida, conectada con tus datos y operación.",
   },
   {
     id: "05",
@@ -37,7 +37,7 @@ const SERVICES = [
     id: "06",
     title: "Mantenimiento",
     line: "Continuidad. Mejora. Expansión.",
-    text: "Mantiene tu producto actualizado, optimizado y listo para incorporar nuevas oportunidades.",
+    text: "Mantiene tu plataforma actualizada, optimizada y lista para incorporar nuevas oportunidades.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function ServiceFlow() {
     <section id="services" className="service-flow">
       <div className="section-shell service-flow-head" data-reveal>
         <p className="micro-label">SERVICIOS</p>
-        <h2>Productos y sistemas.<br /><span>Construidos para generar negocio.</span></h2>
+        <h2>Experiencias y sistemas.<br /><span>Construidos para generar negocio.</span></h2>
       </div>
 
       <div className="section-shell service-flow-layout">
