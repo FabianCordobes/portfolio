@@ -79,6 +79,10 @@ export default function ServiceFlow() {
             <div className="service-stage-frame frame-a" />
             <div className="service-stage-frame frame-b" />
             <div className="service-stage-frame frame-c" />
+            <div className="service-stage-number-ghost" aria-hidden="true">
+              <span>{current.id}</span>
+              <span>{current.id}</span>
+            </div>
             <div className="service-stage-core">
               <span>{current.id}</span>
             </div>
