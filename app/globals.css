@@ -5033,3 +5033,182 @@ html[data-scroll-direction="up"] .kinetic-track-reverse .kinetic-track-inner {
 @media (prefers-reduced-motion: reduce) {
   .hero-portrait img,.hero-portrait::after,.signal-strip::before,.signal-strip-track,.service-stage::after,.ai-cinema-machine::after { animation:none !important; }
 }
+
+
+/* === Editorial engineering direction === */
+.living-site {
+  --editorial-line: rgba(255,255,255,.105);
+}
+.hero-overline {
+  letter-spacing:.2em;
+}
+.hero-title {
+  max-width:11.5ch;
+  font-weight:760;
+}
+.hero-title-outline {
+  -webkit-text-stroke:1px rgba(255,255,255,.34);
+  opacity:.72;
+}
+.hero-intro {
+  max-width:650px;
+  font-size:clamp(1.02rem,1.4vw,1.28rem);
+  line-height:1.65;
+  color:rgba(255,255,255,.64);
+}
+.statement-section,
+.service-flow,
+.brand-credits,
+.applied-intelligence {
+  border-top-color:var(--editorial-line);
+}
+.statement-grid h2,
+.service-flow-head h2,
+.cinematic-work-head h2,
+.ai-cinema-copy h2,
+.contact-heading h2 {
+  text-wrap:balance;
+}
+.statement-grid > p:last-child,
+.service-flow-text,
+.cinematic-work-head p,
+.ai-cinema-copy > p,
+.contact-heading > p:last-child {
+  font-size:clamp(.96rem,1.08vw,1.08rem);
+  line-height:1.72;
+}
+.service-flow-item {
+  position:relative;
+}
+.service-flow-item::before {
+  content:"";
+  position:absolute;
+  left:-28px;
+  top:50%;
+  width:10px;
+  height:1px;
+  background:rgba(255,255,255,.16);
+  transition:width .45s ease,background .45s ease;
+}
+.service-flow-item.is-active::before {
+  width:18px;
+  background:var(--lime);
+}
+.service-flow-line {
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+  font-size:.78rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.48);
+}
+.leadflow-sequence small {
+  line-height:1.45;
+}
+.film-credit-row small,
+.project-frame-top,
+.project-frame-bottom,
+.ai-capability-line,
+.signal-strip {
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+}
+.future-form {
+  max-width:1100px;
+}
+.future-form-head {
+  border-bottom:1px solid rgba(255,255,255,.07);
+  padding-bottom:18px;
+}
+.future-form::before {
+  content:"PROJECT INTAKE / 01";
+  color:rgba(255,255,255,.3);
+}
+.future-submit {
+  border-radius:2px;
+  padding-inline:28px;
+  letter-spacing:.04em;
+}
+@media (min-width: 1100px) {
+  .hero-title-wrap { max-width:1040px; }
+  .service-flow-head h2 { max-width:12ch; }
+}
+
+
+/* === Client spectrum / professional landing layer === */
+.client-spectrum {
+  position:relative;
+  padding:15vh 0;
+  overflow:hidden;
+  background:#09090a;
+  border-block:1px solid rgba(255,255,255,.065);
+}
+.client-spectrum::before {
+  content:"";
+  position:absolute;
+  width:46vw;
+  aspect-ratio:1;
+  right:-18vw;
+  top:-14vw;
+  border-radius:50%;
+  border:1px solid rgba(105,216,255,.08);
+  box-shadow:0 0 0 8vw rgba(105,216,255,.012),0 0 0 16vw rgba(255,255,255,.008);
+}
+.client-spectrum-grid {
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:.42fr 1.58fr;
+  gap:7vw;
+}
+.client-spectrum-grid h2 {
+  max-width:12ch;
+  margin:0;
+  font-size:clamp(3.5rem,7.2vw,7.8rem);
+  line-height:.92;
+  letter-spacing:-.06em;
+  font-weight:810;
+}
+.client-spectrum-grid h2 span { color:rgba(255,255,255,.26); }
+.client-spectrum-cases {
+  margin-top:8vh;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.client-spectrum-cases article {
+  min-height:250px;
+  padding:28px 34px 28px 0;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  border-right:1px solid rgba(255,255,255,.1);
+}
+.client-spectrum-cases article:nth-child(even) { padding-left:34px; border-right:0; }
+.client-spectrum-cases span {
+  color:var(--lime);
+  font-size:.65rem;
+  letter-spacing:.16em;
+}
+.client-spectrum-cases strong {
+  display:block;
+  margin-top:48px;
+  font-size:clamp(1.5rem,2.2vw,2.35rem);
+  letter-spacing:-.04em;
+  font-weight:680;
+}
+.client-spectrum-cases p {
+  max-width:440px;
+  margin:13px 0 0;
+  color:rgba(255,255,255,.42);
+  line-height:1.65;
+  font-size:.9rem;
+}
+.client-spectrum-cases article {
+  transition:background .35s ease,padding .35s ease;
+}
+.client-spectrum-cases article:hover {
+  background:rgba(255,255,255,.025);
+}
+@media(max-width:800px){
+  .client-spectrum-grid{grid-template-columns:1fr;gap:40px}
+  .client-spectrum-cases{grid-template-columns:1fr}
+  .client-spectrum-cases article,.client-spectrum-cases article:nth-child(even){padding:24px 0;border-right:0}
+  .client-spectrum-cases strong{margin-top:30px}
+}
