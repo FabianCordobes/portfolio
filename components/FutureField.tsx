@@ -82,7 +82,7 @@ export default function FutureField() {
             context.beginPath();
             context.moveTo(a.x, a.y);
             context.lineTo(b.x, b.y);
-            context.strokeStyle = `rgba(200,255,98,${alpha})`;
+            const hue = (i + j) % 3;\n            context.strokeStyle = hue === 0 ? `rgba(105,216,255,${alpha * 0.9})` : hue === 1 ? `rgba(159,134,255,${alpha * 0.72})` : `rgba(200,255,98,${alpha})`;
             context.lineWidth = 0.7;
             context.stroke();
           }
@@ -91,7 +91,7 @@ export default function FutureField() {
         const radius = 0.8 + a.z * 1.35;
         context.beginPath();
         context.arc(a.x, a.y, radius, 0, Math.PI * 2);
-        context.fillStyle = `rgba(230,255,185,${0.22 + a.z * 0.34})`;
+        const tint = i % 3;\n        context.fillStyle = tint === 0 ? `rgba(105,216,255,${0.18 + a.z * 0.28})` : tint === 1 ? `rgba(181,163,255,${0.16 + a.z * 0.25})` : `rgba(230,255,185,${0.2 + a.z * 0.3})`;
         context.fill();
       }
 
@@ -103,8 +103,8 @@ export default function FutureField() {
         pointer.y,
         220,
       );
-      glow.addColorStop(0, "rgba(200,255,98,0.08)");
-      glow.addColorStop(1, "rgba(200,255,98,0)");
+      glow.addColorStop(0, "rgba(105,216,255,0.075)");
+      glow.addColorStop(0.42, "rgba(159,134,255,0.032)");\n      glow.addColorStop(1, "rgba(200,255,98,0)");
       context.fillStyle = glow;
       context.fillRect(0, 0, width, height);
 
