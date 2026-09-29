@@ -43,7 +43,7 @@ export default function Home() {
         </nav>
 
         <a href="#contact" className="nav-project-link">
-          Solicitar propuesta ↗
+          Plantear un proyecto ↗
         </a>
       </header>
 
@@ -103,25 +103,25 @@ export default function Home() {
         <div className="section-shell hero-content">
           <div className="hero-overline hero-reveal hero-reveal-1">
             <span className="live-dot" />
-            CAPTACIÓN · AUTOMATIZACIÓN · DESARROLLO
+            ESTRATEGIA · INGENIERÍA · AUTOMATIZACIÓN
           </div>
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">QUE NINGUNA</span>
-              <span className="hero-reveal hero-reveal-3">OPORTUNIDAD</span>
-              <span className="hero-reveal hero-reveal-3 hero-title-outline">SE PIERDA.</span>
+              <span className="hero-reveal hero-reveal-2">DISEÑO.</span>
+              <span className="hero-reveal hero-reveal-3">DESARROLLO.</span>
+              <span className="hero-reveal hero-reveal-3 hero-title-outline">SISTEMAS.</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Diseño sistemas digitales que no se quedan mirando: capturan la intención, entienden cada consulta y la convierten en información lista para actuar.
+              Trabajo con empresas, equipos y profesionales que necesitan convertir una necesidad en software: una presencia web, un flujo comercial, una aplicación, una integración o una operación que hoy depende de trabajo manual.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#services" className="hero-button hero-button-primary">
-                Ver el sistema en acción <span>↗</span>
+                Ver qué puedo resolver <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Solicitar propuesta <span>↗</span>
@@ -145,25 +145,40 @@ export default function Home() {
 
       <section className="signal-strip" aria-label="Flujo del sistema">
         <div className="signal-strip-track">
-          <span>VISITA</span><i>→</i><span>INTENCIÓN</span><i>→</i><span>CONTEXTO</span><i>→</i><span>PRIORIDAD</span><i>→</i><span>ACCIÓN</span>
-          <b>LEADFLOW / LIVE PIPELINE</b>
+          <span>PROBLEMA</span><i>→</i><span>CONTEXTO</span><i>→</i><span>DECISIÓN</span><i>→</i><span>IMPLEMENTACIÓN</span><i>→</i><span>OPERACIÓN</span>
+          <b>FROM CONTEXT TO SOFTWARE</b>
         </div>
       </section>
 
       <section className="statement-section">
         <div className="section-shell statement-grid" data-reveal>
-          <p className="micro-label">PRESENCIA DIGITAL</p>
+          <p className="micro-label">ENFOQUE</p>
           <h2>
-            Una visita dura segundos.<br />
-            <span>La oportunidad no debería desaparecer con ella.</span>
+            La interfaz es sólo una capa.<br />
+            <span>Lo importante es el sistema que sostiene detrás.</span>
           </h2>
           <p>
-            La experiencia atrae. El sistema escucha. La automatización ordena. Vos recibís una oportunidad con contexto para decidir qué hacer después.
+            Trabajo sobre el recorrido completo: interfaz, datos, reglas de negocio, integraciones y automatización. Cada capa tiene una función y una razón técnica para existir.
           </p>
         </div>
       </section>
 
       <BrandCredits />
+
+      <section className="client-spectrum">
+        <div className="section-shell client-spectrum-grid" data-reveal>
+          <p className="micro-label">NO HACE FALTA LLEGAR CON UNA SOLUCIÓN DEFINIDA</p>
+          <div>
+            <h2>Podés llegar con una idea,<br /><span>un problema o un sistema que ya existe.</span></h2>
+            <div className="client-spectrum-cases">
+              <article><span>01</span><strong>Necesito empezar</strong><p>Una presencia web, un MVP o una primera versión que permita validar y operar.</p></article>
+              <article><span>02</span><strong>Necesito mejorar</strong><p>Una interfaz, flujo o aplicación existente que necesita evolucionar sin rehacerse sin criterio.</p></article>
+              <article><span>03</span><strong>Necesito conectar</strong><p>Datos, APIs, herramientas o procesos que hoy funcionan separados o requieren intervención manual.</p></article>
+              <article><span>04</span><strong>Necesito resolver</strong><p>Un problema específico que todavía no tiene una solución técnica definida. El trabajo puede empezar por ahí.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <ServiceFlow />
 
@@ -173,10 +188,10 @@ export default function Home() {
 
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
-          <p className="micro-label">HABLEMOS DE TU PROYECTO</p>
-          <h2>Convertí una visita<br /><span>en una oportunidad accionable.</span></h2>
+          <p className="micro-label">CONTEXTO DEL PROYECTO</p>
+          <h2>Un buen desarrollo empieza<br /><span>por entender bien el problema.</span></h2>
           <p>
-            Contame qué querés lograr. Este mismo formulario registra el origen de tu consulta y prepara el contexto para analizarla: es una muestra del sistema de captación que puedo implementar en tu negocio.
+            Describí el contexto, la necesidad y las restricciones conocidas. Con esa información puedo evaluar alcance, dependencias y una primera dirección técnica antes de hablar de implementación.
           </p>
         </div>
 
@@ -189,7 +204,7 @@ export default function Home() {
         <div className="section-shell living-footer-inner">
           <div>
             <strong>FABIÁN CORDOBÉS</strong>
-            <span>DESIGN · DEVELOPMENT · DIGITAL EXPERIENCES</span>
+            <span>SOFTWARE ENGINEERING · WEB SYSTEMS · AUTOMATION</span>
           </div>
           <div>
             <a href="/portfolio">Portfolio</a>

@@ -23,27 +23,27 @@ export default function AppliedIntelligence() {
 
       <div className="section-shell ai-cinema-layout">
         <div className="ai-cinema-copy" data-reveal>
-          <p className="micro-label">SISTEMA LEADFLOW</p>
+          <p className="micro-label">CASO IMPLEMENTADO · LEADFLOW</p>
           <h2>
-            La consulta entra.<br />
-            <span>El sistema empieza a pensar.</span>
+            Captura, clasificación<br />
+            <span>y trazabilidad de consultas.</span>
           </h2>
           <p>
-            El sistema registra de dónde llega la consulta, interpreta qué necesita el prospecto, asigna señales de prioridad y organiza la información para que el seguimiento empiece con contexto.
+            LeadFlow es una implementación de este sitio: conserva atribución UTM y referrer, procesa el contenido enviado, detecta requerimientos, calcula una señal de prioridad y genera un registro estructurado para seguimiento.
           </p>
 
           <div className="ai-capability-line">
             <span>UTM TRACKING</span>
-            <span>NEED DETECTION</span>
-            <span>LEAD SCORE</span>
+            <span>REQUIREMENT PARSING</span>
+            <span>PRIORITY SIGNAL</span>
             <span>TRELLO</span>
           </div>
 
           <div className="leadflow-sequence" aria-label="Cómo funciona LeadFlow">
-            <div><b>01</b><span>CAPTURA</span><small>Origen + consulta</small></div>
-            <div><b>02</b><span>INTERPRETA</span><small>Necesidad detectada</small></div>
-            <div><b>03</b><span>PRIORIZA</span><small>Señales + score</small></div>
-            <div><b>04</b><span>ENTREGA</span><small>Pipeline listo</small></div>
+            <div><b>01</b><span>INGESTA</span><small>UTM + referrer + payload</small></div>
+            <div><b>02</b><span>ANÁLISIS</span><small>Requerimientos detectados</small></div>
+            <div><b>03</b><span>CLASIFICA</span><small>Score + prioridad</small></div>
+            <div><b>04</b><span>REGISTRA</span><small>Trello + contexto</small></div>
           </div>
         </div>
 
