@@ -9,7 +9,7 @@ const SERVICES = [
   "Sistema a medida",
   "Integración / automatización",
   "Mejora de un proyecto existente",
-  "Todavía no sé qué necesito",
+  "Quiero orientación para definir la solución",
 ];
 
 type Attribution = {
