@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
 export const metadata: Metadata = {
-  title: "Fabián Cordobés — Digital Product · AI · Automation",
+  title: "Fabián Cordobés — Desarrollo Web, Aplicaciones e IA",
   description:
-    "IA aplicada, producto digital, microservicios, automatización, tiempo real e integraciones para construir experiencias que miran hacia adelante.",
+    "Diseño y desarrollo sitios web, aplicaciones, productos digitales, automatizaciones, IA e integraciones para empresas.",
   metadataBase: new URL("https://portfolio-hazel-six-lrkttprbjn.vercel.app"),
   openGraph: {
-    title: "Fabián Cordobés — Digital Product · AI · Automation",
+    title: "Fabián Cordobés — Desarrollo Web, Aplicaciones e IA",
     description:
-      "IA, producto digital, microservicios, WebSocket, NoSQL y experiencias inmersivas para construir lo que sigue.",
+      "Webs, aplicaciones, sistemas, IA, automatización e integraciones con foco en producto y experiencia digital.",
     type: "website",
     locale: "es_AR",
   },
