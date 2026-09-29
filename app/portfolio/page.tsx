@@ -134,12 +134,12 @@ export default function PortfolioPage() {
           <div className="mt-6 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
             <div>
               <h1 className="text-balance text-5xl font-semibold leading-[0.95] tracking-[-0.055em] sm:text-7xl lg:text-8xl">
-                Desarrollo frontend y backend con mirada de producto.
+                Ingeniería aplicada a problemas reales.
               </h1>
             </div>
             <div>
               <p className="max-w-xl text-base leading-8 text-white/50 sm:text-lg">
-                Esta es la parte técnica: proyectos, decisiones de implementación, experiencia profesional, stack y repositorios.
+                Acá está la evidencia técnica detrás de la propuesta comercial: qué construí, qué problema resolvía cada proyecto y con qué arquitectura lo llevé a código.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
@@ -166,7 +166,7 @@ export default function PortfolioPage() {
 
       <section id="projects" className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading eyebrow="Proyectos" title="Casos y productos construidos." />
+          <SectionHeading eyebrow="Proyectos" title="Casos: problema, solución e implementación." />
 
           <div className="mt-14 grid gap-5 lg:grid-cols-2">
             {projects.map((project) => (
@@ -230,7 +230,7 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Experiencia"
-            title="Experiencia profesional desarrollando producto y software."
+            title="Experiencia construyendo software en equipos y operaciones reales."
           />
 
           <div className="mt-14 border-t border-white/10">
@@ -268,7 +268,7 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <SectionHeading
             eyebrow="Stack"
-            title="Tecnologías con las que construyo y mantengo productos."
+            title="Tecnologías que uso para construir, integrar y mantener software."
           />
           <div className="mt-14 flex flex-wrap gap-3">
             {stack.map((item) => (
@@ -291,14 +291,14 @@ export default function PortfolioPage() {
                 ¿Buscás contratar un proyecto?
               </p>
               <h2 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
-                La parte comercial y el formulario están en la landing principal.
+                ¿Tenés un problema concreto que necesite convertirse en software?
               </h2>
             </div>
             <a
               href="/#contact"
               className="inline-flex w-fit items-center justify-center rounded-full bg-black px-6 py-3.5 font-semibold text-white"
             >
-              Ir a servicios ↗
+              Ver soluciones ↗
             </a>
           </div>
         </div>
