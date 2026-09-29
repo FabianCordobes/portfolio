@@ -2,6 +2,9 @@ import LeadForm from "../components/LeadForm";
 import ExperienceLayer from "../components/ExperienceLayer";
 import LivingField from "../components/LivingField";
 import ServiceFlow from "../components/ServiceFlow";
+import KineticType from "../components/KineticType";
+import BrandCredits from "../components/BrandCredits";
+import AppliedIntelligence from "../components/AppliedIntelligence";
 import SelectedWork from "../components/SelectedWork";
 import { heroImagePart1 } from "./_hero-image/part1";
 import { heroImagePart2 } from "./_hero-image/part2";
@@ -105,7 +108,7 @@ export default function Home() {
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">EXPERIENCIAS</span>
+              <span className="hero-reveal hero-reveal-2">PRODUCTOS</span>
               <span className="hero-reveal hero-reveal-3">DIGITALES</span>
             </h1>
 
@@ -138,6 +141,8 @@ export default function Home() {
         </div>
       </section>
 
+      <KineticType />
+
       <section className="statement-section">
         <div className="section-shell statement-grid" data-reveal>
           <p className="micro-label">PRESENCIA DIGITAL</p>
@@ -152,46 +157,13 @@ export default function Home() {
         </div>
       </section>
 
+      <BrandCredits />
+
       <ServiceFlow />
 
       <SelectedWork />
 
-      <section className="intelligence-section">
-        <LivingField />
-        <div className="section-shell intelligence-layout">
-          <div className="intelligence-copy" data-reveal>
-            <p className="micro-label">UNDER THE SURFACE</p>
-            <h2>Tecnología en movimiento.<br /><span>IA integrada al producto.</span></h2>
-            <p>
-              Arquitectura, datos, realtime e inteligencia trabajando dentro de
-              una misma solución para crear productos más conectados y escalables.
-            </p>
-          </div>
-
-          <div className="intelligence-object" data-reveal aria-hidden="true">
-            <div className="intelligence-haze" />
-            <div className="intel-ring intel-ring-one" />
-            <div className="intel-ring intel-ring-two" />
-            <div className="intel-ring intel-ring-three" />
-            <div className="intel-spine">
-              <div className="intel-core"><span>AI</span></div>
-              <i className="intel-node node-a" />
-              <i className="intel-node node-b" />
-              <i className="intel-node node-c" />
-            </div>
-            <div className="intel-scan" />
-            <div className="intel-video-glow" />
-            <div className="intel-video-sweep sweep-one" />
-            <div className="intel-video-sweep sweep-two" />
-            <div className="intel-pulse-ring pulse-ring-one" />
-            <div className="intel-pulse-ring pulse-ring-two" />
-            <span className="intel-label label-one">MICROSERVICES</span>
-            <span className="intel-label label-two">WEBSOCKET</span>
-            <span className="intel-label label-three">NOSQL</span>
-            <span className="intel-label label-four">SYSTEMS</span>
-          </div>
-        </div>
-      </section>
+      <AppliedIntelligence />
 
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
