@@ -1,9 +1,8 @@
 import LeadForm from "../components/LeadForm";
 import ExperienceLayer from "../components/ExperienceLayer";
-import FutureField from "../components/FutureField";
-import CinematicPortal from "../components/CinematicPortal";
-import AIArchitectureScene from "../components/AIArchitectureScene";
-import SmartProjectBrief from "../components/SmartProjectBrief";
+import LivingField from "../components/LivingField";
+import ServiceFlow from "../components/ServiceFlow";
+import SelectedWork from "../components/SelectedWork";
 import { heroImagePart1 } from "./_hero-image/part1";
 import { heroImagePart2 } from "./_hero-image/part2";
 import { heroImagePart3 } from "./_hero-image/part3";
@@ -24,39 +23,24 @@ const CONTACT = {
     "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/?isSelfProfile=true",
 };
 
-const MEDIA = {
-  tamaraHero:
-    "https://raw.githubusercontent.com/FabianCordobes/tamara-atadia-portfolio/main/public/images/tamara/tamara-hero.jpg",
-  tamaraStage:
-    "https://raw.githubusercontent.com/FabianCordobes/tamara-atadia-portfolio/main/public/images/tamara/tamara-stage-purple.jpg",
-  tamaraProduction:
-    "https://raw.githubusercontent.com/FabianCordobes/tamara-atadia-portfolio/main/public/images/tamara/tamara-production-event.jpg",
-  commerceLogin:
-    "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/login.png",
-  commerceRegister:
-    "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/register.png",
-  commerceForgot:
-    "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/forgot.png",
-};
-
 export default function Home() {
   return (
-    <main className="future-site">
+    <main className="living-site">
       <ExperienceLayer />
 
-      <header className="future-nav">
-        <a href="#home" className="future-brand">
+      <header className="living-nav">
+        <a href="#home" className="living-brand">
           FABIÁN<span>.</span>
         </a>
 
         <nav>
-          <a href="#work">Experiencias</a>
-          <a href="#signal">Idea</a>
+          <a href="#services">Servicios</a>
+          <a href="#work">Proyectos</a>
           <a href="/portfolio">Portfolio</a>
         </nav>
 
-        <a href="#contact" className="future-nav-cta">
-          Crear ↗
+        <a href="#contact" className="nav-project-link">
+          Iniciar proyecto ↗
         </a>
       </header>
 
@@ -64,249 +48,178 @@ export default function Home() {
         href={CONTACT.whatsapp}
         target="_blank"
         rel="noreferrer"
-        className="whatsapp-float"
+        className="whatsapp-live"
         aria-label="Abrir conversación por WhatsApp"
       >
-        <span className="whatsapp-pulse" />
-        <span className="whatsapp-icon">WA</span>
-        <span className="whatsapp-label">WhatsApp</span>
+        <span className="whatsapp-live-pulse" />
+        <span className="whatsapp-live-icon"><WhatsAppMark /></span>
+        <span className="whatsapp-live-label">WhatsApp</span>
       </a>
 
-      <section id="home" className="future-hero">
-        <FutureField />
-        <CinematicPortal />
+      <section id="home" className="living-hero">
+        <LivingField />
 
-        <div className="future-hero-photo" aria-hidden="true">
-          <img src={HERO_IMAGE} alt="" />
-          <div className="future-hero-photo-mask" />
+        <div className="hero-atmosphere" aria-hidden="true">
+          <div className="hero-horizon" />
+          <div className="hero-film-light hero-film-light-a" />
+          <div className="hero-film-light hero-film-light-b" />
+          <div className="hero-anamorphic" />
         </div>
 
-        <div className="future-hero-orbit future-hero-orbit-a" aria-hidden="true" />
-        <div className="future-hero-orbit future-hero-orbit-b" aria-hidden="true" />
-
-        <div className="future-hero-content">
-          <div className="future-eyebrow">
-            <span className="signal-dot" />
-            DIGITAL PRODUCT · AI · AUTOMATION
+        <div className="hero-human-system" aria-hidden="true">
+          <div className="hero-portrait">
+            <img src={HERO_IMAGE} alt="" />
+            <div className="hero-portrait-wash" />
+            <div className="hero-portrait-edge" />
           </div>
 
-          <h1 className="five-d-title">
-            <span data-text="¿QUÉ">¿QUÉ</span>
-            <span data-text="SIGUE?">SIGUE?</span>
-          </h1>
+          <div className="hero-sculpture">
+            <div className="sculpture-haze" />
+            <div className="sculpture-plane plane-one" />
+            <div className="sculpture-plane plane-two" />
+            <div className="sculpture-plane plane-three" />
+            <div className="sculpture-arc arc-one" />
+            <div className="sculpture-arc arc-two" />
+            <div className="sculpture-core">
+              <span />
+              <i />
+              <b />
+            </div>
+            <div className="sculpture-signal signal-one" />
+            <div className="sculpture-signal signal-two" />
+          </div>
+        </div>
 
-          <div className="future-hero-bottom">
-            <p>¿Cómo se vería tu próxima idea si ya viviera en 2030?</p>
+        <div className="section-shell hero-content">
+          <div className="hero-overline hero-reveal hero-reveal-1">
+            <span className="live-dot" />
+            DESIGN · DEVELOPMENT · DIGITAL EXPERIENCES
+          </div>
 
-            <div className="future-hero-actions">
-              <a href="#work" className="future-cta future-cta-primary">
-                Ver posibilidades <span>↓</span>
+          <div className="hero-title-wrap">
+            <h1 className="hero-title">
+              <span className="hero-reveal hero-reveal-2">EXPERIENCIAS</span>
+              <span className="hero-reveal hero-reveal-3">DIGITALES</span>
+            </h1>
+
+            <p className="hero-intro hero-reveal hero-reveal-4">
+              Diseño y desarrollo productos web donde estética, tecnología y
+              movimiento forman una misma experiencia.
+            </p>
+          </div>
+
+          <div className="hero-footer hero-reveal hero-reveal-5">
+            <div className="hero-actions">
+              <a href="#services" className="hero-button hero-button-primary">
+                Explorar servicios <span>↓</span>
               </a>
-              <a href="#contact" className="future-cta">
-                Quiero algo así <span>↗</span>
+              <a href="#contact" className="hero-button">
+                Iniciar proyecto <span>↗</span>
               </a>
+            </div>
+
+            <div className="hero-signature">
+              <strong>Fabián Cordobés</strong>
+              <span>Full-Stack Developer · Buenos Aires</span>
             </div>
           </div>
         </div>
 
-        <div className="future-side-label" aria-hidden="true">
-          2027 → 2030
+        <div className="hero-scroll-cue" aria-hidden="true">
+          <span>SCROLL TO ENTER</span>
+          <i />
         </div>
       </section>
 
-
-      <section id="work" className="future-work">
-        <div className="future-section-intro" data-reveal>
-          <p className="future-kicker">SELECTED EXPERIENCES</p>
-          <h2 className="five-d-heading" data-text="¿HASTA DÓNDE?">
-            ¿HASTA DÓNDE?
+      <section className="statement-section">
+        <div className="section-shell statement-grid" data-reveal>
+          <p className="micro-label">PRESENCIA DIGITAL</p>
+          <h2>
+            Belleza que atrae.<br />
+            <span>Tecnología que responde.</span>
           </h2>
-        </div>
-
-        <article className="project-chapter project-chapter-image">
-          <div className="project-media project-media-tamara">
-            <img src={MEDIA.tamaraHero} alt="Proyecto Tamara Atadía" />
-            <img className="project-float project-float-a" src={MEDIA.tamaraStage} alt="" />
-            <img className="project-float project-float-b" src={MEDIA.tamaraProduction} alt="" />
-            <div className="project-gradient" />
-          </div>
-
-          <div className="project-overlay" data-reveal>
-            <div>
-              <p className="future-kicker">01 · BRAND EXPERIENCE</p>
-              <h3>¿Y SI TU<br />MARCA SE SIENTE?</h3>
-            </div>
-
-            <div className="project-meta">
-              <Metric value="47" label="media assets" />
-              <Metric value="05" label="routes" />
-              <Metric value="46" label="source files" />
-            </div>
-
-            <div className="project-links">
-              <a href="https://tamara-atadia-portfolio.vercel.app" target="_blank" rel="noreferrer">
-                Live ↗
-              </a>
-              <a href="https://github.com/FabianCordobes/tamara-atadia-portfolio" target="_blank" rel="noreferrer">
-                Code ↗
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article className="project-chapter project-chapter-system">
-          <div className="system-space">
-            <div className="system-orbit system-orbit-a" />
-            <div className="system-orbit system-orbit-b" />
-
-            <div className="system-core">
-              <div className="system-core-head">
-                <span>JAMLY / LIVE SYSTEM</span>
-                <span className="system-live">● ONLINE</span>
-              </div>
-
-              <div className="system-grid">
-                <div className="system-block system-block-large">
-                  <small>BOOKING ENGINE</small>
-                  <strong>20:00</strong>
-                  <span>Studio session</span>
-                </div>
-
-                <div className="system-block">
-                  <small>ACCESS</small>
-                  <strong>JWT</strong>
-                  <span>1h</span>
-                </div>
-
-                <div className="system-block">
-                  <small>ROLES</small>
-                  <strong>02</strong>
-                  <span>User · Admin</span>
-                </div>
-
-                <div className="system-block system-block-wide">
-                  <small>AVAILABILITY</small>
-                  <div className="availability-wave">
-                    {[38, 62, 44, 86, 54, 92, 68, 78].map((height, index) => (
-                      <i key={index} style={{ height: `${height}%` }} />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="system-label system-label-a">API</div>
-            <div className="system-label system-label-b">DATA</div>
-            <div className="system-label system-label-c">AUTH</div>
-          </div>
-
-          <div className="project-overlay project-overlay-light" data-reveal>
-            <div>
-              <p className="future-kicker">02 · FULL-STACK PRODUCT</p>
-              <h3>¿Y SI TODO<br />FLUYE?</h3>
-            </div>
-
-            <div className="project-meta">
-              <Metric value="03" label="core domains" />
-              <Metric value="45" label="source files" />
-              <Metric value="04" label="test files" />
-            </div>
-
-            <div className="project-links">
-              <a href="https://github.com/FabianCordobes/jamly" target="_blank" rel="noreferrer">
-                Code ↗
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article className="project-chapter project-chapter-commerce">
-          <div className="commerce-space">
-            <div className="commerce-title-ghost">COMMERCE</div>
-            <img className="commerce-shot commerce-shot-a" src={MEDIA.commerceLogin} alt="Login e-commerce" />
-            <img className="commerce-shot commerce-shot-b" src={MEDIA.commerceRegister} alt="Registro e-commerce" />
-            <img className="commerce-shot commerce-shot-c" src={MEDIA.commerceForgot} alt="Recuperación de acceso e-commerce" />
-            <div className="commerce-beam commerce-beam-a" />
-            <div className="commerce-beam commerce-beam-b" />
-          </div>
-
-          <div className="project-overlay">
-            <div>
-              <p className="future-kicker">03 · COMMERCE EXPERIENCE</p>
-              <h3>¿Y SI COMPRAR<br />SE SIENTE NUEVO?</h3>
-            </div>
-
-            <div className="project-meta">
-              <Metric value="08" label="flows" />
-              <Metric value="22" label="source files" />
-              <Metric value="03" label="auth screens" />
-            </div>
-
-            <div className="project-links">
-              <a href="https://e-commerce-app-eta-two.vercel.app" target="_blank" rel="noreferrer">
-                Live ↗
-              </a>
-              <a href="https://github.com/FabianCordobes/eCommerceApp" target="_blank" rel="noreferrer">
-                Code ↗
-              </a>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <AIArchitectureScene />
-
-      <section id="signal" className="future-signal-section">
-        <FutureField />
-        <div className="future-signal-copy" data-reveal>
-          <p className="future-kicker">NEXT MOVE</p>
-          <h2 className="five-d-heading five-d-heading-center" data-text="¿QUÉ QUERÉS CREAR?">
-            ¿QUÉ QUERÉS CREAR?
-          </h2>
-        </div>
-
-        <div className="future-signal-inner" data-reveal>
-          <SmartProjectBrief />
+          <p>
+            Cada decisión visual tiene una función. Cada interacción acompaña
+            la experiencia. Cada producto está pensado para sentirse propio.
+          </p>
         </div>
       </section>
 
-      <section className="future-manifesto">
-        <div className="future-manifesto-question">¿Qué querés que tu marca haga sentir?</div>
-        <div className="future-manifesto-line">IMPACT</div>
-        <div className="future-manifesto-question future-manifesto-question-shift">¿Qué experiencia todavía no existe?</div>
-        <div className="future-manifesto-line future-manifesto-line-shift">MOTION</div>
-        <div className="future-manifesto-question">¿Qué podrías llevar al próximo nivel?</div>
-        <div className="future-manifesto-line future-manifesto-line-accent">NEXT</div>
+      <ServiceFlow />
+
+      <SelectedWork />
+
+      <section className="intelligence-section">
+        <LivingField />
+        <div className="section-shell intelligence-layout">
+          <div className="intelligence-copy" data-reveal>
+            <p className="micro-label">UNDER THE SURFACE</p>
+            <h2>La tecnología<br /><span>también puede sentirse.</span></h2>
+            <p>
+              Arquitectura, datos, realtime e inteligencia integrados sin
+              convertirse en ruido visual.
+            </p>
+          </div>
+
+          <div className="intelligence-object" data-reveal aria-hidden="true">
+            <div className="intelligence-haze" />
+            <div className="intel-ring intel-ring-one" />
+            <div className="intel-ring intel-ring-two" />
+            <div className="intel-ring intel-ring-three" />
+            <div className="intel-spine">
+              <div className="intel-core"><span>AI</span></div>
+              <i className="intel-node node-a" />
+              <i className="intel-node node-b" />
+              <i className="intel-node node-c" />
+            </div>
+            <div className="intel-scan" />
+            <span className="intel-label label-one">MICROSERVICES</span>
+            <span className="intel-label label-two">WEBSOCKET</span>
+            <span className="intel-label label-three">NOSQL</span>
+            <span className="intel-label label-four">SYSTEMS</span>
+          </div>
+        </div>
       </section>
 
-      <section id="contact" className="future-contact">
-        <div className="future-contact-copy" data-reveal>
-          <p className="future-kicker">START SOMETHING</p>
-          <h2 className="five-d-heading" data-text="¿Y SI ES AHORA?">
-            ¿Y SI ES AHORA?
-          </h2>
-          <p>¿Qué te gustaría ver funcionando, moviéndose y creciendo?</p>
+      <section id="contact" className="contact-section">
+        <div className="section-shell contact-heading" data-reveal>
+          <p className="micro-label">NUEVO PROYECTO</p>
+          <h2>Hagamos que<br /><span>tome forma.</span></h2>
+          <p>
+            Landing page, sitio web, e-commerce, aplicación, automatización o
+            mantenimiento. Contame qué querés construir.
+          </p>
         </div>
 
-        <LeadForm />
+        <div className="section-shell contact-form-wrap" data-reveal>
+          <LeadForm />
+        </div>
       </section>
 
-      <footer className="future-footer">
-        <p>© {new Date().getFullYear()} Fabián Cordobés</p>
-        <div>
-          <a href="/portfolio">Portfolio</a>
-          <a href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+      <footer className="living-footer">
+        <div className="section-shell living-footer-inner">
+          <div>
+            <strong>FABIÁN CORDOBÉS</strong>
+            <span>DESIGN · DEVELOPMENT · DIGITAL EXPERIENCES</span>
+          </div>
+          <div>
+            <a href="/portfolio">Portfolio</a>
+            <a href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+          <p>© {new Date().getFullYear()}</p>
         </div>
       </footer>
     </main>
   );
 }
 
-function Metric({ value, label }: { value: string; label: string }) {
+function WhatsAppMark() {
   return (
-    <div className="project-metric">
-      <strong>{value}</strong>
-      <span>{label}</span>
-    </div>
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.93 7.93 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607ZM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.25a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.591-6.592 6.591Zm3.615-4.934c-.197-.1-1.17-.578-1.353-.646-.182-.066-.315-.1-.445.1-.133.197-.513.646-.627.775-.115.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.984-.59-.525-.986-1.17-1.1-1.37-.116-.198-.013-.306.084-.404.09-.088.2-.23.3-.345.098-.115.132-.198.198-.33.066-.133.033-.25-.017-.35-.05-.1-.445-1.078-.61-1.475-.161-.387-.325-.334-.445-.34-.115-.007-.247-.007-.38-.007a.729.729 0 0 0-.528.247c-.182.198-.695.68-.695 1.657s.712 1.916.81 2.049c.1.132 1.4 2.137 3.4 2.996.476.205.847.328 1.136.42.477.15.91.13 1.253.079.383-.058 1.17-.48 1.335-.943.164-.462.164-.858.115-.943-.05-.084-.182-.132-.38-.23Z"
+      />
+    </svg>
   );
 }
