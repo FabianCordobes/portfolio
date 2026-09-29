@@ -146,7 +146,7 @@ export default function Home() {
 
       <section className="signal-strip" aria-label="Flujo del sistema">
         <div className="signal-strip-track">
-          <span>PROBLEMA</span><i>→</i><span>CONTEXTO</span><i>→</i><span>DECISIÓN</span><i>→</i><span>IMPLEMENTACIÓN</span><i>→</i><span>OPERACIÓN</span>
+          <span>OBJETIVO</span><i>→</i><span>CONTEXTO</span><i>→</i><span>DECISIÓN</span><i>→</i><span>IMPLEMENTACIÓN</span><i>→</i><span>OPERACIÓN</span>
           <b>FROM CONTEXT TO SOFTWARE</b>
         </div>
       </section>
@@ -156,10 +156,10 @@ export default function Home() {
           <p className="micro-label">ENFOQUE</p>
           <h2>
             Cada proyecto necesita una escala distinta.<br />
-            <span>La solución debería responder a esa necesidad, no complicarla.</span>
+            <span>La solución crece en proporción a esa necesidad.</span>
           </h2>
           <p>
-            Una página institucional no necesita la arquitectura de una plataforma compleja. Y un sistema crítico no debería resolverse como una página más. Defino el alcance según el problema, el uso y la evolución prevista.
+            Cada proyecto recibe la arquitectura que corresponde a su escala. Defino el alcance según el objetivo, el uso, las necesidades actuales y la evolución prevista.
           </p>
         </div>
       </section>
@@ -172,10 +172,10 @@ export default function Home() {
           <div>
             <h2>Desde una web puntual<br /><span>hasta un sistema que articula una operación.</span></h2>
             <div className="client-spectrum-cases">
-              <article><span>01</span><strong>Necesito empezar</strong><p>Una landing, portfolio o sitio institucional para presentar una actividad, servicio o propuesta con claridad.</p></article>
-              <article><span>02</span><strong>Necesito mejorar</strong><p>Un sitio, tienda o aplicación existente que necesita una nueva etapa de diseño, funcionalidad o rendimiento.</p></article>
-              <article><span>03</span><strong>Necesito conectar</strong><p>Herramientas, APIs y datos que necesitan integrarse para evitar duplicación, demoras o tareas manuales.</p></article>
-              <article><span>04</span><strong>Necesito resolver</strong><p>Una aplicación o sistema con reglas propias, usuarios, permisos, datos, procesos e integraciones específicas.</p></article>
+              <article><span>01</span><strong>Quiero crear</strong><p>Una landing, portfolio o sitio institucional para presentar una actividad, servicio o propuesta con claridad.</p></article>
+              <article><span>02</span><strong>Quiero evolucionar</strong><p>Un sitio, tienda o aplicación existente que necesita una nueva etapa de diseño, funcionalidad o rendimiento.</p></article>
+              <article><span>03</span><strong>Quiero integrar</strong><p>Herramientas, APIs y datos que necesitan integrarse para centralizar información, agilizar procesos y coordinar el trabajo entre sistemas.</p></article>
+              <article><span>04</span><strong>Quiero desarrollar</strong><p>Una aplicación o sistema con reglas propias, usuarios, permisos, datos, procesos e integraciones específicas.</p></article>
             </div>
           </div>
         </div>
@@ -190,9 +190,9 @@ export default function Home() {
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
           <p className="micro-label">CONTEXTO DEL PROYECTO</p>
-          <h2>Un buen desarrollo empieza<br /><span>por entender bien el problema.</span></h2>
+          <h2>Un buen desarrollo empieza<br /><span>por entender bien el objetivo.</span></h2>
           <p>
-            Describí el contexto, la necesidad y las restricciones conocidas. Con esa información puedo evaluar alcance, dependencias y una primera dirección técnica antes de hablar de implementación.
+            Describí el contexto, el objetivo y las condiciones conocidas. Con esa información puedo evaluar alcance, dependencias y una primera dirección técnica para el proyecto.
           </p>
         </div>
 
