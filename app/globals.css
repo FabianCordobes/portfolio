@@ -303,8 +303,8 @@ a {
   perspective: 1200px;
   font-size: clamp(5rem, 15vw, 14rem);
   font-weight: 850;
-  line-height: 0.72;
-  letter-spacing: -0.085em;
+  line-height: 0.86;
+  letter-spacing: -0.065em;
   text-transform: uppercase;
   transform:
     perspective(1200px)
@@ -509,8 +509,8 @@ a {
   width: fit-content;
   font-size: clamp(4.6rem, 11vw, 11rem);
   font-weight: 850;
-  line-height: 0.79;
-  letter-spacing: -0.08em;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
   color: #f5f5ef;
   text-transform: uppercase;
   text-shadow:
@@ -4048,8 +4048,8 @@ a {
   max-width: 11ch;
   margin: 22px 0 0;
   font-size: clamp(4rem, 9.5vw, 10rem);
-  line-height: 0.82;
-  letter-spacing: -0.075em;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
   font-weight: 820;
 }
 
@@ -4092,8 +4092,8 @@ a {
 .service-stack-card h3 {
   margin: 5vh 0 0;
   font-size: clamp(4rem, 9vw, 9.5rem);
-  line-height: .8;
-  letter-spacing: -.075em;
+  line-height: .9;
+  letter-spacing: -.055em;
   font-weight: 820;
 }
 
@@ -4191,8 +4191,8 @@ a {
 .selected-work-heading h2 {
   margin: 18px 0 0;
   font-size: clamp(4rem, 9vw, 9.5rem);
-  line-height: .82;
-  letter-spacing: -.075em;
+  line-height: .92;
+  letter-spacing: -.055em;
   font-weight: 820;
 }
 
@@ -4559,8 +4559,8 @@ a {
 .ai-cinema-copy h2 {
   margin: 20px 0 0;
   font-size: clamp(4rem,8vw,8.6rem);
-  line-height: .79;
-  letter-spacing: -.075em;
+  line-height: .9;
+  letter-spacing: -.055em;
   font-weight: 820;
 }
 
@@ -4884,8 +4884,8 @@ a {
 .intro-copy h1 {
   margin: 0;
   font-size: clamp(5rem, 15vw, 15rem);
-  line-height: .72;
-  letter-spacing: -.085em;
+  line-height: .86;
+  letter-spacing: -.065em;
   font-weight: 850;
 }
 
@@ -5083,5 +5083,64 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .intro-sequence {
     display: none;
+  }
+}
+
+
+/* Editorial hierarchy guardrails */
+.five-d-title,
+.five-d-heading,
+.intro-copy h1,
+.service-stack-header h2,
+.service-stack-card h3,
+.selected-work-heading h2,
+.ai-cinema-copy h2 {
+  text-wrap: balance;
+  overflow-wrap: normal;
+}
+
+.five-d-title {
+  width: auto;
+  max-width: 8.6ch;
+}
+
+.five-d-title span {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.intro-copy h1 {
+  max-width: 8.8ch;
+}
+
+.service-stack-card h3 {
+  max-width: 9.5ch;
+}
+
+.selected-work-heading h2 {
+  max-width: 10.5ch;
+}
+
+.ai-cinema-copy h2 {
+  max-width: 8.5ch;
+}
+
+@media (max-width: 720px) {
+  .five-d-title {
+    line-height: .9;
+    letter-spacing: -.055em;
+  }
+
+  .intro-copy h1 {
+    line-height: .9;
+    letter-spacing: -.055em;
+  }
+
+  .service-stack-header h2,
+  .service-stack-card h3,
+  .selected-work-heading h2,
+  .ai-cinema-copy h2 {
+    line-height: .94;
+    letter-spacing: -.045em;
   }
 }
