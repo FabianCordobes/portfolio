@@ -139,7 +139,7 @@ export default function PortfolioPage() {
             </div>
             <div>
               <p className="max-w-xl text-base leading-8 text-white/50 sm:text-lg">
-                Acá está la evidencia técnica detrás de la propuesta comercial: qué construí, qué problema resolvía cada proyecto y con qué arquitectura lo llevé a código.
+                Proyectos y experiencia profesional presentados desde la implementación: contexto, responsabilidades, decisiones técnicas y tecnologías utilizadas.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
@@ -166,7 +166,7 @@ export default function PortfolioPage() {
 
       <section id="projects" className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionHeading eyebrow="Proyectos" title="Casos: problema, solución e implementación." />
+          <SectionHeading eyebrow="Proyectos" title="Implementaciones y decisiones técnicas." />
 
           <div className="mt-14 grid gap-5 lg:grid-cols-2">
             {projects.map((project) => (
@@ -288,17 +288,17 @@ export default function PortfolioPage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-black/50">
-                ¿Buscás contratar un proyecto?
+                NUEVO PROYECTO
               </p>
               <h2 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight tracking-[-0.045em] sm:text-6xl">
-                ¿Tenés un problema concreto que necesite convertirse en software?
+                Si el problema requiere software, empecemos por definirlo correctamente.
               </h2>
             </div>
             <a
               href="/#contact"
               className="inline-flex w-fit items-center justify-center rounded-full bg-black px-6 py-3.5 font-semibold text-white"
             >
-              Ver soluciones ↗
+              Plantear proyecto ↗
             </a>
           </div>
         </div>
