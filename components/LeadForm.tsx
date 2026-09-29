@@ -7,7 +7,7 @@ const SERVICES = [
   "Sitio Web",
   "Aplicación Web",
   "E-commerce",
-  "No estoy seguro todavía",
+  "Quiero orientación",
 ];
 
 type Attribution = {
@@ -106,7 +106,7 @@ export default function LeadForm() {
         <label className="future-form-wide">
           <span>Tipo de proyecto</span>
           <select name="requestedService" defaultValue="" required>
-            <option value="" disabled>Elegí el tipo de proyecto</option>
+            <option value="" disabled>Elegí una opción</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
           </select>
         </label>
