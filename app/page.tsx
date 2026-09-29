@@ -40,7 +40,7 @@ export default function Home() {
           <a href="#solutions">Soluciones</a>
           <a href="#work">Proyectos</a>
           <a href="#experience">Experiencia</a>
-          <a href="/portfolio">Perfil técnico</a>
+          <a href="/portfolio">Trabajo realizado</a>
         </nav>
 
         <a href="#contact" className="nav-project-link">
@@ -172,7 +172,7 @@ export default function Home() {
             <span>La solución crece en proporción a esa necesidad.</span>
           </h2>
           <p>
-            Cada proyecto recibe la arquitectura que corresponde a su escala. Defino el alcance según el objetivo, el uso, las necesidades actuales y la evolución prevista.
+            Cada proyecto recibe la arquitectura que corresponde a su escala. Defino el alcance según el objetivo, el uso, la etapa actual y la evolución prevista.
           </p>
         </div>
       </section>
@@ -236,7 +236,7 @@ export default function Home() {
             <span>SOFTWARE ENGINEERING · WEB SYSTEMS · AUTOMATION</span>
           </div>
           <div>
-            <a href="/portfolio">Portfolio</a>
+            <a href="/portfolio">Proyectos</a>
             <a href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
           <p>© {new Date().getFullYear()}</p>
