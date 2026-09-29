@@ -3,12 +3,11 @@
 import { FormEvent, useEffect, useState } from "react";
 
 const SERVICES = [
-  "Landing Page",
-  "Sitio Web",
-  "E-commerce",
-  "Aplicación / Sistema",
+  "Sistema de captación",
+  "Web de conversión",
+  "Comercio digital",
+  "Software a medida",
   "Automatización",
-  "Mantenimiento",
   "Quiero orientación",
 ];
 
@@ -97,7 +96,7 @@ export default function LeadForm() {
   return (
     <form onSubmit={onSubmit} className="future-form">
       <div className="future-form-head">
-        <p className="micro-label">PRIMER PASO</p>
+        <p className="micro-label">ESTE SISTEMA ESTÁ FUNCIONANDO AHORA</p>
         <span>~2 min</span>
       </div>
 
@@ -123,7 +122,7 @@ export default function LeadForm() {
         </label>
 
         <label className="future-form-wide">
-          <span>Tipo de proyecto</span>
+          <span>¿Qué querés resolver?</span>
           <select name="requestedService" defaultValue="" required>
             <option value="" disabled>Elegí una opción</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
@@ -148,12 +147,12 @@ export default function LeadForm() {
       </div>
 
       <button type="submit" disabled={status === "sending"} className="future-submit">
-        {status === "sending" ? "Enviando..." : "Contar mi proyecto ↗"}
+        {status === "sending" ? "Enviando..." : "Analizar mi proyecto ↗"}
       </button>
 
       {status === "success" && (
         <p className="future-form-status" role="status">
-          Recibido. Voy a revisar el contexto y te contacto para definir el próximo paso.
+          Recibido. La consulta ya entró con su contexto de origen y proyecto. Voy a revisarla y te contacto para definir el próximo paso.
         </p>
       )}
 

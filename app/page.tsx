@@ -103,24 +103,25 @@ export default function Home() {
         <div className="section-shell hero-content">
           <div className="hero-overline hero-reveal hero-reveal-1">
             <span className="live-dot" />
-            DESIGN · DEVELOPMENT · DIGITAL GROWTH
+            CAPTACIÓN · AUTOMATIZACIÓN · DESARROLLO
           </div>
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">PRODUCTOS</span>
-              <span className="hero-reveal hero-reveal-3">DIGITALES</span>
+              <span className="hero-reveal hero-reveal-2">QUE NINGUNA</span>
+              <span className="hero-reveal hero-reveal-3">OPORTUNIDAD</span>
+              <span className="hero-reveal hero-reveal-3 hero-title-outline">SE PIERDA.</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Diseño y desarrollo experiencias digitales que convierten atención en consultas, ventas y procesos más eficientes. Desde una landing hasta un sistema a medida.
+              Diseño sistemas digitales que no se quedan mirando: capturan la intención, entienden cada consulta y la convierten en información lista para actuar.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#services" className="hero-button hero-button-primary">
-                Quiero impulsar mi proyecto <span>↗</span>
+                Ver el sistema en acción <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Solicitar propuesta <span>↗</span>
@@ -142,15 +143,22 @@ export default function Home() {
 
       <KineticType />
 
+      <section className="signal-strip" aria-label="Flujo del sistema">
+        <div className="signal-strip-track">
+          <span>VISITA</span><i>→</i><span>INTENCIÓN</span><i>→</i><span>CONTEXTO</span><i>→</i><span>PRIORIDAD</span><i>→</i><span>ACCIÓN</span>
+          <b>LEADFLOW / LIVE PIPELINE</b>
+        </div>
+      </section>
+
       <section className="statement-section">
         <div className="section-shell statement-grid" data-reveal>
           <p className="micro-label">PRESENCIA DIGITAL</p>
           <h2>
-            Tu presencia digital no debería limitarse a verse bien.<br />
-            <span>Debería ayudarte a avanzar.</span>
+            Una visita dura segundos.<br />
+            <span>La oportunidad no debería desaparecer con ella.</span>
           </h2>
           <p>
-            Construyo recorridos claros para que una visita entienda tu propuesta, confíe en ella y sepa qué hacer después. Diseño y desarrollo trabajan con un objetivo comercial concreto.
+            La experiencia atrae. El sistema escucha. La automatización ordena. Vos recibís una oportunidad con contexto para decidir qué hacer después.
           </p>
         </div>
       </section>
@@ -166,9 +174,9 @@ export default function Home() {
       <section id="contact" className="contact-section">
         <div className="section-shell contact-heading" data-reveal>
           <p className="micro-label">HABLEMOS DE TU PROYECTO</p>
-          <h2>Si hay una oportunidad,<br /><span>construyamos la solución correcta.</span></h2>
+          <h2>Convertí una visita<br /><span>en una oportunidad accionable.</span></h2>
           <p>
-            No necesitás llegar con la solución definida. Contame qué querés lograr, qué está frenando hoy el proyecto o qué proceso querés mejorar. A partir de eso definimos el próximo paso.
+            Contame qué querés lograr. Este mismo formulario registra el origen de tu consulta y prepara el contexto para analizarla: es una muestra del sistema de captación que puedo implementar en tu negocio.
           </p>
         </div>
 

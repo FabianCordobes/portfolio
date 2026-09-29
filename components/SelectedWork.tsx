@@ -62,14 +62,14 @@ export default function SelectedWork() {
   return (
     <section id="work" className="cinematic-work">
       <div className="section-shell cinematic-work-head" data-reveal>
-        <p className="micro-label dark">TRABAJO SELECCIONADO</p>
+        <p className="micro-label dark">EVIDENCIA / TRABAJO SELECCIONADO</p>
         <div>
           <h2>
-            No alcanza con prometer.<br />
-            <span>Hay que demostrar que se puede construir.</span>
+            Las ideas no cuentan la historia completa.<br />
+            <span>El software funcionando, sí.</span>
           </h2>
           <p>
-            Una selección de trabajos donde diseño y desarrollo resuelven necesidades concretas: operación, compra, navegación y experiencia de usuario.
+            Tres escenarios distintos. Tres problemas convertidos en experiencias funcionales: reservar, comprar y explorar.
           </p>
         </div>
       </div>
