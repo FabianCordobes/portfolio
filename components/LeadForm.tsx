@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 
 const SERVICES = [
+  "IA / agentes / automatización inteligente",
   "Crear un producto / MVP",
   "Evolucionar una experiencia digital",
   "Aplicación / sistema",
@@ -81,14 +82,14 @@ export default function LeadForm() {
       const data = (await response.json()) as { ok?: boolean; error?: string };
 
       if (!response.ok || !data.ok) {
-        throw new Error(data.error || "No se pudo enviar la consulta.");
+        throw new Error(data.error || "Volvamos a intentarlo en un momento.");
       }
 
       form.reset();
       setStatus("success");
     } catch (err) {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "No se pudo enviar la consulta.");
+      setError(err instanceof Error ? err.message : "Volvamos a intentarlo en un momento.");
     }
   }
 

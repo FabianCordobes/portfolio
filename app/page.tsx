@@ -2,6 +2,7 @@ import LeadForm from "../components/LeadForm";
 import ExperienceLayer from "../components/ExperienceLayer";
 import FutureField from "../components/FutureField";
 import CinematicPortal from "../components/CinematicPortal";
+import AIArchitectureScene from "../components/AIArchitectureScene";
 import SmartProjectBrief from "../components/SmartProjectBrief";
 import { heroImagePart1 } from "./_hero-image/part1";
 import { heroImagePart2 } from "./_hero-image/part2";
@@ -38,13 +39,6 @@ const MEDIA = {
     "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/forgot.png",
 };
 
-const signals = [
-  ["47", "media assets"],
-  ["05", "real routes"],
-  ["03", "core domains"],
-  ["08", "product flows"],
-];
-
 export default function Home() {
   return (
     <main className="future-site">
@@ -56,13 +50,13 @@ export default function Home() {
         </a>
 
         <nav>
-          <a href="#work">Work</a>
-          <a href="#signal">Signal</a>
-          <a href="/portfolio">Tech</a>
+          <a href="#work">Experiencias</a>
+          <a href="#signal">Idea</a>
+          <a href="/portfolio">Portfolio</a>
         </nav>
 
         <a href="#contact" className="future-nav-cta">
-          Start ↗
+          Crear ↗
         </a>
       </header>
 
@@ -120,16 +114,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="signal-strip" aria-label="Métricas verificadas">
-        <div className="signal-strip-track">
-          {signals.map(([value, label]) => (
-            <div key={label} className="signal-stat">
-              <strong>{value}</strong>
-              <span>{label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section id="work" className="future-work">
         <div className="future-section-intro" data-reveal>
@@ -269,6 +253,8 @@ export default function Home() {
           </div>
         </article>
       </section>
+
+      <AIArchitectureScene />
 
       <section id="signal" className="future-signal-section">
         <FutureField />
