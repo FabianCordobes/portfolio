@@ -3,11 +3,11 @@
 import { useMemo, useState } from "react";
 
 const NEEDS = [
-  { id: "create", label: "Crear", title: "Una nueva experiencia", route: "Discovery + build", outcome: "¿Qué forma podría tomar tu idea?" },
-  { id: "evolve", label: "Evolucionar", title: "Una experiencia en evolución", route: "Product evolution", outcome: "¿Qué podría sentirse todavía mejor?" },
-  { id: "automate", label: "Automatizar", title: "Un sistema conectado", route: "Automation + integration", outcome: "¿Qué podría suceder de forma más inteligente?" },
-  { id: "ai", label: "Potenciar con IA", title: "Una experiencia inteligente", route: "AI orchestration", outcome: "¿Qué podría pensar, responder o crear junto a tus usuarios?" },
-  { id: "accelerate", label: "Acelerar", title: "Un equipo en expansión", route: "Technical acceleration", outcome: "¿Qué podrías llevar más lejos este trimestre?" },
+  { id: "create", label: "Crear producto", title: "Producto nuevo", route: "Discovery + build", outcome: "Definición, diseño y primera versión." },
+  { id: "evolve", label: "Evolucionar", title: "Producto en evolución", route: "Product evolution", outcome: "Experiencia, rendimiento y nuevas funcionalidades." },
+  { id: "automate", label: "Automatizar", title: "Automatización", route: "Automation + integration", outcome: "Procesos conectados y flujos automáticos." },
+  { id: "ai", label: "Aplicar IA", title: "IA aplicada", route: "AI orchestration", outcome: "Agentes, modelos y automatización inteligente." },
+  { id: "accelerate", label: "Sumar capacidad", title: "Capacidad técnica", route: "Technical acceleration", outcome: "Desarrollo para roadmap, entregas y expansión." },
 ];
 
 const MOMENTS = ["Ahora", "Este trimestre", "Exploración"];
@@ -22,7 +22,7 @@ export default function SmartProjectBrief() {
       <div className="signal-header">
         <div>
           <p className="future-kicker">PROJECT SIGNAL</p>
-          <h3>¿Qué te gustaría activar?</h3>
+          <h3>Seleccioná el tipo de proyecto.</h3>
         </div>
         <div className="ai-orb" aria-hidden="true"><span /><span /><span /></div>
       </div>
@@ -52,7 +52,7 @@ export default function SmartProjectBrief() {
         </div>
       </div>
 
-      <a href="#contact" className="future-cta signal-cta">Quiero algo así <span>↗</span></a>
+      <a href="#contact" className="future-cta signal-cta">Iniciar proyecto <span>↗</span></a>
     </div>
   );
 }
