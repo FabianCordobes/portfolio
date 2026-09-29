@@ -3,14 +3,11 @@
 import { FormEvent, useEffect, useState } from "react";
 
 const SERVICES = [
-  "IA / agentes / automatización inteligente",
-  "Crear un producto / MVP",
-  "Evolucionar una experiencia digital",
-  "Aplicación / sistema",
-  "Automatización / integración",
-  "Acelerar capacidad técnica",
+  "Landing Page",
+  "Sitio Web",
+  "Aplicación Web",
   "E-commerce",
-  "Quiero explorarlo",
+  "No estoy seguro todavía",
 ];
 
 type Attribution = {
@@ -96,7 +93,7 @@ export default function LeadForm() {
   return (
     <form onSubmit={onSubmit} className="future-form">
       <div className="future-form-head">
-        <p className="future-kicker">NUEVO PROYECTO</p>
+        <p className="future-kicker">CONTAME TU PROYECTO</p>
         <span>~2 min</span>
       </div>
 
@@ -109,14 +106,14 @@ export default function LeadForm() {
         <label className="future-form-wide">
           <span>Tipo de proyecto</span>
           <select name="requestedService" defaultValue="" required>
-            <option value="" disabled>Seleccioná una categoría</option>
+            <option value="" disabled>Elegí el tipo de proyecto</option>
             {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
           </select>
         </label>
 
         <label className="future-form-wide">
           <span>Contexto</span>
-          <textarea name="message" minLength={20} maxLength={1800} required placeholder="Objetivo, alcance o idea principal..." />
+          <textarea name="message" minLength={20} maxLength={1800} required placeholder="Contame brevemente qué querés construir..." />
         </label>
 
         <label className="sr-only" aria-hidden="true">
