@@ -42,27 +42,27 @@ const MEDIA = {
 const SERVICES = [
   {
     index: "01",
-    title: "WEB EXPERIENCES",
-    text: "Landing pages, sitios institucionales y experiencias visuales de alto impacto.",
-    tags: "Brand · Conversion · Motion",
+    title: "LANDING PAGES",
+    text: "Páginas enfocadas en presentar una propuesta y convertir visitas en oportunidades.",
+    tags: "Conversión · Marca · Velocidad",
   },
   {
     index: "02",
-    title: "APPLICATIONS",
-    text: "Productos web, MVPs, dashboards, plataformas y sistemas internos.",
-    tags: "Frontend · Backend · Product",
+    title: "SITIOS WEB",
+    text: "Sitios profesionales para empresas, marcas y proyectos con una presencia digital sólida.",
+    tags: "Contenido · Identidad · Escala",
   },
   {
     index: "03",
-    title: "AI & AUTOMATION",
-    text: "Agentes, automatizaciones, orquestación de modelos y flujos inteligentes.",
-    tags: "AI Agents · LLM · Workflows",
+    title: "APLICACIONES WEB",
+    text: "Productos, plataformas, dashboards y sistemas a medida con lógica de negocio.",
+    tags: "Producto · Operación · Integración",
   },
   {
     index: "04",
-    title: "SYSTEMS & REALTIME",
-    text: "APIs, microservicios, WebSocket, NoSQL e integraciones entre sistemas.",
-    tags: "APIs · Microservices · Realtime",
+    title: "E-COMMERCE",
+    text: "Experiencias de compra, catálogo, carrito, administración y flujo de órdenes.",
+    tags: "Ventas · Catálogo · Experiencia",
   },
 ];
 
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="future-hero-content">
           <div className="future-eyebrow">
             <span className="signal-dot" />
-            DESARROLLO WEB · APLICACIONES · IA · AUTOMATIZACIÓN
+            LANDING PAGES · SITIOS WEB · APLICACIONES · E-COMMERCE
           </div>
 
           <h1 className="five-d-title">
@@ -131,8 +131,8 @@ export default function Home() {
 
           <div className="future-hero-bottom">
             <p>
-              Diseño y desarrollo experiencias digitales para empresas: sitios,
-              aplicaciones, sistemas, IA, automatización e integraciones.
+              Diseño y desarrollo landing pages, sitios web, aplicaciones y e-commerce
+              para marcas, profesionales y empresas.
             </p>
 
             <div className="future-hero-actions">
@@ -147,7 +147,7 @@ export default function Home() {
         </div>
 
         <div className="future-side-label" aria-hidden="true">
-          WEB · APPS · AI · SYSTEMS
+          LANDING · WEB · APPS · COMMERCE
         </div>
       </section>
 
