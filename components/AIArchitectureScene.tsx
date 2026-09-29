@@ -12,12 +12,12 @@ export default function AIArchitectureScene() {
   return (
     <section className="ai-architecture" aria-label="Arquitectura digital con inteligencia artificial">
       <div className="ai-architecture-copy" data-reveal>
-        <p className="future-kicker">ARQUITECTURA AVANZADA</p>
-        <h2 className="five-d-heading" data-text="IA APLICADA AL PRODUCTO">
-          IA APLICADA AL PRODUCTO
+        <p className="future-kicker">TECH LAYER</p>
+        <h2 className="five-d-heading" data-text="ARQUITECTURA EN MOVIMIENTO">
+          ARQUITECTURA EN MOVIMIENTO
         </h2>
         <p className="ai-architecture-question">
-          Agentes, microservicios, WebSocket y datos NoSQL conectados para construir sistemas que responden en tiempo real.
+          IA, microservicios, WebSocket, NoSQL y utilidades modernas como parte de una base técnica preparada para experiencias avanzadas.
         </p>
       </div>
 
