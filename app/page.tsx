@@ -39,6 +39,33 @@ const MEDIA = {
     "https://raw.githubusercontent.com/FabianCordobes/eCommerceApp/master/src/assets/forgot.png",
 };
 
+const SERVICES = [
+  {
+    index: "01",
+    title: "WEB EXPERIENCES",
+    text: "Landing pages, sitios institucionales y experiencias visuales de alto impacto.",
+    tags: "Brand · Conversion · Motion",
+  },
+  {
+    index: "02",
+    title: "APPLICATIONS",
+    text: "Productos web, MVPs, dashboards, plataformas y sistemas internos.",
+    tags: "Frontend · Backend · Product",
+  },
+  {
+    index: "03",
+    title: "AI & AUTOMATION",
+    text: "Agentes, automatizaciones, orquestación de modelos y flujos inteligentes.",
+    tags: "AI Agents · LLM · Workflows",
+  },
+  {
+    index: "04",
+    title: "SYSTEMS & REALTIME",
+    text: "APIs, microservicios, WebSocket, NoSQL e integraciones entre sistemas.",
+    tags: "APIs · Microservices · Realtime",
+  },
+];
+
 export default function Home() {
   return (
     <main className="future-site">
@@ -50,13 +77,14 @@ export default function Home() {
         </a>
 
         <nav>
-          <a href="#work">Experiencias</a>
-          <a href="#signal">Idea</a>
+          <a href="#services">Servicios</a>
+          <a href="#work">Proyectos</a>
+          <a href="#architecture">Arquitectura</a>
           <a href="/portfolio">Portfolio</a>
         </nav>
 
         <a href="#contact" className="future-nav-cta">
-          Crear ↗
+          Iniciar proyecto ↗
         </a>
       </header>
 
@@ -76,6 +104,12 @@ export default function Home() {
         <FutureField />
         <CinematicPortal />
 
+        <div className="hero-cinema-lines" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+        </div>
+
         <div className="future-hero-photo" aria-hidden="true">
           <img src={HERO_IMAGE} alt="" />
           <div className="future-hero-photo-mask" />
@@ -87,39 +121,64 @@ export default function Home() {
         <div className="future-hero-content">
           <div className="future-eyebrow">
             <span className="signal-dot" />
-            DIGITAL PRODUCT · AI · AUTOMATION
+            DESARROLLO WEB · APLICACIONES · IA · AUTOMATIZACIÓN
           </div>
 
           <h1 className="five-d-title">
-            <span data-text="¿QUÉ">¿QUÉ</span>
-            <span data-text="SIGUE?">SIGUE?</span>
+            <span data-text="PRODUCTOS">PRODUCTOS</span>
+            <span data-text="DIGITALES">DIGITALES</span>
           </h1>
 
           <div className="future-hero-bottom">
-            <p>¿Cómo se vería tu próxima idea si ya viviera en 2030?</p>
+            <p>
+              Diseño y desarrollo experiencias digitales para empresas: sitios,
+              aplicaciones, sistemas, IA, automatización e integraciones.
+            </p>
 
             <div className="future-hero-actions">
-              <a href="#work" className="future-cta future-cta-primary">
-                Ver posibilidades <span>↓</span>
+              <a href="#contact" className="future-cta future-cta-primary">
+                Quiero crear mi proyecto <span>↗</span>
               </a>
-              <a href="#contact" className="future-cta">
-                Quiero algo así <span>↗</span>
+              <a href="#work" className="future-cta">
+                Ver trabajos <span>↓</span>
               </a>
             </div>
           </div>
         </div>
 
         <div className="future-side-label" aria-hidden="true">
-          2027 → 2030
+          WEB · APPS · AI · SYSTEMS
         </div>
       </section>
 
+      <section id="services" className="future-services">
+        <div className="future-services-head" data-reveal>
+          <p className="future-kicker">SERVICIOS</p>
+          <h2 className="five-d-heading" data-text="DE LA IDEA A PRODUCCIÓN">
+            DE LA IDEA A PRODUCCIÓN
+          </h2>
+        </div>
+
+        <div className="future-services-list">
+          {SERVICES.map((service) => (
+            <article key={service.index} className="future-service-row" data-reveal>
+              <span className="future-service-index">{service.index}</span>
+              <div className="future-service-main">
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </div>
+              <span className="future-service-tags">{service.tags}</span>
+              <span className="future-service-arrow">↗</span>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section id="work" className="future-work">
         <div className="future-section-intro" data-reveal>
-          <p className="future-kicker">SELECTED EXPERIENCES</p>
-          <h2 className="five-d-heading" data-text="¿HASTA DÓNDE?">
-            ¿HASTA DÓNDE?
+          <p className="future-kicker">PROYECTOS REALES</p>
+          <h2 className="five-d-heading" data-text="TRABAJO PUBLICADO">
+            TRABAJO PUBLICADO
           </h2>
         </div>
 
@@ -134,7 +193,10 @@ export default function Home() {
           <div className="project-overlay" data-reveal>
             <div>
               <p className="future-kicker">01 · BRAND EXPERIENCE</p>
-              <h3>¿Y SI TU<br />MARCA SE SIENTE?</h3>
+              <h3>TAMARA<br />ATADÍA</h3>
+              <p className="project-summary">
+                Portfolio artístico, marca personal, contenido multimedia y contratación.
+              </p>
             </div>
 
             <div className="project-meta">
@@ -203,7 +265,10 @@ export default function Home() {
           <div className="project-overlay project-overlay-light" data-reveal>
             <div>
               <p className="future-kicker">02 · FULL-STACK PRODUCT</p>
-              <h3>¿Y SI TODO<br />FLUYE?</h3>
+              <h3>JAMLY</h3>
+              <p className="project-summary">
+                Sistema de reservas con autenticación, roles y validación de disponibilidad.
+              </p>
             </div>
 
             <div className="project-meta">
@@ -230,10 +295,13 @@ export default function Home() {
             <div className="commerce-beam commerce-beam-b" />
           </div>
 
-          <div className="project-overlay">
+          <div className="project-overlay" data-reveal>
             <div>
               <p className="future-kicker">03 · COMMERCE EXPERIENCE</p>
-              <h3>¿Y SI COMPRAR<br />SE SIENTE NUEVO?</h3>
+              <h3>E-COMMERCE</h3>
+              <p className="project-summary">
+                Catálogo, autenticación, carrito, administración y flujo de órdenes.
+              </p>
             </div>
 
             <div className="project-meta">
@@ -254,14 +322,16 @@ export default function Home() {
         </article>
       </section>
 
-      <AIArchitectureScene />
+      <div id="architecture">
+        <AIArchitectureScene />
+      </div>
 
       <section id="signal" className="future-signal-section">
         <FutureField />
         <div className="future-signal-copy" data-reveal>
-          <p className="future-kicker">NEXT MOVE</p>
-          <h2 className="five-d-heading five-d-heading-center" data-text="¿QUÉ QUERÉS CREAR?">
-            ¿QUÉ QUERÉS CREAR?
+          <p className="future-kicker">FORMAS DE TRABAJO</p>
+          <h2 className="five-d-heading five-d-heading-center" data-text="ELEGÍ EL PUNTO DE PARTIDA">
+            ELEGÍ EL PUNTO DE PARTIDA
           </h2>
         </div>
 
@@ -271,21 +341,23 @@ export default function Home() {
       </section>
 
       <section className="future-manifesto">
-        <div className="future-manifesto-question">¿Qué querés que tu marca haga sentir?</div>
-        <div className="future-manifesto-line">IMPACT</div>
-        <div className="future-manifesto-question future-manifesto-question-shift">¿Qué experiencia todavía no existe?</div>
-        <div className="future-manifesto-line future-manifesto-line-shift">MOTION</div>
-        <div className="future-manifesto-question">¿Qué podrías llevar al próximo nivel?</div>
-        <div className="future-manifesto-line future-manifesto-line-accent">NEXT</div>
+        <div className="future-manifesto-caption">Experiencias que representan una marca.</div>
+        <div className="future-manifesto-line">WEB</div>
+        <div className="future-manifesto-caption future-manifesto-caption-shift">
+          Productos que operan, conectan y evolucionan.
+        </div>
+        <div className="future-manifesto-line future-manifesto-line-shift">APPS</div>
+        <div className="future-manifesto-caption">Sistemas inteligentes integrados al negocio.</div>
+        <div className="future-manifesto-line future-manifesto-line-accent">AI</div>
       </section>
 
       <section id="contact" className="future-contact">
         <div className="future-contact-copy" data-reveal>
-          <p className="future-kicker">START SOMETHING</p>
-          <h2 className="five-d-heading" data-text="¿Y SI ES AHORA?">
-            ¿Y SI ES AHORA?
+          <p className="future-kicker">NUEVO PROYECTO</p>
+          <h2 className="five-d-heading" data-text="LLEVÁ TU IDEA A PRODUCCIÓN">
+            LLEVÁ TU IDEA A PRODUCCIÓN
           </h2>
-          <p>¿Qué te gustaría ver funcionando, moviéndose y creciendo?</p>
+          <p>Compartí el contexto y definimos una dirección clara para construirlo.</p>
         </div>
 
         <LeadForm />
