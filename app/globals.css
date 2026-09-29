@@ -6215,3 +6215,276 @@ html[data-scroll-direction="up"] .kinetic-track-reverse .kinetic-track-inner {
   .cinematic-work-footer { padding: 20px 0 28px !important; }
   .ai-cinema-machine { min-height: 330px !important; }
 }
+
+
+/* === PR 20 / Syed Noor-inspired cinematic motion language === */
+.motion-ready .statement-grid,
+.motion-ready .client-spectrum-grid,
+.motion-ready .service-flow-head,
+.motion-ready .cinematic-work-head,
+.motion-ready .brand-credits-head,
+.motion-ready .ai-cinema-grid,
+.motion-ready .contact-heading,
+.motion-ready .work-chapter-copy,
+.motion-ready .cinematic-project-frame {
+  opacity: 0;
+  transform: translate3d(0, 72px, 0);
+  clip-path: inset(0 0 18% 0);
+  filter: blur(7px);
+  transition:
+    opacity .9s cubic-bezier(.16,1,.3,1),
+    transform 1.05s cubic-bezier(.16,1,.3,1),
+    clip-path 1.15s cubic-bezier(.16,1,.3,1),
+    filter .9s ease;
+}
+
+.motion-ready .motion-in {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+  clip-path: inset(0 0 0 0);
+  filter: blur(0);
+}
+
+.motion-ready .hero-title > span {
+  transform: translateY(110%) skewY(4deg);
+  opacity: 0;
+  animation: pr20HeroLine 1.05s cubic-bezier(.16,1,.3,1) forwards;
+}
+.motion-ready .hero-title > span:nth-child(1) { animation-delay: .18s; }
+.motion-ready .hero-title > span:nth-child(2) { animation-delay: .31s; }
+.motion-ready .hero-title > span:nth-child(3) { animation-delay: .44s; }
+
+.motion-ready .hero-intro,
+.motion-ready .hero-actions,
+.motion-ready .hero-signature {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: pr20HeroMeta .9s .68s cubic-bezier(.16,1,.3,1) forwards;
+}
+.motion-ready .hero-actions { animation-delay: .82s; }
+.motion-ready .hero-signature { animation-delay: .94s; }
+
+.motion-ready .hero-portrait img {
+  transform-origin: 62% 38%;
+  animation:
+    pr20PortraitReveal 1.8s .12s cubic-bezier(.12,.82,.18,1) both,
+    portraitBreath 12s 2.1s ease-in-out infinite alternate;
+}
+
+.motion-ready .hero-atmosphere {
+  transform: translate3d(0, calc(var(--scroll-depth) * .14), 0);
+  transition: transform .12s linear;
+}
+
+.motion-ready .hero-human-system {
+  transform: translate3d(calc(var(--shift-x) * .45), calc(var(--scroll-depth) * .18), 0);
+}
+
+.motion-ready .kinetic-track-inner {
+  translate: calc(var(--scroll-scrub, 0px) * -.18) 0;
+}
+.motion-ready .kinetic-track-reverse .kinetic-track-inner {
+  translate: calc(var(--scroll-scrub, 0px) * .14) 0;
+}
+
+.motion-ready .service-flow-item {
+  transition:
+    opacity .55s ease,
+    transform .7s cubic-bezier(.16,1,.3,1),
+    border-color .45s ease,
+    background .45s ease;
+}
+.motion-ready .service-flow-item:not(.is-active) {
+  opacity: .42;
+  transform: translateX(0);
+}
+.motion-ready .service-flow-item.is-active {
+  opacity: 1;
+  transform: translateX(14px);
+}
+.motion-ready .service-flow-item.is-active h3,
+.motion-ready .service-flow-item.is-active .service-flow-line,
+.motion-ready .service-flow-item.is-active .service-flow-text,
+.motion-ready .service-flow-item.is-active > a {
+  transform: translateY(0);
+}
+
+.motion-ready .service-stage {
+  transform:
+    perspective(1200px)
+    rotateX(calc(var(--tilt-x) * .34))
+    rotateY(calc(var(--tilt-y) * .34))
+    translate3d(0, calc(var(--scroll-depth) * -.08), 0);
+  transition: transform .18s linear;
+}
+
+.motion-ready .work-chapter-number {
+  transform: translate3d(0, calc(var(--scroll-depth) * -.24), 0);
+  transition: transform .12s linear;
+}
+
+.motion-ready .cinematic-project-frame {
+  overflow: hidden;
+  transform-origin: center;
+}
+.motion-ready .work-chapter.is-active .cinematic-project-frame {
+  transform: translate3d(0,-8px,0) scale(1.012);
+  box-shadow: 0 28px 90px rgba(0,0,0,.24);
+}
+
+.motion-ready .cinematic-project-frame::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: 22;
+  pointer-events: none;
+  background: linear-gradient(
+    112deg,
+    transparent 34%,
+    rgba(255,255,255,.08) 47%,
+    rgba(105,216,255,.08) 51%,
+    transparent 64%
+  );
+  transform: translateX(-135%) skewX(-10deg);
+  opacity: .72;
+  transition: transform 1s cubic-bezier(.16,1,.3,1);
+}
+.motion-ready .cinematic-project-frame:hover::after {
+  transform: translateX(135%) skewX(-10deg);
+}
+
+.motion-ready .film-credit-row {
+  transition:
+    transform .5s cubic-bezier(.16,1,.3,1),
+    opacity .4s ease,
+    background .4s ease;
+}
+.motion-ready .film-credit-row:not(.is-active) { opacity: .42; }
+.motion-ready .film-credit-row.is-active {
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+.motion-ready .first-choice-links a {
+  overflow: hidden;
+}
+.motion-ready .first-choice-links a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(16,16,18,.055));
+  transform: translateY(100%);
+  transition: transform .48s cubic-bezier(.16,1,.3,1);
+}
+.motion-ready .first-choice-links a:hover::before {
+  transform: translateY(0);
+}
+
+.motion-ready .hero-button,
+.motion-ready .nav-project-link,
+.motion-ready .future-submit {
+  transition:
+    transform .35s cubic-bezier(.16,1,.3,1),
+    border-color .35s ease,
+    background .35s ease;
+}
+.motion-ready .hero-button:hover,
+.motion-ready .nav-project-link:hover,
+.motion-ready .future-submit:hover {
+  transform: translateY(-3px);
+}
+
+@keyframes pr20HeroLine {
+  from {
+    opacity: 0;
+    transform: translateY(110%) skewY(4deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0);
+  }
+}
+
+@keyframes pr20HeroMeta {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pr20PortraitReveal {
+  0% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+    transform: scale(1.16) translate3d(4%,3%,0);
+    filter: blur(12px) brightness(.72);
+  }
+  58% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    filter: blur(1px) brightness(.82);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+    transform: scale(1) translate3d(0,0,0);
+    filter: blur(0) brightness(.82);
+  }
+}
+
+@media (max-width: 800px) {
+  .motion-ready .hero-atmosphere,
+  .motion-ready .hero-human-system,
+  .motion-ready .service-stage,
+  .motion-ready .work-chapter-number {
+    transform: none;
+  }
+
+  .motion-ready .service-flow-item.is-active {
+    transform: none;
+  }
+
+  .motion-ready .work-chapter.is-active .cinematic-project-frame {
+    transform: none;
+  }
+
+  .motion-ready .statement-grid,
+  .motion-ready .client-spectrum-grid,
+  .motion-ready .service-flow-head,
+  .motion-ready .cinematic-work-head,
+  .motion-ready .brand-credits-head,
+  .motion-ready .ai-cinema-grid,
+  .motion-ready .contact-heading,
+  .motion-ready .work-chapter-copy,
+  .motion-ready .cinematic-project-frame {
+    transform: translate3d(0, 38px, 0);
+    filter: blur(4px);
+  }
+
+  .motion-ready .motion-in {
+    transform: translate3d(0,0,0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready .hero-title > span,
+  .motion-ready .hero-intro,
+  .motion-ready .hero-actions,
+  .motion-ready .hero-signature,
+  .motion-ready .hero-portrait img,
+  .motion-ready .statement-grid,
+  .motion-ready .client-spectrum-grid,
+  .motion-ready .service-flow-head,
+  .motion-ready .cinematic-work-head,
+  .motion-ready .brand-credits-head,
+  .motion-ready .ai-cinema-grid,
+  .motion-ready .contact-heading,
+  .motion-ready .work-chapter-copy,
+  .motion-ready .cinematic-project-frame {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+}
