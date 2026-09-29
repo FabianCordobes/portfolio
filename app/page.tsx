@@ -108,20 +108,20 @@ export default function Home() {
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">SISTEMAS</span>
-              <span className="hero-reveal hero-reveal-3">DIGITALES</span>
-              <span className="hero-reveal hero-reveal-3 hero-title-outline">CON CRITERIO.</span>
+              <span className="hero-reveal hero-reveal-2">DISEÑO.</span>
+              <span className="hero-reveal hero-reveal-3">DESARROLLO.</span>
+              <span className="hero-reveal hero-reveal-3 hero-title-outline">SISTEMAS.</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Diseño y desarrollo interfaces, aplicaciones y automatizaciones para resolver problemas concretos de adquisición, operación e información. Desde la arquitectura hasta la puesta en producción.
+              Trabajo con empresas, equipos y profesionales que necesitan convertir una necesidad en software: una presencia web, un flujo comercial, una aplicación, una integración o una operación que hoy depende de trabajo manual.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#services" className="hero-button hero-button-primary">
-                Ver enfoque de trabajo <span>↗</span>
+                Ver qué puedo resolver <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Solicitar propuesta <span>↗</span>
@@ -145,8 +145,8 @@ export default function Home() {
 
       <section className="signal-strip" aria-label="Flujo del sistema">
         <div className="signal-strip-track">
-          <span>VISITA</span><i>→</i><span>INTENCIÓN</span><i>→</i><span>CONTEXTO</span><i>→</i><span>PRIORIDAD</span><i>→</i><span>ACCIÓN</span>
-          <b>LEADFLOW / LIVE PIPELINE</b>
+          <span>PROBLEMA</span><i>→</i><span>CONTEXTO</span><i>→</i><span>DECISIÓN</span><i>→</i><span>IMPLEMENTACIÓN</span><i>→</i><span>OPERACIÓN</span>
+          <b>FROM CONTEXT TO SOFTWARE</b>
         </div>
       </section>
 
@@ -164,6 +164,21 @@ export default function Home() {
       </section>
 
       <BrandCredits />
+
+      <section className="client-spectrum">
+        <div className="section-shell client-spectrum-grid" data-reveal>
+          <p className="micro-label">NO HACE FALTA LLEGAR CON UNA SOLUCIÓN DEFINIDA</p>
+          <div>
+            <h2>Podés llegar con una idea,<br /><span>un problema o un sistema que ya existe.</span></h2>
+            <div className="client-spectrum-cases">
+              <article><span>01</span><strong>Necesito empezar</strong><p>Una presencia web, un MVP o una primera versión que permita validar y operar.</p></article>
+              <article><span>02</span><strong>Necesito mejorar</strong><p>Una interfaz, flujo o aplicación existente que necesita evolucionar sin rehacerse sin criterio.</p></article>
+              <article><span>03</span><strong>Necesito conectar</strong><p>Datos, APIs, herramientas o procesos que hoy funcionan separados o requieren intervención manual.</p></article>
+              <article><span>04</span><strong>Necesito resolver</strong><p>Un problema específico que todavía no tiene una solución técnica definida. El trabajo puede empezar por ahí.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <ServiceFlow />
 
