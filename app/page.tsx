@@ -36,31 +36,45 @@ const MEDIA = {
 const SERVICES = [
   {
     index: "01",
-    title: "LANDING PAGES",
-    line: "Presentan. Conectan. Convierten.",
-    text: "Una propuesta clara, una identidad visual fuerte y un recorrido pensado para generar oportunidades.",
+    title: "LANDING PAGE",
+    line: "Presencia. Claridad. Conversión.",
+    text: "Una experiencia enfocada en presentar tu propuesta, atraer atención y generar oportunidades.",
     scene: "landing",
   },
   {
     index: "02",
-    title: "SITIOS WEB",
-    line: "Marca. Contenido. Presencia.",
-    text: "Una experiencia digital completa para comunicar valor, posicionar la marca y acompañar su crecimiento.",
+    title: "SITIO WEB",
+    line: "Identidad. Contenido. Evolución.",
+    text: "Una presencia digital completa para comunicar valor, construir marca y acompañar el crecimiento.",
     scene: "website",
   },
   {
     index: "03",
-    title: "APLICACIONES WEB",
-    line: "Producto. Lógica. Datos.",
-    text: "Interfaces, procesos, integraciones y datos trabajando dentro de una experiencia de producto.",
-    scene: "application",
+    title: "E-COMMERCE",
+    line: "Catálogo. Compra. Gestión.",
+    text: "Una experiencia comercial conectada desde el descubrimiento hasta la administración.",
+    scene: "commerce",
   },
   {
     index: "04",
-    title: "E-COMMERCE",
-    line: "Catálogo. Compra. Gestión.",
-    text: "Una experiencia comercial conectada desde el descubrimiento hasta la operación.",
-    scene: "commerce",
+    title: "APLICACIÓN / SISTEMA",
+    line: "Producto. Lógica. Datos.",
+    text: "Interfaces, procesos, integraciones y datos trabajando dentro de una experiencia a medida.",
+    scene: "application",
+  },
+  {
+    index: "05",
+    title: "AUTOMATIZACIÓN",
+    line: "Flujos. Conexión. Escala.",
+    text: "Procesos digitales que conectan herramientas, información y acciones de forma inteligente.",
+    scene: "automation",
+  },
+  {
+    index: "06",
+    title: "MANTENIMIENTO",
+    line: "Continuidad. Mejora. Evolución.",
+    text: "Acompañamiento técnico para mantener, optimizar y ampliar productos digitales en el tiempo.",
+    scene: "maintenance",
   },
 ];
 
@@ -116,7 +130,7 @@ export default function Home() {
         <div className="future-hero-content">
           <div className="future-eyebrow">
             <span className="signal-dot" />
-            LANDING PAGES · SITIOS WEB · APLICACIONES · E-COMMERCE
+            LANDING · WEB · E-COMMERCE · APLICACIONES · AUTOMATIZACIÓN · MANTENIMIENTO
           </div>
 
           <h1 className="five-d-title">
@@ -126,8 +140,8 @@ export default function Home() {
 
           <div className="future-hero-bottom">
             <p>
-              Diseño y desarrollo productos digitales para marcas, profesionales y
-              empresas con una experiencia visual distintiva y una base técnica sólida.
+              Diseño y desarrollo landing pages, sitios web, e-commerce, aplicaciones,
+              automatizaciones y evolución técnica para marcas, profesionales y empresas.
             </p>
 
             <div className="future-hero-actions">
@@ -149,7 +163,7 @@ export default function Home() {
       <section id="services" className="service-cinema">
         <div className="service-cinema-intro" data-reveal>
           <p className="future-kicker">SERVICIOS</p>
-          <h2 className="five-d-heading" data-text="CUATRO FORMAS DE CONSTRUIR">
+          <h2 className="five-d-heading" data-text="SERVICIOS DIGITALES">
             CUATRO FORMAS DE CONSTRUIR
           </h2>
         </div>
@@ -268,6 +282,54 @@ export default function Home() {
                     </div>
                     <div className="tech-whisper tech-whisper-a">inventory.sync()</div>
                     <div className="tech-whisper tech-whisper-c">orders.stream</div>
+                  </>
+                )}
+
+                {service.scene === "automation" && (
+                  <>
+                    <div className="automation-core">
+                      <small>INTELLIGENT FLOW</small>
+                      <strong>AUTOMATION</strong>
+                      <span>events → rules → actions</span>
+                    </div>
+                    <div className="automation-node automation-node-a">
+                      <small>AI</small><strong>AGENT</strong>
+                    </div>
+                    <div className="automation-node automation-node-b">
+                      <small>REALTIME</small><strong>WS</strong>
+                    </div>
+                    <div className="automation-node automation-node-c">
+                      <small>DATA</small><strong>MONGO</strong>
+                    </div>
+                    <div className="automation-node automation-node-d">
+                      <small>UTILS</small><strong>LODASH</strong>
+                    </div>
+                    <div className="automation-link automation-link-a"><i /></div>
+                    <div className="automation-link automation-link-b"><i /></div>
+                    <div className="automation-link automation-link-c"><i /></div>
+                    <div className="automation-link automation-link-d"><i /></div>
+                    <div className="tech-whisper tech-whisper-a">microservice.execute()</div>
+                    <div className="tech-whisper tech-whisper-c">event.stream / active</div>
+                  </>
+                )}
+
+                {service.scene === "maintenance" && (
+                  <>
+                    <div className="maintenance-orbit maintenance-orbit-a" />
+                    <div className="maintenance-orbit maintenance-orbit-b" />
+                    <div className="maintenance-core">
+                      <small>DIGITAL PRODUCT</small>
+                      <strong>ACTIVE</strong>
+                      <div className="maintenance-status">
+                        <span><i /> PERFORMANCE</span>
+                        <span><i /> EVOLUTION</span>
+                        <span><i /> DELIVERY</span>
+                      </div>
+                    </div>
+                    <div className="maintenance-module maintenance-module-a">01 · UPDATE</div>
+                    <div className="maintenance-module maintenance-module-b">02 · OPTIMIZE</div>
+                    <div className="maintenance-module maintenance-module-c">03 · EXTEND</div>
+                    <div className="tech-whisper tech-whisper-b">release.pipeline()</div>
                   </>
                 )}
               </div>
