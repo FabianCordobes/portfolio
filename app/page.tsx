@@ -104,28 +104,28 @@ export default function Home() {
         <div className="section-shell hero-content">
           <div className="hero-overline hero-reveal hero-reveal-1">
             <span className="live-dot" />
-            DISEÑO Y DESARROLLO DIGITAL · DE SITIOS WEB A SISTEMAS
+            DESARROLLO WEB · APLICACIONES · SISTEMAS
           </div>
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">SOLUCIONES</span>
-              <span className="hero-reveal hero-reveal-3">DIGITALES</span>
-              <span className="hero-reveal hero-reveal-3 hero-title-outline">A MEDIDA.</span>
+              <span className="hero-reveal hero-reveal-2">CREO</span>
+              <span className="hero-reveal hero-reveal-3">SOLUCIONES</span>
+              <span className="hero-reveal hero-reveal-3 hero-title-outline">DIGITALES.</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Diseño y desarrollo sitios web, tiendas, aplicaciones y sistemas para profesionales, empresas y equipos. El alcance puede ser una web clara y bien resuelta o una plataforma con lógica, datos, integraciones y automatización.
+              Desde una landing o sitio profesional hasta una aplicación o sistema completo. Diseño y desarrollo experiencias digitales que presentan, venden, organizan, conectan y hacen avanzar una operación.
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#solutions" className="hero-button hero-button-primary">
-                Explorar soluciones <span>↗</span>
+                Encontrar mi solución <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
-                Solicitar propuesta <span>↗</span>
+                Hablemos de tu proyecto <span>↗</span>
               </a>
             </div>
 
@@ -137,8 +137,21 @@ export default function Home() {
         </div>
 
         <div className="hero-scroll-cue" aria-hidden="true">
-          <span>SCROLL TO ENTER</span>
+          <span>EXPLORAR</span>
           <i />
+        </div>
+      </section>
+
+      <section className="first-choice" aria-label="Tipos de proyecto">
+        <div className="section-shell first-choice-inner">
+          <p>¿Qué querés crear?</p>
+          <div className="first-choice-links">
+            <a href="#services"><span>01</span>Una web</a>
+            <a href="#services"><span>02</span>Una tienda</a>
+            <a href="#services"><span>03</span>Una aplicación</a>
+            <a href="#services"><span>04</span>Un sistema</a>
+            <a href="#contact"><span>05</span>Definirlo juntos</a>
+          </div>
         </div>
       </section>
 
