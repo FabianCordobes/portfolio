@@ -91,7 +91,6 @@ export default function Home() {
         <nav>
           <a href="#services">Servicios</a>
           <a href="#work">Proyectos</a>
-          <a href="#architecture">Tech</a>
           <a href="/portfolio">Portfolio</a>
         </nav>
 
@@ -108,7 +107,7 @@ export default function Home() {
         aria-label="Abrir conversación por WhatsApp"
       >
         <span className="whatsapp-pulse" />
-        <span className="whatsapp-icon">WA</span>
+        <span className="whatsapp-icon"><WhatsAppMark /></span>
         <span className="whatsapp-label">WhatsApp</span>
       </a>
 
@@ -164,7 +163,7 @@ export default function Home() {
         <div className="service-cinema-intro" data-reveal>
           <p className="future-kicker">SERVICIOS</p>
           <h2 className="five-d-heading" data-text="SERVICIOS DIGITALES">
-            CUATRO FORMAS DE CONSTRUIR
+            SERVICIOS DIGITALES
           </h2>
         </div>
 
@@ -427,9 +426,7 @@ export default function Home() {
         </a>
       </section>
 
-      <div id="architecture">
-        <AIArchitectureScene />
-      </div>
+      <AIArchitectureScene />
 
       <section id="signal" className="future-signal-section">
         <FutureField />
@@ -485,5 +482,16 @@ function Metric({ value, label }: { value: string; label: string }) {
       <strong>{value}</strong>
       <span>{label}</span>
     </div>
+  );
+}
+
+function WhatsAppMark() {
+  return (
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.93 7.93 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.327-5.607ZM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.25a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.591-6.592 6.591Zm3.615-4.934c-.197-.1-1.17-.578-1.353-.646-.182-.066-.315-.1-.445.1-.133.197-.513.646-.627.775-.115.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.984-.59-.525-.986-1.17-1.1-1.37-.116-.198-.013-.306.084-.404.09-.088.2-.23.3-.345.098-.115.132-.198.198-.33.066-.133.033-.25-.017-.35-.05-.1-.445-1.078-.61-1.475-.161-.387-.325-.334-.445-.34-.115-.007-.247-.007-.38-.007a.729.729 0 0 0-.528.247c-.182.198-.695.68-.695 1.657s.712 1.916.81 2.049c.1.132 1.4 2.137 3.4 2.996.476.205.847.328 1.136.42.477.15.91.13 1.253.079.383-.058 1.17-.48 1.335-.943.164-.462.164-.858.115-.943-.05-.084-.182-.132-.38-.23Z"
+      />
+    </svg>
   );
 }
