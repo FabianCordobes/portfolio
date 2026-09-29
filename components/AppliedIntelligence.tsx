@@ -7,10 +7,10 @@ export default function AppliedIntelligence() {
 
       <div className="ai-cinema-bg" aria-hidden="true">
         <div className="ai-cinema-type ai-cinema-type-a">
-          INTELIGENCIA APLICADA · AUTOMATIZACIÓN · DATOS · REALTIME ·
+          LEADFLOW · CAPTURA · CONTEXTO · PRIORIDAD · SEGUIMIENTO ·
         </div>
         <div className="ai-cinema-type ai-cinema-type-b">
-          SYSTEMS · WORKFLOWS · APIs · SIGNAL · LOGIC ·
+          UTM · FORMULARIO · SCORING · TRELLO · AUTOMATION ·
         </div>
 
         <div className="ai-frame-burn ai-frame-burn-a" />
@@ -23,20 +23,20 @@ export default function AppliedIntelligence() {
 
       <div className="section-shell ai-cinema-layout">
         <div className="ai-cinema-copy" data-reveal>
-          <p className="micro-label">INTELIGENCIA APLICADA</p>
+          <p className="micro-label">SISTEMA LEADFLOW</p>
           <h2>
-            Menos trabajo manual.<br />
-            <span>Más capacidad para avanzar.</span>
+            De una visita a una oportunidad.<br />
+            <span>Sin perder el contexto en el camino.</span>
           </h2>
           <p>
-            Integro herramientas, datos y automatizaciones para reducir tareas repetitivas, mejorar tiempos de respuesta y hacer que la operación acompañe el crecimiento.
+            El sistema registra de dónde llega la consulta, interpreta qué necesita el prospecto, asigna señales de prioridad y organiza la información para que el seguimiento empiece con contexto.
           </p>
 
           <div className="ai-capability-line">
-            <span>APIs</span>
-            <span>WORKFLOWS</span>
-            <span>WEBSOCKET</span>
-            <span>DATA</span>
+            <span>UTM TRACKING</span>
+            <span>NEED DETECTION</span>
+            <span>LEAD SCORE</span>
+            <span>TRELLO</span>
           </div>
         </div>
 
@@ -54,15 +54,15 @@ export default function AppliedIntelligence() {
           <div className="ai-stream stream-c"><i /><i /><i /></div>
 
           <div className="ai-signal-rail rail-a">
-            <span>INPUT / DATA</span>
+            <span>VISIT / SOURCE</span>
             <b />
           </div>
           <div className="ai-signal-rail rail-b">
-            <span>PROCESS / LOGIC</span>
+            <span>ANALYZE / SCORE</span>
             <b />
           </div>
           <div className="ai-signal-rail rail-c">
-            <span>OUTPUT / ACTION</span>
+            <span>PIPELINE / FOLLOW-UP</span>
             <b />
           </div>
 
