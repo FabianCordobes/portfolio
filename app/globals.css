@@ -5894,3 +5894,110 @@ html[data-scroll-direction="up"] .kinetic-track-reverse .kinetic-track-inner {
     grid-column: 1 / 2;
   }
 }
+
+
+/* === PR 19 / mobile vertical rhythm compaction === */
+@media (max-width: 600px) {
+  .statement-section,
+  .client-spectrum,
+  .service-flow,
+  .cinematic-work,
+  .brand-credits,
+  .applied-intelligence,
+  .contact-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .cinematic-work-head,
+  .brand-credits-head,
+  .service-flow-head,
+  .contact-heading {
+    margin-bottom: 42px;
+  }
+
+  .work-chapter {
+    min-height: auto;
+    padding-block: 42px;
+  }
+
+  .work-chapter-grid {
+    min-height: auto;
+    gap: 28px;
+  }
+
+  .cinematic-project-frame {
+    min-height: 340px;
+  }
+
+  .project-frame-stage {
+    min-height: 280px;
+  }
+
+  .cinematic-work-footer {
+    min-height: auto;
+    padding: 34px 0 48px;
+  }
+
+  .cinematic-work-footer .section-shell {
+    min-height: auto;
+  }
+
+  .cinematic-work-footer a {
+    margin-top: 0;
+  }
+
+  .applied-intelligence {
+    min-height: auto;
+  }
+
+  .ai-cinema-grid {
+    min-height: auto;
+    gap: 42px;
+  }
+
+  .ai-cinema-copy {
+    padding-block: 0;
+  }
+
+  .ai-cinema-copy h2 {
+    margin-top: 20px;
+  }
+
+  .leadflow-sequence {
+    margin-top: 26px;
+  }
+
+  .film-credits-stage {
+    margin-top: 36px;
+    padding-bottom: 18px;
+  }
+
+  .client-spectrum-cases {
+    margin-top: 34px;
+  }
+
+  .first-choice-inner {
+    min-height: 0;
+  }
+
+  .contact-heading {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .statement-section,
+  .client-spectrum,
+  .service-flow,
+  .cinematic-work,
+  .brand-credits,
+  .applied-intelligence,
+  .contact-section {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .work-chapter { padding-block: 34px; }
+  .cinematic-work-footer { padding: 28px 0 38px; }
+}
