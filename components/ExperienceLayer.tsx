@@ -54,12 +54,30 @@ export default function ExperienceLayer() {
     const revealItems = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
     revealItems.forEach((item) => observer.observe(item));
 
+    const motionItems = Array.from(document.querySelectorAll<HTMLElement>(
+      ".statement-grid, .client-spectrum-grid, .service-flow-head, .cinematic-work-head, .brand-credits-head, .ai-cinema-grid, .contact-heading, .work-chapter-copy, .cinematic-project-frame"
+    ));
+
+    const motionObserver = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          (entry.target as HTMLElement).classList.add("motion-in");
+          motionObserver.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -10% 0px" },
+    );
+
+    motionItems.forEach((item) => motionObserver.observe(item));
+
     window.addEventListener("pointermove", onPointerMove, { passive: true });
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
 
     return () => {
       observer.disconnect();
+      motionObserver.disconnect();
       window.removeEventListener("pointermove", onPointerMove);
       window.removeEventListener("scroll", onScroll);
       root.classList.remove("motion-ready");
