@@ -5,33 +5,33 @@ import { useEffect, useRef, useState } from "react";
 const SERVICES = [
   {
     id: "01",
-    title: "Sistema de Captación",
-    line: "Captar. Entender. Priorizar.",
-    text: "Una landing conectada a un formulario inteligente que registra el origen de cada consulta, detecta necesidades y prepara la oportunidad para su seguimiento comercial.",
+    title: "Adquisición y Captura",
+    line: "Interfaces conectadas a procesos.",
+    text: "Diseño puntos de entrada que registran procedencia, intención y contexto. La información puede validarse, clasificarse y derivarse al flujo operativo correspondiente.",
   },
   {
     id: "02",
-    title: "Web de Conversión",
-    line: "Claridad. Confianza. Acción.",
-    text: "Diseño una presencia digital enfocada en explicar tu propuesta, reducir dudas y llevar a cada visitante hacia una acción concreta.",
+    title: "Web e Interfaces",
+    line: "Arquitectura de información y experiencia.",
+    text: "Construyo sitios e interfaces donde contenido, jerarquía visual, rendimiento y comportamiento responden a objetivos definidos, no a una plantilla.",
   },
   {
     id: "03",
     title: "Comercio Digital",
-    line: "Descubrir. Elegir. Comprar.",
-    text: "Construyo experiencias de venta donde catálogo, navegación y checkout forman un recorrido simple y administrable.",
+    line: "Catálogo, estado y transacciones.",
+    text: "Implemento experiencias de comercio con navegación, gestión de estado, carrito, órdenes e integraciones, cuidando consistencia entre interfaz y lógica.",
   },
   {
     id: "04",
-    title: "Software a Medida",
-    line: "Procesos. Datos. Operación.",
-    text: "Desarrollo aplicaciones y sistemas cuando una solución estándar no alcanza: autenticación, roles, datos, integraciones y lógica de negocio.",
+    title: "Aplicaciones y Sistemas",
+    line: "Dominio, datos e integración.",
+    text: "Desarrollo aplicaciones cuando el problema requiere reglas propias: autenticación, permisos, persistencia, APIs, integraciones y procesos específicos del dominio.",
   },
   {
     id: "05",
-    title: "Automatización",
-    line: "Conectar. Ejecutar. Escalar.",
-    text: "Conecto herramientas y flujos para reducir tareas manuales, acelerar respuestas y convertir información dispersa en acciones concretas.",
+    title: "Automatización e Integración",
+    line: "Menos transferencia manual entre sistemas.",
+    text: "Conecto servicios, eventos y datos para ejecutar tareas repetibles de forma consistente, conservar trazabilidad y reducir puntos de intervención manual.",
   },
 ];
 
@@ -62,8 +62,8 @@ export default function ServiceFlow() {
   return (
     <section id="services" className="service-flow">
       <div className="section-shell service-flow-head" data-reveal>
-        <p className="micro-label">SOLUCIONES</p>
-        <h2>Primero, el resultado.<br /><span>Después, la tecnología necesaria para conseguirlo.</span></h2>
+        <p className="micro-label">ÁREAS DE TRABAJO</p>
+        <h2>No parto de una tecnología.<br /><span>Parto del problema y sus restricciones.</span></h2>
       </div>
 
       <div className="section-shell service-flow-layout">
@@ -83,7 +83,7 @@ export default function ServiceFlow() {
             <div className="service-stage-pulse pulse-a" />
             <div className="service-stage-pulse pulse-b" />
             <div className="service-stage-caption">
-              <small>ACTIVE LAYER</small>
+              <small>CURRENT DOMAIN</small>
               <strong>{current.title}</strong>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function ServiceFlow() {
               <h3>{service.title}</h3>
               <p className="service-flow-line">{service.line}</p>
               <p className="service-flow-text">{service.text}</p>
-              <a href="#contact">Quiero resolver esto ↗</a>
+              <a href="#contact">Plantear un caso ↗</a>
             </article>
           ))}
         </div>
