@@ -9,7 +9,7 @@ const PROJECTS = [
     type: "Aplicación full-stack",
     result: "Reservas, disponibilidad y operación en una sola experiencia.",
     description:
-      "Producto full-stack para gestionar reservas de salas y estudios con autenticación, roles y lógica de disponibilidad.",
+      "Plataforma full-stack para gestionar reservas de salas y estudios con autenticación, roles y lógica de disponibilidad.",
     tech: ["Next.js", "NestJS", "PostgreSQL", "TypeORM"],
     href: "https://github.com/FabianCordobes/jamly",
     visual: "jamly",
@@ -70,7 +70,7 @@ export default function SelectedWork() {
           </h2>
           <p>
             Cada proyecto se construye desde la necesidad real hasta la experiencia
-            final: interfaz, producto, datos y operación.
+            final: interfaz, arquitectura, datos y operación.
           </p>
         </div>
       </div>
@@ -166,7 +166,7 @@ export default function SelectedWork() {
                         <small>COMMERCE EXPERIENCE</small>
                         <strong>DISCOVER<br />CHOOSE<br />BUY</strong>
                         <div className="commerce-film-line"><i /><i /><i /></div>
-                        <span>PRODUCT · CART · CHECKOUT</span>
+                        <span>CATALOG · CART · CHECKOUT</span>
                       </div>
                     </>
                   )}
