@@ -5637,3 +5637,130 @@ html[data-scroll-direction="up"] .kinetic-track-reverse .kinetic-track-inner {
   .ai-cinema-copy h2,
   .contact-heading h2 { font-size: 2.8rem; }
 }
+
+
+/* === PR 19 / narrow mobile correction === */
+@media (max-width: 480px) {
+  html, body, .living-site {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .living-nav {
+    width: 100%;
+    min-width: 0;
+    gap: 10px;
+  }
+  .living-brand { min-width: 0; }
+  .nav-project-link {
+    width: auto;
+    max-width: 150px;
+    white-space: nowrap;
+  }
+
+  .living-hero {
+    min-height: 100svh;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 8;
+    width: calc(100% - 28px);
+    min-width: 0;
+    margin-inline: auto;
+    padding-top: 100px;
+    padding-bottom: 84px;
+  }
+
+  .hero-overline {
+    width: min(100%, 270px);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-title-wrap,
+  .hero-title {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-title {
+    font-size: clamp(3.15rem, 15.4vw, 4.15rem);
+    line-height: .9;
+    letter-spacing: -.065em;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .hero-title > span {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .hero-intro {
+    width: 100%;
+    max-width: 100%;
+    font-size: .96rem !important;
+    line-height: 1.58 !important;
+    overflow-wrap: break-word;
+  }
+
+  .hero-footer {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-actions,
+  .hero-button,
+  .hero-button-primary {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-button {
+    box-sizing: border-box;
+    padding-inline: 16px;
+    font-size: .86rem;
+  }
+
+  .hero-human-system {
+    right: -31%;
+    width: 112%;
+    opacity: .3;
+  }
+
+  .hero-portrait {
+    top: 7%;
+    right: 0;
+    width: 92%;
+    height: 93%;
+  }
+
+  .hero-portrait img {
+    object-position: 57% center;
+  }
+
+  .hero-portrait-wash {
+    background:
+      linear-gradient(90deg,#050506 0%,rgba(5,5,6,.92) 21%,rgba(5,5,6,.58) 48%,rgba(5,5,6,.18) 76%,rgba(5,5,6,.08) 100%),
+      linear-gradient(0deg,#050506 0%,rgba(5,5,6,.7) 16%,transparent 46%);
+  }
+
+  .whatsapp-live { z-index: 30; }
+}
+
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: clamp(2.85rem, 15vw, 3.35rem);
+    letter-spacing: -.055em;
+  }
+  .hero-intro { font-size: .92rem !important; }
+  .nav-project-link {
+    max-width: 132px;
+    font-size: .67rem;
+  }
+}
