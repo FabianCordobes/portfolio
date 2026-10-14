@@ -4,10 +4,17 @@ export const metadata: Metadata = {
   title: "Proyectos y soluciones digitales — Fabián Cordobés",
   description:
     "Sitios web, aplicaciones y sistemas desarrollados por Fabián Cordobés para marcas, profesionales y operaciones digitales.",
+  alternates: { canonical: "/portfolio" },
+  openGraph: {
+    title: "Proyectos y soluciones digitales — Fabián Cordobés",
+    description: "Conocé proyectos web y soluciones digitales desarrolladas por Fabián Cordobés.",
+    url: "/portfolio",
+    type: "website",
+  },
 };
 
 const CONTACT = {
-  linkedin: "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/?isSelfProfile=true",
+  linkedin: "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/",
   github: "https://github.com/FabianCordobes",
 };
 
@@ -93,8 +100,6 @@ export default function PortfolioPage() {
               <div className="mt-7 flex flex-wrap gap-3">
                 <a
                   href="#projects"
-                  target="_blank"
-                  rel="noreferrer"
                   className="rounded-full bg-[#c8ff62] px-5 py-3 text-sm font-semibold text-black transition hover:bg-[#d5ff87]"
                 >
                   Ver proyectos ↗
@@ -200,10 +205,10 @@ export default function PortfolioPage() {
         <p>© {new Date().getFullYear()} Fabián — TRABAJO REALIZADO</p>
         <div className="flex flex-wrap gap-6">
           <a className="transition hover:text-white" href="/">Servicios</a>
-          <a className="transition hover:text-white" href="#projects" target="_blank" rel="noreferrer">
+          <a className="transition hover:text-white" href={CONTACT.github} target="_blank" rel="noreferrer">
             GitHub
           </a>
-          <a className="transition hover:text-white" href="/#contact" target="_blank" rel="noreferrer">
+          <a className="transition hover:text-white" href={CONTACT.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
         </div>

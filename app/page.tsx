@@ -22,7 +22,7 @@ const HERO_IMAGE =
 const CONTACT = {
   whatsapp: "https://wa.me/5491127813814",
   linkedin:
-    "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/?isSelfProfile=true",
+    "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/",
 };
 
 export default function Home() {
