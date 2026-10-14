@@ -28,6 +28,7 @@ const CONTACT = {
 export default function Home() {
   return (
     <main className="living-site">
+      <a className="skip-to-main" href="#home">Saltar al contenido</a>
       <ExperienceLayer />
 
       <header className="living-nav">
@@ -35,14 +36,15 @@ export default function Home() {
           FABIÁN<span>.</span>
         </a>
 
-        <nav>
+        <nav aria-label="Navegación principal">
           <a href="#solutions">Soluciones</a>
           <a href="#work">Proyectos</a>
-          <a href="/portfolio">Perfil</a>
+          <a href="/portfolio" className="nav-recruiter-link">Perfil profesional</a>
         </nav>
 
         <a href="#contact" className="nav-project-link">
-          Plantear un proyecto ↗
+          <span className="nav-project-full">Plantear un proyecto ↗</span>
+          <span className="nav-project-short">Proyecto ↗</span>
         </a>
       </header>
 
@@ -115,6 +117,9 @@ export default function Home() {
             <p className="hero-intro hero-reveal hero-reveal-4">
               Desde una landing o sitio profesional hasta una aplicación o sistema completo. Diseño y desarrollo experiencias digitales que presentan, venden, organizan, conectan y hacen avanzar una operación.
             </p>
+            <p className="hero-professional-proof">
+              Fabián Ariel Cordobés <span>· Full Stack Developer · Backend Focus</span>
+            </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
@@ -149,6 +154,30 @@ export default function Home() {
             <a href="#services"><span>03</span>Una aplicación</a>
             <a href="#services"><span>04</span>Un sistema</a>
             <a href="#contact"><span>05</span>Definirlo juntos</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="recruiters" className="recruiter-route" aria-labelledby="recruiter-route-title">
+        <div className="section-shell recruiter-route-inner">
+          <div className="recruiter-route-copy">
+            <p className="recruiter-route-eyebrow">PERFIL PROFESIONAL / FOR HIRING TEAMS</p>
+            <h2 id="recruiter-route-title">¿Buscás un desarrollador para tu equipo?</h2>
+            <p>
+              Soy Fabián Ariel Cordobés, Full Stack Developer con más de 3 años
+              de experiencia y especialización en Backend. Trabajo con TypeScript,
+              Node.js, NestJS y AWS, desarrollando APIs, integraciones y sistemas
+              para entornos de producción.
+            </p>
+            <p className="recruiter-route-scope">Full Stack Developer · Backend Developer · Semi Senior · Buenos Aires, Argentina</p>
+          </div>
+          <div className="recruiter-route-actions">
+            <a href="/portfolio" className="recruiter-route-primary">
+              Experiencia y proyectos <span aria-hidden="true">↗</span>
+            </a>
+            <a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer" className="recruiter-route-secondary">
+              Ver mi LinkedIn <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </section>
@@ -232,7 +261,7 @@ export default function Home() {
             <span>SOFTWARE ENGINEERING · WEB SYSTEMS · AUTOMATION</span>
           </div>
           <div>
-            <a href="/portfolio">Perfil profesional</a>
+            <a href="/portfolio">Perfil técnico y experiencia</a>
             <a href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
           <p>© {new Date().getFullYear()}</p>
