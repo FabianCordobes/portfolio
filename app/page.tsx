@@ -38,7 +38,7 @@ export default function Home() {
         <nav>
           <a href="#solutions">Soluciones</a>
           <a href="#work">Proyectos</a>
-          <a href="/portfolio">Trabajo realizado</a>
+          <a href="/portfolio">Perfil</a>
         </nav>
 
         <a href="#contact" className="nav-project-link">
@@ -232,7 +232,7 @@ export default function Home() {
             <span>SOFTWARE ENGINEERING · WEB SYSTEMS · AUTOMATION</span>
           </div>
           <div>
-            <a href="/portfolio">Proyectos</a>
+            <a href="/portfolio">Perfil profesional</a>
             <a href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
           <p>© {new Date().getFullYear()}</p>

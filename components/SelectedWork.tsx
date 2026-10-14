@@ -196,7 +196,7 @@ export default function SelectedWork() {
       </div>
 
       <div className="section-shell cinematic-work-footer">
-        <a href="/portfolio">
+        <a href="/portfolio#projects">
           Ver más proyectos <span>↗</span>
         </a>
       </div>
