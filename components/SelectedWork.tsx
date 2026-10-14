@@ -5,17 +5,6 @@ import { useEffect, useRef, useState } from "react";
 const PROJECTS = [
   {
     id: "01",
-    title: "FlowOps",
-    type: "Sistema de gestión operativa",
-    result: "Órdenes de trabajo, seguimiento y operaciones en un solo lugar.",
-    description:
-      "Aplicación para organizar órdenes de trabajo, gestionar su seguimiento y conectar la operación móvil con servicios backend.",
-    tech: ["React Native", "Expo", "NestJS", "Supabase"],
-    href: "#work",
-    visual: "flowops",
-  },
-  {
-    id: "02",
     title: "Jamly",
     type: "Aplicación full-stack",
     result: "Reservas, disponibilidad y operación en una sola experiencia.",
@@ -26,7 +15,7 @@ const PROJECTS = [
     visual: "jamly",
   },
   {
-    id: "03",
+    id: "02",
     title: "E-commerce App",
     type: "Comercio digital",
     result: "Un recorrido continuo desde el descubrimiento hasta el checkout.",
@@ -37,7 +26,7 @@ const PROJECTS = [
     visual: "commerce",
   },
   {
-    id: "04",
+    id: "03",
     title: "Travel App",
     type: "Experiencia web",
     result: "Exploración, navegación y contenido dentro de un flujo continuo.",
@@ -76,22 +65,17 @@ export default function SelectedWork() {
         <p className="micro-label dark">PROYECTOS / SOLUCIONES EN ACCIÓN</p>
         <div>
           <h2>
-            Ideas llevadas a experiencias reales.
-            <br />
-            <span>
-              Proyectos que muestran distintas formas de crear valor digital.
-            </span>
+            Ideas llevadas a experiencias reales.<br />
+            <span>Proyectos que muestran distintas formas de crear valor digital.</span>
           </h2>
           <p>
-            Sitios, aplicaciones y experiencias desarrolladas para objetivos
-            distintos: presentar una propuesta, facilitar una compra, organizar
-            reservas y construir recorridos digitales claros.
+            Sitios, aplicaciones y experiencias desarrolladas para objetivos distintos: presentar una propuesta, facilitar una compra, organizar reservas y construir recorridos digitales claros.
           </p>
         </div>
       </div>
 
       <div className="cinematic-work-progress" aria-hidden="true">
-        <span>{String(PROJECTS.length).padStart(2, "0")}</span>
+        <span>{String(active + 1).padStart(2, "0")}</span>
         <i />
         <span>03</span>
       </div>
@@ -100,13 +84,9 @@ export default function SelectedWork() {
         {PROJECTS.map((project, index) => (
           <article
             key={project.id}
-            ref={(node) => {
-              refs.current[index] = node;
-            }}
+            ref={(node) => { refs.current[index] = node; }}
             data-index={index}
-            className={
-              active === index ? "work-chapter is-active" : "work-chapter"
-            }
+            className={active === index ? "work-chapter is-active" : "work-chapter"}
           >
             <div className="work-chapter-number" aria-hidden="true">
               <span>{project.id}</span>
@@ -118,14 +98,10 @@ export default function SelectedWork() {
                 <p className="work-chapter-type">{project.type}</p>
                 <h3>{project.title}</h3>
                 <p className="work-chapter-result">{project.result}</p>
-                <p className="work-chapter-description">
-                  {project.description}
-                </p>
+                <p className="work-chapter-description">{project.description}</p>
 
                 <div className="work-chapter-tech">
-                  {project.tech.map((tech) => (
-                    <span key={tech}>{tech}</span>
-                  ))}
+                  {project.tech.map((tech) => <span key={tech}>{tech}</span>)}
                 </div>
 
                 <a href={project.href} target="_blank" rel="noreferrer">
@@ -142,9 +118,7 @@ export default function SelectedWork() {
               >
                 <div className="project-frame-top">
                   <span>FABIAN / SELECTED WORK</span>
-                  <span>
-                    {project.id} / {String(PROJECTS.length).padStart(2, "0")}
-                  </span>
+                  <span>{project.id} / 03</span>
                 </div>
 
                 <div className="project-frame-stage">
@@ -152,41 +126,6 @@ export default function SelectedWork() {
                   <div className="project-frame-scan" />
                   <div className="project-frame-chroma chroma-one" />
                   <div className="project-frame-chroma chroma-two" />
-
-                  {project.visual === "flowops" && (
-                    <div className="flowops-film-ui">
-                      <div className="flowops-film-header">
-                        <span>FLOWOPS / OPERATIONS</span>
-                        <span>LIVE OVERVIEW</span>
-                      </div>
-
-                      <div className="flowops-film-content">
-                        <div className="flowops-film-summary">
-                          <small>WORK ORDERS</small>
-                          <strong>24</strong>
-                          <span>Operational overview</span>
-                        </div>
-
-                        <div className="flowops-film-orders">
-                          {[
-                            { id: "WO-1024", status: "IN PROGRESS" },
-                            { id: "WO-1025", status: "PENDING" },
-                            { id: "WO-1026", status: "COMPLETED" },
-                          ].map((order) => (
-                            <div className="flowops-film-order" key={order.id}>
-                              <span>{order.id}</span>
-                              <small>{order.status}</small>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div className="flowops-film-footer">
-                        <span>FIELD OPERATIONS</span>
-                        <span>CONNECTED WORKFLOW ↗</span>
-                      </div>
-                    </div>
-                  )}
 
                   {project.visual === "jamly" && (
                     <>
@@ -206,14 +145,9 @@ export default function SelectedWork() {
                           <div className="jamly-film-side">
                             <small>AVAILABILITY</small>
                             <div className="jamly-bars">
-                              {[34, 58, 43, 81, 62, 92, 68, 78].map(
-                                (height, barIndex) => (
-                                  <i
-                                    key={barIndex}
-                                    style={{ height: `${height}%` }}
-                                  />
-                                ),
-                              )}
+                              {[34, 58, 43, 81, 62, 92, 68, 78].map((height, barIndex) => (
+                                <i key={barIndex} style={{ height: `${height}%` }} />
+                              ))}
                             </div>
                           </div>
                         </div>
@@ -229,18 +163,8 @@ export default function SelectedWork() {
                       </div>
                       <div className="commerce-film-panel">
                         <small>COMMERCE EXPERIENCE</small>
-                        <strong>
-                          DISCOVER
-                          <br />
-                          CHOOSE
-                          <br />
-                          BUY
-                        </strong>
-                        <div className="commerce-film-line">
-                          <i />
-                          <i />
-                          <i />
-                        </div>
+                        <strong>DISCOVER<br />CHOOSE<br />BUY</strong>
+                        <div className="commerce-film-line"><i /><i /><i /></div>
                         <span>CATALOG · CART · CHECKOUT</span>
                       </div>
                     </>
@@ -250,18 +174,11 @@ export default function SelectedWork() {
                     <>
                       <div className="travel-film-map" />
                       <div className="travel-film-route">
-                        <i />
-                        <i />
-                        <i />
-                        <i />
+                        <i /><i /><i /><i />
                       </div>
                       <div className="travel-film-panel">
                         <small>EXPLORE / LIVE ROUTE</small>
-                        <strong>
-                          BUENOS
-                          <br />
-                          AIRES
-                        </strong>
+                        <strong>BUENOS<br />AIRES</strong>
                         <span>Discover · Move · Connect</span>
                       </div>
                     </>
