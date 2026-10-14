@@ -102,16 +102,18 @@ function SectionHeading({
   index,
   title,
   introduction,
+  headingId,
 }: {
   index: string;
   title: string;
   introduction?: string;
+  headingId: string;
 }) {
   return (
     <div className="mb-8 grid gap-4 border-t border-white/15 pt-7 sm:mb-10 md:grid-cols-[190px_minmax(0,1fr)] md:gap-10">
       <p className="pt-1 text-sm font-semibold uppercase tracking-[0.12em] text-[#c8ff62]">{index}</p>
       <div>
-        <h2 className="text-4xl font-semibold leading-[1.06] tracking-[-0.045em] text-white sm:text-5xl">{title}</h2>
+        <h2 id={headingId} className="text-4xl font-semibold leading-[1.06] tracking-[-0.045em] text-white sm:text-5xl">{title}</h2>
         {introduction && <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">{introduction}</p>}
       </div>
     </div>
@@ -212,7 +214,7 @@ export default function PortfolioPage() {
 
         <section id="about" aria-labelledby="about-heading" className="scroll-mt-32">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
-            <SectionHeading index="01 / ABOUT" title="Building reliable software, end to end." />
+            <SectionHeading headingId="about-heading" index="01 / ABOUT" title="Building reliable software, end to end." />
             <div className="grid gap-7 md:grid-cols-[190px_minmax(0,1fr)] md:gap-10">
               <p className="text-sm font-medium uppercase tracking-[0.12em] text-white/55">PROFILE</p>
               <div className="max-w-3xl space-y-5 text-lg leading-[1.8] text-white/80">
@@ -237,7 +239,7 @@ export default function PortfolioPage() {
 
         <section id="experience" aria-labelledby="experience-heading" className="scroll-mt-32 bg-[#0d0e0e]">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
-            <SectionHeading index="02 / EXPERIENCE" title="Professional experience." introduction="A summary of my recent work across backend systems and web development." />
+            <SectionHeading headingId="experience-heading" index="02 / EXPERIENCE" title="Professional experience." introduction="A summary of my recent work across backend systems and web development." />
             <div className="space-y-4">
               {experience.map((item) => (
                 <article key={item.organization} className="grid gap-5 rounded-2xl border border-white/15 bg-white/[0.025] p-6 sm:p-8 md:grid-cols-[190px_minmax(0,1fr)] md:gap-10">
@@ -260,7 +262,7 @@ export default function PortfolioPage() {
 
         <section id="projects" aria-labelledby="projects-heading" className="scroll-mt-32">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
-            <SectionHeading index="03 / FEATURED" title="Selected projects." introduction="A selection of work highlighting different areas of my engineering practice." />
+            <SectionHeading headingId="projects-heading" index="03 / FEATURED" title="Selected projects." introduction="A selection of work highlighting different areas of my engineering practice." />
             <div className="grid gap-5 lg:grid-cols-3">
               {projects.map((project) => (
                 <article key={project.number} className="flex flex-col rounded-2xl border border-white/15 bg-white/[0.025] p-6 sm:p-8">
@@ -293,7 +295,7 @@ export default function PortfolioPage() {
 
         <section id="skills" aria-labelledby="skills-heading" className="scroll-mt-32 bg-[#0d0e0e]">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24">
-            <SectionHeading index="04 / EXPERTISE" title="Technical skills." introduction="Technologies I use to design, implement, test and maintain software." />
+            <SectionHeading headingId="skills-heading" index="04 / EXPERTISE" title="Technical skills." introduction="Technologies I use to design, implement, test and maintain software." />
             <div className="grid gap-5 sm:grid-cols-2">
               {skillGroups.map((group) => (
                 <section key={group.title} aria-label={group.title} className="rounded-2xl border border-white/15 bg-white/[0.025] p-6 sm:p-8">
