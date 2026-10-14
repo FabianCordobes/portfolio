@@ -115,7 +115,7 @@ export default function Home() {
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Desde una landing o sitio profesional hasta una aplicación o sistema completo. Diseño y desarrollo experiencias digitales que presentan, venden, organizan, conectan y hacen avanzar una operación.
+              Desarrollo sitios web, aplicaciones y sistemas a medida para empresas y profesionales. Desde una primera presencia online hasta soluciones que integran usuarios, datos y procesos.
             </p>
             <p className="hero-professional-proof">
               Fabián Ariel Cordobés <span>· Full Stack Developer · Backend Focus</span>
@@ -125,7 +125,7 @@ export default function Home() {
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#solutions" className="hero-button hero-button-primary">
-                Encontrar mi solución <span>↗</span>
+                Ver soluciones <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Hablemos de tu proyecto <span>↗</span>
@@ -214,21 +214,6 @@ export default function Home() {
               <article><span>02</span><strong>Quiero evolucionar</strong><p>Un sitio, tienda o aplicación existente que necesita una nueva etapa de diseño, funcionalidad o rendimiento.</p></article>
               <article><span>03</span><strong>Quiero integrar</strong><p>Herramientas, APIs y datos que necesitan integrarse para centralizar información, agilizar procesos y coordinar el trabajo entre sistemas.</p></article>
               <article><span>04</span><strong>Quiero desarrollar</strong><p>Una aplicación o sistema con reglas propias, usuarios, permisos, datos, procesos e integraciones específicas.</p></article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="client-spectrum">
-        <div className="section-shell client-spectrum-grid" data-reveal>
-          <p className="micro-label">NO HACE FALTA LLEGAR CON UNA SOLUCIÓN DEFINIDA</p>
-          <div>
-            <h2>Podés llegar con una idea,<br /><span>un objetivo o un sistema que ya existe.</span></h2>
-            <div className="client-spectrum-cases">
-              <article><span>01</span><strong>Necesito empezar</strong><p>Una presencia web, un MVP o una primera versión que permita validar y operar.</p></article>
-              <article><span>02</span><strong>Necesito mejorar</strong><p>Una interfaz, flujo o aplicación existente que necesita evolucionar sin rehacerse sin criterio.</p></article>
-              <article><span>03</span><strong>Necesito conectar</strong><p>Datos, APIs, herramientas o procesos que hoy funcionan separados o requieren intervención manual.</p></article>
-              <article><span>04</span><strong>Necesito resolver</strong><p>Un objetivo específico que todavía no tiene una solución técnica definida. El trabajo puede empezar por ahí.</p></article>
             </div>
           </div>
         </div>
