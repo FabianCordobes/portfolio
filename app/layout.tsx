@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const siteUrl = "https://portfolio-hazel-six-lrkttprbjn.vercel.app";
-const siteTitle = "Fabián Cordobés | Desarrollo Web y Soluciones Digitales";
+const siteTitle = "Fabián Ariel Cordobés | Desarrollo Web y Soluciones Digitales";
 const siteDescription =
-  "Desarrollo de sitios web, aplicaciones y sistemas a medida con React, Next.js, Node.js y TypeScript. Soluciones digitales para profesionales y empresas.";
+  "Fabián Ariel Cordobés, Full Stack Developer con foco Backend. Desarrollo de sitios web, APIs, aplicaciones y sistemas con TypeScript, Node.js, NestJS, AWS y React.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -27,24 +27,40 @@ export const metadata: Metadata = {
   },
 };
 
-const personStructuredData = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Fabián Ariel Cordobés",
-  alternateName: "Fabián Cordobés",
-  url: siteUrl,
-  jobTitle: "Full Stack Developer",
-  knowsAbout: [
-    "TypeScript",
-    "Node.js",
-    "NestJS",
-    "React",
-    "Next.js",
-    "Desarrollo web",
-  ],
-  sameAs: [
-    "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/",
-    "https://github.com/FabianCordobes",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "Fabián Cordobés — Desarrollo web y software",
+      url: siteUrl,
+      inLanguage: "es-AR",
+      publisher: { "@id": `${siteUrl}/#person` },
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Fabián Ariel Cordobés",
+      alternateName: "Fabián Cordobés",
+      url: `${siteUrl}/portfolio`,
+      mainEntityOfPage: `${siteUrl}/portfolio`,
+      jobTitle: "Full Stack Developer",
+      description: "Full Stack Developer con especialización Backend en TypeScript, Node.js, NestJS y AWS.",
+      knowsAbout: [
+        "TypeScript",
+        "Node.js",
+        "NestJS",
+        "AWS",
+        "PostgreSQL",
+        "React",
+        "Next.js",
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/",
+        "https://github.com/FabianCordobes",
+      ],
+    },
   ],
 };
 
@@ -58,7 +74,7 @@ export default function RootLayout({
       <body className="antialiased">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
       </body>

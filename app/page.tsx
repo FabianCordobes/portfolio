@@ -28,6 +28,7 @@ const CONTACT = {
 export default function Home() {
   return (
     <main className="living-site">
+      <a className="skip-to-main" href="#home">Saltar al contenido</a>
       <ExperienceLayer />
 
       <header className="living-nav">
@@ -35,14 +36,15 @@ export default function Home() {
           FABIÁN<span>.</span>
         </a>
 
-        <nav>
+        <nav aria-label="Navegación principal">
           <a href="#solutions">Soluciones</a>
           <a href="#work">Proyectos</a>
-          <a href="/portfolio">Perfil</a>
+          <a href="/portfolio" className="nav-recruiter-link">Perfil profesional</a>
         </nav>
 
         <a href="#contact" className="nav-project-link">
-          Plantear un proyecto ↗
+          <span className="nav-project-full">Plantear un proyecto ↗</span>
+          <span className="nav-project-short">Proyecto ↗</span>
         </a>
       </header>
 
@@ -113,14 +115,17 @@ export default function Home() {
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Desde una landing o sitio profesional hasta una aplicación o sistema completo. Diseño y desarrollo experiencias digitales que presentan, venden, organizan, conectan y hacen avanzar una operación.
+              Desarrollo sitios web, aplicaciones y sistemas a medida para empresas y profesionales. Desde una primera presencia online hasta soluciones que integran usuarios, datos y procesos.
+            </p>
+            <p className="hero-professional-proof">
+              Fabián Ariel Cordobés <span>· Full Stack Developer · Backend Focus</span>
             </p>
           </div>
 
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#solutions" className="hero-button hero-button-primary">
-                Encontrar mi solución <span>↗</span>
+                Ver soluciones <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
                 Hablemos de tu proyecto <span>↗</span>
@@ -149,6 +154,30 @@ export default function Home() {
             <a href="#services"><span>03</span>Una aplicación</a>
             <a href="#services"><span>04</span>Un sistema</a>
             <a href="#contact"><span>05</span>Definirlo juntos</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="recruiters" className="recruiter-route" aria-labelledby="recruiter-route-title">
+        <div className="section-shell recruiter-route-inner">
+          <div className="recruiter-route-copy">
+            <p className="recruiter-route-eyebrow">PERFIL PROFESIONAL / FOR HIRING TEAMS</p>
+            <h2 id="recruiter-route-title">¿Buscás un desarrollador para tu equipo?</h2>
+            <p>
+              Soy Fabián Ariel Cordobés, Full Stack Developer con más de 3 años
+              de experiencia y especialización en Backend. Trabajo con TypeScript,
+              Node.js, NestJS y AWS, desarrollando APIs, integraciones y sistemas
+              para entornos de producción.
+            </p>
+            <p className="recruiter-route-scope">Full Stack Developer · Backend Developer · Semi Senior · Buenos Aires, Argentina</p>
+          </div>
+          <div className="recruiter-route-actions">
+            <a href="/portfolio" className="recruiter-route-primary">
+              Experiencia y proyectos <span aria-hidden="true">↗</span>
+            </a>
+            <a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer" className="recruiter-route-secondary">
+              Ver mi LinkedIn <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </section>
@@ -190,21 +219,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="client-spectrum">
-        <div className="section-shell client-spectrum-grid" data-reveal>
-          <p className="micro-label">NO HACE FALTA LLEGAR CON UNA SOLUCIÓN DEFINIDA</p>
-          <div>
-            <h2>Podés llegar con una idea,<br /><span>un objetivo o un sistema que ya existe.</span></h2>
-            <div className="client-spectrum-cases">
-              <article><span>01</span><strong>Necesito empezar</strong><p>Una presencia web, un MVP o una primera versión que permita validar y operar.</p></article>
-              <article><span>02</span><strong>Necesito mejorar</strong><p>Una interfaz, flujo o aplicación existente que necesita evolucionar sin rehacerse sin criterio.</p></article>
-              <article><span>03</span><strong>Necesito conectar</strong><p>Datos, APIs, herramientas o procesos que hoy funcionan separados o requieren intervención manual.</p></article>
-              <article><span>04</span><strong>Necesito resolver</strong><p>Un objetivo específico que todavía no tiene una solución técnica definida. El trabajo puede empezar por ahí.</p></article>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <ServiceFlow />
 
       <SelectedWork />
@@ -232,7 +246,7 @@ export default function Home() {
             <span>SOFTWARE ENGINEERING · WEB SYSTEMS · AUTOMATION</span>
           </div>
           <div>
-            <a href="/portfolio">Perfil profesional</a>
+            <a href="/portfolio">Perfil técnico y experiencia</a>
             <a href={CONTACT.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
           <p>© {new Date().getFullYear()}</p>
