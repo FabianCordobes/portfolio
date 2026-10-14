@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fabián Ariel Cordobés | Full Stack Developer · Backend Focus",
+  title: "Fabián Ariel Cordobés | Full Stack & Backend Developer",
   description:
     "Portfolio profesional de Fabián Ariel Cordobés. Full Stack Developer semi senior especializado en TypeScript, Node.js, NestJS, AWS, APIs y sistemas backend. Experiencia, proyectos y tecnologías.",
   alternates: { canonical: "/portfolio" },
@@ -11,9 +11,28 @@ export const metadata: Metadata = {
       "Conocé la experiencia profesional y los proyectos de Fabián Cordobés: TypeScript, Node.js, NestJS, AWS, React y Next.js.",
     url: "/portfolio",
     type: "profile",
-    locale: "es_AR",
+    locale: "en_US",
   },
   twitter: { card: "summary" },
+};
+
+const profilePageStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://portfolio-hazel-six-lrkttprbjn.vercel.app/portfolio#profile",
+  url: "https://portfolio-hazel-six-lrkttprbjn.vercel.app/portfolio",
+  name: "Fabián Ariel Cordobés | Full Stack & Backend Developer",
+  inLanguage: "en",
+  mainEntity: {
+    "@id": "https://portfolio-hazel-six-lrkttprbjn.vercel.app/#person",
+    "@type": "Person",
+    name: "Fabián Ariel Cordobés",
+    jobTitle: "Full Stack Developer",
+    sameAs: [
+      "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/",
+      "https://github.com/FabianCordobes",
+    ],
+  },
 };
 
 const LINKS = {
@@ -122,7 +141,11 @@ function SectionHeading({
 
 export default function PortfolioPage() {
   return (
-    <main id="top" className="min-h-screen bg-[#080909] text-[#f6f6f3]">
+    <main id="top" lang="en" className="min-h-screen bg-[#080909] text-[#f6f6f3]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageStructuredData) }}
+      />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-[#c8ff62] focus:px-4 focus:py-3 focus:font-semibold focus:text-black"
