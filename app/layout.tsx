@@ -1,18 +1,51 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = "https://portfolio-hazel-six-lrkttprbjn.vercel.app";
+const siteTitle = "Fabián Cordobés | Desarrollo Web y Soluciones Digitales";
+const siteDescription =
+  "Desarrollo de sitios web, aplicaciones y sistemas a medida con React, Next.js, Node.js y TypeScript. Soluciones digitales para profesionales y empresas.";
+
 export const metadata: Metadata = {
-  title: "Fabián Cordobés — Diseño y desarrollo de experiencias digitales",
-  description:
-    "Landing pages, sitios web, e-commerce, aplicaciones, automatización y mantenimiento con una mirada de diseño, producto y desarrollo full-stack.",
-  metadataBase: new URL("https://portfolio-hazel-six-lrkttprbjn.vercel.app"),
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "Fabián Cordobés — Experiencias digitales",
-    description:
-      "Diseño y desarrollo de landing pages, sitios web, e-commerce, aplicaciones y automatizaciones.",
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName: "Fabián Cordobés",
     type: "website",
     locale: "es_AR",
   },
+  twitter: {
+    card: "summary",
+    title: siteTitle,
+    description: siteDescription,
+  },
+};
+
+const personStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Fabián Ariel Cordobés",
+  alternateName: "Fabián Cordobés",
+  url: siteUrl,
+  jobTitle: "Full Stack Developer",
+  knowsAbout: [
+    "TypeScript",
+    "Node.js",
+    "NestJS",
+    "React",
+    "Next.js",
+    "Desarrollo web",
+  ],
+  sameAs: [
+    "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/",
+    "https://github.com/FabianCordobes",
+  ],
 };
 
 export default function RootLayout({
@@ -22,7 +55,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personStructuredData) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
