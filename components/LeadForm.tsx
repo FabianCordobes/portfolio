@@ -41,9 +41,12 @@ function normalizeChannel(value: string) {
 }
 
 export default function LeadForm() {
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
   const [error, setError] = useState("");
-  const [attribution, setAttribution] = useState<Attribution>(EMPTY_ATTRIBUTION);
+  const [attribution, setAttribution] =
+    useState<Attribution>(EMPTY_ATTRIBUTION);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -62,35 +65,68 @@ export default function LeadForm() {
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    const form = event.currentTarget;
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      setStatus("error");
+      setError("El formulario no está disponible temporalmente.");
+      return;
+    }
+
     setStatus("sending");
     setError("");
 
-    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    // Honeypot: descartar envíos automatizados.
+    if (formData.get("website")) {
+      setStatus("success");
+      return;
+    }
+
     const payload = {
-      ...Object.fromEntries(new FormData(form).entries()),
-      budgetRange: "",
-      deadline: "",
-      ...attribution,
+      ...Object.fromEntries(formData.entries()),
+      access_key: accessKey,
+      subject: "Nueva consulta desde el portfolio",
+      from_name: "Portfolio - Formulario de contacto",
+      source: attribution.source,
+      utmSource: attribution.utmSource,
+      utmMedium: attribution.utmMedium,
+      utmCampaign: attribution.utmCampaign,
+      utmContent: attribution.utmContent,
+      landingPath: attribution.landingPath,
+      referrer: attribution.referrer,
     };
 
     try {
-      const response = await fetch("/api/leads", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(payload),
       });
 
-      const data = (await response.json()) as { ok?: boolean; error?: string };
+      const data = (await response.json()) as {
+        success?: boolean;
+        message?: string;
+      };
 
-      if (!response.ok || !data.ok) {
-        throw new Error(data.error || "Volvamos a intentarlo en un momento.");
+      if (!response.ok || !data.success) {
+        throw new Error("No pudimos enviar tu consulta. Intentá nuevamente.");
       }
 
       form.reset();
       setStatus("success");
-    } catch (err) {
+    } catch (error) {
       setStatus("error");
-      setError(err instanceof Error ? err.message : "Volvamos a intentarlo en un momento.");
+      setError(
+        error instanceof Error
+          ? error.message
+          : "No pudimos enviar tu consulta. Intentá nuevamente.",
+      );
     }
   }
 
@@ -104,29 +140,60 @@ export default function LeadForm() {
       <div className="future-form-grid">
         <label>
           <span>Nombre</span>
-          <input name="name" type="text" autoComplete="name" maxLength={120} required placeholder="Tu nombre" />
+          <input
+            name="name"
+            type="text"
+            autoComplete="name"
+            maxLength={120}
+            required
+            placeholder="Tu nombre"
+          />
         </label>
 
         <label>
           <span>Email</span>
-          <input name="email" type="email" autoComplete="email" maxLength={180} required placeholder="nombre@empresa.com" />
+          <input
+            name="email"
+            type="email"
+            autoComplete="email"
+            maxLength={180}
+            required
+            placeholder="nombre@empresa.com"
+          />
         </label>
 
         <label>
           <span>Empresa / proyecto</span>
-          <input name="companyOrProject" type="text" maxLength={160} placeholder="Nombre" />
+          <input
+            name="companyOrProject"
+            type="text"
+            maxLength={160}
+            placeholder="Nombre"
+          />
         </label>
 
         <label>
           <span>WhatsApp</span>
-          <input name="phone" type="tel" autoComplete="tel" maxLength={80} placeholder="+54 ..." />
+          <input
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            maxLength={80}
+            placeholder="+54 ..."
+          />
         </label>
 
         <label className="future-form-wide">
           <span>¿Qué necesitás?</span>
           <select name="requestedService" defaultValue="" required>
-            <option value="" disabled>Elegí una opción</option>
-            {SERVICES.map((service) => <option key={service} value={service}>{service}</option>)}
+            <option value="" disabled>
+              Elegí una opción
+            </option>
+            {SERVICES.map((service) => (
+              <option key={service} value={service}>
+                {service}
+              </option>
+            ))}
           </select>
         </label>
 
@@ -147,18 +214,25 @@ export default function LeadForm() {
         </label>
       </div>
 
-      <button type="submit" disabled={status === "sending"} className="future-submit">
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="future-submit"
+      >
         {status === "sending" ? "Enviando..." : "Enviar consulta ↗"}
       </button>
 
       {status === "success" && (
         <p className="future-form-status" role="status">
-          Recibido. Voy a revisar el proyecto y te contacto para definir el siguiente paso.
+          Recibido. Voy a revisar el proyecto y te contacto para definir el
+          siguiente paso.
         </p>
       )}
 
       {status === "error" && (
-        <p className="future-form-status" role="alert">{error}</p>
+        <p className="future-form-status" role="alert">
+          {error}
+        </p>
       )}
     </form>
   );

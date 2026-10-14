@@ -1,0 +1,36 @@
+
+/* statement */
+.statement-section {
+    position: relative;
+    z-index: 10;
+    padding: 18vh 0 20vh;
+    background: var(--bg);
+  }
+  
+  .statement-grid {
+    display: grid;
+    grid-template-columns: .46fr 1.25fr .72fr;
+    gap: 7vw;
+    align-items: end;
+  }
+  
+  .statement-grid h2 {
+    margin: 0;
+    max-width: 9ch;
+    font-size: clamp(3.8rem,7.3vw,7.6rem);
+    line-height: .94;
+    letter-spacing: -.055em;
+    font-weight: 790;
+  }
+  
+  .statement-grid h2 span {
+    color: rgba(255,255,255,.26);
+  }
+  
+  .statement-grid > p:last-child {
+    max-width: 410px;
+    margin: 0;
+    color: rgba(255,255,255,.42);
+    line-height: 1.7;
+  }
+  
