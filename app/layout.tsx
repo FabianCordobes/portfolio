@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: siteDescription,
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  verification: {
+    google: "imXU0a7pJNG6lfKp2PgeDE2bRmypaL_QJ1p34AmQ_n0",
+  },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
