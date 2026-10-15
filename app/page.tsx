@@ -175,6 +175,9 @@ export default function Home() {
             <a href="/portfolio" className="recruiter-route-primary">
               Experiencia y proyectos <span aria-hidden="true">↗</span>
             </a>
+            <a href="/resume" className="recruiter-route-secondary">
+              Ver CV profesional <span aria-hidden="true">↗</span>
+            </a>
             <a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer" className="recruiter-route-secondary">
               Ver mi LinkedIn <span aria-hidden="true">↗</span>
             </a>
