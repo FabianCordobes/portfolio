@@ -45,6 +45,7 @@ const navigation = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Resume", href: "/resume" },
 ];
 
 const experience = [
@@ -53,7 +54,7 @@ const experience = [
     role: "Full Stack / Backend Developer",
     organization: "ISCX",
     summary:
-      "Backend development for insurance workflows and integrations. REST APIs, serverless processes, business logic, data handling and automated testing in production systems.",
+      "Developed and maintained REST APIs, backend business rules, AWS Lambda serverless processes and external system integrations. Worked with DynamoDB and MySQL, writing automated unit and integration tests with Jest and SuperTest.",
     technologies: ["TypeScript", "Node.js", "NestJS", "AWS Lambda", "DynamoDB", "MySQL", "Jest"],
   },
   {
@@ -205,6 +206,9 @@ export default function PortfolioPage() {
                 <a href="#projects" className={linkClass + " bg-[#c8ff62] text-black hover:bg-[#dcff9b]"}>
                   View selected work <span aria-hidden="true" className="ml-2">↘</span>
                 </a>
+                <a href="/resume" className={linkClass + " border border-white/30 text-white hover:border-[#c8ff62]"}>
+                  View resume ↗
+                </a>
                 <a href={LINKS.github} target="_blank" rel="noopener noreferrer" className={linkClass + " border border-white/30 text-white hover:border-white"}>
                   GitHub ↗
                 </a>
@@ -217,6 +221,10 @@ export default function PortfolioPage() {
                 <div>
                   <dt className="text-sm text-white/60">Experience</dt>
                   <dd className="mt-1 text-lg font-medium text-white">3+ years</dd>
+                </div>
+                <div>
+                  <dt className="text-sm text-white/60">Roles</dt>
+                  <dd className="mt-1 text-lg font-medium text-white">Full Stack Developer · Backend Developer</dd>
                 </div>
                 <div>
                   <dt className="text-sm text-white/60">Specialization</dt>
@@ -346,6 +354,9 @@ export default function PortfolioPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" className={linkClass + " bg-black text-white hover:bg-[#202020] focus-visible:outline-black"}>
                 Connect on LinkedIn ↗
+              </a>
+              <a href="/resume" className={linkClass + " border border-black/40 text-black hover:border-black focus-visible:outline-black"}>
+                Read resume ↗
               </a>
               <a href={LINKS.github} target="_blank" rel="noopener noreferrer" className={linkClass + " border border-black/40 text-black hover:border-black focus-visible:outline-black"}>
                 Explore GitHub ↗
