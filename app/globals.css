@@ -6884,12 +6884,12 @@ html[data-scroll-direction="up"] .kinetic-track-reverse .kinetic-track-inner {
 }
 @media (max-width: 560px) {
   .flowops-film-ui { inset: 7% 5%; }
-  .flowops-film-head { padding: 10px; min-height: 42px; font-size: .6rem; }
-  .flowops-film-head strong { font-size: .57rem; }
+  .flowops-film-head { padding: 10px; min-height: 42px; font-size: .72rem; }
+  .flowops-film-head strong { font-size: .68rem; }
   .flowops-film-body { padding: 10px; gap: 12px; }
-  .flowops-film-body small, .flowops-film-body p { font-size: .57rem; }
+  .flowops-film-body small, .flowops-film-body p { font-size: .7rem; }
   .flowops-film-states { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 5px; }
   .flowops-film-state { min-height: 57px; padding: 7px; }
-  .flowops-film-state span { font-size: .56rem; }
-  .flowops-film-state strong { font-size: .56rem; }
+  .flowops-film-state span { font-size: .7rem; }
+  .flowops-film-state strong { font-size: .75rem; }
 }
