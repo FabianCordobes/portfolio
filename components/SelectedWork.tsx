@@ -5,14 +5,14 @@ import { useEffect, useRef, useState } from "react";
 const PROJECTS = [
   {
     id: "01",
-    title: "Jamly",
-    type: "Aplicación full-stack",
-    result: "Reservas, disponibilidad y operación en una sola experiencia.",
+    title: "FlowOps",
+    type: "Backend + mobile · MVP en desarrollo",
+    result: "Órdenes de trabajo, permisos y aprobación con trazabilidad.",
     description:
-      "Plataforma full-stack para gestionar reservas de salas y estudios con autenticación, roles y lógica de disponibilidad.",
-    tech: ["Next.js", "NestJS", "PostgreSQL", "TypeORM"],
-    href: "https://github.com/FabianCordobes/jamly",
-    visual: "jamly",
+      "Aplicación para gestionar órdenes de trabajo con roles, asignaciones, transiciones de estado validadas y registro auditable. Proyecto propio en evolución.",
+    tech: ["NestJS", "TypeScript", "React Native", "PostgreSQL"],
+    href: "https://github.com/FabianCordobes/flowops",
+    visual: "flowops",
   },
   {
     id: "02",
@@ -69,7 +69,7 @@ export default function SelectedWork() {
             <span>Proyectos que muestran distintas formas de crear valor digital.</span>
           </h2>
           <p>
-            Sitios, aplicaciones y experiencias desarrolladas para objetivos distintos: presentar una propuesta, facilitar una compra, organizar reservas y construir recorridos digitales claros.
+            Sitios, aplicaciones y experiencias desarrolladas para objetivos distintos: presentar una propuesta, facilitar una compra, coordinar tareas y construir recorridos digitales claros.
           </p>
         </div>
       </div>
@@ -121,38 +121,31 @@ export default function SelectedWork() {
                   <span>{project.id} / 03</span>
                 </div>
 
-                <div className="project-frame-stage">
+                <div className="project-frame-stage" aria-hidden="true">
                   <div className="project-frame-bloom" />
                   <div className="project-frame-scan" />
                   <div className="project-frame-chroma chroma-one" />
                   <div className="project-frame-chroma chroma-two" />
 
-                  {project.visual === "jamly" && (
-                    <>
-                      <div className="jamly-film-orbit jamly-film-orbit-a" />
-                      <div className="jamly-film-orbit jamly-film-orbit-b" />
-                      <div className="jamly-film-ui">
-                        <div className="jamly-film-head">
-                          <span>JAMLY</span>
-                          <i>LIVE SYSTEM</i>
-                        </div>
-                        <div className="jamly-film-body">
-                          <div className="jamly-film-main">
-                            <small>NEXT SESSION</small>
-                            <strong>20:00</strong>
-                            <span>Studio A · Confirmed</span>
-                          </div>
-                          <div className="jamly-film-side">
-                            <small>AVAILABILITY</small>
-                            <div className="jamly-bars">
-                              {[34, 58, 43, 81, 62, 92, 68, 78].map((height, barIndex) => (
-                                <i key={barIndex} style={{ height: `${height}%` }} />
-                              ))}
-                            </div>
-                          </div>
-                        </div>
+                  {project.visual === "flowops" && (
+                    <div className="flowops-film-ui">
+                      <div className="flowops-film-head">
+                        <span>FLOWOPS / WORK ORDERS</span>
+                        <strong>MVP EN DESARROLLO</strong>
                       </div>
-                    </>
+                      <div className="flowops-film-body">
+                        <small>FLUJO DE UNA ORDEN</small>
+                        <div className="flowops-film-states">
+                          {["NEW", "ASSIGNED", "IN PROGRESS", "IN REVIEW", "COMPLETED"].map((step, index) => (
+                            <div className="flowops-film-state" key={step}>
+                              <span>{String(index + 1).padStart(2, "0")}</span>
+                              <strong>{step}</strong>
+                            </div>
+                          ))}
+                        </div>
+                        <p>ROLES · TRANSICIONES VALIDADAS · HISTORIAL AUDITABLE</p>
+                      </div>
+                    </div>
                   )}
 
                   {project.visual === "commerce" && (
