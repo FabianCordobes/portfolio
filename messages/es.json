@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "solutions": "Soluciones",
+    "projects": "Proyectos",
+    "profile": "Perfil profesional",
+    "contact": "Plantear un proyecto ↗"
+  },
+  "hero": {
+    "eyebrow": "DESARROLLO WEB · APLICACIONES · SISTEMAS",
+    "title": [
+      "CREO",
+      "SOLUCIONES",
+      "DIGITALES."
+    ],
+    "intro": "Desarrollo sitios web, aplicaciones y sistemas a medida para empresas y profesionales. Desde una primera presencia online hasta soluciones que integran usuarios, datos y procesos.",
+    "solutions": "Ver soluciones",
+    "contact": "Hablemos de tu proyecto",
+    "explore": "EXPLORAR"
+  },
+  "seo": {
+    "title": "Fabián Ariel Cordobés | Desarrollo Web y Soluciones Digitales",
+    "description": "Desarrollo de sitios web, aplicaciones, APIs y sistemas a medida con TypeScript, Node.js, NestJS y React."
+  }
+}

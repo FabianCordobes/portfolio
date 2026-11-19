@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "solutions": "Solutions",
+    "projects": "Projects",
+    "profile": "Professional profile",
+    "contact": "Start a project ↗"
+  },
+  "hero": {
+    "eyebrow": "WEB DEVELOPMENT · APPLICATIONS · SOFTWARE SYSTEMS",
+    "title": [
+      "I BUILD",
+      "DIGITAL",
+      "SOLUTIONS."
+    ],
+    "intro": "I build websites, applications, and tailored software systems for businesses and professionals. From your first online presence to solutions connecting users, data, and processes.",
+    "solutions": "Explore solutions",
+    "contact": "Let's discuss your project",
+    "explore": "EXPLORE"
+  },
+  "seo": {
+    "title": "Fabián Ariel Cordobés | Full Stack Developer & Software Solutions",
+    "description": "Custom websites, applications, APIs and software systems built with TypeScript, Node.js, NestJS and React."
+  }
+}

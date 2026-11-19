@@ -1,3 +1,6 @@
+import LanguageSwitcher from "../components/LanguageSwitcher";
+import { getDictionary } from "../i18n/dictionaries";
+import type { Locale } from "../i18n/config";
 import LeadForm from "../components/LeadForm";
 import ExperienceLayer from "../components/ExperienceLayer";
 import LivingField from "../components/LivingField";
@@ -25,7 +28,8 @@ const CONTACT = {
     "https://www.linkedin.com/in/fabi%C3%A1n-ariel-cordob%C3%A9s-956539234/",
 };
 
-export default function Home() {
+export default function Home({ locale = "es" }: { locale?: Locale }) {
+  const t = getDictionary(locale);
   return (
     <main className="living-site">
       <a className="skip-to-main" href="#home">Saltar al contenido</a>
@@ -37,15 +41,16 @@ export default function Home() {
         </a>
 
         <nav aria-label="Navegación principal">
-          <a href="#solutions">Soluciones</a>
-          <a href="#work">Proyectos</a>
-          <a href="/portfolio" className="nav-recruiter-link">Perfil profesional</a>
+          <a href="#solutions">{t.nav.solutions}</a>
+          <a href="#work">{t.nav.projects}</a>
+          <a href={`/${locale}/portfolio`} className="nav-recruiter-link">{t.nav.profile}</a>
         </nav>
 
         <a href="#contact" className="nav-project-link">
-          <span className="nav-project-full">Plantear un proyecto ↗</span>
+          <span className="nav-project-full">{t.nav.contact}</span>
           <span className="nav-project-short">Proyecto ↗</span>
         </a>
+        <LanguageSwitcher locale={locale} />
       </header>
 
       <a
@@ -104,18 +109,18 @@ export default function Home() {
         <div className="section-shell hero-content">
           <div className="hero-overline hero-reveal hero-reveal-1">
             <span className="live-dot" />
-            DESARROLLO WEB · APLICACIONES · SISTEMAS
+            {t.hero.eyebrow}
           </div>
 
           <div className="hero-title-wrap">
             <h1 className="hero-title">
-              <span className="hero-reveal hero-reveal-2">CREO</span>
-              <span className="hero-reveal hero-reveal-3">SOLUCIONES</span>
-              <span className="hero-reveal hero-reveal-3 hero-title-outline">DIGITALES.</span>
+              <span className="hero-reveal hero-reveal-2">{t.hero.title[0]}</span>
+              <span className="hero-reveal hero-reveal-3">{t.hero.title[1]}</span>
+              <span className="hero-reveal hero-reveal-3 hero-title-outline">{t.hero.title[2]}</span>
             </h1>
 
             <p className="hero-intro hero-reveal hero-reveal-4">
-              Desarrollo sitios web, aplicaciones y sistemas a medida para empresas y profesionales. Desde una primera presencia online hasta soluciones que integran usuarios, datos y procesos.
+              {t.hero.intro}
             </p>
             <p className="hero-professional-proof">
               Fabián Ariel Cordobés <span>· Full Stack Developer · Backend Focus</span>
@@ -125,10 +130,10 @@ export default function Home() {
           <div className="hero-footer hero-reveal hero-reveal-5">
             <div className="hero-actions">
               <a href="#solutions" className="hero-button hero-button-primary">
-                Ver soluciones <span>↗</span>
+                {t.hero.solutions} <span>↗</span>
               </a>
               <a href="#contact" className="hero-button">
-                Hablemos de tu proyecto <span>↗</span>
+                {t.hero.contact} <span>↗</span>
               </a>
             </div>
 
@@ -140,7 +145,7 @@ export default function Home() {
         </div>
 
         <div className="hero-scroll-cue" aria-hidden="true">
-          <span>EXPLORAR</span>
+          <span>{t.hero.explore}</span>
           <i />
         </div>
       </section>
@@ -175,7 +180,7 @@ export default function Home() {
             <a href="/portfolio" className="recruiter-route-primary">
               Experiencia y proyectos <span aria-hidden="true">↗</span>
             </a>
-            <a href="/resume" className="recruiter-route-secondary">
+            <a href={`/${locale}/resume`} className="recruiter-route-secondary">
               Ver CV profesional <span aria-hidden="true">↗</span>
             </a>
             <a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer" className="recruiter-route-secondary">
